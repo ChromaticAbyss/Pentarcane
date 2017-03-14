@@ -1,0 +1,116 @@
+<!-- Parameters (the question is how to get c++ to send the ones we need OR send a generic set and allow "Formula" like constructs here)
+Ints
+
+
+
+Floats
+
+
+
+
+Strings
+
+-->
+
+
+<UiElement>
+	
+	
+	<Conditional>
+		<IntValueSmallerThan Index="0" Value="10">Content Doesnt matter</IntValueSmallerThan>
+		<IntValueGreaterThan Index="0" Value="0">Content Doesnt matter</IntValueGreaterThan>	
+		<UiElement>
+			<Transform2D>
+				<X>0.85</X>				
+				<Y>0.75</Y>
+				<SizeX>0.160</SizeX>
+				<UseFloatParamForSizeX>3</UseFloatParamForSizeX><!--use this to shrink as the animation progresses-->
+				<SizeY>1.0</SizeY>
+				<SizeYRelativeToX>True</SizeYRelativeToX><!--takes into account window dimensions, so a 1 in SizeY would always be a square-->
+			</Transform2D>		
+			<Image>
+				<ImageFile>../Data/2D/Animations/Bite_1.png</ImageFile>
+			</Image>
+		</UiElement>
+	</Conditional>
+	
+	
+	
+	<Conditional>
+		<IntValueSmallerThan Index="0" Value="20">Content Doesnt matter</IntValueSmallerThan>
+		<IntValueGreaterThan Index="0" Value="9">Content Doesnt matter</IntValueGreaterThan>	
+		<UiElement>
+			<Transform2D>
+				<X>0.85</X>				
+				<Y>0.75</Y>
+				<SizeX>0.160</SizeX>
+				<UseFloatParamForSizeX>3</UseFloatParamForSizeX><!--use this to shrink as the animation progresses-->
+				<SizeY>1.0</SizeY>
+				<SizeYRelativeToX>True</SizeYRelativeToX><!--takes into account window dimensions, so a 1 in SizeY would always be a square-->
+			</Transform2D>		
+			<Image>
+				<ImageFile>../Data/2D/Animations/Bite_2.png</ImageFile>
+			</Image>
+		</UiElement>
+	</Conditional>
+		
+
+	
+</UiElement>
+
+
+
+<!--
+	
+	<Conditional>
+		<IntValueSmallerThan Index="0" Value="10">Content Doesnt matter</IntValueSmallerThan>
+		<IntValueGreaterThan Index="0" Value="4">Content Doesnt matter</IntValueGreaterThan>	
+		<UiElement>
+			<Transform2D>
+				<X>0.85</X>
+				<Y>0.75</Y>
+				<SizeX>0.090</SizeX>
+				<SizeY>1.0</SizeY>
+				<SizeYRelativeToX>True</SizeYRelativeToX>
+			</Transform2D>		
+			<Image>
+				<ImageFile>../Data/2D/Ui/Select.png</ImageFile>
+			</Image>
+		</UiElement>
+	</Conditional>	
+	
+	
+	<Conditional>
+		<IntValueSmallerThan Index="0" Value="15">Content Doesnt matter</IntValueSmallerThan>
+		<IntValueGreaterThan Index="0" Value="9">Content Doesnt matter</IntValueGreaterThan>	
+		<UiElement>
+			<Transform2D>
+				<X>0.85</X>
+				<Y>0.75</Y>
+				<SizeX>0.060</SizeX>
+				<SizeY>1.0</SizeY>
+				<SizeYRelativeToX>True</SizeYRelativeToX>
+			</Transform2D>		
+			<Image>
+				<ImageFile>../Data/2D/Ui/Select.png</ImageFile>
+			</Image>
+		</UiElement>
+	</Conditional>	
+	
+	<Conditional>
+		<IntValueSmallerThan Index="0" Value="20">Content Doesnt matter</IntValueSmallerThan>
+		<IntValueGreaterThan Index="0" Value="14">Content Doesnt matter</IntValueGreaterThan>	
+		<UiElement>
+			<Transform2D>
+				<X>0.85</X>
+				<Y>0.75</Y>
+				<SizeX>0.030</SizeX>
+				<SizeY>1.0</SizeY>
+				<SizeYRelativeToX>True</SizeYRelativeToX>
+			</Transform2D>		
+			<Image>
+				<ImageFile>../Data/2D/Ui/Select.png</ImageFile>
+			</Image>
+		</UiElement>
+	</Conditional>	
+-->

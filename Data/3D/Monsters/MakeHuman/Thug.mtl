@@ -1,0 +1,74 @@
+# Blender MTL File: 'Thug.blend'
+# Material Count: 6
+
+newmtl male_casualsuit05
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.027450 0.027450 0.027450
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 0.000000
+illum 2
+map_Kd textures\eyebrow005.png
+map_d textures\\male_casualsuit05_diffuse.png
+
+newmtl male_casualsuit05_NONE
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.027450 0.027450 0.027450
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 0.000000
+illum 2
+map_Kd E:\\Coding\\MageMinigame\\Data\\2D\\Monsters\\MakeHuman\\Thug.png
+map_d textures\\male_casualsuit05_diffuse.png
+
+newmtl male_casualsuit05_ice_eye.png
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.027450 0.027450 0.027450
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 0.000000
+illum 2
+map_Kd textures\ice_eye.png
+map_d textures\\male_casualsuit05_diffuse.png
+
+newmtl male_casualsuit05_male_casualsuit05_diffuse.png
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.027450 0.027450 0.027450
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 0.000000
+illum 2
+map_Kd E:\Coding\MageMinigame\Data\2D\Monsters\MakeHuman\Thug.png
+map_d textures\\male_casualsuit05_diffuse.png
+
+newmtl male_casualsuit05_shoes01_diffuse.png
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.027450 0.027450 0.027450
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 0.000000
+illum 2
+map_Kd textures\shoes01_diffuse.png
+map_d textures\\male_casualsuit05_diffuse.png
+
+newmtl male_casualsuit05_short04_diffuse.png
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.027450 0.027450 0.027450
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 0.000000
+illum 2
+map_Kd textures\short04_diffuse.png
+map_d textures\\male_casualsuit05_diffuse.png

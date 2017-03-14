@@ -1,0 +1,125 @@
+<Sequence>
+	<DisplayName>Monsters in the fields</DisplayName>
+	<Description>Near the cities the forest gave way to arable land but that doesn't mean danger did give way to safety.</Description>
+	<Description>Farmers and Woodsmen are troubled alike with the recent onslaught of wild beasts,</Description>
+	<Description>that they attribute to something stirring in the woods.</Description>
+	<Description>Fishermen and peat cutters tell even more frightening stories of a humongous creature,</Description>
+	<Description> rising from the waters to devour the unweary. This could be your first real test.</Description>
+	
+	<!--Display/Selection Parts-->
+	<Art3D>
+		<ModelFile>../Data/3D/Stages/House1.obj</ModelFile>
+		<TextureFile>../Data/2D/Stages/House1.png</TextureFile>
+		<Transform>
+			<RotX>0</RotX>
+			<RotZ>180</RotZ>
+			<Scale>0.4</Scale>	
+		</Transform>			
+	</Art3D>
+	<Art3D>
+		<ModelFile>../Data/3D/SimpleSquare.obj</ModelFile>
+		<TextureFile>../Data/2D/Sequences/MageTower_Locked.png</TextureFile>
+		<Transform>
+			<RotZ>180</RotZ>
+			<Scale>1.9</Scale>	
+		</Transform>			
+	</Art3D>	
+	
+	<Soundtrack>Lightless Dawn.mp3</Soundtrack>
+	
+	<!--<UnlockRequirement>TryFulfillingThis</UnlockRequirement>-->
+	
+	<!--Resolution Parts-->
+	<Reward>MonstersInTheFields</Reward><!--Unlock this thing for the player. It allows accessing additional sequences-->
+	<CompleteRequirement>MonstersInTheFields</CompleteRequirement><!--Usually one of the rewards!-->
+
+	<Fight>
+		<Condition>
+			<Type>Difficulty</Type>
+			<Modifier>LessOrEqual</Modifier>
+			<Value>90</Value>
+		</Condition>
+		<Condition>
+			<Type>HasTag</Type>
+			<StringValue>MonstersInTheFields</StringValue>
+		</Condition>
+		<Condition>
+			<Type>NOT</Type>
+			<Condition>
+				<Type>HasTag</Type>
+				<StringValue>Boss</StringValue>
+			</Condition>
+		</Condition>
+		<Condition>
+			<Type>HasTag</Type>
+			<StringValue>MonstersInTheFields</StringValue>
+		</Condition>
+		<Stage>../Data/Stages/Fields.xml</Stage><!--A stage is just a bunch of models and positions at which to place enemy models-->
+		<Description>...</Description>
+		
+		<Flavour>You move out into the fields as soon as the morning fog lifts.</Flavour>
+		<Flavour>The wind carries with it the noises of creatures, which you track down quickly.</Flavour>
+	</Fight>
+
+	
+	<Fight>
+		<Condition>
+			<Type>Difficulty</Type>
+			<Modifier>LessOrEqual</Modifier>
+			<Value>90</Value>
+		</Condition>
+		<Condition>
+			<Type>NOT</Type>
+			<Condition>
+				<Type>HasTag</Type>
+				<StringValue>Boss</StringValue>
+			</Condition>
+		</Condition>
+		<Condition>
+			<Type>HasTag</Type>
+			<StringValue>MonstersInTheFields</StringValue>
+		</Condition>
+		<Stage>../Data/Stages/Fields.xml</Stage><!--A stage is just a bunch of models and positions at which to place enemy models-->
+		<Description>...</Description>
+
+		<Flavour>Amazed at what kinds of creatures you find this close to the town, you note to recommend the city guard the assembly of more common patrols.</Flavour>
+		<Flavour>You find more creatures near a small heath, preying on lifestock.</Flavour>
+	</Fight>
+	
+	
+	<Fight>
+		<Condition>
+			<Type>Difficulty</Type>
+			<Modifier>LessOrEqual</Modifier>
+			<Value>95</Value>
+		</Condition>
+		<Condition>
+			<Type>HasTag</Type>
+			<StringValue>MonstersInTheFields</StringValue>
+		</Condition>
+		<Condition>
+			<Type>NOT</Type>
+			<Condition>
+				<Type>HasTag</Type>
+				<StringValue>Boss</StringValue>
+			</Condition>
+		</Condition>
+		<Stage>../Data/Stages/Fields.xml</Stage><!--A stage is just a bunch of models and positions at which to place enemy models-->
+		<Description>...</Description>
+
+	</Fight>
+	
+	
+	<Fight>
+		<Condition>
+			<Type>ExactName</Type>
+			<StringValue>OneServingOfHydra</StringValue>
+		</Condition>
+		<Stage>../Data/Stages/Swamp.xml</Stage><!--A stage is just a bunch of models and positions at which to place enemy models-->
+		<Description>...</Description>
+		<Flavour>The creature that the fishermen only speak in whispers of and that makes the farmes spit when their hear its name</Flavour>
+		<Flavour>raises its ugly head. And then two more, equally ugly heads.</Flavour>
+	</Fight>
+	
+</Sequence>
+	

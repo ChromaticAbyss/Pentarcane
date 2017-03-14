@@ -1,0 +1,25 @@
+<FlipbookAnimation>
+	<!--For derived class "FlipbookAnimation"-->
+	<FileName>../Data/2D/Animations/Lifedrain_1.png</FileName>
+	<FileName>../Data/2D/Animations/Lifedrain_2.png</FileName>
+	<FileName>../Data/2D/Animations/Lifedrain_3.png</FileName>
+	<FileName>../Data/2D/Animations/Lifedrain_4.png</FileName>
+	<FileName>../Data/2D/Animations/Lifedrain_5.png</FileName>
+	<FileName>../Data/2D/Animations/Lifedrain_6.png</FileName>
+	<FileName>../Data/2D/Animations/Lifedrain_7.png</FileName>
+	<FileName>../Data/2D/Animations/Lifedrain_8.png</FileName>
+	<FileName>../Data/2D/Animations/Lifedrain_9.png</FileName>
+	
+	<Transform2D>
+		<X>0.0</X>
+		<Y>0.0</Y>
+		<SizeX>0.4</SizeX>
+		<SizeY>1.0</SizeY>
+		<SizeYRelativeToX>True</SizeYRelativeToX>
+	</Transform2D>
+	
+	
+	<!--For base class "Animation"-->
+	<Frames>40</Frames>
+	<Blocking>1</Blocking>
+</FlipbookAnimation>

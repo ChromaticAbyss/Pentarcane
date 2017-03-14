@@ -1,0 +1,89 @@
+<!-- Parameters
+Ints
+[0] Selected instance id
+
+Strings
+[0] <If an entity is selected:> TypeName
+[1] <If an entity is selected:> UniqueName
+
+-->
+
+
+<UiElement>
+	<Transform2D>
+		<X>0.85</X>
+		<Y>0</Y>
+		<SizeX>0.15</SizeX>
+		<SizeY>1.0</SizeY>
+	</Transform2D>
+	<Image>
+		<ImageFile>../Data/2D/Grey.png</ImageFile>
+	</Image>
+	<Effect>
+		<Type>Dummy</Type>
+		<ForMode>1</ForMode><!--Catch mouse clicks-->
+	</Effect>		
+	
+
+	<UiElement>
+		<Transform2D>
+			<X>-0.04</X>
+			<Y>0.8</Y>
+			<SizeX>0.08</SizeX>
+			<SizeY>1.0</SizeY>
+			<SizeYRelativeToX>True</SizeYRelativeToX><!--takes into account window dimensions, so a 1 in SizeY would always be a square-->
+		</Transform2D>		
+		<Image>
+			<ImageFile>../Data/2D/Ui/MapEd_Connect.png</ImageFile>
+		</Image>
+		<Effect>
+			<Type>Tooltip</Type>
+			<ForMode>0</ForMode><!--On mouse hover-->
+			<StringValue>Connection Mode: Click an object to add it as a connection for the currently selected object</StringValue>
+		</Effect>
+	</UiElement>	
+		
+		
+	
+	<UiElement>
+		<Transform2D>
+			<X>-0.04</X>
+			<Y>0.6</Y>
+			<SizeX>0.08</SizeX>
+			<SizeY>0.5</SizeY>
+			<SizeYRelativeToX>True</SizeYRelativeToX>
+		</Transform2D>		
+		<Image>
+			<ImageFile>../Data/2D/Ui/MapEd_ClearConnections.png</ImageFile>
+		</Image>
+		<Effect>
+			<Type>FlushAllConnections</Type>
+			<ForMode>1</ForMode>
+		</Effect>
+	</UiElement>			
+	
+		
+	<UiElement>
+		<Transform2D>
+			<X>-0.04</X>
+			<Y>0.4</Y>
+			<SizeX>0.08</SizeX>
+			<SizeY>0.5</SizeY>
+			<SizeYRelativeToX>True</SizeYRelativeToX>
+		</Transform2D>		
+		<Image>
+			<ImageFile>../Data/2D/Ui/MapEd_FinishAndDeselect.png</ImageFile>
+		</Image>
+		<Effect>
+			<Type>FinishAndDeselect</Type>
+			<ForMode>1</ForMode>
+		</Effect>
+	</UiElement>			
+	
+	
+</UiElement>
+
+
+
+
+	

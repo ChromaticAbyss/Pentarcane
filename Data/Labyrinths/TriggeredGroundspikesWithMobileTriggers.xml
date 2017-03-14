@@ -1,0 +1,1345 @@
+<Labyrinth>
+    <FastTime>30</FastTime>
+    <Part>
+        <Type>Transporter</Type>
+        <Transform>
+            <X>-9</X>
+            <Y>-5</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+        <UniqueName>Transporter 11 260</UniqueName>
+        <String>Signaler 36 427</String>
+        <String>Transporter 11 260</String>
+        <String>PositionMarker 24 721</String>
+    </Part>
+    <Part>
+        <Type>PositionMarker</Type>
+        <Transform>
+            <X>-9</X>
+            <Y>8</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+        <UniqueName>PositionMarker 24 721</UniqueName>
+    </Part>
+    <Part>
+        <Type>Signaler</Type>
+        <Transform>
+            <X>-12</X>
+            <Y>-4</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+        <UniqueName>Signaler 36 427</UniqueName>
+        <String>ExplodingGroundTile_Triggered 48 689</String>
+        <String>ExplodingGroundTile_Triggered 49 697</String>
+        <String>ExplodingGroundTile_Triggered 51 661</String>
+        <String>ExplodingGroundTile_Triggered 50 811</String>
+        <String>ExplodingGroundTile_Triggered 44 928</String>
+        <String>ExplodingGroundTile_Triggered 45 321</String>
+        <String>ExplodingGroundTile_Triggered 47 151</String>
+        <String>ExplodingGroundTile_Triggered 48 344</String>
+        <String>ExplodingGroundTile_Triggered 49 497</String>
+        <String>PositionMarker 24 721</String>
+        <String>ExplodingGroundTile_Triggered 50 159</String>
+        <String>ExplodingGroundTile_Triggered 46 843</String>
+        <String>ExplodingGroundTile_Triggered 62 493</String>
+        <String>ExplodingGroundTile_Triggered 62 493</String>
+        <String>ExplodingGroundTile_Triggered 63 707</String>
+        <String>Switchable_Blockade_Base 118 786</String>
+        <String>Switchable_Blockade_Base 114 926</String>
+    </Part>
+    <Part>
+        <Type>ExplodingGroundTile_Triggered</Type>
+        <Transform>
+            <X>-9</X>
+            <Y>1</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+        <UniqueName>ExplodingGroundTile_Triggered 48 689</UniqueName>
+    </Part>
+    <Part>
+        <Type>ExplodingGroundTile_Triggered</Type>
+        <Transform>
+            <X>-9</X>
+            <Y>0</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+        <UniqueName>ExplodingGroundTile_Triggered 49 697</UniqueName>
+    </Part>
+    <Part>
+        <Type>ExplodingGroundTile_Triggered</Type>
+        <Transform>
+            <X>-9</X>
+            <Y>-2</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+        <UniqueName>ExplodingGroundTile_Triggered 50 811</UniqueName>
+    </Part>
+    <Part>
+        <Type>ExplodingGroundTile_Triggered</Type>
+        <Transform>
+            <X>-9</X>
+            <Y>-1</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+        <UniqueName>ExplodingGroundTile_Triggered 51 661</UniqueName>
+    </Part>
+    <Part>
+        <Type>Goal</Type>
+        <Transform>
+            <X>-6</X>
+            <Y>-1</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </Part>
+    <Part>
+        <Type>Spawn</Type>
+        <Transform>
+            <X>-3</X>
+            <Y>-8</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </Part>
+    <Part>
+        <Type>Wall_1x5</Type>
+        <Transform>
+            <X>-10</X>
+            <Y>1</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </Part>
+    <Part>
+        <Type>Wall_1x5</Type>
+        <Transform>
+            <X>-8</X>
+            <Y>-1</Y>
+            <Z>0</Z>
+            <RotZ>180</RotZ>
+            <Scale>1</Scale>
+        </Transform>
+    </Part>
+    <Part>
+        <Type>Wall_1</Type>
+        <Transform>
+            <X>-10</X>
+            <Y>-3</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </Part>
+    <Part>
+        <Type>Wall_1</Type>
+        <Transform>
+            <X>-11</X>
+            <Y>-2</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </Part>
+    <Part>
+        <Type>Wall_1</Type>
+        <Transform>
+            <X>-10</X>
+            <Y>-4</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </Part>
+    <Part>
+        <Type>Wall_1</Type>
+        <Transform>
+            <X>-8</X>
+            <Y>-4</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </Part>
+    <Part>
+        <Type>Wall_1</Type>
+        <Transform>
+            <X>-8</X>
+            <Y>4</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </Part>
+    <Part>
+        <Type>Wall_1</Type>
+        <Transform>
+            <X>-8</X>
+            <Y>3</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </Part>
+    <Part>
+        <Type>Wall_1</Type>
+        <Transform>
+            <X>-7</X>
+            <Y>3</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </Part>
+    <Part>
+        <Type>Wall_1</Type>
+        <Transform>
+            <X>-7</X>
+            <Y>2</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </Part>
+    <Part>
+        <Type>Wall_1</Type>
+        <Transform>
+            <X>-7</X>
+            <Y>2</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </Part>
+    <Part>
+        <Type>Wall_1</Type>
+        <Transform>
+            <X>-7</X>
+            <Y>1</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </Part>
+    <Part>
+        <Type>Wall_1</Type>
+        <Transform>
+            <X>-10</X>
+            <Y>5</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </Part>
+    <Part>
+        <Type>Wall_1</Type>
+        <Transform>
+            <X>-10</X>
+            <Y>4</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </Part>
+    <Part>
+        <Type>Wall_1</Type>
+        <Transform>
+            <X>-10</X>
+            <Y>8</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </Part>
+    <Part>
+        <Type>Wall_1</Type>
+        <Transform>
+            <X>-10</X>
+            <Y>9</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </Part>
+    <Part>
+        <Type>Wall_1</Type>
+        <Transform>
+            <X>-9</X>
+            <Y>9</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </Part>
+    <Part>
+        <Type>Wall_1</Type>
+        <Transform>
+            <X>-8</X>
+            <Y>9</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </Part>
+    <Part>
+        <Type>Wall_1</Type>
+        <Transform>
+            <X>-8</X>
+            <Y>7</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </Part>
+    <Part>
+        <Type>Wall_1</Type>
+        <Transform>
+            <X>-6</X>
+            <Y>7</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </Part>
+    <Part>
+        <Type>Wall_1</Type>
+        <Transform>
+            <X>-8</X>
+            <Y>6</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </Part>
+    <Part>
+        <Type>ExplodingGroundTile_Triggered</Type>
+        <Transform>
+            <X>-9</X>
+            <Y>2</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+        <UniqueName>ExplodingGroundTile_Triggered 44 928</UniqueName>
+    </Part>
+    <Part>
+        <Type>ExplodingGroundTile_Triggered</Type>
+        <Transform>
+            <X>-9</X>
+            <Y>3</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+        <UniqueName>ExplodingGroundTile_Triggered 45 321</UniqueName>
+    </Part>
+    <Part>
+        <Type>ExplodingGroundTile_Triggered</Type>
+        <Transform>
+            <X>-9</X>
+            <Y>4</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+        <UniqueName>ExplodingGroundTile_Triggered 46 843</UniqueName>
+    </Part>
+    <Part>
+        <Type>ExplodingGroundTile_Triggered</Type>
+        <Transform>
+            <X>-9</X>
+            <Y>5</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+        <UniqueName>ExplodingGroundTile_Triggered 47 151</UniqueName>
+    </Part>
+    <Part>
+        <Type>ExplodingGroundTile_Triggered</Type>
+        <Transform>
+            <X>-9</X>
+            <Y>6</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+        <UniqueName>ExplodingGroundTile_Triggered 48 344</UniqueName>
+    </Part>
+    <Part>
+        <Type>ExplodingGroundTile_Triggered</Type>
+        <Transform>
+            <X>-9</X>
+            <Y>7</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+        <UniqueName>ExplodingGroundTile_Triggered 49 497</UniqueName>
+    </Part>
+    <Part>
+        <Type>ExplodingGroundTile_Triggered</Type>
+        <Transform>
+            <X>-9</X>
+            <Y>8</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+        <UniqueName>ExplodingGroundTile_Triggered 50 159</UniqueName>
+    </Part>
+    <Part>
+        <Type>ExplodingGroundTile_Triggered</Type>
+        <Transform>
+            <X>-9</X>
+            <Y>-3</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+        <UniqueName>ExplodingGroundTile_Triggered 62 493</UniqueName>
+    </Part>
+    <Part>
+        <Type>ExplodingGroundTile_Triggered</Type>
+        <Transform>
+            <X>-9</X>
+            <Y>-4</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+        <UniqueName>ExplodingGroundTile_Triggered 63 707</UniqueName>
+    </Part>
+    <Part>
+        <Type>Wall_1x3</Type>
+        <Transform>
+            <X>-10</X>
+            <Y>-6</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </Part>
+    <Part>
+        <Type>Wall_1</Type>
+        <Transform>
+            <X>-7</X>
+            <Y>-4</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </Part>
+    <Part>
+        <Type>Wall_1</Type>
+        <Transform>
+            <X>-9</X>
+            <Y>-6</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </Part>
+    <Part>
+        <Type>Wall_1</Type>
+        <Transform>
+            <X>-8</X>
+            <Y>-6</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </Part>
+    <Part>
+        <Type>Wall_1</Type>
+        <Transform>
+            <X>-7</X>
+            <Y>-6</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </Part>
+    <Part>
+        <Type>Wall_1</Type>
+        <Transform>
+            <X>-6</X>
+            <Y>-4</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </Part>
+    <Part>
+        <Type>Wall_1</Type>
+        <Transform>
+            <X>-5</X>
+            <Y>-6</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </Part>
+    <Part>
+        <Type>Wall_1</Type>
+        <Transform>
+            <X>-4</X>
+            <Y>-4</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </Part>
+    <Part>
+        <Type>Wall_1</Type>
+        <Transform>
+            <X>-2</X>
+            <Y>-3</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </Part>
+    <Part>
+        <Type>Wall_1</Type>
+        <Transform>
+            <X>-4</X>
+            <Y>-6</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </Part>
+    <Part>
+        <Type>Wall_1</Type>
+        <Transform>
+            <X>0</X>
+            <Y>-7</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </Part>
+    <Part>
+        <Type>Wall_1</Type>
+        <Transform>
+            <X>1</X>
+            <Y>-6</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </Part>
+    <Part>
+        <Type>Wall_1</Type>
+        <Transform>
+            <X>2</X>
+            <Y>-6</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </Part>
+    <Part>
+        <Type>Signaler</Type>
+        <Transform>
+            <X>-12</X>
+            <Y>-6</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+        <UniqueName>Signaler 1 343</UniqueName>
+        <String>ExplodingGroundTile_Triggered 48 689</String>
+        <String>ExplodingGroundTile_Triggered 49 697</String>
+        <String>ExplodingGroundTile_Triggered 51 661</String>
+        <String>ExplodingGroundTile_Triggered 50 811</String>
+        <String>ExplodingGroundTile_Triggered 44 928</String>
+        <String>ExplodingGroundTile_Triggered 45 321</String>
+        <String>ExplodingGroundTile_Triggered 47 151</String>
+        <String>ExplodingGroundTile_Triggered 48 344</String>
+        <String>ExplodingGroundTile_Triggered 49 497</String>
+        <String>PositionMarker 24 721</String>
+        <String>ExplodingGroundTile_Triggered 50 159</String>
+        <String>ExplodingGroundTile_Triggered 46 843</String>
+        <String>ExplodingGroundTile_Triggered 62 493</String>
+        <String>ExplodingGroundTile_Triggered 62 493</String>
+        <String>ExplodingGroundTile_Triggered 63 707</String>
+        <String>Switchable_Blockade_Base 116 283</String>
+        <String>Switchable_Blockade_Base 120 868</String>
+        <String>Switchable_Blockade_Base 115 209</String>
+    </Part>
+    <Part>
+        <Type>Transporter</Type>
+        <Transform>
+            <X>-9</X>
+            <Y>8</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+        <UniqueName>Transporter 2 999</UniqueName>
+        <String>Signaler 1 343</String>
+        <String>Transporter 2 999</String>
+        <String>Transporter 11 260</String>
+    </Part>
+    <Part>
+        <Type>Signaler</Type>
+        <Transform>
+            <X>-12</X>
+            <Y>-8</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+        <UniqueName>Signaler 3 93</UniqueName>
+        <String>ExplodingGroundTile_Triggered 48 689</String>
+        <String>ExplodingGroundTile_Triggered 49 697</String>
+        <String>ExplodingGroundTile_Triggered 51 661</String>
+        <String>ExplodingGroundTile_Triggered 50 811</String>
+        <String>ExplodingGroundTile_Triggered 44 928</String>
+        <String>ExplodingGroundTile_Triggered 45 321</String>
+        <String>ExplodingGroundTile_Triggered 47 151</String>
+        <String>ExplodingGroundTile_Triggered 48 344</String>
+        <String>ExplodingGroundTile_Triggered 49 497</String>
+        <String>PositionMarker 24 721</String>
+        <String>ExplodingGroundTile_Triggered 50 159</String>
+        <String>ExplodingGroundTile_Triggered 46 843</String>
+        <String>ExplodingGroundTile_Triggered 62 493</String>
+        <String>ExplodingGroundTile_Triggered 62 493</String>
+        <String>ExplodingGroundTile_Triggered 63 707</String>
+        <String>Switchable_Blockade_Base 119 620</String>
+        <String>Switchable_Blockade_Base 117 408</String>
+        <String>Switchable_Blockade_Base 114 926</String>
+    </Part>
+    <Part>
+        <Type>Transporter</Type>
+        <Transform>
+            <X>-8</X>
+            <Y>2</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+        <UniqueName>Transporter 15 807</UniqueName>
+        <String>Signaler 3 93</String>
+        <String>Transporter 11 260</String>
+        <String>PositionMarker 24 721</String>
+        <String>ExplodingGroundTile_Triggered 50 159</String>
+        <String>Transporter 2 999</String>
+    </Part>
+    <Part>
+        <Type>SlowMine</Type>
+        <Transform>
+            <X>-10</X>
+            <Y>6</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </Part>
+    <Part>
+        <Type>Wall_1</Type>
+        <Transform>
+            <X>-3</X>
+            <Y>0</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </Part>
+    <Part>
+        <Type>Wall_1</Type>
+        <Transform>
+            <X>-2</X>
+            <Y>-2</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </Part>
+    <Part>
+        <Type>Wall_1</Type>
+        <Transform>
+            <X>-1</X>
+            <Y>0</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </Part>
+    <Part>
+        <Type>Wall_1</Type>
+        <Transform>
+            <X>0</X>
+            <Y>0</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </Part>
+    <Part>
+        <Type>Pickup_Damage</Type>
+        <Transform>
+            <X>1</X>
+            <Y>-1</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </Part>
+    <Part>
+        <Type>ExplodingGroundTile_Triggered</Type>
+        <Transform>
+            <X>-3</X>
+            <Y>-1</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+        <UniqueName>ExplodingGroundTile_Triggered 71 390</UniqueName>
+    </Part>
+    <Part>
+        <Type>ExplodingGroundTile_Triggered</Type>
+        <Transform>
+            <X>-3</X>
+            <Y>-2</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+        <UniqueName>ExplodingGroundTile_Triggered 72 593</UniqueName>
+    </Part>
+    <Part>
+        <Type>ExplodingGroundTile_Triggered</Type>
+        <Transform>
+            <X>-3</X>
+            <Y>-3</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+        <UniqueName>ExplodingGroundTile_Triggered 73 587</UniqueName>
+    </Part>
+    <Part>
+        <Type>ExplodingGroundTile_Triggered</Type>
+        <Transform>
+            <X>-3</X>
+            <Y>-4</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+        <UniqueName>ExplodingGroundTile_Triggered 74 152</UniqueName>
+    </Part>
+    <Part>
+        <Type>ExplodingGroundTile_Triggered</Type>
+        <Transform>
+            <X>-3</X>
+            <Y>-5</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+        <UniqueName>ExplodingGroundTile_Triggered 75 781</UniqueName>
+    </Part>
+    <Part>
+        <Type>ExplodingGroundTile_Triggered</Type>
+        <Transform>
+            <X>-4</X>
+            <Y>-5</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+        <UniqueName>ExplodingGroundTile_Triggered 76 486</UniqueName>
+    </Part>
+    <Part>
+        <Type>ExplodingGroundTile_Triggered</Type>
+        <Transform>
+            <X>-5</X>
+            <Y>-5</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+        <UniqueName>ExplodingGroundTile_Triggered 77 723</UniqueName>
+    </Part>
+    <Part>
+        <Type>ExplodingGroundTile_Triggered</Type>
+        <Transform>
+            <X>-6</X>
+            <Y>-5</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+        <UniqueName>ExplodingGroundTile_Triggered 78 579</UniqueName>
+    </Part>
+    <Part>
+        <Type>ExplodingGroundTile_Triggered</Type>
+        <Transform>
+            <X>-7</X>
+            <Y>-5</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+        <UniqueName>ExplodingGroundTile_Triggered 79 359</UniqueName>
+    </Part>
+    <Part>
+        <Type>ExplodingGroundTile_Triggered</Type>
+        <Transform>
+            <X>-2</X>
+            <Y>-5</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+        <UniqueName>ExplodingGroundTile_Triggered 80 901</UniqueName>
+    </Part>
+    <Part>
+        <Type>ExplodingGroundTile_Triggered</Type>
+        <Transform>
+            <X>-1</X>
+            <Y>-5</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+        <UniqueName>ExplodingGroundTile_Triggered 81 110</UniqueName>
+    </Part>
+    <Part>
+        <Type>ExplodingGroundTile_Triggered</Type>
+        <Transform>
+            <X>0</X>
+            <Y>-5</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+        <UniqueName>ExplodingGroundTile_Triggered 82 938</UniqueName>
+    </Part>
+    <Part>
+        <Type>ExplodingGroundTile_Triggered</Type>
+        <Transform>
+            <X>1</X>
+            <Y>-5</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+        <UniqueName>ExplodingGroundTile_Triggered 83 359</UniqueName>
+    </Part>
+    <Part>
+        <Type>ExplodingGroundTile_Triggered</Type>
+        <Transform>
+            <X>2</X>
+            <Y>-5</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+        <UniqueName>ExplodingGroundTile_Triggered 84 160</UniqueName>
+    </Part>
+    <Part>
+        <Type>Wall_1</Type>
+        <Transform>
+            <X>3</X>
+            <Y>-4</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </Part>
+    <Part>
+        <Type>Wall_1</Type>
+        <Transform>
+            <X>4</X>
+            <Y>-5</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </Part>
+    <Part>
+        <Type>Wall_1</Type>
+        <Transform>
+            <X>0</X>
+            <Y>-10</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </Part>
+    <Part>
+        <Type>Wall_1</Type>
+        <Transform>
+            <X>-6</X>
+            <Y>-9</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </Part>
+    <Part>
+        <Type>Wall_1</Type>
+        <Transform>
+            <X>-6</X>
+            <Y>-8</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </Part>
+    <Part>
+        <Type>Signaler</Type>
+        <Transform>
+            <X>0</X>
+            <Y>-8</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+        <UniqueName>Signaler 120 400</UniqueName>
+        <String>ExplodingGroundTile_Triggered 71 390</String>
+        <String>ExplodingGroundTile_Triggered 72 593</String>
+        <String>ExplodingGroundTile_Triggered 73 587</String>
+        <String>ExplodingGroundTile_Triggered 74 152</String>
+        <String>ExplodingGroundTile_Triggered 74 152</String>
+        <String>ExplodingGroundTile_Triggered 79 359</String>
+        <String>ExplodingGroundTile_Triggered 78 579</String>
+        <String>ExplodingGroundTile_Triggered 77 723</String>
+        <String>ExplodingGroundTile_Triggered 77 723</String>
+        <String>ExplodingGroundTile_Triggered 76 486</String>
+        <String>ExplodingGroundTile_Triggered 75 781</String>
+        <String>ExplodingGroundTile_Triggered 80 901</String>
+        <String>ExplodingGroundTile_Triggered 81 110</String>
+        <String>ExplodingGroundTile_Triggered 82 938</String>
+        <String>ExplodingGroundTile_Triggered 83 359</String>
+        <String>ExplodingGroundTile_Triggered 84 160</String>
+        <String>Switchable_Blockade_Base 133 66</String>
+    </Part>
+    <Part>
+        <Type>Signaler</Type>
+        <Transform>
+            <X>2</X>
+            <Y>-8</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+        <UniqueName>Signaler 121 421</UniqueName>
+        <String>ExplodingGroundTile_Triggered 71 390</String>
+        <String>ExplodingGroundTile_Triggered 72 593</String>
+        <String>ExplodingGroundTile_Triggered 73 587</String>
+        <String>ExplodingGroundTile_Triggered 74 152</String>
+        <String>ExplodingGroundTile_Triggered 74 152</String>
+        <String>ExplodingGroundTile_Triggered 79 359</String>
+        <String>ExplodingGroundTile_Triggered 78 579</String>
+        <String>ExplodingGroundTile_Triggered 77 723</String>
+        <String>ExplodingGroundTile_Triggered 77 723</String>
+        <String>ExplodingGroundTile_Triggered 76 486</String>
+        <String>ExplodingGroundTile_Triggered 75 781</String>
+        <String>ExplodingGroundTile_Triggered 80 901</String>
+        <String>ExplodingGroundTile_Triggered 81 110</String>
+        <String>ExplodingGroundTile_Triggered 82 938</String>
+        <String>ExplodingGroundTile_Triggered 83 359</String>
+        <String>ExplodingGroundTile_Triggered 84 160</String>
+        <String>Switchable_Blockade_Base 133 66</String>
+    </Part>
+    <Part>
+        <Type>Transporter</Type>
+        <Transform>
+            <X>3</X>
+            <Y>-5</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+        <UniqueName>Transporter 118 625</UniqueName>
+        <String>Signaler 121 421</String>
+        <String>Transporter 118 625</String>
+        <String>Transporter 119 374</String>
+    </Part>
+    <Part>
+        <Type>Transporter</Type>
+        <Transform>
+            <X>-8</X>
+            <Y>-5</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+        <UniqueName>Transporter 119 374</UniqueName>
+        <String>Signaler 120 400</String>
+        <String>Transporter 119 374</String>
+        <String>Transporter 118 625</String>
+    </Part>
+    <Part>
+        <Type>Switchable_Blockade_Base</Type>
+        <Transform>
+            <X>-2</X>
+            <Y>-1</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+        <UniqueName>Switchable_Blockade_Base 133 66</UniqueName>
+        <Float>0</Float>
+    </Part>
+    <Part>
+        <Type>Wall_1</Type>
+        <Transform>
+            <X>1</X>
+            <Y>0</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </Part>
+    <Part>
+        <Type>Pickup_Damage</Type>
+        <Transform>
+            <X>0</X>
+            <Y>-1</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </Part>
+    <Part>
+        <Type>Wall_1</Type>
+        <Transform>
+            <X>-3</X>
+            <Y>8</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </Part>
+    <Part>
+        <Type>Pickup_Damage</Type>
+        <Transform>
+            <X>-1</X>
+            <Y>3</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </Part>
+    <Part>
+        <Type>PositionMarker</Type>
+        <Transform>
+            <X>-3</X>
+            <Y>4</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+        <UniqueName>PositionMarker 66 97</UniqueName>
+    </Part>
+    <Part>
+        <Type>Patrol_BackAndForth</Type>
+        <Transform>
+            <X>-3</X>
+            <Y>1</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+        <UniqueName>Patrol_BackAndForth 78 803</UniqueName>
+        <String>Patrol_BackAndForth 78 803</String>
+        <String>PositionMarker 66 97</String>
+    </Part>
+    <Part>
+        <Type>Patrol_BackAndForth</Type>
+        <Transform>
+            <X>-3</X>
+            <Y>3</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+        <UniqueName>Patrol_BackAndForth 90 875</UniqueName>
+        <String>Patrol_BackAndForth 90 875</String>
+        <String>PositionMarker 102 286</String>
+    </Part>
+    <Part>
+        <Type>PositionMarker</Type>
+        <Transform>
+            <X>-6</X>
+            <Y>3</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+        <UniqueName>PositionMarker 102 286</UniqueName>
+        <Float>0</Float>
+    </Part>
+    <Part>
+        <Type>Switchable_Blockade_Base</Type>
+        <Transform>
+            <X>-4</X>
+            <Y>6</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+        <UniqueName>Switchable_Blockade_Base 114 926</UniqueName>
+        <Float>0</Float>
+    </Part>
+    <Part>
+        <Type>Switchable_Blockade_Base</Type>
+        <Transform>
+            <X>-5</X>
+            <Y>4</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+        <UniqueName>Switchable_Blockade_Base 115 209</UniqueName>
+        <Float>0</Float>
+    </Part>
+    <Part>
+        <Type>Switchable_Blockade_Base</Type>
+        <Transform>
+            <X>-7</X>
+            <Y>5</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+        <UniqueName>Switchable_Blockade_Base 116 283</UniqueName>
+        <Float>0</Float>
+    </Part>
+    <Part>
+        <Type>Switchable_Blockade_Base</Type>
+        <Transform>
+            <X>-2</X>
+            <Y>3</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+        <UniqueName>Switchable_Blockade_Base 117 408</UniqueName>
+        <Float>0</Float>
+    </Part>
+    <Part>
+        <Type>Switchable_Blockade_Base</Type>
+        <Transform>
+            <X>-4</X>
+            <Y>2</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+        <UniqueName>Switchable_Blockade_Base 118 786</UniqueName>
+        <Float>0</Float>
+    </Part>
+    <Part>
+        <Type>Switchable_Blockade_Base</Type>
+        <Transform>
+            <X>-6</X>
+            <Y>1</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+        <UniqueName>Switchable_Blockade_Base 119 620</UniqueName>
+        <Float>0</Float>
+    </Part>
+    <Part>
+        <Type>Switchable_Blockade_Base</Type>
+        <Transform>
+            <X>-7</X>
+            <Y>-2</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+        <UniqueName>Switchable_Blockade_Base 120 868</UniqueName>
+        <Float>0</Float>
+    </Part>
+    <Part>
+        <Type>Switchable_Blockade_Base</Type>
+        <Transform>
+            <X>-5</X>
+            <Y>-3</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+        <UniqueName>Switchable_Blockade_Base 121 611</UniqueName>
+        <Float>0</Float>
+    </Part>
+    <Part>
+        <Type>Wall_1x5</Type>
+        <Transform>
+            <X>-3</X>
+            <Y>-10</Y>
+            <Z>0</Z>
+            <RotZ>270</RotZ>
+            <Scale>1</Scale>
+        </Transform>
+    </Part>
+    <Part>
+        <Type>Wall_1x5</Type>
+        <Transform>
+            <X>0</X>
+            <Y>3</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </Part>
+    <Part>
+        <Type>Wall_1x5</Type>
+        <Transform>
+            <X>-5</X>
+            <Y>9</Y>
+            <Z>0</Z>
+            <RotZ>90</RotZ>
+            <Scale>1</Scale>
+        </Transform>
+    </Part>
+    <Part>
+        <Type>Wall_1x5</Type>
+        <Transform>
+            <X>4</X>
+            <Y>-8</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </Part>
+    <Part>
+        <Type>Wall_1x5</Type>
+        <Transform>
+            <X>0</X>
+            <Y>-4</Y>
+            <Z>0</Z>
+            <RotZ>90</RotZ>
+            <Scale>1</Scale>
+        </Transform>
+    </Part>
+    <Part>
+        <Type>Wall_1x3</Type>
+        <Transform>
+            <X>-4</X>
+            <Y>-2</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </Part>
+    <Part>
+        <Type>Wall_1x3</Type>
+        <Transform>
+            <X>-3</X>
+            <Y>6</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </Part>
+    <Part>
+        <Type>Wall_1x3</Type>
+        <Transform>
+            <X>-11</X>
+            <Y>6</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </Part>
+    <Part>
+        <Type>Wall_1x3</Type>
+        <Transform>
+            <X>-6</X>
+            <Y>-7</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </Part>
+    <Part>
+        <Type>Wall_1x3</Type>
+        <Transform>
+            <X>-2</X>
+            <Y>-6</Y>
+            <Z>0</Z>
+            <RotZ>270</RotZ>
+            <Scale>1</Scale>
+        </Transform>
+    </Part>
+    <Part>
+        <Type>Wall_1x3</Type>
+        <Transform>
+            <X>2</X>
+            <Y>-10</Y>
+            <Z>0</Z>
+            <RotZ>90</RotZ>
+            <Scale>1</Scale>
+        </Transform>
+    </Part>
+    <Part>
+        <Type>Wall_1x1_Corner</Type>
+        <Transform>
+            <X>4</X>
+            <Y>-4</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </Part>
+    <Part>
+        <Type>Wall_1x1_Corner</Type>
+        <Transform>
+            <X>-2</X>
+            <Y>5</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </Part>
+    <Part>
+        <Type>Wall_1x1_Corner</Type>
+        <Transform>
+            <X>-11</X>
+            <Y>-1</Y>
+            <Z>0</Z>
+            <RotZ>90</RotZ>
+            <Scale>1</Scale>
+        </Transform>
+    </Part>
+    <Part>
+        <Type>Wall_1x1_Corner</Type>
+        <Transform>
+            <X>-6</X>
+            <Y>-10</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </Part>
+    <Part>
+        <Type>Wall_1x1_Corner</Type>
+        <Transform>
+            <X>1</X>
+            <Y>-7</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </Part>
+    <Part>
+        <Type>Wall_1x1_Corner_2</Type>
+        <Transform>
+            <X>-11</X>
+            <Y>-3</Y>
+            <Z>0</Z>
+            <RotZ>180</RotZ>
+            <Scale>1</Scale>
+        </Transform>
+    </Part>
+    <Part>
+        <Type>Wall_1x1_Corner_2</Type>
+        <Transform>
+            <X>-4</X>
+            <Y>0</Y>
+            <Z>0</Z>
+            <RotZ>90</RotZ>
+            <Scale>1</Scale>
+        </Transform>
+    </Part>
+    <Part>
+        <Type>Wall_1x3</Type>
+        <Transform>
+            <X>2</X>
+            <Y>-1</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </Part>
+    <Part>
+        <Type>Wall_1x3</Type>
+        <Transform>
+            <X>0</X>
+            <Y>-2</Y>
+            <Z>0</Z>
+            <RotZ>270</RotZ>
+            <Scale>1</Scale>
+        </Transform>
+    </Part>
+    <Part>
+        <Type>Wall_1_WithLittleBlocks</Type>
+        <Transform>
+            <X>-1</X>
+            <Y>-7</Y>
+            <Z>0</Z>
+            <RotZ>180</RotZ>
+            <Scale>1</Scale>
+        </Transform>
+    </Part>
+    <Part>
+        <Type>Wall_1_WithLittleBlocks</Type>
+        <Transform>
+            <X>-2</X>
+            <Y>0</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </Part>
+    <Part>
+        <Type>Wall_1_WithLittleBlocks</Type>
+        <Transform>
+            <X>-5</X>
+            <Y>-4</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </Part>
+    <Part>
+        <Type>Wall_1_WithLittleBlocks</Type>
+        <Transform>
+            <X>-10</X>
+            <Y>7</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </Part>
+    <Part>
+        <Type>Wall_1_WithLittleBlocks</Type>
+        <Transform>
+            <X>-7</X>
+            <Y>7</Y>
+            <Z>0</Z>
+            <RotZ>90</RotZ>
+            <Scale>1</Scale>
+        </Transform>
+    </Part>
+    <Part>
+        <Type>Wall_1_WithLittleBlocks</Type>
+        <Transform>
+            <X>-8</X>
+            <Y>5</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </Part>
+    <Part>
+        <Type>Wall_1_WithLittleBlocks</Type>
+        <Transform>
+            <X>-1</X>
+            <Y>5</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </Part>
+</Labyrinth>

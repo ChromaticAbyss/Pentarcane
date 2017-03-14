@@ -1,0 +1,47 @@
+<!-- Parameters
+Ints
+
+Floats
+[0] Percentage of bar
+
+Strings
+
+-->
+
+
+<UiElement>
+	<Transform2D>
+		<X>0.0</X>
+		<Y>-0.8</Y>
+		<SizeX>0.30</SizeX>
+		<SizeY>0.035</SizeY>
+	</Transform2D>
+	<Image>
+		<ImageFile>../Data/2D/Grey.png</ImageFile>
+	</Image>
+	
+
+	<UiElement>
+		<Transform2D>
+			<X>-0.30</X>
+			<Y>0.0</Y>
+			<SizeX>0.29</SizeX>
+			<SizeY>0.03</SizeY>
+			<UseFloatParamForSizeX>0</UseFloatParamForSizeX><!--use floating point param[0] to scale the length-->
+		</Transform2D>		
+		<Image>
+			<ImageFile>../Data/2D/Green.png</ImageFile>
+			<Offset>
+				<Horizontal>Left</Horizontal>
+				<Vertical>Center</Vertical>
+			</Offset>
+		</Image>
+	</UiElement>	
+	
+
+</UiElement>
+
+
+
+
+	

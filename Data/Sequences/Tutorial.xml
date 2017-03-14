@@ -1,0 +1,54 @@
+<Sequence>
+	<DisplayName>Tutorial</DisplayName>
+	<Description>Train your arcane powers on dummies to earn your guild membership.</Description>
+	<Description>Fireball: Potentially hits every oponent.</Description>
+	<Description>Lightning Bolt: Moves fast, hinders enemy spellcasters.</Description>
+	<Description>Frozen Star: Deals more damage the more projectiles you bring to the goal.</Description>
+	<Description>Life Drain: If you bring the projectile back it not only damages the enemy but also heals you.</Description>
+	<Description>Legend has it that there is a fifth Arcane spell that humans can master.</Description><!--More than 6 lines will not be displayed correctly when a (completed) qualifier is added.-->
+	
+	<Soundtrack>Lightless Dawn.mp3</Soundtrack>
+	
+	<Reward>Mages_Certificate</Reward><!--Unlock this thing for the player. It allows accessing additional sequences-->
+	<CompleteRequirement>Mages_Certificate</CompleteRequirement><!--Usually one of the rewards!-->
+		
+	<Art3D>
+		<ModelFile>../Data/3D/LabyrinthParts/Target.obj</ModelFile>
+		<TextureFile>../Data/2D/Blue.png</TextureFile>
+		<Transform>
+			<RotX>90</RotX>
+			<Scale>1.7</Scale>	
+		</Transform>			
+	</Art3D>	
+	
+	
+	<Fight>
+		<Condition>
+			<Type>ExactName</Type>
+			<StringValue>Tutorial1</StringValue>
+		</Condition>
+		<Stage>../Data/Stages/Tutorial.xml</Stage><!--A stage is just a bunch of models and positions at which to place enemy models-->
+		<Description>...</Description>
+	</Fight>
+	
+	<Fight>
+		<Condition>
+			<Type>ExactName</Type>
+			<StringValue>Tutorial2</StringValue>
+		</Condition>
+		<Stage>../Data/Stages/Tutorial.xml</Stage><!--A stage is just a bunch of models and positions at which to place enemy models-->
+		<Description>...</Description>
+	</Fight>
+	
+	<Fight>
+		<Condition>
+			<Type>ExactName</Type>
+			<StringValue>Tutorial3</StringValue>
+		</Condition>
+		<Stage>../Data/Stages/Tutorial.xml</Stage><!--A stage is just a bunch of models and positions at which to place enemy models-->
+		<Description>...</Description>
+	</Fight>
+	
+	
+</Sequence>
+	

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GroupDefinitions>
+
+	
+	
+	<GroupDefinition>
+		<InternalName>ColdfireCavern_1</InternalName>
+		<Likelihood>100</Likelihood>
+		<PowerRating>120</PowerRating>
+		<Monster>Thregg</Monster>
+		<Monster>Thregg_Strong</Monster>
+		<Tag>Nonhuman</Tag>
+		<Tag>ColdfireCavern</Tag>
+	</GroupDefinition>		
+	
+	
+
+
+	
+</GroupDefinitions>

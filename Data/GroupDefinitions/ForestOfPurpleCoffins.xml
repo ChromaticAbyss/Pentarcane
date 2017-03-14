@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GroupDefinitions>
+
+	
+	
+	<GroupDefinition>
+		<InternalName>FoPC_1</InternalName>
+		<Likelihood>100</Likelihood>
+		<PowerRating>70</PowerRating>
+		<Monster>Spook</Monster>
+		<Tag>Nonhuman</Tag>
+		<Tag>ForestOfPurpleCoffins</Tag>
+	</GroupDefinition>		
+	
+	
+	<GroupDefinition>
+		<InternalName>FoPC_2</InternalName>
+		<Likelihood>100</Likelihood>
+		<PowerRating>90</PowerRating>
+		<Monster>Spectre</Monster>
+		<Tag>Nonhuman</Tag>
+		<Tag>ForestOfPurpleCoffins</Tag>
+	</GroupDefinition>		
+	
+	
+	<GroupDefinition>
+		<InternalName>FoPC_3</InternalName>
+		<Likelihood>100</Likelihood>
+		<PowerRating>100</PowerRating>
+		<Monster>Wraith</Monster>
+		<Tag>Nonhuman</Tag>
+		<Tag>ForestOfPurpleCoffins</Tag>
+	</GroupDefinition>		
+	
+	<GroupDefinition>
+		<InternalName>FoPC_4</InternalName>
+		<Likelihood>100</Likelihood>
+		<PowerRating>100</PowerRating>
+		<Monster>Spectre</Monster>
+		<Monster>Spook</Monster>
+		<Monster>Spook</Monster>
+		<Tag>Nonhuman</Tag>
+		<Tag>ForestOfPurpleCoffins</Tag>
+	</GroupDefinition>		
+	
+	<!--
+		Shrieking Herald
+		Voiceless Preacher
+		Choir of Sinners	
+	-->
+</GroupDefinitions>

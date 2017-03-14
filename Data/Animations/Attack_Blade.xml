@@ -1,0 +1,24 @@
+<FlipbookAnimation>
+	<!--For derived class "FlipbookAnimation"-->
+	<FileName>../Data/2D/Animations/Blade_0.png</FileName>
+	<FileName>../Data/2D/Animations/Blade_1.png</FileName>
+	<FileName>../Data/2D/Animations/Blade_2.png</FileName>
+	<FileName>../Data/2D/Animations/Blade_3.png</FileName>
+	<FileName>../Data/2D/Animations/Blade_4.png</FileName>
+
+
+
+	<Transform2D>
+		<X>0.0</X>
+		<Y>0.1</Y>
+		<SizeX>1.0</SizeX>
+		<SizeY>1.0</SizeY>
+		<SizeYRelativeToX>True</SizeYRelativeToX>
+	</Transform2D>
+	
+	
+	<!--For base class "Animation"-->
+	<Frames>20</Frames>
+	<Blocking>1</Blocking>
+	<Sound>Slash.ogg</Sound>
+</FlipbookAnimation>

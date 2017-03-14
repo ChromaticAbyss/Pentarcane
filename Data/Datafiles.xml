@@ -1,0 +1,33 @@
+<Datafiles>
+	<GroupDefinitions>GroupDefinitions/GroupDefinitions1.xml</GroupDefinitions>
+	<GroupDefinitions>GroupDefinitions/Luna_Groups.xml</GroupDefinitions>
+	<GroupDefinitions>GroupDefinitions/MonstersInTheFields.xml</GroupDefinitions>
+	<GroupDefinitions>GroupDefinitions/ForestOfPurpleCoffins.xml</GroupDefinitions>
+	<GroupDefinitions>GroupDefinitions/Pyramid.xml</GroupDefinitions>
+	<GroupDefinitions>GroupDefinitions/CapturedCity.xml</GroupDefinitions>
+	<GroupDefinitions>GroupDefinitions/ColdfireCavern.xml</GroupDefinitions>
+	
+
+	<MonsterDefinitions>MonsterDefinitions/Monsters1.xml</MonsterDefinitions>
+	<MonsterDefinitions>MonsterDefinitions/Lunas.xml</MonsterDefinitions>
+	<MonsterDefinitions>MonsterDefinitions/MonstersInTheFields.xml</MonsterDefinitions>
+	<MonsterDefinitions>MonsterDefinitions/Spectres.xml</MonsterDefinitions>
+	<MonsterDefinitions>MonsterDefinitions/CapturedCity.xml</MonsterDefinitions>
+	<MonsterDefinitions>MonsterDefinitions/ColdfireCavern.xml</MonsterDefinitions>
+
+	<LabyrinthPartDefinitions>LabyrinthParts/PartDefinitions1.xml</LabyrinthPartDefinitions>
+	<LabyrinthPartDefinitions>LabyrinthParts/Walls.xml</LabyrinthPartDefinitions>
+	<LabyrinthPartDefinitions>LabyrinthParts/EnemyParts.xml</LabyrinthPartDefinitions>
+	<LabyrinthPartDefinitions>LabyrinthParts/Pickups.xml</LabyrinthPartDefinitions>
+
+
+	<Sequence>Sequences/TestSequence.xml</Sequence>
+	<Sequence>Sequences/Tutorial.xml</Sequence>
+	<Sequence>Sequences/MonstersInTheFields.xml</Sequence>
+	<Sequence>Sequences/MagicTower.xml</Sequence>
+	<Sequence>Sequences/ForestOfPurpleCoffins.xml</Sequence>
+	<Sequence>Sequences/Pyramid.xml</Sequence>
+	<Sequence>Sequences/CapturedCity_Infiltrate.xml</Sequence>
+	<Sequence>Sequences/CapturedCity_Liberate.xml</Sequence>
+	<Sequence>Sequences/ColdfireCavern.xml</Sequence>
+</Datafiles>

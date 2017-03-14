@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MonsterDefinitions>
+
+
+	
+	
+    <MonsterDefinition>
+		<InternalName>Luna_Blue</InternalName>
+		<Name>Azure Luna</Name>
+		<!--Also known as the weakest, most annoying monster you definitely need a mage to get rid of-->
+		<Stats>
+			<Health>2</Health>
+			<Attack>2</Attack>
+			<Armor>0</Armor>
+			<CastChance>20</CastChance>
+		</Stats>
+		<Image>../Data/2D/Monsters/Luna_Blue.png</Image>
+		<ImageTransform>
+			<SizeX>0.4</SizeX>
+			<SizeY>1.0</SizeY>
+			<SizeYRelativeToX>True</SizeYRelativeToX>
+		</ImageTransform>
+		<Labyrinth>../Data/Labyrinths/Luna_Blue.xml</Labyrinth>		
+		
+		<Cast>
+			<InternalName>Luna_Waterblessing</InternalName>
+			<!--
+			<Segment>
+				<Type>UiAnimation</Type> 
+				<StringValue>Blah</StringValue>
+			</Segment>
+			-->
+			<Segment>
+				<Type>ChangeStats</Type>
+				<Targets>Self</Targets>
+				<Value>1</Value><!--Hp-->
+				<Value>0</Value><!--attack-->
+				<Value>1</Value><!--armor-->
+				<Value>0</Value><!--cast chance-->
+			</Segment>
+			<Segment>
+				<Type>Finish</Type>
+			</Segment>		
+		</Cast>
+		<Cast>
+			<InternalName>Luna_Freeze</InternalName>
+			<!--
+			<Segment>
+				<Type>UiAnimation</Type> 
+				<StringValue>Blah</StringValue>
+			</Segment>
+			-->
+			<Segment>
+				<Type>ApplyEffect</Type>
+				<Targets>Player</Targets>
+				<StringValue>SlowerLabyrinthMovement</StringValue>
+			</Segment>
+			<Segment>
+				<Type>Finish</Type>
+			</Segment>		
+		</Cast>
+		
+	</MonsterDefinition>
+	
+
+	
+
+	
+
+    <MonsterDefinition>
+		<InternalName>Luna_Red</InternalName>
+		<Name>Carmine Luna</Name>
+		<!--Also known as the weakest, most annoying monster you definitely need a mage to get rid of-->
+		<Stats>
+			<Health>2</Health>
+			<Attack>3</Attack>
+			<Armor>0</Armor>
+			<CastChance>15</CastChance>
+		</Stats>
+		<Image>../Data/2D/Monsters/Luna_Red.png</Image>
+		<ImageTransform>
+			<SizeX>0.4</SizeX>
+			<SizeY>1.0</SizeY>
+			<SizeYRelativeToX>True</SizeYRelativeToX>
+		</ImageTransform>
+		<Labyrinth>../Data/Labyrinths/Luna_Red.xml</Labyrinth>		
+	
+		<Cast>
+			<InternalName>Luna_Fireblessing</InternalName>
+			<Segment>
+				<Type>FlipbookAnimation</Type>
+				<Targets>Self</Targets>
+				<StringValue>../Data/Animations/Flipbook_Firesparks.xml</StringValue>
+			</Segment>
+			<Segment>
+				<Type>ChangeStats</Type>
+				<Targets>Self</Targets>
+				<Value>0</Value><!--Hp-->
+				<Value>1</Value><!--attack-->
+				<Value>0</Value><!--armor-->
+				<Value>0</Value><!--cast chance-->
+			</Segment>
+			<Segment>
+				<Type>Finish</Type>
+			</Segment>		
+		</Cast>
+		<Cast>
+			<InternalName>Luna_Ignite</InternalName>
+			<Segment>
+				<Type>FlipbookAnimation</Type>
+				<Targets>Self</Targets>
+				<StringValue>../Data/Animations/Flipbook_Firesparks.xml</StringValue>
+			</Segment>
+			<!--Attack player with increased damage-->
+			<Segment>
+				<Type>Finish</Type>
+			</Segment>		
+		</Cast>		
+	</MonsterDefinition>
+	
+	
+	
+    <MonsterDefinition>
+		<InternalName>Luna_Yellow</InternalName>
+		<Name>Sulfur Luna</Name>
+		<!--Also known as the weakest, most annoying monster you definitely need a mage to get rid of-->
+		<Stats>
+			<Health>2</Health>
+			<Attack>3</Attack>
+			<Armor>0</Armor>
+			<CastChance>15</CastChance>
+		</Stats>
+		<Image>../Data/2D/Monsters/Luna_Yellow.png</Image>
+		<ImageTransform>
+			<SizeX>0.4</SizeX>
+			<SizeY>1.0</SizeY>
+			<SizeYRelativeToX>True</SizeYRelativeToX>
+		</ImageTransform>
+		<Labyrinth>../Data/Labyrinths/Luna_Yellow.xml</Labyrinth>		
+	
+		<Cast>
+			<InternalName>Luna_Fireblessing</InternalName>
+			<Segment>
+				<Type>FlipbookAnimation</Type>
+				<Targets>Self</Targets>
+				<StringValue>../Data/Animations/Flipbook_Firesparks.xml</StringValue>
+			</Segment>
+			<Segment>
+				<Type>ChangeStats</Type>
+				<Targets>Self</Targets>
+				<Value>0</Value><!--Hp-->
+				<Value>1</Value><!--attack-->
+				<Value>0</Value><!--armor-->
+				<Value>0</Value><!--cast chance-->
+			</Segment>
+			<Segment>
+				<Type>Finish</Type>
+			</Segment>		
+		</Cast>
+		<Cast>
+			<InternalName>Luna_Ignite</InternalName>
+			<Segment>
+				<Type>FlipbookAnimation</Type>
+				<Targets>Self</Targets>
+				<StringValue>../Data/Animations/Flipbook_Firesparks.xml</StringValue>
+			</Segment>
+			<!--Attack player with increased damage-->
+			<Segment>
+				<Type>Finish</Type>
+			</Segment>		
+		</Cast>		
+	</MonsterDefinition>
+	
+	
+
+    <MonsterDefinition>
+		<InternalName>Luna_White</InternalName>
+		<Name>Snow Luna</Name>
+		<!--Also known as the weakest, most annoying monster you definitely need a mage to get rid of-->
+		<Stats>
+			<Health>2</Health>
+			<Attack>3</Attack>
+			<Armor>0</Armor>
+			<CastChance>15</CastChance>
+		</Stats>
+		<Image>../Data/2D/Monsters/Luna_White.png</Image>
+		<ImageTransform>
+			<SizeX>0.5</SizeX>
+			<SizeY>1.0</SizeY>
+			<SizeYRelativeToX>True</SizeYRelativeToX>
+		</ImageTransform>
+		<Labyrinth>../Data/Labyrinths/Luna_White.xml</Labyrinth>		
+		
+		<Cast>
+			<InternalName>Luna_Frostblessing</InternalName>
+			<!--
+			<Segment>
+				<Type>UiAnimation</Type> 
+				<StringValue>Blah</StringValue>
+			</Segment>
+			-->
+			<Segment>
+				<Type>ChangeStats</Type>
+				<Targets>Self</Targets>
+				<Value>0</Value><!--Hp-->
+				<Value>1</Value><!--attack-->
+				<Value>1</Value><!--armor-->
+				<Value>0</Value><!--cast chance-->
+			</Segment>
+			<Segment>
+				<Type>Finish</Type>
+			</Segment>		
+		</Cast>
+		<Cast>
+			<InternalName>Luna_Freeze</InternalName>
+			<!--
+			<Segment>
+				<Type>UiAnimation</Type> 
+				<StringValue>Blah</StringValue>
+			</Segment>
+			-->
+			<Segment>
+				<Type>ApplyEffect</Type>
+				<Targets>Player</Targets>
+				<StringValue>SlowerLabyrinthMovement</StringValue>
+			</Segment>
+			<Segment>
+				<Type>Finish</Type>
+			</Segment>		
+		</Cast>		
+	</MonsterDefinition>
+
+	
+    <MonsterDefinition>
+		<InternalName>Luna_StygianBlue</InternalName>
+		<Name>Snow Luna</Name>
+		<!--Also known as the weakest, most annoying monster you definitely need a mage to get rid of-->
+		<Stats>
+			<Health>4</Health>
+			<Attack>3</Attack>
+			<Armor>0</Armor>
+			<CastChance>30</CastChance>
+		</Stats>
+		<Image>../Data/2D/Monsters/Luna_StygianBlue.png</Image>
+		<ImageTransform>
+			<SizeX>0.5</SizeX>
+			<SizeY>1.0</SizeY>
+			<SizeYRelativeToX>True</SizeYRelativeToX>
+		</ImageTransform>
+		<Labyrinth>../Data/Labyrinths/Luna_StygianBlue.xml</Labyrinth>		
+		
+		<Cast>
+			<InternalName>Luna_Nightblessing</InternalName>
+			<!--
+			<Segment>
+				<Type>UiAnimation</Type> 
+				<StringValue>Blah</StringValue>
+			</Segment>
+			-->
+			<Segment>
+				<Type>ChangeStats</Type>
+				<Targets>Self</Targets>
+				<Value>0</Value><!--Hp-->
+				<Value>0</Value><!--attack-->
+				<Value>0</Value><!--armor-->
+				<Value>20</Value><!--cast chance-->
+			</Segment>
+			<Segment>
+				<Type>Finish</Type>
+			</Segment>		
+		</Cast>
+		<Cast>
+			<InternalName>Luna_Shadowbolt</InternalName>
+			<!--
+			<Segment>
+				<Type>UiAnimation</Type> 
+				<StringValue>Blah</StringValue>
+			</Segment>
+			-->
+			<!--Attack player with increased damage-->
+			<Segment>
+				<Type>Finish</Type>
+			</Segment>		
+		</Cast>		
+	</MonsterDefinition>
+
+	
+	
+	
+	
+    <MonsterDefinition>
+		<InternalName>GuardianGlyph</InternalName>
+		<Name>Spectrograde Guardian</Name>
+		<!--Also known as the weakest, most annoying monster you definitely need a mage to get rid of-->
+		<Stats>
+			<Health>2</Health>
+			<Attack>4</Attack>
+			<Armor>0</Armor>
+			<CastChance>0</CastChance>
+		</Stats>
+		<Image>../Data/2D/Monsters/GuardianGlyph.png</Image>
+		<ImageTransform>
+			<SizeX>0.35</SizeX>
+			<SizeY>1.0</SizeY>
+			<SizeYRelativeToX>True</SizeYRelativeToX>
+		</ImageTransform>
+		<Labyrinth>../Data/Labyrinths/GuardianGlyph.xml</Labyrinth>		
+	</MonsterDefinition>
+
+	
+	
+	
+    <MonsterDefinition>
+		<InternalName>Vorigan_Spellthief</InternalName>
+		<Name>Gretine, Vorigan Spellthief</Name>
+		<!--Also known as the weakest, most annoying monster you definitely need a mage to get rid of-->
+		<Stats>
+			<Health>8</Health>
+			<Attack>2</Attack>
+			<Armor>2</Armor>
+			<CastChance>100</CastChance>
+		</Stats>
+		<Image>../Data/2D/Monsters/Vorigan_Spellthief.png</Image>
+		<ImageTransform>
+			<SizeX>0.45</SizeX>
+			<SizeY>1.0</SizeY>
+			<SizeYRelativeToX>True</SizeYRelativeToX>
+		</ImageTransform>
+		<Labyrinth>../Data/Labyrinths/Vorigan_Spellthief.xml</Labyrinth>		
+		
+		<Cast>
+			<InternalName>Luna_Nightblessing</InternalName>
+			<!--
+			<Segment>
+				<Type>UiAnimation</Type> 
+				<StringValue>Blah</StringValue>
+			</Segment>
+			-->
+			<Segment>
+				<Type>ChangeStats</Type>
+				<Targets>Self</Targets>
+				<Value>0</Value><!--Hp-->
+				<Value>0</Value><!--attack-->
+				<Value>0</Value><!--armor-->
+				<Value>20</Value><!--cast chance-->
+			</Segment>
+			<Segment>
+				<Type>Finish</Type>
+			</Segment>		
+		</Cast>
+	
+	
+	</MonsterDefinition>
+
+
+	
+	
+</MonsterDefinitions>

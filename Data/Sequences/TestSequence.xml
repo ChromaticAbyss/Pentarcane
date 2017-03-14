@@ -1,0 +1,37 @@
+<Sequence>
+	<DisplayName>Test Sequence</DisplayName>
+	<Description>...</Description>
+	<!--
+	For style reasons this won't have human opponents early on.
+	-->
+	<Reward>MageTower_Rune</Reward><!--Unlock this thing for the player. It allows accessing additional sequences-->
+	<Reward>MageTower_Rune2</Reward><!--Unlock this thing for the player. It allows accessing additional sequences-->
+	<Reward>MageTower_Rune3</Reward><!--Unlock this thing for the player. It allows accessing additional sequences-->
+	<Reward>MageTower_Rune4</Reward><!--Unlock this thing for the player. It allows accessing additional sequences-->
+
+
+	
+	
+	<Art3D>
+		<ModelFile>../Data/3D/MissingModelMarker.obj</ModelFile>
+		<TextureFile>../Data/2D/Blue.png</TextureFile>
+		<Transform>
+			<RotX>90</RotX>
+			<RotZ>180</RotZ>
+			<Scale>1.0</Scale>	
+		</Transform>			
+	</Art3D>	
+	
+	
+	<Fight>
+		<Condition>
+			<Type>ExactName</Type>
+			<StringValue>TestGroup</StringValue>
+		</Condition>
+		<Stage>../Data/Stages/Swamp.xml</Stage><!--A stage is just a bunch of models and positions at which to place enemy models-->
+	</Fight>
+	
+
+	
+</Sequence>
+	

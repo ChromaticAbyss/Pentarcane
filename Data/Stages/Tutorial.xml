@@ -1,0 +1,35 @@
+<Stage>
+	
+	<Background>../Data/2D/Stages/ArcaneArena.png</Background>
+	
+	<!--TODO:
+		Light source data such as position and colour intensities, maybe same for ambient light
+	-->
+	
+	<MonsterPosition>
+		<X>0</X>
+		<Y>0</Y>
+		<Z>0</Z>
+		<Scale>0.25f</Scale>
+	</MonsterPosition>
+	<MonsterPosition>
+		<X>-0.2</X>
+		<Y>0.1</Y>
+		<Z>0</Z>
+		<Scale>0.25f</Scale>
+	</MonsterPosition>
+	<MonsterPosition>
+		<X>0.2</X>
+		<Y>-0.1</Y>
+		<Z>0</Z>
+		<Scale>0.25f</Scale>
+	</MonsterPosition>
+	<MonsterPosition>
+		<X>0.2</X>
+		<Y>0.2</Y>
+		<Z>0</Z>
+		<Scale>0.25f</Scale>
+	</MonsterPosition>
+
+
+</Stage>

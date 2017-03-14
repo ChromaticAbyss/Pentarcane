@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MonsterDefinitions>
+
+	
+    <MonsterDefinition>
+		<InternalName>Vorigan_Twinblade</InternalName>
+		<Name>Twinblade</Name>
+		<Stats>
+			<Health>5</Health>
+			<Attack>2</Attack>
+			<Armor>0</Armor>
+			<CastChance>50</CastChance>
+		</Stats>
+		<Image>../Data/2D/Monsters/VoriganTroop.png</Image>
+		<ImageTransform>
+			<SizeX>0.63</SizeX>
+			<SizeY>1.0</SizeY>
+			<SizeYRelativeToX>True</SizeYRelativeToX>
+		</ImageTransform>
+		<Labyrinth>../Data/Labyrinths/Vorigan_Twinblade.xml</Labyrinth><!-- Easy slow but hard to do on the timer-->		
+		<DefaultAttackAnimation>../Data/Animations/Attack_Blade.xml</DefaultAttackAnimation>
+		<!--Vorigan soldiers deal increased damage for every time they take damage. May be better to fail a slow attack than to hit and immediately get punched back-->
+		<CastWhenDamageTaken>
+			<InternalName>Vorigan_Enrage</InternalName>	
+			<Segment>
+				<Type>FlipbookAnimation</Type> 
+				<Targets>Self</Targets>
+				<StringValue>../Data/Animations/Enrage.xml</StringValue>
+			</Segment>
+			<Segment>
+				<Type>ChangeStats</Type>
+				<Targets>Self</Targets>
+				<Value>0</Value><!--Hp-->
+				<Value>3</Value><!--attack-->
+				<Value>0</Value><!--armor-->
+				<Value>0</Value><!--cast chance-->
+			</Segment>		
+		</CastWhenDamageTaken>	
+	</MonsterDefinition>
+
+    <MonsterDefinition>
+		<InternalName>Vorigan_Twinblade_2</InternalName>
+		<Name>Twinblade</Name>
+		<Stats>
+			<Health>5</Health>
+			<Attack>2</Attack>
+			<Armor>0</Armor>
+			<CastChance>50</CastChance>
+		</Stats>
+		<Image>../Data/2D/Monsters/VoriganTroop.png</Image>
+		<ImageTransform>
+			<SizeX>0.66</SizeX>
+			<SizeY>1.0</SizeY>
+			<SizeYRelativeToX>True</SizeYRelativeToX>
+		</ImageTransform>
+		<Labyrinth>../Data/Labyrinths/Vorigan_Twinblade_2.xml</Labyrinth><!-- Easy slow but hard to do on the timer-->	
+		<DefaultAttackAnimation>../Data/Animations/Attack_Blade.xml</DefaultAttackAnimation>		
+		<CastWhenDamageTaken>
+			<InternalName>Vorigan_Enrage</InternalName><!--Vorigan soldiers deal increased damage for every time they take damage. May be better to fail an attack than to hit and immediately get punched back-->
+			<Segment>
+				<Type>FlipbookAnimation</Type> 
+				<Targets>Self</Targets>
+				<StringValue>../Data/Animations/Enrage.xml</StringValue>
+			</Segment>
+			<Segment>
+				<Type>ChangeStats</Type>
+				<Targets>Self</Targets>
+				<Value>0</Value><!--Hp-->
+				<Value>3</Value><!--attack-->
+				<Value>0</Value><!--armor-->
+				<Value>0</Value><!--cast chance-->
+			</Segment>		
+		</CastWhenDamageTaken>	
+	</MonsterDefinition>
+
+    <MonsterDefinition>
+		<InternalName>Vorigan_Twinblade_3</InternalName>
+		<Name>Twinblade</Name>
+		<Stats>
+			<Health>5</Health>
+			<Attack>2</Attack>
+			<Armor>0</Armor>
+			<CastChance>50</CastChance>
+		</Stats>
+		<Image>../Data/2D/Monsters/VoriganTroop.png</Image>
+		<ImageTransform>
+			<SizeX>0.64</SizeX>
+			<SizeY>1.0</SizeY>
+			<SizeYRelativeToX>True</SizeYRelativeToX>
+		</ImageTransform>
+		<Labyrinth>../Data/Labyrinths/Vorigan_Twinblade_3.xml</Labyrinth><!-- Easy slow but hard to do on the timer-->		
+		<DefaultAttackAnimation>../Data/Animations/Attack_Blade.xml</DefaultAttackAnimation>
+		<CastWhenDamageTaken>
+			<InternalName>Vorigan_Enrage</InternalName><!--Vorigan soldiers deal increased damage for every time they take damage. May be better to fail an attack than to hit and immediately get punched back-->
+			<Segment>
+				<Type>FlipbookAnimation</Type> 
+				<Targets>Self</Targets>
+				<StringValue>../Data/Animations/Enrage.xml</StringValue>
+			</Segment>
+			<Segment>
+				<Type>ChangeStats</Type>
+				<Targets>Self</Targets>
+				<Value>0</Value><!--Hp-->
+				<Value>3</Value><!--attack-->
+				<Value>0</Value><!--armor-->
+				<Value>0</Value><!--cast chance-->
+			</Segment>		
+		</CastWhenDamageTaken>	
+	</MonsterDefinition>
+
+	
+	
+    <MonsterDefinition>
+		<InternalName>Vorigan_ReaperGlaive</InternalName>
+		<Name>Reaper Glaive</Name>
+		<Stats>
+			<Health>5</Health>
+			<Attack>3</Attack>
+			<Armor>1</Armor>
+			<CastChance>50</CastChance>
+		</Stats>
+		<Image>../Data/2D/Monsters/Vorigan_ReaperGlaive.png</Image>
+		<ImageTransform>
+			<SizeX>0.87</SizeX>
+			<SizeY>1.0</SizeY>
+			<SizeYRelativeToX>True</SizeYRelativeToX>
+		</ImageTransform>
+		<DefaultAttackAnimation>../Data/Animations/Attack_Blade.xml</DefaultAttackAnimation>		
+		<Labyrinth>../Data/Labyrinths/Vorigan_ReaperGlaive.xml</Labyrinth><!-- Easy slow but hard to do on the timer (this version uses a shadow shroud-->		
+		<!--Cast some lightning strike-->
+		<CastWhenDamageTaken>
+			<InternalName>Vorigan_Enrage</InternalName><!--Vorigan soldiers deal increased damage for every time they take damage. May be better to fail an attack than to hit and immediately get punched back-->
+			<Segment>
+				<Type>FlipbookAnimation</Type> 
+				<Targets>Self</Targets>
+				<StringValue>../Data/Animations/Enrage.xml</StringValue>
+			</Segment>
+			<Segment>
+				<Type>ChangeStats</Type>
+				<Targets>Self</Targets>
+				<Value>0</Value><!--Hp-->
+				<Value>3</Value><!--attack-->
+				<Value>0</Value><!--armor-->
+				<Value>0</Value><!--cast chance-->
+			</Segment>		
+		</CastWhenDamageTaken>	
+	
+	</MonsterDefinition>
+
+
+
+	
+    <MonsterDefinition>
+		<InternalName>Vorigan_ReaperGlaive_Boss</InternalName>
+		<Name>Oathflame</Name>
+		<Stats>
+			<Health>7</Health>
+			<Attack>3</Attack>
+			<Armor>1</Armor>
+			<CastChance>75</CastChance>
+		</Stats>
+		<Image>../Data/2D/Monsters/Vorigan_ReaperGlaive_Boss.png</Image>
+		<ImageTransform>
+			<SizeX>0.92</SizeX>
+			<SizeY>1.0</SizeY>
+			<SizeYRelativeToX>True</SizeYRelativeToX>
+		</ImageTransform>
+		<Labyrinth>../Data/Labyrinths/Vorigan_Boss1.xml</Labyrinth><!-- Easy slow but hard to do on the timer (this version uses a shadow shroud-->	
+		<DefaultAttackAnimation>../Data/Animations/Attack_Blade.xml</DefaultAttackAnimation>				
+		<!--Cast some lightning strike-->
+		<CastWhenDamageTaken>
+			<InternalName>Vorigan_Enrage</InternalName><!--Vorigan soldiers deal increased damage for every time they take damage. May be better to fail an attack than to hit and immediately get punched back-->
+			<Segment>
+				<Type>FlipbookAnimation</Type> 
+				<Targets>Self</Targets>
+				<StringValue>../Data/Animations/Enrage.xml</StringValue>
+			</Segment>
+			<Segment>
+				<Type>ChangeStats</Type>
+				<Targets>Self</Targets>
+				<Value>0</Value><!--Hp-->
+				<Value>3</Value><!--attack-->
+				<Value>0</Value><!--armor-->
+				<Value>0</Value><!--cast chance-->
+			</Segment>		
+		</CastWhenDamageTaken>	
+	
+	</MonsterDefinition>
+
+	
+	
+	
+</MonsterDefinitions>

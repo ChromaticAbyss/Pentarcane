@@ -1,0 +1,35 @@
+<Stage>
+	
+	<Background>../Data/2D/Stages/Fields.png</Background>
+	
+	<!--TODO:
+		Light source data such as position and colour intensities, maybe same for ambient light
+	-->
+	
+	<MonsterPosition>
+		<X>0</X>
+		<Y>-0.2</Y>
+		<Z>0</Z>
+		<Scale>0.15f</Scale>
+	</MonsterPosition>
+	<MonsterPosition>
+		<X>-0.2</X>
+		<Y>-0.15</Y>
+		<Z>0</Z>
+		<Scale>0.15f</Scale>
+	</MonsterPosition>
+	<MonsterPosition>
+		<X>0.2</X>
+		<Y>-0.25</Y>
+		<Z>0</Z>
+		<Scale>0.15f</Scale>
+	</MonsterPosition>
+	<MonsterPosition>
+		<X>0.2</X>
+		<Y>-0.15</Y>
+		<Z>0</Z>
+		<Scale>0.15f</Scale>
+	</MonsterPosition>
+
+
+</Stage>

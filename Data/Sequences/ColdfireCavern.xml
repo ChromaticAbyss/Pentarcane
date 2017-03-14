@@ -1,0 +1,59 @@
+<Sequence>
+	<DisplayName>Coldfire Cavern</DisplayName>
+	<Description>.</Description>
+	<Description>.</Description>
+	<Description>.</Description>
+	<Description>.</Description>
+	<Description>.</Description>
+	<Description>.</Description>
+	
+	
+	<SequenceModifiers><!--TODO: Currently not working as a feature-->
+		<Health>0</Health>
+		<Attack>0</Attack>
+		<Armor>0</Armor>
+		<CastChance>0</CastChance>
+	</SequenceModifiers>
+
+	<Art3D>
+		<ModelFile>../Data/3D/Sequences/ColdfireCavern.obj</ModelFile>
+		<TextureFile>../Data/2D/Sequences/ColdfireCavern.png</TextureFile>
+		<Transform>
+			<Scale>0.6</Scale>	
+		</Transform>			
+	</Art3D>	
+	<Art3D>
+		<ModelFile>../Data/3D/SimpleSquare.obj</ModelFile>
+		<TextureFile>../Data/2D/Sequences/Pyramid_Locked.png</TextureFile>
+		<Transform>
+			<RotZ>180</RotZ>
+			<Scale>1.0</Scale>	
+		</Transform>			
+	</Art3D>
+	
+	<Reward>ColdfireCavern_1</Reward><!--Unlock this thing for the player. It allows accessing additional sequences-->
+	<CompleteRequirement>ColdfireCavern_1</CompleteRequirement><!--Usually one of the rewards!-->
+	
+	<UnlockRequirement>Pyramid</UnlockRequirement><!--TODO: Change to: Lumient-->
+	
+	<!--Start with a random refight from forest of the purple coffins-->
+	<Fight>
+		<Condition> 
+			<Type>OR</Type>
+			<Condition>
+				<Type>ExactName</Type>
+				<StringValue>ColdfireCavern_1</StringValue>
+			</Condition>
+		</Condition>
+		<Stage>../Data/Stages/ColdfireCavern.xml</Stage><!--A stage is just a bunch of models and positions at which to place enemy models-->
+		<Description>...</Description>
+	</Fight>
+	
+
+
+	
+	
+
+	
+</Sequence>
+	

@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{1A9A8C35-38D9-41F8-9DBE-B36885129EEC}</ProjectGuid>
+    <RootNamespace>MageMinigame</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>E:\Coding\Libraries\glm-0.9.4.0;E:\Coding\Libraries\Simple OpenGL Image Library\src;E:\Coding\MageMinigame\MageMinigame\common;E:\Coding\Libraries\glew-2.0.0-win32\glew-2.0.0\include;E:\Coding\Libraries\glfw-3.2.1\include\GLFW;E:\Coding\Lua\5.1\include;E:\Coding\Libraries\irrKlang-32bit-1.5.0\irrKlang-1.5.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <OmitDefaultLibName>false</OmitDefaultLibName>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>tinyxml2.lib;glu32.lib;opengl32.lib;E:\Coding\Libraries\glfw-3.2.1\lib-vc2015\glfw3.lib;E:\Coding\Libraries\glew-2.0.0-win32\glew-2.0.0\lib\Release\Win32\glew32s.lib;E:\Coding\Lua\5.1\lib\lua5.1.lib;legacy_stdio_definitions.lib;irrKlang.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>E:\Coding\Libraries\tinyxml2-master\tinyxml2-master\tinyxml2\bin\Win32-Debug-Dll;E:\Coding\Libraries\irrKlang-32bit-1.5.0\irrKlang-1.5.0\lib\Win32-visualStudio;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>E:\Coding\Libraries\glm-0.9.4.0;E:\Coding\Libraries\Simple OpenGL Image Library\src;E:\Coding\MageMinigame\MageMinigame\common;E:\Coding\Libraries\glew-2.0.0-win32\glew-2.0.0\include;E:\Coding\Libraries\glfw-3.2.1\include\GLFW;E:\Coding\Lua\5.1\include;E:\Coding\Libraries\irrKlang-32bit-1.5.0\irrKlang-1.5.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>tinyxml2.lib;glu32.lib;opengl32.lib;E:\Coding\Libraries\glfw-3.2.1\lib-vc2015\glfw3.lib;E:\Coding\Libraries\glew-2.0.0-win32\glew-2.0.0\lib\Release\Win32\glew32s.lib;E:\Coding\Lua\5.1\lib\lua5.1.lib;legacy_stdio_definitions.lib;irrKlang.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>E:\Coding\Libraries\tinyxml2-master\tinyxml2-master\tinyxml2\bin\Win32-Debug-Dll;E:\Coding\Libraries\irrKlang-32bit-1.5.0\irrKlang-1.5.0\lib\Win32-visualStudio;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Collider2D.cpp" />
+    <ClCompile Include="IrrklangSingleton.cpp" />
+    <ClCompile Include="MapEditor\CommandSelectTool.cpp" />
+    <ClCompile Include="Ui\Command.cpp" />
+    <ClCompile Include="common\objloader.cpp" />
+    <ClCompile Include="common\quaternion_utils.cpp" />
+    <ClCompile Include="common\shader.cpp" />
+    <ClCompile Include="common\tangentspace.cpp" />
+    <ClCompile Include="common\texture.cpp" />
+    <ClCompile Include="common\vboindexer.cpp" />
+    <ClCompile Include="Conditions\CastCondition.cpp" />
+    <ClCompile Include="Definition3D.cpp" />
+    <ClCompile Include="Fight.cpp" />
+    <ClCompile Include="FightData.cpp" />
+    <ClCompile Include="GroupDefinition.cpp" />
+    <ClCompile Include="GroupDefinition_Manager.cpp" />
+    <ClCompile Include="HashingForTags.cpp" />
+    <ClCompile Include="Instance3D_New.cpp" />
+    <ClCompile Include="Key.cpp" />
+    <ClCompile Include="LabyrinthPartDefinition.cpp" />
+    <ClCompile Include="LabyrinthPartDefinition_Manager.cpp" />
+    <ClCompile Include="LabyrinthPartInstance.cpp" />
+    <ClCompile Include="LabyrinthResult.cpp" />
+    <ClCompile Include="LoadSaveUnlocks.cpp" />
+    <ClCompile Include="Log.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="MapEditor\MapEditor.cpp" />
+    <ClCompile Include="MapEditor\MapEditorTileSelector.cpp" />
+    <ClCompile Include="MapEditor\TextInput.cpp" />
+    <ClCompile Include="MapEditor\PseudoInstance.cpp" />
+    <ClCompile Include="MapEditor\VariantCarrier.cpp" />
+    <ClCompile Include="Minigames.cpp" />
+    <ClCompile Include="Monster.cpp" />
+    <ClCompile Include="MonsterCast.cpp" />
+    <ClCompile Include="MonsterDefinition.cpp" />
+    <ClCompile Include="MonsterDefinition_Manager.cpp" />
+    <ClCompile Include="LabyrinthInstance.cpp" />
+    <ClCompile Include="OpenGLContainer.cpp" />
+    <ClCompile Include="PlayerState.cpp" />
+    <ClCompile Include="ScriptBridge.cpp" />
+    <ClCompile Include="ScriptReturn.cpp" />
+    <ClCompile Include="Sequence.cpp" />
+    <ClCompile Include="SequenceRepresentation.cpp" />
+    <ClCompile Include="SequenceSelect.cpp" />
+    <ClCompile Include="Stage.cpp" />
+    <ClCompile Include="Stats.cpp" />
+    <ClCompile Include="StringUtility.cpp" />
+    <ClCompile Include="Ui\AnimationManager.cpp" />
+    <ClCompile Include="Ui\FlipbookAnimation.cpp" />
+    <ClCompile Include="Ui\OffsetElement.cpp" />
+    <ClCompile Include="Ui\TimerBar.cpp" />
+    <ClCompile Include="Transform.cpp" />
+    <ClCompile Include="Ui\Animation.cpp" />
+    <ClCompile Include="Ui\Element2D.cpp" />
+    <ClCompile Include="Ui\TimerManager.cpp" />
+    <ClCompile Include="Ui\Transform2D.cpp" />
+    <ClCompile Include="Ui\UiAnimation.cpp" />
+    <ClCompile Include="Ui\UiElement.cpp" />
+    <ClCompile Include="Ui\UiElementEffect.cpp" />
+    <ClCompile Include="Ui\UiElementParameter.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BuildHeader.h" />
+    <ClInclude Include="Collider2D.h" />
+    <ClInclude Include="IrrklangSingleton.h" />
+    <ClInclude Include="MapEditor\CommandSelectTool.h" />
+    <ClInclude Include="Ui\Command.h" />
+    <ClInclude Include="common\objloader.hpp" />
+    <ClInclude Include="common\quaternion_utils.hpp" />
+    <ClInclude Include="common\shader.hpp" />
+    <ClInclude Include="common\tangentspace.hpp" />
+    <ClInclude Include="common\texture.hpp" />
+    <ClInclude Include="common\vboindexer.hpp" />
+    <ClInclude Include="Conditions\CastCondition.h" />
+    <ClInclude Include="Definition3D.h" />
+    <ClInclude Include="Fight.h" />
+    <ClInclude Include="FightData.h" />
+    <ClInclude Include="GroupDefinition.h" />
+    <ClInclude Include="GroupDefinition_Manager.h" />
+    <ClInclude Include="HashingForTags.h" />
+    <ClInclude Include="LoadSaveUnlocks.h" />
+    <ClInclude Include="InterObjectMessage.h" />
+    <ClInclude Include="Key.h" />
+    <ClInclude Include="MapEditor\TextInput.h" />
+    <ClInclude Include="MapEditor\PseudoInstance.h" />
+    <ClInclude Include="MapEditor\VariantCarrier.h" />
+    <ClInclude Include="MonsterCast.h" />
+    <ClInclude Include="PlayerState.h" />
+    <ClInclude Include="Sequence.h" />
+    <ClInclude Include="SequenceRepresentation.h" />
+    <ClInclude Include="SequenceSelect.h" />
+    <ClInclude Include="Stage.h" />
+    <ClInclude Include="Instance3D_New.h" />
+    <ClInclude Include="LabyrinthInstance.h" />
+    <ClInclude Include="LabyrinthPartDefinition.h" />
+    <ClInclude Include="LabyrinthPartDefinition_Manager.h" />
+    <ClInclude Include="LabyrinthPartInstance.h" />
+    <ClInclude Include="LabyrinthResult.h" />
+    <ClInclude Include="Log.h" />
+    <ClInclude Include="MapEditor\MapEditor.h" />
+    <ClInclude Include="MapEditor\MapEditorTileSelector.h" />
+    <ClInclude Include="Minigames.h" />
+    <ClInclude Include="Monster.h" />
+    <ClInclude Include="MonsterDefinition.h" />
+    <ClInclude Include="MonsterDefinition_Manager.h" />
+    <ClInclude Include="OpenGLContainer.h" />
+    <ClInclude Include="ScriptBridge.h" />
+    <ClInclude Include="ScriptReturn.h" />
+    <ClInclude Include="Stats.h" />
+    <ClInclude Include="StringUtility.h" />
+    <ClInclude Include="Ui\AnimationManager.h" />
+    <ClInclude Include="Ui\FlipbookAnimation.h" />
+    <ClInclude Include="Ui\OffsetElement.h" />
+    <ClInclude Include="Ui\TimerBar.h" />
+    <ClInclude Include="tinyxml2.h" />
+    <ClInclude Include="Transform.h" />
+    <ClInclude Include="Ui\Animation.h" />
+    <ClInclude Include="Ui\Element2D.h" />
+    <ClInclude Include="Ui\TimerManager.h" />
+    <ClInclude Include="Ui\Transform2D.h" />
+    <ClInclude Include="Ui\UiAnimation.h" />
+    <ClInclude Include="Ui\UiElement.h" />
+    <ClInclude Include="Ui\UiElementEffect.h" />
+    <ClInclude Include="Ui\uiElementParameter.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

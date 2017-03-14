@@ -1,0 +1,70 @@
+<!-- Parameters
+Ints
+[0] Active Mode
+
+Strings
+
+-->
+
+
+<UiElement>
+	<Transform2D>
+		<X>0.85</X>
+		<Y>0</Y>
+		<SizeX>0.15</SizeX>
+		<SizeY>1.0</SizeY>
+	</Transform2D>
+	<Image>
+		<ImageFile>../Data/2D/Grey.png</ImageFile>
+	</Image>
+	<Effect>
+		<Type>Dummy</Type>
+		<ForMode>1</ForMode><!--Catch mouse clicks-->
+	</Effect>		
+	
+
+	<UiElement>
+		<Transform2D>
+			<X>-0.04</X>
+			<Y>0.8</Y>
+			<SizeX>0.08</SizeX>
+			<SizeY>1.0</SizeY>
+			<SizeYRelativeToX>True</SizeYRelativeToX><!--takes into account window dimensions, so a 1 in SizeY would always be a square-->
+		</Transform2D>		
+		<Image>
+			<ImageFile>../Data/2D/Ui/MapEd_Draw.png</ImageFile>
+		</Image>
+		<Effect>
+			<Type>Tooltip</Type>
+			<ForMode>0</ForMode><!--On mouse hover-->
+			<StringValue>Selection Mode: Click an object for more options</StringValue>
+		</Effect>
+	</UiElement>	
+	
+	
+	
+	<UiElement>
+		<Transform2D>
+			<X>-0.04</X>
+			<Y>0.6</Y>
+			<SizeX>0.08</SizeX>
+			<SizeY>0.5</SizeY>
+			<SizeYRelativeToX>True</SizeYRelativeToX><!--takes into account window dimensions, so a 1 in SizeY would always be a square-->
+		</Transform2D>		
+		<Image>
+			<ImageFile>../Data/2D/Ui/MapEd_SelectToDraw.png</ImageFile>
+		</Image>
+		<Effect>
+			<Type>SelectToDraw</Type>
+			<ForMode>1</ForMode><!--On mouse click-->
+		</Effect>
+	</UiElement>			
+
+	
+	
+</UiElement>
+
+
+
+
+	

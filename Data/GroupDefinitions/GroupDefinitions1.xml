@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GroupDefinitions>
+
+	<GroupDefinition>
+		<InternalName>TestGroup</InternalName>
+		<Likelihood>2</Likelihood>
+		<PowerRating>7000</PowerRating>
+		<!--<Monster>TestMonster</Monster>-->
+		<Monster>TestMonster</Monster>
+		<Tag>Nonhuman</Tag>
+	</GroupDefinition>
+	
+	
+	<GroupDefinition>
+		<InternalName>Tutorial1</InternalName>
+		<Likelihood>100</Likelihood>
+		<PowerRating>20</PowerRating>
+		<Monster>TargetDummy</Monster>
+		<Tag>Dummy</Tag>
+	</GroupDefinition>	
+	<GroupDefinition>
+		<InternalName>Tutorial2</InternalName>
+		<Likelihood>100</Likelihood>
+		<PowerRating>20</PowerRating>
+		<Monster>ArmorDummy</Monster>
+		<Tag>Dummy</Tag>
+	</GroupDefinition>	
+	<GroupDefinition>
+		<InternalName>Tutorial3</InternalName>
+		<Likelihood>100</Likelihood>
+		<PowerRating>20</PowerRating>
+		<Monster>CasterDummy</Monster>
+		<Tag>Dummy</Tag>
+	</GroupDefinition>	
+	
+	
+	
+	<GroupDefinition>
+		<InternalName>Hammerhead</InternalName>
+		<Likelihood>100</Likelihood>
+		<PowerRating>85</PowerRating>
+		<Monster>Hammerhead</Monster>
+		<Tag>Nonhuman</Tag>
+	</GroupDefinition>
+	
+	
+	
+	<GroupDefinition>
+		<InternalName>Doline</InternalName>
+		<Likelihood>100</Likelihood>
+		<PowerRating>70</PowerRating>
+		<Monster>Doline</Monster>
+		<Tag>Nonhuman</Tag>
+	</GroupDefinition>
+		
+	<GroupDefinition>
+		<InternalName>Spooky</InternalName>
+		<Likelihood>100</Likelihood>
+		<PowerRating>70</PowerRating>
+		<Monster>Spook</Monster>
+		<Monster>Spook</Monster>
+		<Monster>Spook</Monster>
+		<Tag>Nonhuman</Tag>
+	</GroupDefinition>
+	
+	<GroupDefinition>
+		<InternalName>Jellyfish</InternalName>
+		<Likelihood>100</Likelihood>
+		<PowerRating>70</PowerRating>
+		<Monster>Jellyfish</Monster>
+		<Tag>Nonhuman</Tag>
+	</GroupDefinition>
+	
+	<GroupDefinition>
+		<InternalName>Bladesnakes</InternalName>
+		<Likelihood>100</Likelihood>
+		<PowerRating>100</PowerRating>
+		<Monster>Bladesnake</Monster>
+		<Monster>Bladesnake</Monster>
+		<Tag>Nonhuman</Tag>
+	</GroupDefinition>
+	
+	<GroupDefinition>
+		<InternalName>BladesnakeDoline</InternalName>
+		<Likelihood>100</Likelihood>
+		<PowerRating>100</PowerRating>
+		<Monster>Bladesnake</Monster>
+		<Monster>Doline</Monster>
+		<Tag>Nonhuman</Tag>
+	</GroupDefinition>
+
+	<GroupDefinition>
+		<InternalName>Wyk</InternalName>
+		<Likelihood>100</Likelihood>
+		<PowerRating>90</PowerRating>
+		<Monster>Wyk</Monster>
+		<Tag>Nonhuman</Tag>
+	</GroupDefinition>
+	
+	<GroupDefinition>
+		<InternalName>Wyk_Drone</InternalName>
+		<Likelihood>100</Likelihood>
+		<PowerRating>90</PowerRating>
+		<Monster>Wyk</Monster>
+		<Monster>Drone</Monster>
+		<Monster>Drone</Monster>
+		<Tag>Nonhuman</Tag>
+	</GroupDefinition>
+	
+	<GroupDefinition>
+		<InternalName>AphereneServants</InternalName>
+		<Likelihood>100</Likelihood>
+		<PowerRating>70</PowerRating>
+		<Monster>AphereneServant</Monster>
+		<Monster>AphereneServant</Monster>
+		<Monster>AphereneServant</Monster>
+		<Tag>Nonhuman</Tag>
+	</GroupDefinition>
+
+
+	
+	<GroupDefinition>
+		<InternalName>IceScorpionGroup</InternalName>
+		<Likelihood>100</Likelihood>
+		<PowerRating>80</PowerRating>
+		<Monster>IceScorpion</Monster>
+		<Monster>IceScorpion</Monster>
+		<Tag>Nonhuman</Tag>
+	</GroupDefinition>
+	
+	<GroupDefinition>
+		<InternalName>AphereneCultGroup1</InternalName>
+		<Likelihood>100</Likelihood>
+		<PowerRating>110</PowerRating>
+		<Monster>AphereneEnforcer</Monster>
+		<Monster>Thug</Monster>
+		<Tag>Human</Tag>
+		<Tag>Apherene</Tag>
+	</GroupDefinition>
+
+	
+	<GroupDefinition>
+		<InternalName>AphereneBossGroup1</InternalName>
+		<Likelihood>0</Likelihood><!--Don't spawn bosses as random encounters-->
+		<PowerRating>150</PowerRating>
+		<Monster>ApherenePriestess</Monster>
+		<Monster>AphereneServant</Monster>
+		<Monster>AphereneServant</Monster>
+		<Tag>Boss</Tag>
+		<Tag>Human</Tag>
+		<Tag>Apherene</Tag>
+	</GroupDefinition>
+
+	<GroupDefinition>
+		<InternalName>AphereneBossGroup2</InternalName>
+		<Likelihood>0</Likelihood><!--Don't spawn bosses as random encounters-->
+		<PowerRating>150</PowerRating>
+		<Monster>ApherenePriestess</Monster>
+		<Monster>AphereneEnforcer</Monster>
+		<Tag>Boss</Tag>
+		<Tag>Human</Tag>
+		<Tag>Apherene</Tag>
+	</GroupDefinition>
+	
+	<GroupDefinition>
+		<InternalName>Thugs</InternalName>
+		<Likelihood>100</Likelihood>
+		<PowerRating>70</PowerRating>
+		<Monster>Thug</Monster>
+		<Monster>Thug</Monster>
+		<Tag>Human</Tag>
+	</GroupDefinition>	
+	
+	<GroupDefinition>
+		<InternalName>Thugs</InternalName>
+		<Likelihood>100</Likelihood>
+		<PowerRating>80</PowerRating>
+		<Monster>Enforcer</Monster>
+		<Monster>Thug</Monster>
+		<Tag>Human</Tag>
+	</GroupDefinition>	
+
+	
+	<GroupDefinition>
+		<InternalName>OneServingOfHydra</InternalName>
+		<Likelihood>1</Likelihood>
+		<PowerRating>150</PowerRating>
+		<Monster>Hydra</Monster>
+		<Tag>Boss</Tag>
+		<Tag>Nonhuman</Tag>
+	</GroupDefinition>	
+
+	
+	<GroupDefinition>
+		<InternalName>SwampBeast</InternalName>
+		<Likelihood>100</Likelihood>
+		<PowerRating>120</PowerRating>
+		<Monster>SwampBeast</Monster>
+		<Tag>Nonhuman</Tag>
+	</GroupDefinition>
+	
+	<!--
+		Shrieking Herold
+		Voiceless Preacher
+		Choir of Sinners
+		
+	-->
+</GroupDefinitions>

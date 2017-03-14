@@ -1,0 +1,10 @@
+﻿  Fight.cpp
+e:\coding\mageminigame\mageminigame\monstercast.h(43): warning C4018: ">=": Konflikt zwischen "signed" und "unsigned"
+e:\coding\mageminigame\mageminigame\fight.cpp(44): warning C4244: "Initialisierung": Konvertierung von "double" in "float", möglicher Datenverlust
+e:\coding\mageminigame\mageminigame\fight.cpp(618): warning C4018: ">=": Konflikt zwischen "signed" und "unsigned"
+  Code wird generiert...
+  Überspringen... (keine relevanten Änderungen gefunden)
+  Sequence.cpp
+  Main.cpp
+  MageMinigame.vcxproj -> E:\Coding\MageMinigame\Debug\MageMinigame.exe
+  MageMinigame.vcxproj -> E:\Coding\MageMinigame\Debug\MageMinigame.pdb (Full PDB)

@@ -1,0 +1,136 @@
+<!-- Parameters
+Ints
+[0] Spell that is hovered
+
+
+Strings
+
+-->
+
+
+<UiElement>
+	<Transform2D>
+		<X>0.55</X>
+		<Y>-0.65</Y>
+		<SizeX>0.15</SizeX>
+		<SizeY>0.35</SizeY>
+	</Transform2D>
+	<Image>
+		<ImageFile>../Data/2D/Ui/Statbar.png</ImageFile>
+	</Image>
+	
+	<!--Name-->
+	<UiElement>
+		<TextField>
+			<StringParameterIndex>0</StringParameterIndex>	
+			<Transform2D>
+				<X>0</X>
+				<Y>0.3</Y>
+				<SizeX>0.05</SizeX>
+				<SizeY>0.05</SizeY>
+			</Transform2D>		
+		</TextField>	
+	</UiElement>
+
+	
+	
+	<UiElement>
+		<TextField>
+			<StringParameterIndex>1</StringParameterIndex>	
+			<Transform2D>
+				<X>-0.07</X>
+				<Y>0.2</Y>
+				<SizeX>0.04</SizeX>
+				<SizeY>0.04</SizeY>
+			</Transform2D>		
+		</TextField>	
+	</UiElement>
+	<UiElement>
+		<TextField>
+			<StringParameterIndex>5</StringParameterIndex>	
+			<Transform2D>
+				<X>0.055</X>
+				<Y>0.21</Y>
+				<SizeX>0.04</SizeX>
+				<SizeY>0.04</SizeY>
+			</Transform2D>		
+		</TextField>	
+	</UiElement>
+	
+	<UiElement>
+		<TextField>
+			<StringParameterIndex>2</StringParameterIndex>	
+			<Transform2D>
+				<X>-0.07</X>
+				<Y>0.1</Y>
+				<SizeX>0.04</SizeX>
+				<SizeY>0.04</SizeY>
+			</Transform2D>		
+		</TextField>	
+	</UiElement>
+	<UiElement>
+		<TextField>
+			<StringParameterIndex>6</StringParameterIndex>	
+			<Transform2D>
+				<X>0.055</X>
+				<Y>0.11</Y>
+				<SizeX>0.04</SizeX>
+				<SizeY>0.04</SizeY>
+			</Transform2D>		
+		</TextField>	
+	</UiElement>
+	
+	<UiElement>
+		<TextField>
+			<StringParameterIndex>3</StringParameterIndex>	
+			<Transform2D>
+				<X>-0.07</X>
+				<Y>0.0</Y>
+				<SizeX>0.04</SizeX>
+				<SizeY>0.04</SizeY>
+			</Transform2D>		
+		</TextField>	
+	</UiElement>
+	<UiElement>
+		<TextField>
+			<StringParameterIndex>7</StringParameterIndex>	
+			<Transform2D>
+				<X>0.055</X>
+				<Y>0.01</Y>
+				<SizeX>0.04</SizeX>
+				<SizeY>0.04</SizeY>
+			</Transform2D>		
+		</TextField>	
+	</UiElement>
+	
+	
+	<UiElement>
+		<TextField>
+			<StringParameterIndex>4</StringParameterIndex>	
+			<Transform2D>
+				<X>-0.07</X>
+				<Y>-0.1</Y>
+				<SizeX>0.04</SizeX>
+				<SizeY>0.04</SizeY>
+			</Transform2D>		
+		</TextField>	
+	</UiElement>
+	<UiElement>
+		<TextField>
+			<StringParameterIndex>8</StringParameterIndex>	
+			<Transform2D>
+				<X>0.055</X>
+				<Y>-0.09</Y>
+				<SizeX>0.04</SizeX>
+				<SizeY>0.04</SizeY>
+			</Transform2D>		
+		</TextField>	
+	</UiElement>
+
+	
+</UiElement>
+
+
+
+
+	

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GroupDefinitions>
+
+
+	<GroupDefinition>
+		<InternalName>CapturedCity_1</InternalName><!--Same for infiltrate and Liberate-->
+		<Likelihood>100</Likelihood>
+		<PowerRating>80</PowerRating>
+		<Monster>Vorigan_Twinblade</Monster>
+		<Tag>CapturedCity</Tag>
+	</GroupDefinition>
+	
+	<GroupDefinition>
+		<InternalName>CapturedCity_2_Infiltrate</InternalName>
+		<Likelihood>100</Likelihood>
+		<PowerRating>140</PowerRating>
+		<Monster>Vorigan_Twinblade_3</Monster>
+		<Monster>Vorigan_Twinblade_2</Monster>
+		<Tag>CapturedCity</Tag>
+	</GroupDefinition>
+	<GroupDefinition>
+		<InternalName>CapturedCity_2_Liberate</InternalName>
+		<Likelihood>100</Likelihood>
+		<PowerRating>180</PowerRating>
+		<Monster>Vorigan_Twinblade</Monster>
+		<Monster>Vorigan_Twinblade_2</Monster>
+		<Monster>Vorigan_Twinblade_3</Monster>
+		<Tag>CapturedCity</Tag>
+	</GroupDefinition>
+	
+	
+	<GroupDefinition>
+		<InternalName>CapturedCity_3_Infiltrate</InternalName>
+		<Likelihood>80</Likelihood>
+		<PowerRating>100</PowerRating>
+		<Monster>Vorigan_ReaperGlaive</Monster>
+		<Tag>CapturedCity</Tag>
+	</GroupDefinition>	
+	<GroupDefinition>
+		<InternalName>CapturedCity_3_Liberate</InternalName>
+		<Likelihood>80</Likelihood>
+		<PowerRating>200</PowerRating>
+		<Monster>Vorigan_ReaperGlaive</Monster>
+		<Monster>Vorigan_Twinblade_2</Monster>
+		<Monster>Vorigan_Twinblade</Monster>
+		<Tag>CapturedCity</Tag>
+	</GroupDefinition>
+	
+	
+	<GroupDefinition>
+		<InternalName>CapturedCity_4_Liberate</InternalName>
+		<Likelihood>70</Likelihood>
+		<PowerRating>250</PowerRating>
+		<Monster>Vorigan_ReaperGlaive</Monster>
+		<Monster>Vorigan_ReaperGlaive</Monster>
+		<Monster>Vorigan_ReaperGlaive</Monster>
+		<Tag>CapturedCity</Tag>
+	</GroupDefinition>
+		
+		
+	<GroupDefinition>
+		<InternalName>CapturedCity_Boss_Infiltrate</InternalName>
+		<Likelihood>100</Likelihood>
+		<PowerRating>250</PowerRating>
+		<Monster>Vorigan_ReaperGlaive_Boss</Monster>
+		<Monster>Vorigan_ReaperGlaive</Monster>
+		<Tag>CapturedCity</Tag>
+		<Tag>Boss</Tag>
+	</GroupDefinition>		
+	<GroupDefinition>
+		<InternalName>CapturedCity_Boss_Liberate</InternalName>
+		<Likelihood>100</Likelihood>
+		<PowerRating>250</PowerRating>
+		<Monster>Vorigan_CapturedCityBoss</Monster>
+		<Monster>Vorigan_ReaperGlaive</Monster>
+		<Monster>Vorigan_ReaperGlaive</Monster>
+		<Tag>CapturedCity</Tag>
+		<Tag>Boss</Tag>
+	</GroupDefinition>
+	
+</GroupDefinitions>

@@ -1,0 +1,8 @@
+<UiAnimation>
+	<!--For derived class "UiAnimation"-->
+	<FileName>"../Data/Ui/Firesparks.xml"</FileName>
+	
+	<!--For base class "Animation"-->
+	<Frames>20</Frames>
+	<Blocking>1</Blocking>
+</UiAnimation>

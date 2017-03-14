@@ -1,0 +1,228 @@
+<!-- Parameters
+Ints
+[0] Active Mode
+
+Strings
+
+-->
+
+
+<UiElement>
+	<Transform2D>
+		<X>-1</X>
+		<Y>0.9</Y>
+		<SizeX>0.4</SizeX>
+		<SizeY>0.1</SizeY>
+	</Transform2D>
+	<Image>
+		<ImageFile>../Data/2D/Grey.png</ImageFile>
+	</Image>
+	<Effect>
+		<Type>Dummy</Type>
+		<ForMode>1</ForMode><!--Catch mouse clicks-->
+	</Effect>		
+
+	
+
+	<UiElement>
+		<Transform2D>
+			<X>0.04</X>
+			<Y>0.0</Y>
+			<SizeX>0.04</SizeX>
+			<SizeY>1.0</SizeY>
+			<SizeYRelativeToX>True</SizeYRelativeToX><!--takes into account window dimensions, so a 1 in SizeY would always be a square-->
+		</Transform2D>		
+		<Image>
+			<ImageFile>../Data/2D/Ui/MapEd_Draw.png</ImageFile>
+		</Image>
+		<Effect>
+			<Type>Tooltip</Type>
+			<ForMode>0</ForMode><!--On mouse hover-->
+			<StringValue>Default Mode: [L] Draw objects, [R] erase objects, [S] select type</StringValue>
+		</Effect>
+		<Effect>
+			<Type>SelectTool</Type>
+			<ForMode>1</ForMode>
+			<Value>0</Value>
+		</Effect>
+	</UiElement>
+	
+	<Conditional>
+		<IntValueEqual Index="0" Value="0">Content Doesnt matter</IntValueEqual>
+		<UiElement>
+			<Transform2D>
+				<X>0.04</X>
+				<Y>0.0</Y>
+				<SizeX>0.04</SizeX>
+				<SizeY>1.0</SizeY>
+				<SizeYRelativeToX>True</SizeYRelativeToX><!--takes into account window dimensions, so a 1 in SizeY would always be a square-->
+			</Transform2D>		
+			<Image>
+				<ImageFile>../Data/2D/Ui/Select.png</ImageFile>
+			</Image>
+		</UiElement>
+	</Conditional>
+	
+
+	<!--Sub element: Selector-->
+	<UiElement>
+		<Transform2D>
+			<X>0.12</X>
+			<Y>0.0</Y>
+			<SizeX>0.04</SizeX>
+			<SizeY>1.0</SizeY>
+			<SizeYRelativeToX>True</SizeYRelativeToX><!--takes into account window dimensions, so a 1 in SizeY would always be a square-->
+		</Transform2D>		
+		<Image>
+			<ImageFile>../Data/2D/Ui/MapEd_Select.png</ImageFile>
+		</Image>
+		<Effect>
+			<Type>Tooltip</Type>
+			<ForMode>0</ForMode><!--On mouse hover-->
+			<StringValue>Default Mode: [L] Draw objects, [R] erase objects, [S] select type</StringValue>
+		</Effect>
+		<Effect>
+			<Type>SelectTool</Type>
+			<ForMode>1</ForMode>
+			<Value>1</Value>
+		</Effect>
+	</UiElement>
+	
+	<Conditional>
+		<IntValueEqual Index="0" Value="1">Content Doesnt matter</IntValueEqual>
+		<UiElement>
+			<Transform2D>
+				<X>0.12</X>
+				<Y>0.0</Y>
+				<SizeX>0.04</SizeX>
+				<SizeY>1.0</SizeY>
+				<SizeYRelativeToX>True</SizeYRelativeToX><!--takes into account window dimensions, so a 1 in SizeY would always be a square-->
+			</Transform2D>		
+			<Image>
+				<ImageFile>../Data/2D/Ui/Select.png</ImageFile>
+			</Image>
+		</UiElement>
+	</Conditional>
+
+	
+	
+	
+	<UiElement>
+		<Transform2D>
+			<X>0.20</X>
+			<Y>0.0</Y>
+			<SizeX>0.04</SizeX>
+			<SizeY>1.0</SizeY>
+			<SizeYRelativeToX>True</SizeYRelativeToX><!--takes into account window dimensions, so a 1 in SizeY would always be a square-->
+		</Transform2D>		
+		<Image>
+			<ImageFile>../Data/2D/Ui/MapEd_GlobalTool.png</ImageFile>
+		</Image>
+		<Effect>
+			<Type>Tooltip</Type>
+			<ForMode>0</ForMode><!--On mouse hover-->
+			<StringValue>...</StringValue>
+		</Effect>
+		<Effect>
+			<Type>SelectTool</Type>
+			<ForMode>1</ForMode>
+			<Value>4</Value>
+		</Effect>
+	</UiElement>
+	
+	<Conditional>
+		<IntValueEqual Index="0" Value="4">Content Doesnt matter</IntValueEqual>
+		<UiElement>
+			<Transform2D>
+				<X>0.20</X>
+				<Y>0.0</Y>
+				<SizeX>0.04</SizeX>
+				<SizeY>1.0</SizeY>
+				<SizeYRelativeToX>True</SizeYRelativeToX><!--takes into account window dimensions, so a 1 in SizeY would always be a square-->
+			</Transform2D>		
+			<Image>
+				<ImageFile>../Data/2D/Ui/Select.png</ImageFile>
+			</Image>
+		</UiElement>
+	</Conditional>
+
+	
+
+	
+	<UiElement>
+		<Transform2D>
+			<X>0.04</X>
+			<Y>-0.16</Y>
+			<SizeX>0.04</SizeX>
+			<SizeY>1.0</SizeY>
+			<SizeYRelativeToX>True</SizeYRelativeToX><!--takes into account window dimensions, so a 1 in SizeY would always be a square-->
+		</Transform2D>		
+		<Image>
+			<ImageFile>../Data/2D/Ui/MapEd_Save.png</ImageFile>
+		</Image>
+		<Effect>
+			<Type>Tooltip</Type>
+			<ForMode>0</ForMode><!--On mouse hover-->
+			<StringValue>Default Mode: Save and Test</StringValue>
+		</Effect>
+		<Effect>
+			<Type>Save</Type>
+			<ForMode>1</ForMode>
+			<Value>1</Value>
+		</Effect>
+	</UiElement>	
+	
+	
+	<UiElement>
+		<Transform2D>
+			<X>0.12</X>
+			<Y>-0.16</Y>
+			<SizeX>0.04</SizeX>
+			<SizeY>1.0</SizeY>
+			<SizeYRelativeToX>True</SizeYRelativeToX><!--takes into account window dimensions, so a 1 in SizeY would always be a square-->
+		</Transform2D>		
+		<Image>
+			<ImageFile>../Data/2D/Ui/MapEd_SaveAndTest.png</ImageFile>
+		</Image>
+		<Effect>
+			<Type>Tooltip</Type>
+			<ForMode>0</ForMode><!--On mouse hover-->
+			<StringValue>Default Mode: Save and Test</StringValue>
+		</Effect>
+		<Effect>
+			<Type>SaveAndTest</Type>
+			<ForMode>1</ForMode>
+			<Value>1</Value>
+		</Effect>
+	</UiElement>	
+	
+	<UiElement>
+		<Transform2D>
+			<X>0.20</X>
+			<Y>-0.16</Y>
+			<SizeX>0.04</SizeX>
+			<SizeY>1.0</SizeY>
+			<SizeYRelativeToX>True</SizeYRelativeToX><!--takes into account window dimensions, so a 1 in SizeY would always be a square-->
+		</Transform2D>		
+		<Image>
+			<ImageFile>../Data/2D/Ui/MapEd_Load.png</ImageFile>
+		</Image>
+		<Effect>
+			<Type>Tooltip</Type>
+			<ForMode>0</ForMode><!--On mouse hover-->
+			<StringValue>Load / New</StringValue>
+		</Effect>
+		<Effect>
+			<Type>LoadNew</Type>
+			<ForMode>1</ForMode>
+			<Value>1</Value>
+		</Effect>
+	</UiElement>	
+
+	
+</UiElement>
+
+
+
+
+	

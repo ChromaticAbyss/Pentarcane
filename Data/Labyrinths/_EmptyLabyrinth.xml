@@ -1,0 +1,11 @@
+<Labyrinth>
+    <Part>
+        <Type>Floor_Grey</Type>
+        <Transform>
+            <X>0</X>
+            <Y>0</Y>
+            <Z>0</Z>
+            <Scale>1.0</Scale>
+        </Transform>
+    </Part>
+</Labyrinth>

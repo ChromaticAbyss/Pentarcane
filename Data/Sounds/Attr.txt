@@ -1,0 +1,31 @@
+Explosion - IrrklangExample
+
+
+
+Freesound.org:
+Thunderstrike 
+magic_woosh : 249819__spookymodem__magic-smite  (closing door?)
+positive_trigger: https://www.freesound.org/people/dan2008ds/sounds/214455/ (trigger object)
+magicsonar : https://www.freesound.org/people/Dneproman/sounds/377222/
+lock + unlock : https://www.freesound.org/people/sergiosmarinis/sounds/346760/
+key : https://www.freesound.org/people/LG/sounds/73092/
+powerup1 : https://www.freesound.org/people/RandomationPictures/sounds/138491/
+zap 1 + 2: https://www.freesound.org/people/maria@gmdthree.com/sounds/87305/
+shroud remove https://www.freesound.org/people/benjaminharveydesign/sounds/366092/
+slow mine : https://www.freesound.org/people/kantouth/sounds/104400/
+bite :  https://www.freesound.org/people/ggctuk/sounds/80550/
+slash :  https://www.freesound.org/people/Abyssmal/sounds/35213/
+enrage : https://www.freesound.org/people/thanvannispen/sounds/94583/
+
+
+http://www.audiorhapsody.com/
+labyrinth_fail (hit_3)
+obeliskImpact (impact_2)
+obeliskTrigger (impact_3)
+goal (riser_1)
+Mage tower theme (Phobia)
+(Division)
+Liberate/Infiltrate (Crossing the chasm)
+ Kevin MacLeod (incompetech.com)
+Licensed under Creative Commons: By Attribution 3.0 License
+http://creativecommons.org/licenses/by/3.0/

@@ -1,0 +1,54 @@
+# Written by MakeHuman 1.1.0
+version v1.1.0
+tags Enforcer
+camera 347.0 344.5 0.401922207006 0.430776947214 0.395788263566 0.4125
+modifier torso/torso-vshape-decr|incr -0.034000
+modifier macrodetails-universal/Muscle 0.687000
+modifier macrodetails/African 0.180003
+modifier macrodetails-proportions/BodyProportions 0.891000
+modifier torso/torso-scale-horiz-decr|incr 0.334000
+modifier measure/measure-upperarm-circ-decr|incr 0.388000
+modifier macrodetails/Gender 1.000000
+modifier torso/torso-scale-vert-decr|incr -0.184000
+modifier armslegs/l-upperarm-shoulder-muscle-decr|incr 0.552000
+modifier macrodetails-height/Height 0.395000
+modifier breast/BreastSize 0.500000
+modifier torso/torso-muscle-dorsi-decr|incr -0.142000
+modifier armslegs/l-hand-scale-decr|incr 0.496000
+modifier torso/torso-muscle-pectoral-decr|incr 0.320000
+modifier macrodetails/Age 0.585000
+modifier armslegs/r-lowerarm-muscle-decr|incr 0.538000
+modifier breast/BreastFirmness 0.500000
+modifier macrodetails/Asian 0.009997
+modifier measure/measure-neck-circ-decr|incr 0.472000
+modifier armslegs/r-hand-scale-decr|incr 0.538000
+modifier armslegs/l-hand-trans-in|out -0.646000
+modifier measure/measure-wrist-circ-decr|incr 0.258000
+modifier armslegs/l-lowerarm-muscle-decr|incr 0.756000
+modifier macrodetails/Caucasian 0.810000
+modifier armslegs/r-upperarm-shoulder-muscle-decr|incr 0.538000
+modifier head/head-square 0.680000
+modifier torso/torso-scale-depth-decr|incr 0.278000
+modifier armslegs/r-upperarm-muscle-decr|incr 0.756000
+modifier head/head-round 0.163000
+modifier armslegs/r-hand-fingers-distance-decr|incr -0.088000
+modifier head/head-rectangular 0.238000
+modifier armslegs/l-upperarm-muscle-decr|incr 0.620000
+modifier head/head-back-scale-depth-decr|incr -0.538000
+modifier armslegs/l-lowerarm-fat-decr|incr -0.198000
+modifier armslegs/r-hand-trans-in|out -0.756000
+modifier armslegs/r-lowerarm-scale-depth-decr|incr 0.496000
+modifier measure/measure-lowerarm-length-decr|incr 0.172000
+modifier armslegs/l-lowerarm-scale-depth-decr|incr 0.510000
+modifier macrodetails-universal/Weight 1.000000
+teeth Teeth_Base 0a5ec82a-0d5f-43ce-a765-8f076f95692d
+proxy male_muscle_13290 79e967dc-3f7a-4f2d-851e-4f06753ed571
+eyes Low-Poly 1cc97a30-85a1-42e6-a9f7-b3e753732baa
+pose run01.bvh
+clothes male_casualsuit04 402c35f6-0cf4-4d22-af5b-0cc58fb2b617
+clothes shoes03 ad622a26-da1e-4e3c-9f8e-454edf10d504
+clothesHideFaces True
+expression anger01.mhpose
+skinMaterial skins/default.mhmat
+material Low-Poly 1cc97a30-85a1-42e6-a9f7-b3e753732baa eyes/materials/brown.mhmat
+subdivide False

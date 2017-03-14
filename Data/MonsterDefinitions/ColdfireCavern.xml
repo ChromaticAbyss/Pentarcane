@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MonsterDefinitions>
+	<!--Monsters here have the special labyrinth feature of enemies that are invisible unless the player is close to them-->
+	
+
+	<MonsterDefinition>
+		<InternalName>Thregg</InternalName>
+		<Name>Thregg</Name>
+		<Stats>
+			<Health>4</Health>
+			<Attack>2</Attack>
+			<Armor>0</Armor>
+			<CastChance>0</CastChance>
+		</Stats>
+		<Image>../Data/2D/Monsters/Thregg.png</Image>
+		<ImageTransform>
+			<SizeX>1.0</SizeX>
+			<SizeY>1.0</SizeY>
+			<SizeYRelativeToX>True</SizeYRelativeToX>
+		</ImageTransform>
+		<Labyrinth>../Data/Labyrinths/TriggeredGroundspikes.xml</Labyrinth>
+	</MonsterDefinition>
+
+	
+	<MonsterDefinition>
+		<InternalName>Thregg_Strong</InternalName>
+		<Name>Raging Thregg</Name>
+		<Stats>
+			<Health>4</Health>
+			<Attack>4</Attack>
+			<Armor>0</Armor>
+			<CastChance>0</CastChance>
+		</Stats>
+		<Image>../Data/2D/Monsters/Thregg.png</Image>
+		<ImageTransform>
+			<SizeX>1.25</SizeX>
+			<SizeY>1.0</SizeY>
+			<SizeYRelativeToX>True</SizeYRelativeToX>
+		</ImageTransform>
+		<Labyrinth>../Data/Labyrinths/TriggeredGroundspikesWithMobileTriggers.xml</Labyrinth>
+	</MonsterDefinition>	
+
+
+</MonsterDefinitions>

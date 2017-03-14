@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LabyrinthPartDefinitions>
+
+	
+	
+	<LabyrinthPartDefinition>
+		<InternalName>Pickup_ExtraTime</InternalName>
+		<Type>Interactive</Type>
+		<Art3D>
+			<ModelFile>../Data/3D/LabyrinthParts/Weakspot.obj</ModelFile>
+			<TextureFile>../Data/2D/Blue.png</TextureFile>
+			<Transform>
+				<RotX>90</RotX>
+				<Scale>1.0</Scale>	
+			</Transform>
+		</Art3D>
+		<LogicStepScript>../Data/Scripts/Pickup_ExtraTime.lua</LogicStepScript>
+		<CircleCollider>
+			<Radius>0.35</Radius>
+		</CircleCollider>
+		<Tag>LevelControl</Tag>
+		<Tag>1x1</Tag>
+	</LabyrinthPartDefinition>
+
+	<LabyrinthPartDefinition>
+		<InternalName>Pickup_Shield</InternalName>
+		<Type>Interactive</Type>
+		<Art3D>
+			<ModelFile>../Data/3D/LabyrinthParts/Pickup_Shield.obj</ModelFile>
+			<TextureFile>../Data/2D/Blue.png</TextureFile>
+			<Transform>
+				<RotX>0</RotX>
+				<Scale>1.0</Scale>	
+			</Transform>
+		</Art3D>
+		<LogicStepScript>../Data/Scripts/Pickup_Shield.lua</LogicStepScript>
+		<CircleCollider>
+			<Radius>0.35</Radius>
+		</CircleCollider>
+		<Tag>LevelControl</Tag>
+		<Tag>1x1</Tag>
+	</LabyrinthPartDefinition>
+	
+	<LabyrinthPartDefinition>
+		<InternalName>Pickup_CombineDamage</InternalName>
+		<Type>Interactive</Type>
+		<Art3D>
+			<ModelFile>../Data/3D/LabyrinthParts/Pickup_CombineDamage.obj</ModelFile>
+			<TextureFile>../Data/2D/Blue.png</TextureFile>
+			<Transform>
+				<RotX>0</RotX>
+				<Scale>1.0</Scale>	
+			</Transform>
+		</Art3D>
+		<LogicStepScript>../Data/Scripts/Pickup_CombineDamage.lua</LogicStepScript>
+		<CircleCollider>
+			<Radius>0.35</Radius>
+		</CircleCollider>
+		<Tag>LevelControl</Tag>
+		<Tag>1x1</Tag>
+	</LabyrinthPartDefinition>
+		
+		
+	<LabyrinthPartDefinition>
+		<InternalName>Pickup_Damage</InternalName>
+		<Type>Interactive</Type>
+		<Art3D>
+			<ModelFile>../Data/3D/LabyrinthParts/Pickup_Damage.obj</ModelFile>
+			<TextureFile>../Data/2D/Blue.png</TextureFile>
+			<Transform>
+				<RotX>0</RotX>
+				<Scale>1.0</Scale>	
+			</Transform>
+		</Art3D>
+		<LogicStepScript>../Data/Scripts/Pickup_Damage.lua</LogicStepScript>
+		<CircleCollider>
+			<Radius>0.35</Radius>
+		</CircleCollider>
+		<Tag>LevelControl</Tag>
+		<Tag>1x1</Tag>
+	</LabyrinthPartDefinition>
+
+		
+	<LabyrinthPartDefinition>
+		<InternalName>Pickup_ArmorPierce</InternalName>
+		<Type>Interactive</Type>
+		<Art3D>
+			<ModelFile>../Data/3D/LabyrinthParts/Pickup_ArmorPierce.obj</ModelFile>
+			<TextureFile>../Data/2D/Blue.png</TextureFile>
+			<Transform>
+				<RotX>0</RotX>
+				<Scale>1.0</Scale>	
+			</Transform>
+		</Art3D>
+		<LogicStepScript>../Data/Scripts/Pickup_ArmorPierce.lua</LogicStepScript>
+		<CircleCollider>
+			<Radius>0.35</Radius>
+		</CircleCollider>
+		<Tag>LevelControl</Tag>
+		<Tag>1x1</Tag>
+	</LabyrinthPartDefinition>
+
+	
+	<LabyrinthPartDefinition>
+		<InternalName>SpeedPickup</InternalName>
+		<Type>Interactive</Type>
+		<Art3D>
+			<ModelFile>../Data/3D/LabyrinthParts/SlowMine.obj</ModelFile>
+			<TextureFile>../Data/2D/Blue.png</TextureFile>
+			<Transform>
+				<RotX>0</RotX>
+				<Scale>0.35</Scale>	
+			</Transform>			
+		</Art3D>
+		<CircleCollider>
+			<Radius>0.45</Radius>
+		</CircleCollider>
+		<Tag>1x1</Tag>
+		<Tag>Collectible</Tag>
+		<LogicStepScript>../Data/Scripts/SpeedPickup.lua</LogicStepScript>
+	</LabyrinthPartDefinition>
+	
+
+	<LabyrinthPartDefinition>
+		<InternalName>MobileKey</InternalName>
+		<Type>Interactive</Type>
+		<Art3D>
+			<ModelFile>../Data/3D/LabyrinthParts/MobilePickup.obj</ModelFile>
+			<TextureFile>../Data/2D/Blue.png</TextureFile>
+			<Transform>
+				<RotX>0</RotX>
+				<Scale>0.40</Scale>	
+			</Transform>			
+		</Art3D>
+		<CircleCollider>
+			<Radius>0.45</Radius>
+		</CircleCollider>
+		<Tag>1x1</Tag>
+		<Tag>LevelControl</Tag>
+		<Tag>Collectible</Tag>
+		<Tag>Mobile</Tag>
+		<LogicStepScript>../Data/Scripts/Common/Patrol_Basics.lua</LogicStepScript>
+		<LogicStepScript>../Data/Scripts/MobileKey.lua</LogicStepScript>
+	</LabyrinthPartDefinition>
+	
+
+	
+	
+</LabyrinthPartDefinitions>

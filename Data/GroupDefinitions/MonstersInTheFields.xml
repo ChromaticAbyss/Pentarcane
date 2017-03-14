@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GroupDefinitions>
+
+	
+	
+	<GroupDefinition>
+		<InternalName>SkinModifier</InternalName>
+		<Likelihood>100</Likelihood>
+		<PowerRating>90</PowerRating>
+		<Monster>SkinModifier</Monster>
+		<Tag>Nonhuman</Tag>
+		<Tag>MonstersInTheFields</Tag>
+	</GroupDefinition>		
+	
+	
+	<GroupDefinition>
+		<InternalName>GreyRipper</InternalName>
+		<Likelihood>100</Likelihood>
+		<PowerRating>80</PowerRating>
+		<Monster>GreyRipper</Monster>
+		<Tag>Nonhuman</Tag>
+		<Tag>MonstersInTheFields</Tag>
+	</GroupDefinition>
+			
+			
+	<GroupDefinition>
+		<InternalName>Siyia2</InternalName>
+		<Likelihood>100</Likelihood>
+		<PowerRating>70</PowerRating>
+		<Monster>Siyia</Monster>
+		<Monster>Siyia</Monster>
+		<Tag>Nonhuman</Tag>
+		<Tag>Plant</Tag>
+		<Tag>MonstersInTheFields</Tag>
+	</GroupDefinition>
+				
+	
+	<GroupDefinition>
+		<InternalName>DroneGroup</InternalName>
+		<Likelihood>1000000</Likelihood>
+		<PowerRating>70</PowerRating>
+		<Monster>Drone</Monster>
+		<Monster>Drone</Monster>
+		<Monster>Drone</Monster>
+		<Tag>MonstersInTheFields</Tag>
+	</GroupDefinition>
+
+	
+	
+	<!--
+		Shrieking Herald
+		Voiceless Preacher
+		Choir of Sinners	
+	-->
+</GroupDefinitions>

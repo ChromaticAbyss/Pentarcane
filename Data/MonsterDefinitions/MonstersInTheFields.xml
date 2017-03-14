@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MonsterDefinitions>
+
+
+
+	<MonsterDefinition>
+		<InternalName>Drone</InternalName>
+		<Name>Cyl Drone</Name>
+		<Stats>
+			<Health>2</Health>
+			<Attack>1</Attack>
+			<Armor>0</Armor>
+			<CastChance>25</CastChance>
+		</Stats>
+		<Image>../Data/2D/Monsters/Drone_2d.png</Image>
+		<ImageTransform>
+			<SizeX>0.3</SizeX>
+			<SizeY>1.0</SizeY>
+			<SizeYRelativeToX>True</SizeYRelativeToX>
+		</ImageTransform>
+		<Labyrinth>../Data/Labyrinths/Drone1.xml</Labyrinth>
+		<Cast>
+			<InternalName>CylReinforcements</InternalName>
+			<Segment>
+				<Type>SpawnMonster</Type>
+				<StringValue>Drone</StringValue>
+				<StringValue>../Data/Animations/Flipbook_Firesparks.xml</StringValue><!--Flipbook animation on minion spawn-->
+				<Value>1</Value><!--Spawn stunned-->
+			</Segment>	
+			<Segment>
+				<Type>Finish</Type>
+			</Segment>		
+		</Cast>	
+	</MonsterDefinition>
+			
+	
+	<MonsterDefinition>
+		<InternalName>SkinModifier</InternalName>
+		<Name>Skin Modifier</Name>
+		<Stats>
+			<Health>5</Health>
+			<Attack>2</Attack>
+			<Armor>1</Armor>
+			<CastChance>50</CastChance>
+		</Stats>
+		<Image>../Data/2D/Monsters/SkinModifier.png</Image>
+		<ImageTransform>
+			<SizeX>0.8</SizeX>
+			<SizeY>1.0</SizeY>
+			<SizeYRelativeToX>True</SizeYRelativeToX>
+		</ImageTransform>
+		<Labyrinth>../Data/Labyrinths/SkinModifier.xml</Labyrinth>
+		<Cast>
+			<InternalName>PlaceTotem</InternalName>
+			<!--
+			<Segment>
+				<Type>UiAnimation</Type> 
+				<StringValue>Blah</StringValue>
+			</Segment>
+			-->
+			<Segment>
+				<Type>SpawnMonster</Type>
+				<StringValue>SkinModifier_Totem</StringValue>
+				<StringValue>../Data/Animations/Flipbook_Firesparks.xml</StringValue><!--Flipbook animation on minion spawn-->
+				<Value>1</Value><!--Spawn stunned-->
+			</Segment>
+			
+			<Segment>
+				<Type>Finish</Type>
+			</Segment>		
+		</Cast>	
+	</MonsterDefinition>
+
+	<MonsterDefinition>
+		<InternalName>SkinModifier_Totem</InternalName>
+		<Name>Skin Modifier Totem</Name>
+		<Stats>
+			<Health>3</Health>
+			<Attack>4</Attack>
+			<Armor>0</Armor>
+			<CastChance>0</CastChance>
+		</Stats>
+		<Image>../Data/2D/Monsters/SkinModifier_Totem.png</Image>
+		<ImageTransform>
+			<SizeX>0.6</SizeX>
+			<SizeY>1.0</SizeY>
+			<SizeYRelativeToX>True</SizeYRelativeToX>
+		</ImageTransform>
+		<Labyrinth>../Data/Labyrinths/SkinModifier_Totem.xml</Labyrinth>
+	</MonsterDefinition>	
+	
+	
+	
+	
+	<MonsterDefinition>
+		<InternalName>GreyRipper</InternalName>
+		<Name>Grey Ripper</Name>
+		<!--Also known as the weakest, most annoying monster you definitely need a mage to get rid of-->
+		<Stats>
+			<Health>5</Health>
+			<Attack>3</Attack>
+			<Armor>0</Armor>
+			<CastChance>0</CastChance>
+		</Stats>
+		<Image>../Data/2D/Monsters/GreyRipper.png</Image>
+		<ImageTransform>
+			<SizeX>0.95</SizeX>
+			<SizeY>1.0</SizeY>
+			<SizeYRelativeToX>True</SizeYRelativeToX>
+		</ImageTransform>
+		<Labyrinth>../Data/Labyrinths/GreyRipper.xml</Labyrinth>
+	</MonsterDefinition>
+	
+
+	
+	<MonsterDefinition>
+		<InternalName>Siyia</InternalName>
+		<Name>Thornsiyia</Name>
+		<!--Also known as the weakest, most annoying monster you definitely need a mage to get rid of-->
+		<Stats>
+			<Health>2</Health>
+			<Attack>1</Attack>
+			<Armor>0</Armor>
+			<CastChance>0</CastChance>
+		</Stats>
+		<Image>../Data/2D/Monsters/PlantThing.png</Image>
+		<ImageTransform>
+			<SizeX>0.55</SizeX>
+			<SizeY>1.0</SizeY>
+			<SizeYRelativeToX>True</SizeYRelativeToX>
+		</ImageTransform>
+		<Labyrinth>../Data/Labyrinths/Siyia.xml</Labyrinth>
+	</MonsterDefinition>
+	
+
+	
+	
+	
+
+	<MonsterDefinition>
+		<InternalName>Hydra</InternalName>
+		<Name>Hydra</Name>
+		<Stats>
+			<Health>22</Health>
+			<Attack>2</Attack>
+			<Armor>0</Armor>
+			<CastChance>30</CastChance>
+		</Stats>
+		<Art3D>
+			<ModelFile>../Data/3D/Monsters/Hydra.obj</ModelFile>
+			<TextureFile>../Data/2D/Monsters/Hydra.png</TextureFile>
+			<Transform>
+				<RotX>0</RotX>
+				<RotZ>-90</RotZ>
+				<Scale>1.20</Scale>	
+			</Transform>			
+		</Art3D>
+		<Image>../Data/2D/Monsters/Hydra_2d.png</Image>
+		<ImageTransform>
+			<SizeX>1.6</SizeX><!-- has no effect at the moment-->
+			<SizeY>1.0</SizeY>
+			<SizeYRelativeToX>True</SizeYRelativeToX>
+		</ImageTransform>
+		<Labyrinth>../Data/Labyrinths/Hydra1.xml</Labyrinth>
+		<Cast>
+			<InternalName>SelfHeal</InternalName>	
+			<Segment>
+				<Type>FlipbookAnimation</Type>
+				<Targets>Self</Targets>
+				<StringValue>../Data/Animations/Heal.xml</StringValue>
+			</Segment>
+			<Segment>
+				<Type>Heal</Type>
+				<Targets>Self</Targets>
+				<Value>5</Value><!--Hp-->
+			</Segment>		
+			<Segment>
+				<Type>ChangeLabyrinth</Type>
+				<Targets>Self</Targets>
+				<StringValue>../Data/Labyrinths/Hydra1.xml</StringValue>
+				<StringValue>../Data/Labyrinths/Hydra2.xml</StringValue>	
+				<StringValue>../Data/Labyrinths/Hydra3.xml</StringValue>	
+			</Segment>			
+			<Segment>
+				<Type>Finish</Type>
+			</Segment>		
+		</Cast>
+		<CastWhenDamageTaken>
+			<Segment>
+				<Type>ChangeLabyrinth</Type>
+				<Targets>Self</Targets>
+				<StringValue>../Data/Labyrinths/Hydra1.xml</StringValue>
+				<StringValue>../Data/Labyrinths/Hydra2.xml</StringValue>	
+				<StringValue>../Data/Labyrinths/Hydra3.xml</StringValue>	
+			</Segment>			
+			<Segment>
+				<Type>Finish</Type>
+			</Segment>			
+		</CastWhenDamageTaken>
+		
+	</MonsterDefinition>	
+	
+	
+	
+	
+
+	
+</MonsterDefinitions>

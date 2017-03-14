@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LabyrinthPartDefinitions>
+
+	
+	
+	<LabyrinthPartDefinition>
+		<InternalName>Wall_1</InternalName>
+		<Type>Inert</Type>
+		<Art3D>
+			<ModelFile>../Data/3D/LabyrinthParts/Wall1.obj</ModelFile>
+			<TextureFile>../Data/2D/LabyrinthParts/Wall1.png</TextureFile>
+			<Transform>
+				<RotX>90</RotX>
+				<Scale>1.0</Scale>	
+			</Transform>			
+		</Art3D>
+		<RectangleCollider>
+			<Width>1.0</Width>
+			<Height>1.0</Height>
+		</RectangleCollider>
+		<Tag>Wall</Tag><!--A non deadly blocker!-->
+		<Tag>1x1</Tag>
+	</LabyrinthPartDefinition>
+
+	<LabyrinthPartDefinition>
+		<InternalName>Wall_Beveled</InternalName>
+		<Type>Inert</Type>
+		<Art3D>
+			<ModelFile>../Data/3D/LabyrinthParts/Wall_Beveled.obj</ModelFile>
+			<TextureFile>../Data/2D/LabyrinthParts/Wall_Beveled.png</TextureFile>
+			<Transform>
+				<RotX>0</RotX>
+				<Scale>1.0</Scale>	
+			</Transform>			
+		</Art3D>
+		<RectangleCollider>
+			<Width>1.0</Width>
+			<Height>1.0</Height>
+		</RectangleCollider>
+		<Tag>Wall</Tag><!--A non deadly blocker!-->
+		<Tag>1x1</Tag>
+	</LabyrinthPartDefinition>
+
+	<LabyrinthPartDefinition>
+		<InternalName>Wall_1x1_Corner</InternalName>
+		<Type>Inert</Type>
+		<Art3D>
+			<ModelFile>../Data/3D/LabyrinthParts/Wall_1x1_Corner.obj</ModelFile>
+			<TextureFile>../Data/2D/LabyrinthParts/Wall_1x1_Corner.png</TextureFile>
+			<Transform>
+				<Scale>0.5</Scale>	
+			</Transform>			
+		</Art3D>
+		<RectangleCollider>
+			<Width>1.0</Width>
+			<Height>1.0</Height>
+		</RectangleCollider>
+		<Tag>Wall</Tag><!--A non deadly blocker!-->
+		<Tag>1x1</Tag>
+	</LabyrinthPartDefinition>
+	
+	<LabyrinthPartDefinition>
+		<InternalName>Wall_1x1_Corner_2</InternalName>
+		<Type>Inert</Type>
+		<Art3D>
+			<ModelFile>../Data/3D/LabyrinthParts/Wall_1x1_Corner_2.obj</ModelFile>
+			<TextureFile>../Data/2D/LabyrinthParts/Wall_1x1_Corner_2.png</TextureFile>
+			<Transform>
+				<Scale>0.5</Scale>	
+			</Transform>			
+		</Art3D>
+		<RectangleCollider>
+			<Width>1.0</Width>
+			<Height>1.0</Height>
+		</RectangleCollider>
+		<Tag>Wall</Tag><!--A non deadly blocker!-->
+		<Tag>1x1</Tag>
+	</LabyrinthPartDefinition>
+	
+	
+	<LabyrinthPartDefinition>
+		<InternalName>Wall_Contorted</InternalName>
+		<Type>Inert</Type>
+		<Art3D>
+			<ModelFile>../Data/3D/LabyrinthParts/Wall_Contorted.obj</ModelFile>
+			<TextureFile>../Data/2D/LabyrinthParts/Wall_Contorted.png</TextureFile>
+			<Transform>
+				<Scale>0.6</Scale>	
+			</Transform>			
+		</Art3D>
+		<RectangleCollider>
+			<Width>1.0</Width>
+			<Height>1.0</Height>
+		</RectangleCollider>
+		<Tag>Wall</Tag><!--A non deadly blocker!-->
+		<Tag>1x1</Tag>
+	</LabyrinthPartDefinition>
+
+	
+	<LabyrinthPartDefinition>
+		<InternalName>Wall_1x3</InternalName>
+		<Type>Inert</Type>
+		<Art3D>
+			<ModelFile>../Data/3D/LabyrinthParts/Wall_1x3.obj</ModelFile>
+			<TextureFile>../Data/2D/LabyrinthParts/Wall_1x3.png</TextureFile>
+			<Transform>
+				<Scale>0.5</Scale>	
+			</Transform>			
+		</Art3D>
+		<RectangleCollider>
+			<Width>1.0</Width>
+			<Height>3.0</Height>
+		</RectangleCollider>
+		<Tag>Wall</Tag><!--A non deadly blocker!-->
+		<Tag>1x3</Tag>
+	</LabyrinthPartDefinition>
+	
+	<LabyrinthPartDefinition>
+		<InternalName>Wall_1x5</InternalName>
+		<Type>Inert</Type>
+		<Art3D>
+			<ModelFile>../Data/3D/LabyrinthParts/Wall_1x5.obj</ModelFile>
+			<TextureFile>../Data/2D/LabyrinthParts/Wall_1x5.png</TextureFile>
+			<Transform>
+				<Scale>0.5</Scale>	
+			</Transform>			
+		</Art3D>
+		<RectangleCollider>
+			<Width>1.0</Width>
+			<Height>5.0</Height>
+		</RectangleCollider>
+		<Tag>Wall</Tag><!--A non deadly blocker!-->
+		<Tag>1x5</Tag>
+	</LabyrinthPartDefinition>
+
+	
+	<LabyrinthPartDefinition>
+		<InternalName>Wall_1_WithLittleBlocks</InternalName>
+		<Type>Inert</Type>
+		<Art3D>
+			<ModelFile>../Data/3D/LabyrinthParts/Wall_WithLittleBlocks.obj</ModelFile>
+			<TextureFile>../Data/2D/LabyrinthParts/Wall_WithLittleBlocks.png</TextureFile>
+			<Transform>
+				<Scale>1.0</Scale>	
+			</Transform>			
+		</Art3D>
+		<RectangleCollider>
+			<Width>1.0</Width>
+			<Height>1.0</Height>
+		</RectangleCollider>
+		<Tag>Wall</Tag><!--A non deadly blocker!-->
+		<Tag>1x1</Tag>
+	</LabyrinthPartDefinition>
+	
+	<LabyrinthPartDefinition>
+		<InternalName>Wall_2x2_1</InternalName>
+		<Type>Inert</Type>
+		<Art3D>
+			<ModelFile>../Data/3D/LabyrinthParts/LabyrinthBlock_2x2_1.obj</ModelFile>
+			<TextureFile>../Data/2D/LabyrinthParts/LabyrinthBlock_2x2_1.png</TextureFile>
+			<Transform>
+				<X>0.5</X>
+				<Y>0.5</Y>
+				<RotX>0</RotX>
+				<Scale>1.0</Scale>	
+			</Transform>			
+		</Art3D>
+		<RectangleCollider>
+			<X>0.5</X>
+			<Y>0.5</Y>
+			<Width>2.0</Width>
+			<Height>2.0</Height>
+		</RectangleCollider>
+		<Tag>Wall</Tag><!--A non deadly blocker!-->
+		<Tag>2x2</Tag>
+	</LabyrinthPartDefinition>
+	
+	<LabyrinthPartDefinition>
+		<InternalName>Wall_2x2_2</InternalName>
+		<Type>Inert</Type>
+		<Art3D>
+			<ModelFile>../Data/3D/LabyrinthParts/LabyrinthBlock_2x2_2.obj</ModelFile>
+			<TextureFile>../Data/2D/LabyrinthParts/LabyrinthBlock_2x2_2.png</TextureFile>
+			<Transform>
+				<X>0.5</X>
+				<Y>0.5</Y>
+				<RotX>0</RotX>
+				<Scale>1.0</Scale>	
+			</Transform>			
+		</Art3D>
+		<RectangleCollider>
+			<X>0.5</X>
+			<Y>0.5</Y>
+			<Width>2.0</Width>
+			<Height>2.0</Height>
+		</RectangleCollider>
+		<Tag>Wall</Tag><!--A non deadly blocker!-->
+		<Tag>2x2</Tag>
+	</LabyrinthPartDefinition>
+
+	<LabyrinthPartDefinition>
+		<InternalName>Wall_3x3_Pyramid</InternalName>
+		<Type>Inert</Type>
+		<Art3D>
+			<ModelFile>../Data/3D/LabyrinthParts/Wall_3x3_Pyramid.obj</ModelFile>
+			<TextureFile>../Data/2D/LabyrinthParts/Wall_3x3_Pyramid.png</TextureFile>
+			<Transform>
+				<X>0.0</X>
+				<Y>0.0</Y>
+				<RotX>0</RotX>
+				<Scale>1.0</Scale>	
+			</Transform>			
+		</Art3D>
+		<RectangleCollider>
+			<X>0.0</X>
+			<Y>0.0</Y>
+			<Width>3.0</Width>
+			<Height>3.0</Height>
+		</RectangleCollider>
+		<Tag>Wall</Tag><!--A non deadly blocker!-->
+		<Tag>3x3</Tag>
+	</LabyrinthPartDefinition>
+
+	<LabyrinthPartDefinition>
+		<InternalName>Wall_3x3_Tunnel</InternalName>
+		<Type>Inert</Type>
+		<Art3D>
+			<ModelFile>../Data/3D/LabyrinthParts/Wall_3x3_Tunnel.obj</ModelFile>
+			<TextureFile>../Data/2D/LabyrinthParts/Wall_3x3_Tunnel.png</TextureFile>
+			<Transform>
+				<Scale>0.5</Scale>	
+			</Transform>			
+		</Art3D>
+		<RectangleCollider>
+			<X>1.0</X>
+			<Y>0.0</Y>
+			<Width>1.0</Width>
+			<Height>3.0</Height>
+		</RectangleCollider>
+		<RectangleCollider>
+			<X>-1.0</X>
+			<Y>0.0</Y>
+			<Width>1.0</Width>
+			<Height>3.0</Height>
+		</RectangleCollider>
+		<Tag>Wall</Tag><!--A non deadly blocker!-->
+		<Tag>3x3</Tag>
+	</LabyrinthPartDefinition>
+	
+	
+</LabyrinthPartDefinitions>

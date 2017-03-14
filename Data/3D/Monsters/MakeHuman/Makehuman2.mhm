@@ -1,0 +1,31 @@
+# Written by MakeHuman 1.1.0
+version v1.1.0
+tags Makehuman2
+camera 45.0 355.5 0.294018971228 0.635111021914 0.124576053532 0.4125
+modifier macrodetails-universal/Muscle 0.490000
+modifier macrodetails/African 0.187000
+modifier macrodetails-proportions/BodyProportions 0.483000
+modifier macrodetails/Gender 0.000000
+modifier armslegs/l-upperarm-shoulder-muscle-decr|incr -0.198000
+modifier macrodetails-height/Height 0.503000
+modifier breast/BreastSize 0.500000
+modifier head/head-invertedtriangular 0.347000
+modifier macrodetails/Age 0.500000
+modifier breast/BreastFirmness 0.500000
+modifier macrodetails/Asian 0.187000
+modifier head/head-oval 0.088000
+modifier macrodetails/Caucasian 0.626000
+modifier macrodetails-universal/Weight 0.340000
+proxy female1605 e7cb8171-845e-42b0-a109-e6e8c8a61f9d
+hair ponytail01 44e0340e-c7a6-4d22-814c-0632968d2dde
+eyelashes eyelashes04 efd75993-8de1-43fb-b410-adc203091d25
+eyebrows eyebrow004 eb028b6d-3ff8-40c7-a2ea-4d9aa808b38d
+eyes Low-Poly 1cc97a30-85a1-42e6-a9f7-b3e753732baa
+pose standing05.bvh
+clothes female_elegantsuit01 8bb26477-c09f-4439-b05f-961516acf662
+clothesHideFaces True
+expression sceptical01.mhpose
+skinMaterial skins/default.mhmat
+material ponytail01 44e0340e-c7a6-4d22-814c-0632968d2dde ponytail01.mhmat
+material Low-Poly 1cc97a30-85a1-42e6-a9f7-b3e753732baa eyes/materials/brown.mhmat
+subdivide False

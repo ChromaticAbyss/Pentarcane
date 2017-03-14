@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GroupDefinitions>
+
+	
+	
+	<GroupDefinition>
+		<InternalName>Pyramid_2</InternalName>
+		<Likelihood>100</Likelihood>
+		<PowerRating>80</PowerRating>
+		<Monster>PyramidGuardian</Monster>
+		<Tag>Nonhuman</Tag>
+		<Tag>PyramidExcavation</Tag>
+	</GroupDefinition>		
+	
+	<GroupDefinition>
+		<InternalName>Pyramid_C</InternalName>
+		<Likelihood>100</Likelihood>
+		<PowerRating>100</PowerRating>
+		<Monster>CindersOfTheLost</Monster>
+		<Tag>Nonhuman</Tag>
+		<Tag>PyramidExcavation</Tag>
+	</GroupDefinition>		
+	
+	<GroupDefinition>
+		<InternalName>GodInTheMire</InternalName>
+		<Likelihood>100</Likelihood>
+		<PowerRating>120</PowerRating>
+		<Monster>GodInTheMire</Monster>
+		<Tag>Nonhuman</Tag>
+		<Tag>PyramidExcavation</Tag>
+	</GroupDefinition>		
+	
+
+	
+	<!--
+		Shrieking Herald
+		Voiceless Preacher
+		Choir of Sinners	
+	-->
+</GroupDefinitions>

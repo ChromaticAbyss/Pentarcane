@@ -1,0 +1,31 @@
+<FlipbookAnimation>
+	<!--For derived class "FlipbookAnimation"-->
+	<FileName>../Data/2D/Animations/Heal_1.png</FileName>
+	<FileName>../Data/2D/Animations/Heal_2.png</FileName>
+	<FileName>../Data/2D/Animations/Heal_3.png</FileName>
+	<FileName>../Data/2D/Animations/Heal_4.png</FileName>
+	<FileName>../Data/2D/Animations/Heal_5.png</FileName>
+	<FileName>../Data/2D/Animations/Heal_6.png</FileName>
+	<FileName>../Data/2D/Animations/Heal_7.png</FileName>
+	<FileName>../Data/2D/Animations/Heal_8.png</FileName>
+	<FileName>../Data/2D/Animations/Heal_8.png</FileName>
+	<FileName>../Data/2D/Animations/Heal_8.png</FileName>
+	<FileName>../Data/2D/Animations/Heal_8.png</FileName>
+	<FileName>../Data/2D/Animations/Heal_9.png</FileName>
+	<FileName>../Data/2D/Animations/Heal_10.png</FileName>
+	<FileName>../Data/2D/Animations/Heal_11.png</FileName>
+
+
+	<Transform2D>
+		<X>0.0</X>
+		<Y>0.1</Y>
+		<SizeX>0.28</SizeX>
+		<SizeY>1.0</SizeY>
+		<SizeYRelativeToX>True</SizeYRelativeToX>
+	</Transform2D>
+	
+	
+	<!--For base class "Animation"-->
+	<Frames>70</Frames>
+	<Blocking>1</Blocking>
+</FlipbookAnimation>
