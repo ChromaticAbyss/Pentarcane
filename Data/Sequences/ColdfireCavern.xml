@@ -1,8 +1,8 @@
 <Sequence>
 	<DisplayName>Coldfire Cavern</DisplayName>
-	<Description>.</Description>
-	<Description>.</Description>
-	<Description>.</Description>
+	<Description>To get to the legendary draconic library you must descent the Coldfire Caverns.</Description>
+	<Description>Magic runs rampant in the labyrinthine depths.</Description>
+	<Description>The creatures here have been fed by it and are of unusual size and power.</Description>
 	<Description>.</Description>
 	<Description>.</Description>
 	<Description>.</Description>
@@ -31,26 +31,93 @@
 		</Transform>			
 	</Art3D>
 	
+	<Soundtrack>Division.mp3</Soundtrack>
+
 	<Reward>ColdfireCavern_1</Reward><!--Unlock this thing for the player. It allows accessing additional sequences-->
-	<CompleteRequirement>ColdfireCavern_1</CompleteRequirement><!--Usually one of the rewards!-->
+	<RewardHuman>Safe Passage</RewardHuman>
+	<RewardIcon>../Data/2D/Rewards/CavernMap.png</RewardIcon>
 	
+	<CompleteRequirement>ColdfireCavern_1</CompleteRequirement><!--Usually one of the rewards!-->
 	<UnlockRequirement>Pyramid</UnlockRequirement><!--TODO: Change to: Lumient-->
 	
-	<!--Start with a random refight from forest of the purple coffins-->
 	<Fight>
-		<Condition> 
-			<Type>OR</Type>
+		<Condition>
+			<Type>NOT</Type>
 			<Condition>
-				<Type>ExactName</Type>
-				<StringValue>ColdfireCavern_1</StringValue>
+				<Type>HasTag</Type>
+				<StringValue>Boss</StringValue>
 			</Condition>
 		</Condition>
+		<Condition>
+			<Type>HasTag</Type>
+			<StringValue>ColdfireCavern</StringValue>
+		</Condition>	
 		<Stage>../Data/Stages/ColdfireCavern.xml</Stage><!--A stage is just a bunch of models and positions at which to place enemy models-->
-		<Description>...</Description>
 	</Fight>
 	
+	<Fight>
+		<Condition>
+			<Type>NOT</Type>
+			<Condition>
+				<Type>HasTag</Type>
+				<StringValue>Boss</StringValue>
+			</Condition>
+		</Condition>
+		<Condition>
+			<Type>HasTag</Type>
+			<StringValue>ColdfireCavern</StringValue>
+		</Condition>	
+		<Stage>../Data/Stages/ColdfireCavern.xml</Stage><!--A stage is just a bunch of models and positions at which to place enemy models-->
+	</Fight>
+	
+	<Fight>
+		<Condition>
+			<Type>NOT</Type>
+			<Condition>
+				<Type>HasTag</Type>
+				<StringValue>Boss</StringValue>
+			</Condition>
+		</Condition>
+		<Condition>
+			<Type>HasTag</Type>
+			<StringValue>ColdfireCavern</StringValue>
+		</Condition>	
+		<Stage>../Data/Stages/ColdfireCavern.xml</Stage><!--A stage is just a bunch of models and positions at which to place enemy models-->
+	</Fight>
+	
+	<Fight>
+		<Condition>
+			<Type>NOT</Type>
+			<Condition>
+				<Type>HasTag</Type>
+				<StringValue>Boss</StringValue>
+			</Condition>
+		</Condition>
+		<Condition>
+			<Type>HasTag</Type>
+			<StringValue>ColdfireCavern</StringValue>
+		</Condition>	
+		<Stage>../Data/Stages/ColdfireCavern.xml</Stage><!--A stage is just a bunch of models and positions at which to place enemy models-->
+	</Fight>
+	
+	<Fight>
+		<Condition>
+			<Type>NOT</Type>
+			<Condition>
+				<Type>HasTag</Type>
+				<StringValue>Boss</StringValue>
+			</Condition>
+		</Condition>
+		<Condition>
+			<Type>HasTag</Type>
+			<StringValue>ColdfireCavern</StringValue>
+		</Condition>	
+		<Stage>../Data/Stages/ColdfireCavern.xml</Stage><!--A stage is just a bunch of models and positions at which to place enemy models-->
+	</Fight>
+	
+					
 
-
+		
 	
 	
 

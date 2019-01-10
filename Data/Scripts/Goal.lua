@@ -23,8 +23,11 @@ function frame()
 			Spawn("Player_Lifesteal_B",my_x,my_y,my_z,"Player_OnReturn") --Spawn the fully soaked return object for DrainLife
 			Disable(my_id)
 		end 
-		PlaySound("Goal.wav")
-		Disable(possibly_player)
-		
+		--PlaySound("Goal.wav")
+		PlaySound("BrassHitMedium.wav")		
+
+		Disable(possibly_player)	
 	end 
+	
+	RotateZ(my_id,0.8)
 end 

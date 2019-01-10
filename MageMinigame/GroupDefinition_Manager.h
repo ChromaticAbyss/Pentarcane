@@ -6,7 +6,7 @@
 #include <vector>
 #include <string>
 
-#include "FightData.h"
+#include "Fight/FightData.h"
 
 class GroupDefinition_Manager {
 public:

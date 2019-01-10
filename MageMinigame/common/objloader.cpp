@@ -45,8 +45,8 @@ bool loadOBJ(
 
 	FILE * file = fopen(cstr, "r");
 	if( file == NULL ){
-		printf_s("Impossible to open the file ! Are you in the right path ? See Tutorial 1 for details\n");
-		getchar();
+		printf_s("Impossible to open the file %s ! Are you in the right path ? See Tutorial 1 for details\n",cstr);
+		//getchar();
 		return false;
 	}
 

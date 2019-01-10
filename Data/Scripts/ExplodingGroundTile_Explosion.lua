@@ -3,7 +3,7 @@ my_id = -1
 my_x = -10
 my_y = -10
 
-state = 0 --0 down, 1 moving down, 2 moving up, 3 up(and dangerous)
+state = 0 --0 down, 1 moving down, 2 moving up, 3 up(and dangerous), 10 hit player (disabled)
 progress = 0 --out of 10
 
 retract_how_far = -1.001
@@ -39,12 +39,8 @@ function frame()
 
 	if(state==3)then
 		--Kill player on contact, spikes are only dangerous in extended mode
-		possibly_player = CheckCollisionWithTag(my_id,"Player",0,0,0)
-		if(possibly_player > -1)then 
-			--Disable(possibly_player)--TODO: make this a message!
-			SendMessage(possibly_player,0,"Die")
-
-		end 
+		EnemyPlayerCollision("Spike")
+		
 	end 
 end 
 

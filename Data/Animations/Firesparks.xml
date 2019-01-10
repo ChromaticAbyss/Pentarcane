@@ -1,8 +1,26 @@
-<UiAnimation>
-	<!--For derived class "UiAnimation"-->
-	<FileName>"../Data/Ui/Firesparks.xml"</FileName>
-	
-	<!--For base class "Animation"-->
-	<Frames>20</Frames>
-	<Blocking>1</Blocking>
-</UiAnimation>
+<Animation>
+	<Frames>40</Frames>
+	<BlockFrames>30</BlockFrames>
+	<Behaviour>
+		<Type>SpawnFlipbookParticle</Type>
+		<Size>0.6</Size>
+		<Image>../Data/2D/Animations/Empty.png</Image>
+		<Image>../Data/2D/Animations/Firesparks_1.png</Image>
+		<Image>../Data/2D/Animations/Firesparks_2.png</Image>
+		<Image>../Data/2D/Animations/Firesparks_3.png</Image>
+		<Image>../Data/2D/Animations/Firesparks_4.png</Image>
+		<Image>../Data/2D/Animations/Empty.png</Image>
+		<Transform2D>
+			<X>0.0</X>
+			<Y>0.0</Y>
+			<SizeX>0.9</SizeX>
+			<SizeY>1.0</SizeY>
+			<SizeYRelativeToX>True</SizeYRelativeToX>
+		</Transform2D>
+		<FramesPerImage>5</FramesPerImage>
+		<Fade>-3</Fade>
+	</Behaviour>		
+	<Sound>../Data/Sounds/explosion.wav</Sound>
+</Animation>
+
+

@@ -2,7 +2,108 @@
 <MonsterDefinitions>
 	<!--Monsters here have the special labyrinth feature of enemies that are invisible unless the player is close to them-->
 	
+	<MonsterDefinition>
+		<InternalName>Ratsnapper</InternalName>
+		<Name>Ratsnapper</Name>
+		<Stats>
+			<Health>3</Health>
+			<Attack>3</Attack>
+			<Armor>0</Armor>
+			<CastChance>0</CastChance>
+		</Stats>
+		<Image>../Data/2D/Monsters/Ratsnapper.png</Image>
+		<ImageTransform>
+			<SizeX>0.8</SizeX>
+			<SizeY>1.0</SizeY>
+			<SizeYRelativeToX>True</SizeYRelativeToX>
+		</ImageTransform>
+		<Labyrinth>../Data/Labyrinths/Ratsnapper.xml</Labyrinth>
+	</MonsterDefinition>
 
+	<MonsterDefinition>
+		<InternalName>DeepSlime</InternalName>
+		<Name>Deep Slime</Name>
+		<!--Also known as the weakest, most annoying monster you definitely need a mage to get rid of-->
+		<Stats>
+			<Health>5</Health>
+			<Attack>2</Attack>
+			<Armor>0</Armor>
+			<CastChance>0</CastChance>
+		</Stats>
+		<Image>../Data/2D/Monsters/GreenSlime.png</Image>
+		<ImageTransform>
+			<SizeX>0.65</SizeX>
+			<SizeY>1.0</SizeY>
+			<SizeYRelativeToX>True</SizeYRelativeToX>
+		</ImageTransform>
+		<Color>
+			<R>0.5</R>
+			<G>0.8</G>
+			<B>1.5</B>
+		</Color>
+		<Labyrinth>../Data/Labyrinths/DeepSlime.xml</Labyrinth>
+	</MonsterDefinition>
+		
+
+	
+	<MonsterDefinition>
+		<InternalName>SinElemental</InternalName>
+		<Name>Sin Elemental</Name>
+		<Stats>
+			<Health>4</Health>
+			<Attack>2</Attack>
+			<Armor>0</Armor>
+			<CastChance>50</CastChance>
+		</Stats>
+		<Image>../Data/2D/Monsters/SinElemental.png</Image>
+		<ImageTransform>
+			<SizeX>1.0</SizeX>
+			<SizeY>1.0</SizeY>
+			<SizeYRelativeToX>True</SizeYRelativeToX>
+		</ImageTransform>
+		<Labyrinth>../Data/Labyrinths/SinElemental.xml</Labyrinth>
+		<Cast>
+			<InternalName>Corrupted Shell</InternalName>	
+			<Segment>
+				<Type>FlipbookAnimation</Type>
+				<Targets>Self</Targets>
+				<StringValue>../Data/Animations/DarkBloom.xml</StringValue>
+			</Segment>
+			<Segment>
+				<Type>ChangeStats</Type>
+				<Targets>Self</Targets>
+				<Value>0</Value><!--Hp-->
+				<Value>0</Value><!--attack-->
+				<Value>2</Value><!--armor-->
+				<Value>0</Value><!--cast chance-->
+			</Segment>		
+			<Segment>
+				<Type>Finish</Type>
+			</Segment>		
+		</Cast>	
+	</MonsterDefinition>
+
+	
+	<MonsterDefinition>
+		<InternalName>Strakta</InternalName>
+		<Name>Strakta</Name>
+		<Stats>
+			<Health>4</Health>
+			<Attack>2</Attack>
+			<Armor>0</Armor>
+			<CastChance>0</CastChance>
+		</Stats>
+		<Image>../Data/2D/Monsters/Strakta.png</Image>
+		<ImageTransform>
+			<SizeX>0.8</SizeX>
+			<SizeY>1.0</SizeY>
+			<SizeYRelativeToX>True</SizeYRelativeToX>
+		</ImageTransform>
+		<Labyrinth>../Data/Labyrinths/Strakta.xml</Labyrinth>
+	</MonsterDefinition>
+
+
+	
 	<MonsterDefinition>
 		<InternalName>Thregg</InternalName>
 		<Name>Thregg</Name>
@@ -41,4 +142,98 @@
 	</MonsterDefinition>	
 
 
+	<MonsterDefinition>
+		<InternalName>Tremor</InternalName>
+		<Name>Tremor</Name>
+		<Stats>
+			<Health>8</Health>
+			<Attack>4</Attack>
+			<Armor>0</Armor>
+			<CastChance>0</CastChance>
+		</Stats>
+		<Image>../Data/2D/Monsters/Tremor.png</Image>
+		<ImageTransform>
+			<SizeX>1.2</SizeX>
+			<SizeY>1.0</SizeY>
+			<SizeYRelativeToX>True</SizeYRelativeToX>
+		</ImageTransform>
+		<Labyrinth>../Data/Labyrinths/Tremor.xml</Labyrinth>
+	</MonsterDefinition>
+	
+
+	<MonsterDefinition>
+		<InternalName>BlueSefinae</InternalName>
+		<Name>Blue Sefinae</Name>
+		<Stats>
+			<Health>5</Health>
+			<Attack>3</Attack>
+			<Armor>1</Armor>
+			<CastChance>0</CastChance>
+		</Stats>
+		<Image>../Data/2D/Monsters/BlueSefinae.png</Image>
+		<ImageTransform>
+			<SizeX>0.95</SizeX>
+			<SizeY>1.0</SizeY>
+			<SizeYRelativeToX>True</SizeYRelativeToX>
+		</ImageTransform>
+		<Labyrinth>../Data/Labyrinths/BlueSefinae.xml</Labyrinth>
+	</MonsterDefinition>
+
+	
+				
+	<MonsterDefinition>
+		<InternalName>Shurla_Tarla</InternalName>
+		<Name>Shurla Tarla</Name>
+		<Stats>
+			<Health>6</Health>
+			<Attack>3</Attack>
+			<Armor>0</Armor>
+			<CastChance>0</CastChance>
+		</Stats>
+		<Image>../Data/2D/Monsters/Shura_Tarla.png</Image>
+		<ImageTransform>
+			<SizeX>0.65</SizeX>
+			<SizeY>1.0</SizeY>
+			<SizeYRelativeToX>True</SizeYRelativeToX>
+		</ImageTransform>
+		<Labyrinth>../Data/Labyrinths/Shurla_Tarla.xml</Labyrinth>
+	</MonsterDefinition>
+							
+							
+	<MonsterDefinition>
+		<InternalName>CageDemon</InternalName>
+		<Name>Deridranit</Name>
+		<Stats>
+			<Health>6</Health>
+			<Attack>2</Attack>
+			<Armor>1</Armor>
+			<CastChance>25</CastChance>
+		</Stats>
+		<Image>../Data/2D/Monsters/CageDemon.png</Image>
+		<ImageTransform>
+			<SizeX>0.65</SizeX>
+			<SizeY>1.0</SizeY>
+			<SizeYRelativeToX>True</SizeYRelativeToX>
+		</ImageTransform>	
+		<Labyrinth>../Data/Labyrinths/CageDemon.xml</Labyrinth>	
+		<Cast><!--Can cast this for extra damage when player is low on health-->
+			<InternalName>Unleash</InternalName>	
+			<Segment>
+				<Type>FlipbookAnimation</Type>
+				<Targets>Player</Targets>
+				<StringValue>../Data/Animations/Flamesparks.xml</StringValue>
+			</Segment>
+			<Segment>
+				<Type>Damage</Type>
+				<Targets>Player</Targets>
+				<Value>3</Value>
+				<Value>1</Value> <!--1 = Add in monster base damage!-->
+			</Segment>	
+			<Segment>
+				<Type>Finish</Type>
+			</Segment>
+		</Cast>		
+	</MonsterDefinition>	
+	
+	
 </MonsterDefinitions>

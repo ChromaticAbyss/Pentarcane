@@ -1,11 +1,15 @@
 <Sequence>
 	<DisplayName>The mage tower</DisplayName>
-	<Description>The guild calls nearby members to investigate Celerans mage tower.</Description>
-	<Description>Its not inhabited currently but usually served as an early warning system.</Description>
-	<Description>A few days ago however, the magical machinery powering it has stopped working,</Description>
-	<Description>its light has vanished.</Description>
-	<Description>Go in there and find the cause, restore functionality if able.</Description>
-	<Description>Reward is consideration for promotion and 500 coins.</Description>
+	<Description>
+		The guild calls for an investigation of Celeran's tower.
+		It has been uninhabited for many years now, but the magical machinery on it's apex has
+		relayed messages reliably for decades.
+		A few days ago it's light has become erratic. 
+		Due to the importance of this node a bounty of 500 gold coins is offered for 
+		getting the beacon back to working condition.
+	</Description>
+
+	
 	
 	<Art3D>
 		<ModelFile>../Data/3D/Sequences/MagesTower.obj</ModelFile>
@@ -26,99 +30,111 @@
 	</Art3D>
 	
 	<Soundtrack>phobia.ogg</Soundtrack>
+	<SoundtrackVolume>0.25</SoundtrackVolume>
 
-	<Reward>MageTower_Rune</Reward><!--Unlock this thing for the player. It allows accessing additional sequences-->
-	<CompleteRequirement>MageTower_Rune</CompleteRequirement><!--Usually one of the rewards!-->
 	
+	<Reward>MageTower_Rune</Reward><!--Unlock this thing for the player. It allows accessing additional sequences-->
+	<RewardHuman>Title: Suspected Insane</RewardHuman>
+	<RewardIcon>../Data/2D/Rewards/Insane.png</RewardIcon>		
+	<RewardHuman>Rune of Light</RewardHuman>
+	<RewardIcon>../Data/2D/Rewards/LightRune.png</RewardIcon>	
+
+	
+	<CompleteRequirement>MageTower_Rune</CompleteRequirement><!--Usually one of the rewards!-->
 	<UnlockRequirement>Mages_Certificate</UnlockRequirement>
 	
 	
+	<Entry>
+		<Fight>
+			<Condition> <!--Any group with two lunas of different colour-->
+				<Type>OR</Type>
+				<Condition>
+					<Type>ExactName</Type>
+					<StringValue>Lunas_2_RY</StringValue>
+				</Condition>
+				<Condition>
+					<Type>ExactName</Type>
+					<StringValue>Lunas_2_YB</StringValue>
+				</Condition>
+				<Condition>
+					<Type>ExactName</Type>
+					<StringValue>Lunas_2_RB</StringValue>
+				</Condition>
+			</Condition>
+			<Stage>../Data/Stages/MageTower.xml</Stage><!--A stage is just a bunch of models and positions at which to place enemy models-->
+			<Description>...</Description>
+		</Fight>
+	</Entry>
+
+	<Entry>
+		<Fight>
+			<Condition> <!--White + 1 of any colour-->
+				<Type>OR</Type>
+				<Condition>
+					<Type>ExactName</Type>
+					<StringValue>Lunas_W_WB</StringValue>
+				</Condition>
+				<Condition>
+					<Type>ExactName</Type>
+					<StringValue>Lunas_W_WR</StringValue>
+				</Condition>	
+				<Condition>
+					<Type>ExactName</Type>
+					<StringValue>Lunas_W_WY</StringValue>
+				</Condition>			
+			</Condition>
+			<Stage>../Data/Stages/MageTower.xml</Stage><!--A stage is just a bunch of models and positions at which to place enemy models-->
+			<Description>...</Description>
+		</Fight>
+	</Entry>
 	
-	<Fight>
-		<Condition> <!--Any group with two lunas of different colour-->
-			<Type>OR</Type>
-			<Condition>
-				<Type>ExactName</Type>
-				<StringValue>Lunas_2_RY</StringValue>
+	<Entry>
+		<Fight>
+			<Condition> <!--White + 1 of any colour-->
+				<Type>OR</Type>
+				<Condition>
+					<Type>ExactName</Type>
+					<StringValue>GuardianGlyph</StringValue>
+				</Condition>		
 			</Condition>
-			<Condition>
-				<Type>ExactName</Type>
-				<StringValue>Lunas_2_YB</StringValue>
-			</Condition>
-			<Condition>
-				<Type>ExactName</Type>
-				<StringValue>Lunas_2_RB</StringValue>
-			</Condition>
-		</Condition>
-		<Stage>../Data/Stages/Tutorial.xml</Stage><!--A stage is just a bunch of models and positions at which to place enemy models-->
-		<Description>...</Description>
-	</Fight>
+			<Stage>../Data/Stages/MageTower.xml</Stage><!--A stage is just a bunch of models and positions at which to place enemy models-->
+			<Description>...</Description>
+		</Fight>
+	</Entry>
 	
 
-	<Fight>
-		<Condition> <!--White + 1 of any colour-->
-			<Type>OR</Type>
-			<Condition>
-				<Type>ExactName</Type>
-				<StringValue>Lunas_W_WB</StringValue>
+	<Entry>
+		<Fight>
+			<Condition> <!--StygianBlue+ 1 of any colour-->
+				<Type>OR</Type>
+				<Condition>
+					<Type>ExactName</Type>
+					<StringValue>Lunas_Sty_StyB</StringValue>
+				</Condition>
+				<Condition>
+					<Type>ExactName</Type>
+					<StringValue>Lunas_Sty_StyR</StringValue>
+				</Condition>		
+				<Condition>
+					<Type>ExactName</Type>
+					<StringValue>Lunas_Sty_StyY</StringValue>
+				</Condition>	
 			</Condition>
+			<Stage>../Data/Stages/MageTower.xml</Stage><!--A stage is just a bunch of models and positions at which to place enemy models-->
+			<Description>...</Description>
+		</Fight>
+	</Entry>
+	
+	<Entry>
+		<Fight>
 			<Condition>
 				<Type>ExactName</Type>
-				<StringValue>Lunas_W_WR</StringValue>
-			</Condition>	
-			<Condition>
-				<Type>ExactName</Type>
-				<StringValue>Lunas_W_WY</StringValue>
-			</Condition>			
-		</Condition>
-		<Stage>../Data/Stages/Tutorial.xml</Stage><!--A stage is just a bunch of models and positions at which to place enemy models-->
-		<Description>...</Description>
-	</Fight>
-	
-	
-	<Fight>
-		<Condition> <!--White + 1 of any colour-->
-			<Type>OR</Type>
-			<Condition>
-				<Type>ExactName</Type>
-				<StringValue>GuardianGlyph</StringValue>
-			</Condition>		
-		</Condition>
-		<Stage>../Data/Stages/Tutorial.xml</Stage><!--A stage is just a bunch of models and positions at which to place enemy models-->
-		<Description>...</Description>
-	</Fight>
-	
-
-	
-	<Fight>
-		<Condition> <!--StygianBlue+ 1 of any colour-->
-			<Type>OR</Type>
-			<Condition>
-				<Type>ExactName</Type>
-				<StringValue>Lunas_Sty_StyB</StringValue>
+				<StringValue>Vorigan_Spellthief_Bossfight</StringValue>
 			</Condition>
-			<Condition>
-				<Type>ExactName</Type>
-				<StringValue>Lunas_Sty_StyR</StringValue>
-			</Condition>		
-			<Condition>
-				<Type>ExactName</Type>
-				<StringValue>Lunas_Sty_StyY</StringValue>
-			</Condition>	
-		</Condition>
-		<Stage>../Data/Stages/Tutorial.xml</Stage><!--A stage is just a bunch of models and positions at which to place enemy models-->
-		<Description>...</Description>
-	</Fight>
-	
-
-	<Fight>
-		<Condition>
-			<Type>ExactName</Type>
-			<StringValue>Vorigan_Spellthief_Bossfight</StringValue>
-		</Condition>
-		<Stage>../Data/Stages/Tutorial.xml</Stage><!--A stage is just a bunch of models and positions at which to place enemy models-->
-		<Description>...</Description>
-	</Fight>
+			<Stage>../Data/Stages/MageTower.xml</Stage><!--A stage is just a bunch of models and positions at which to place enemy models-->
+			<Description>...</Description>
+		</Fight>
+	</Entry>
 	
 </Sequence>
 	

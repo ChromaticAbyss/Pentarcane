@@ -71,8 +71,7 @@
 		<InternalName>CapturedCity_Boss_Liberate</InternalName>
 		<Likelihood>100</Likelihood>
 		<PowerRating>250</PowerRating>
-		<Monster>Vorigan_CapturedCityBoss</Monster>
-		<Monster>Vorigan_ReaperGlaive</Monster>
+		<Monster>Vorigan_Commander</Monster>
 		<Monster>Vorigan_ReaperGlaive</Monster>
 		<Tag>CapturedCity</Tag>
 		<Tag>Boss</Tag>

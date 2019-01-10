@@ -1,32 +1,43 @@
 #pragma once
 
 
-#include "UiElement.h"
+#include "PolymorphicUiElement.h"
+#include "Spell.h"
+#include "BarUiElement.h"
 
 #include <string>
 #include <vector>
+#include <memory>
 
 class OpenGLContainer;
 
-
 class TimerBar{
 public:
-	TimerBar();
-	TimerBar(int, int, std::string);
+	TimerBar(OpenGLContainer * open_gl);
+	TimerBar(int frames, Spell mode, OpenGLContainer * open_gl);
 
 	TimerBar(const TimerBar &) = delete;
+	TimerBar(TimerBar&& other) = default;
+	TimerBar& operator=(TimerBar&& other) = default;
 
-	void Render(OpenGLContainer * open_gl) const;
+	void render(OpenGLContainer * open_gl) const;
 
 	void Progress();
 	bool Done() const { return (frames_left < 1); };
-	int Id() const { return id; };
+
+	void nullify();
 
 private:
-	int id;
+	std::unique_ptr<PolymorphicUiElement> stun_background() const;
+	std::unique_ptr<PolymorphicUiElement> distraction_background() const ;
+	void makeBar(const std::string& file);
+
+	Spell mode;
 	int frames_left;
 	int frames_total;
+	OpenGLContainer * open_gl;
 
 	std::string ui_name;
-	std::unique_ptr<UiElement> ui;
+	std::unique_ptr<PolymorphicUiElement> ui;
+	std::unique_ptr<BarUiElement> bar;
 };

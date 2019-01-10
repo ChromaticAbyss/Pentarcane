@@ -4,13 +4,27 @@
 	<!--
 	For style reasons this won't have human opponents early on.
 	-->
-	<Reward>MageTower_Rune</Reward><!--Unlock this thing for the player. It allows accessing additional sequences-->
-	<Reward>MageTower_Rune2</Reward><!--Unlock this thing for the player. It allows accessing additional sequences-->
-	<Reward>MageTower_Rune3</Reward><!--Unlock this thing for the player. It allows accessing additional sequences-->
-	<Reward>MageTower_Rune4</Reward><!--Unlock this thing for the player. It allows accessing additional sequences-->
+	<Reward>TestReward</Reward><!--Unlock this thing for the player. It allows accessing additional sequences-->
 
-
+	<RewardHuman>Title: Liberator</RewardHuman>
+	<RewardIcon>../Data/2D/Rewards/Liberator.png</RewardIcon>			
+	<RewardHuman>Free Library Access</RewardHuman>
+	<RewardIcon>../Data/2D/Rewards/Transcript.png</RewardIcon>	
+	<RewardHuman>Safe Passage</RewardHuman>
+	<RewardIcon>../Data/2D/Rewards/Map.png</RewardIcon>
+	<RewardHuman>Rune Stone</RewardHuman>
+	<RewardIcon>../Data/2D/Rewards/RuneStone.png</RewardIcon>	
+	<RewardHuman>Transcript</RewardHuman>
+	<RewardIcon>../Data/2D/Rewards/Transcript.png</RewardIcon>	
+	<RewardHuman>10 coins</RewardHuman>
+	<RewardIcon>../Data/2D/Rewards/Coins.png</RewardIcon>
+	<RewardHuman>Aknowledgement</RewardHuman>
+	<RewardIcon>../Data/2D/Rewards/ThumbUp.png</RewardIcon>		
+	<RewardHuman>A free beer or two</RewardHuman>
+	<RewardIcon>../Data/2D/Rewards/FreeBeer.png</RewardIcon>	
 	
+	<CompleteRequirement>NeverUnlock</CompleteRequirement><!--Usually one of the rewards!-->
+			
 	
 	<Art3D>
 		<ModelFile>../Data/3D/MissingModelMarker.obj</ModelFile>
@@ -21,16 +35,64 @@
 			<Scale>1.0</Scale>	
 		</Transform>			
 	</Art3D>	
+
+	<Entry>	
+		<Intro>
+			<Heading>Analysis</Heading>
+			<Text>
+				You finish your essay on the usage of wyvernroot in folk medicine well on time.
+				As the pupil of a with this is nothing to you. With ample time left you call for the examiner.
+				No one answers. You try the door, but it's locked.
+			</Text>
+			<Text>
+				It is an unusual door indeed. Some magical mechanism guards it instead of a lock.
+				Figuring this is your final test you set to work.
+			</Text>		
+		</Intro>
+		<Fight>
+			<Type>Analysis</Type>
+			<Condition>
+				<Type>ExactName</Type>
+				<StringValue>Tutorial4</StringValue>
+			</Condition>
+			<Stage>../Data/Stages/TutorialAnalysis.xml</Stage>
+			<Description>...</Description>
+		</Fight>
+	</Entry>
+	<Entry>	
+		<Intro>
+			<Heading>Analysis</Heading>
+			<Text>
+				You finish your essay on the usage of wyvernroot in folk medicine well on time.
+				As the pupil of a with this is nothing to you. With ample time left you call for the examiner.
+				No one answers. You try the door, but it's locked.
+			</Text>
+			<Text>
+				It is an unusual door indeed. Some magical mechanism guards it instead of a lock.
+				Figuring this is your final test you set to work.
+			</Text>		
+		</Intro>
+		<Fight>
+			<Type>Analysis</Type>
+			<Condition>
+				<Type>ExactName</Type>
+				<StringValue>Tutorial5</StringValue>
+			</Condition>
+			<Stage>../Data/Stages/TutorialDoorBackground.xml</Stage>
+			<Description>...</Description>
+		</Fight>
+	</Entry>
+		
 	
-	
-	<Fight>
-		<Condition>
-			<Type>ExactName</Type>
-			<StringValue>TestGroup</StringValue>
-		</Condition>
-		<Stage>../Data/Stages/Swamp.xml</Stage><!--A stage is just a bunch of models and positions at which to place enemy models-->
-	</Fight>
-	
+	<Entry>	
+		<Fight>
+			<Condition>
+				<Type>ExactName</Type>
+				<StringValue>TestGroup</StringValue>
+			</Condition>
+			<Stage>../Data/Stages/ForestOfPurpleCoffins.xml</Stage><!--A stage is just a bunch of models and positions at which to place enemy models-->
+		</Fight>
+	</Entry>
 
 	
 </Sequence>

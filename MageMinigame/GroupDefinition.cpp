@@ -1,60 +1,24 @@
 #include "GroupDefinition.h"
 #include "Log.h"
-
-using namespace tinyxml2;
+#include "XMLUtil.h"
+;
 
 using namespace std;
 
 #include <algorithm>
 
 
-GroupDefinition::GroupDefinition(XMLElement * pointer_xml) 
+GroupDefinition::GroupDefinition(const tinyxml2::XMLElement * root)
 	:internal_name("GroupDef internal_name not set"),monsters(),tags(),likelihood(1000),power_rating(100)
 {
-	if (pointer_xml == 0) {
+	if (root == 0) {
 		return; //If we somehow got a nullpointer we can't extract any information and need to return
 	}
-	internal_name = (pointer_xml->FirstChildElement("InternalName"))->GetText();
-	Log("Data", "Loading GroupDefinition with internal name: " + internal_name);
-
-	//Load all monster names for that group
-	{
-		XMLElement* p_lab_entry = pointer_xml->FirstChildElement("Monster");
-		while (p_lab_entry != 0) {
-			monsters.push_back(p_lab_entry->GetText());
-			//cout << "Labyrinth: " << labyrinths[labyrinths.size() - 1] << endl;
-			p_lab_entry = p_lab_entry->NextSiblingElement("Monster");
-		}
-	}
-
-	//Load all Tags for this group
-	{
-		XMLElement* p_cast_entry = pointer_xml->FirstChildElement("Tag");
-		while (p_cast_entry != 0) {
-			tags.push_back(p_cast_entry->GetText());
-			p_cast_entry = p_cast_entry->NextSiblingElement("Tag");
-		}
-	}
-
-	//Look for likelihood tag
-	{
-		XMLElement* p_entry = pointer_xml->FirstChildElement("Likelihood");
-		if (p_entry != 0) {
-			likelihood = stoi(p_entry->GetText());
-		}
-	}
-
-	//Look for power rating tag
-	{
-		XMLElement* p_entry = pointer_xml->FirstChildElement("PowerRating");
-		if (p_entry != 0) {
-			power_rating = stoi(p_entry->GetText());
-		}
-	}
-
-
-	Log("Data", "Done loading GroupDefinition with internal name: " + internal_name);
-
+	internal_name = LoadSingleValue_Required<std::string>(root,"InternalName");
+	monsters = LoadVectorOf<std::string>(root, "Monster");
+	tags = LoadVectorOf<std::string>(root, "Tag");
+	likelihood = LoadSingleValue(root, "Likelyhood",1000);
+	power_rating = LoadSingleValue(root, "PowerRating", 100);
 };
 
 

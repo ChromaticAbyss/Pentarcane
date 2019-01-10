@@ -21,6 +21,15 @@ public:
 		return my_instance;
 	};
 
+
+	static irrklang::ISoundEngine* get() {
+		if (!my_instance)
+		{
+			Log("Sound", "Could not start IrrKlangEngine");
+		}
+		return my_instance;
+	}
+
 private:
 	static irrklang::ISoundEngine*  my_instance;
 };

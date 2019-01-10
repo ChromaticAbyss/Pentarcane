@@ -1,19 +1,16 @@
-<FlipbookAnimation>
-	<!--For derived class "FlipbookAnimation"-->
-	<FileName>../Data/2D/Animations/Bite_1.png</FileName>
-	<FileName>../Data/2D/Animations/Bite_2.png</FileName>
+<Animation>
+	<Frames>80</Frames>
+	<BlockFrames>40</BlockFrames>
+	<Behaviour>
+		<Type>SpawnFlipbookParticle</Type>
+		<Size>0.8</Size>
+		<Image>../Data/2D/Animations/Empty.png</Image>
+		<FileName>../Data/2D/Animations/Bite_0.png</FileName>
+		<FileName>../Data/2D/Animations/Bite_1.png</FileName>
+		<Image>../Data/2D/Animations/Empty.png</Image>
+		<FramesPerImage>20</FramesPerImage>
+		<Fade>5</Fade>
+	</Behaviour>			
+	<Sound>../Data/Sounds/bite.ogg</Sound>
 
-	<Transform2D>
-		<X>0.0</X>
-		<Y>0.1</Y>
-		<SizeX>1.0</SizeX>
-		<SizeY>1.0</SizeY>
-		<SizeYRelativeToX>True</SizeYRelativeToX>
-	</Transform2D>
-	
-	
-	<!--For base class "Animation"-->
-	<Frames>20</Frames>
-	<Blocking>1</Blocking>
-	<Sound>Bite.ogg</Sound>
-</FlipbookAnimation>
+</Animation>

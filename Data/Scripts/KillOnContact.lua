@@ -9,8 +9,8 @@ end
 function frame()
 	possibly_player = CheckCollisionWithTag(my_id,"Player",0,0,0)
 	if(possibly_player > -1)then 
-		--Disable(possibly_player)
-		SendMessage(possibly_player,0,"Die")
+		EnemyPlayerCollision("Death")
+		EnemyDeathPulsing(step)
 	end 		
 	
 end 

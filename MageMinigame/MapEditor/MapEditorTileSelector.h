@@ -1,20 +1,20 @@
 #pragma once
 
-#include "../LabyrinthPartInstance.h"
+#include "Labyrinth/LabyrinthPartInstance.h"
 #include <memory>
 #include <vector>
 #include <string>
 
-#include "../Ui/UiElement.h"
+#include "PolymorphicUiElement.h"
 
 
 class LabyrinthPartDefinition_Manager;
-class OpenGLContainer;
+class OpenGLContainerWith3D;
 
 
 class MapEditorTileSelector {
 public:
-	MapEditorTileSelector(OpenGLContainer* open_gl_,LabyrinthPartDefinition_Manager* part_def_manager_);
+	MapEditorTileSelector(OpenGLContainerWith3D* open_gl_,LabyrinthPartDefinition_Manager* part_def_manager_, bool active_parts_ = true);
 
 	void Update();//Updates the selection of avaliable tiles with the filters
 	std::string Run();
@@ -32,8 +32,8 @@ private:
 	std::vector<std::string> filter_yes;
 	std::vector<std::string> filter_no;
 	std::vector<std::string> filter_cand;
-	UiElement filter_ui_yes;
-	UiElement filter_ui_no;
+	std::unique_ptr<PolymorphicUiElement> filter_ui_yes;
+	std::unique_ptr<PolymorphicUiElement> filter_ui_no;
 	void RemakeUi();
 
 
@@ -41,5 +41,7 @@ private:
 
 	LabyrinthPartDefinition_Manager* part_def_manager;
 
-	OpenGLContainer* open_gl;
+	OpenGLContainerWith3D* open_gl;
+
+	bool active_parts;
 };

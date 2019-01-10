@@ -38,6 +38,7 @@ function frame()
 			countdown = 100 --Sync with the orange ball falling
 			PlaySound("ObeliskTrigger.wav")
 			SendMessage(child_object_ball,0,"Drop")
+			ScreenShake(0.025)
 		end 	
 	end 
 	
@@ -46,6 +47,7 @@ function frame()
 		if(countdown <= 0)then 
 			state = 0
 			SendMessage(child_object_explosion,0,"Flash")
+			ScreenShake(1.0)
 		end 
 	end 
 

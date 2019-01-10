@@ -6,15 +6,90 @@
 	<GroupDefinition>
 		<InternalName>ColdfireCavern_1</InternalName>
 		<Likelihood>100</Likelihood>
-		<PowerRating>120</PowerRating>
+		<PowerRating>100</PowerRating>
+		<Monster>Ratsnapper</Monster>
+		<Tag>Nonhuman</Tag>
+		<Tag>ColdfireCavern</Tag>
+	</GroupDefinition>		
+	
+	<GroupDefinition>
+		<InternalName>ColdfireCavern_Termor</InternalName>
+		<Likelihood>100</Likelihood>
+		<PowerRating>100</PowerRating>
+		<Monster>Tremor</Monster>
+		<Tag>Nonhuman</Tag>
+		<Tag>ColdfireCavern</Tag>
+	</GroupDefinition>			
+	
+	<GroupDefinition>
+		<InternalName>ColdfireCavern_3</InternalName>
+		<Likelihood>100</Likelihood>
+		<PowerRating>100</PowerRating>
+		<Monster>Shurla_Tarla</Monster>
+		<Tag>Nonhuman</Tag>
+		<Tag>ColdfireCavern</Tag>
+	</GroupDefinition>			
+	
+	<GroupDefinition>
+		<InternalName>ColdfireCavern_4</InternalName>
+		<Likelihood>100</Likelihood>
+		<PowerRating>100</PowerRating>
+		<Monster>Strakta</Monster>
+		<Tag>Nonhuman</Tag>
+		<Tag>ColdfireCavern</Tag>
+	</GroupDefinition>	
+	
+	<GroupDefinition>
+		<InternalName>ColdfireCavern_5</InternalName>
+		<Likelihood>100</Likelihood>
+		<PowerRating>100</PowerRating>
+		<Monster>BlueSefinae</Monster>
+		<Tag>Nonhuman</Tag>
+		<Tag>ColdfireCavern</Tag>
+	</GroupDefinition>	
+	
+	
+	<GroupDefinition>
+		<InternalName>ColdfireCavern_CageDemon</InternalName>
+		<Likelihood>100</Likelihood>
+		<PowerRating>100</PowerRating>
+		<Monster>CageDemon</Monster>
+		<Tag>Nonhuman</Tag>
+		<Tag>ColdfireCavern</Tag>
+	</GroupDefinition>	
+	
+	<GroupDefinition>
+		<InternalName>ColdfireCavern_Slime</InternalName>
+		<Likelihood>100</Likelihood>
+		<PowerRating>100</PowerRating>
+		<Monster>DeepSlime</Monster>
+		<Tag>Nonhuman</Tag>
+		<Tag>ColdfireCavern</Tag>
+	</GroupDefinition>			
+	
+		
+	<GroupDefinition>
+		<InternalName>ColdfireCavern_Sin2</InternalName>
+		<Likelihood>100</Likelihood>
+		<PowerRating>150</PowerRating>
+		<Monster>SinElemental</Monster>
+		<Tag>Nonhuman</Tag>
+		<Tag>ColdfireCavern</Tag>
+	</GroupDefinition>		
+	
+	
+	
+	
+	<GroupDefinition>
+		<InternalName>ColdfireCavern_X</InternalName>
+		<Likelihood>100</Likelihood>
+		<PowerRating>150</PowerRating>
 		<Monster>Thregg</Monster>
 		<Monster>Thregg_Strong</Monster>
 		<Tag>Nonhuman</Tag>
 		<Tag>ColdfireCavern</Tag>
 	</GroupDefinition>		
 	
-	
-
 
 	
 </GroupDefinitions>

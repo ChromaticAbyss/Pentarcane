@@ -7,7 +7,9 @@ state = 0 --0 open, 1 moving up, 2 moving down, 3 closed(and dangerous)
 progress = 0 --out of 10
 
 retract_how_far = 1.00
-steps = 6
+steps_to = 6
+
+step = 0
 
 function setup()
 	my_id = GetMyId() 
@@ -16,32 +18,36 @@ function setup()
 end
 
 function frame()
+	step = step + 1
+	
+
+	
 	if(state==1)then 
 		progress = progress + 1 	
-		MoveTo(my_id,my_x,my_y,retract_how_far * progress / steps)
-		if(progress >= steps)then 
+		MoveTo(my_id,my_x,my_y,retract_how_far * progress / steps_to)
+		if(progress >= steps_to)then 
 			state = 0
 			progress = 0
 		end 
+		SetColor(my_id,0.5,1,1)
 	end 
 
 	
 	if(state==2)then 
 		progress = progress + 1
-		MoveTo(my_id,my_x,my_y,retract_how_far * (steps - progress) / steps)
-		if(progress >= steps)then 
+		MoveTo(my_id,my_x,my_y,retract_how_far * (steps_to - progress) / steps_to)
+		if(progress >= steps_to)then 
+			ScreenShake(0.1)
 			state = 3
 			progress = 0
 		end 
+		SetColor(my_id,0.5,1,1)
 	end 
 
 	if(state==3)then
 		--Kill player on contact, spikes are only dangerous in extended mode
-		possibly_player = CheckCollisionWithTag(my_id,"Player",0,0,0)
-		if(possibly_player > -1)then 
-			--Disable(possibly_player)--TODO: make this a message!
-			SendMessage(possibly_player,0,"Die")
-		end 
+		EnemyPlayerCollision("Death")
+		EnemyDeathPulsing(step)
 	end 
 end 
 

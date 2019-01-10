@@ -21,19 +21,10 @@
     <ClCompile Include="Stats.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="Monster.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
     <ClCompile Include="Transform.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="Instance3D_New.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="MonsterDefinition.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="MonsterDefinition_Manager.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="Log.cpp">
@@ -48,55 +39,16 @@
     <ClCompile Include="GroupDefinition_Manager.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="Fight.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
     <ClCompile Include="Collider2D.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="LabyrinthPartDefinition.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="Definition3D.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="LabyrinthPartDefinition_Manager.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="LabyrinthPartInstance.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="LabyrinthInstance.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="OpenGLContainer.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="common\quaternion_utils.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="common\tangentspace.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="common\vboindexer.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="common\objloader.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
     <ClCompile Include="common\texture.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="common\shader.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="Minigames.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
     <ClCompile Include="ScriptReturn.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="LabyrinthResult.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="ScriptBridge.cpp">
@@ -114,19 +66,10 @@
     <ClCompile Include="Stage.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="Ui\Element2D.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="Ui\UiElement.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
     <ClCompile Include="Ui\UiElementEffect.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="Ui\UiElementParameter.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="Ui\Transform2D.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="MapEditor\VariantCarrier.cpp">
@@ -138,40 +81,16 @@
     <ClCompile Include="PlayerState.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="Sequence.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="FightData.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
     <ClCompile Include="MapEditor\TextInput.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="MonsterCast.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="Ui\Animation.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="Ui\UiAnimation.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
     <ClCompile Include="Key.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="SequenceSelect.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
     <ClCompile Include="Ui\TimerBar.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="Ui\TimerManager.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="Ui\OffsetElement.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="Ui\FlipbookAnimation.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="Ui\AnimationManager.cpp">
@@ -180,19 +99,184 @@
     <ClCompile Include="Conditions\CastCondition.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="SequenceRepresentation.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
     <ClCompile Include="LoadSaveUnlocks.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="Ui\Command.cpp">
+    <ClCompile Include="IrrklangSingleton.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Ui\TooltipHolder.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Conditions\ConditionToPlayer.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Ui\BackgroundNebula.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Ui\BackgroundNebulaFlash.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Ui\SpellResult.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Particles\ParticleAnimationManager.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Particles\ParticleDispatching.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Particles\BillboardParticle.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Particles\SingleParticleCreationStrategy.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Particles\ParticleDefinition.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Particles\ClusterSpawnStrategy.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Particles\DriftUpwardMovement.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Particles\ParticleExplodeMovement.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenShaker.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Fight\Fight.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Fight\PlayerActionResolutionPhase.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Fight\MonsterPreActionPhase.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Fight\MonsterActionResolutionPhase.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility\ParseTransform.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="common\objloader.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="OpenGLContainerWith3D.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Fight\FightData.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Fight\PlayerActionPhase.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Labyrinth\LabyrinthResult.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Labyrinth\LabyrinthPartInstance.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Labyrinth\LabyrinthPartDefinition_Manager.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Labyrinth\LabyrinthPartDefinition.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Labyrinth\LabyrinthInstance.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Ui\PlayerActionPhaseSidebar.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Ui\PlayerStatsUi.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Ui\LabyrinthHitCounter.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Monster\Monster.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Monster\MonsterCast.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Monster\MonsterDefinition.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Monster\MonsterDefinition_Manager.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Monster\AbilityEffects\DispatchEffect.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Monster\AbilityEffects\DealPlayerDamage.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Monster\MonsterCastCore.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Monster\AbilityEffects\StartAnimation.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Monster\AbilityEffects\SpawnMonster.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Monster\AbilityEffects\MonsterCastEffect.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Monster\AbilityEffects\HealMonster.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Monster\AbilityEffects\SelectMonsters.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Ui\MonsterUiCombat.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Monster\AbilityEffects\BlockSpellh.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Spell.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Monster\AbilityEffects\ChangeLabyrinth.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Monster\AbilityEffects\ChangeMonsterStats.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Monster\AbilityEffects\PlayerTempEffect.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Sequence\Sequence.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Sequence\SequenceSelect.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Sequence\SequenceRepresentation.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Sequence\SequenceEntry.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Sequence\SequencePrefightText.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Tests\Tests.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="MapEditor\CommandSelectTool.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="IrrklangSingleton.cpp">
+    <ClCompile Include="MapEditor\Modes\DrawMode.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="MapEditor\Modes\ModeCommonFunctionality.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>
@@ -203,22 +287,10 @@
     <ClInclude Include="Instance3D_New.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="Monster.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
     <ClInclude Include="Stats.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="MonsterDefinition.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="MonsterDefinition_Manager.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
     <ClInclude Include="Log.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="tinyxml2.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="StringUtility.h">
@@ -230,55 +302,16 @@
     <ClInclude Include="GroupDefinition_Manager.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="Fight.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
     <ClInclude Include="Collider2D.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="LabyrinthPartDefinition.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="Definition3D.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="LabyrinthPartDefinition_Manager.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="LabyrinthPartInstance.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="LabyrinthInstance.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="OpenGLContainer.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="common\quaternion_utils.hpp">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="common\tangentspace.hpp">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="common\vboindexer.hpp">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="common\objloader.hpp">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
     <ClInclude Include="common\texture.hpp">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="common\shader.hpp">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="Minigames.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
     <ClInclude Include="ScriptReturn.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="LabyrinthResult.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="ScriptBridge.h">
@@ -296,19 +329,10 @@
     <ClInclude Include="Stage.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="Ui\Element2D.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="Ui\UiElement.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
     <ClInclude Include="Ui\UiElementEffect.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="Ui\uiElementParameter.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="Ui\Transform2D.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="MapEditor\VariantCarrier.h">
@@ -320,12 +344,6 @@
     <ClInclude Include="PlayerState.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="Sequence.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="FightData.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
     <ClInclude Include="BuildHeader.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
@@ -335,31 +353,13 @@
     <ClInclude Include="InterObjectMessage.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="MonsterCast.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
     <ClInclude Include="Ui\Animation.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="Ui\UiAnimation.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="Key.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="SequenceSelect.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
     <ClInclude Include="Ui\TimerBar.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="Ui\TimerManager.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="Ui\OffsetElement.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="Ui\FlipbookAnimation.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="Ui\AnimationManager.h">
@@ -368,19 +368,205 @@
     <ClInclude Include="Conditions\CastCondition.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="SequenceRepresentation.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
     <ClInclude Include="LoadSaveUnlocks.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="Ui\Command.h">
+    <ClInclude Include="IrrklangSingleton.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Ui\TooltipHolder.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Conditions\ConditionToPlayer.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Ui\BackgroundNebula.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Ui\BackgroundNebulaFlash.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Ui\SpellResult.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Particles\ParticleAnimationManager.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Particles\ParticleDispatching.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Particles\BillboardParticle.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Particles\ParticleMovementStrategy.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Particles\ParticleCreationStrategy.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Particles\SingleParticleCreationStrategy.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Particles\ParticleDefinition.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Particles\ClusterSpawnStrategy.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Particles\DriftUpwardMovement.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Particles\ParticleExplodeMovement.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenShaker.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Fight\Fight.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Fight\FightPhase.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Fight\PlayerActionResolutionPhase.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Fight\MonsterPreActionPhase.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Fight\MonsterActionResolutionPhase.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\ParseTransform.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="common\objloader.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="OpenGLContainerWith3D.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Fight\FightData.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Labyrinth\LabyrinthParameters.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Fight\PlayerActionPhase.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Labyrinth\LabyrinthResult.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Labyrinth\LabyrinthPartInstance.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Labyrinth\LabyrinthPartDefinition_Manager.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Labyrinth\LabyrinthInstance.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Labyrinth\LabyrinthPartDefinition.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Spell.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Ui\PlayerActionPhaseSidebar.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Ui\PlayerStatsUi.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Ui\LabyrinthHitCounter.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Monster\Monster.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Monster\MonsterCast.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Monster\MonsterDefinition.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Monster\MonsterDefinition_Manager.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Monster\AbilityEffects\DispatchEffect.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Monster\AbilityEffects\MonsterCastEffect.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Monster\AbilityEffects\DealPlayerDamage.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Monster\MonsterCastCore.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Monster\AbilityEffects\StartAnimation.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Monster\AbilityEffects\SpawnMonster.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Monster\AbilityEffects\HealMonster.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Monster\AbilityEffects\SelectMonsters.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Ui\MonsterUiCombat.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Monster\AbilityEffects\BlockSpellh.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Monster\AbilityEffects\ChangeLabyrinth.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Particles\PolymorphicParticle3D.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\PickWeighted.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Monster\AbilityEffects\ChangeMonsterStats.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Monster\AbilityEffects\PlayerTempEffect.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Sequence\SequenceSelect.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Sequence\SequenceRepresentation.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Sequence\Sequence.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Sequence\SequenceEntry.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Sequence\SequencePrefightText.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Tests\Tests.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="MapEditor\CommandSelectTool.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="IrrklangSingleton.h">
+    <ClInclude Include="MapEditor\Modes\MapEditorMode.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="MapEditor\Modes\DrawMode.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="MapEditor\Modes\ModeCommonFunctionality.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>

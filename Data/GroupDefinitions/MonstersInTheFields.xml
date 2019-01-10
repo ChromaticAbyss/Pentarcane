@@ -2,17 +2,52 @@
 <GroupDefinitions>
 
 	
+	<GroupDefinition>
+		<InternalName>GreenSlime</InternalName>
+		<Likelihood>100</Likelihood>
+		<PowerRating>30</PowerRating>
+		<Monster>GreenSlime</Monster>
+		<Tag>Nonhuman</Tag>
+		<Tag>MonstersInTheFields</Tag>
+	</GroupDefinition>	
+
 	
 	<GroupDefinition>
 		<InternalName>SkinModifier</InternalName>
 		<Likelihood>100</Likelihood>
 		<PowerRating>90</PowerRating>
-		<Monster>SkinModifier</Monster>
+		<Monster>Drakta</Monster>
 		<Tag>Nonhuman</Tag>
 		<Tag>MonstersInTheFields</Tag>
 	</GroupDefinition>		
 	
-	
+	<GroupDefinition>
+		<InternalName>Hammerhead</InternalName>
+		<Likelihood>150</Likelihood>
+		<PowerRating>80</PowerRating>
+		<Monster>Hammerhead</Monster>
+		<Tag>Nonhuman</Tag>
+		<Tag>MonstersInTheFields</Tag>
+	</GroupDefinition>
+
+	<GroupDefinition>
+		<InternalName>FaerieCatcher</InternalName>
+		<Likelihood>150</Likelihood>
+		<PowerRating>90</PowerRating>
+		<Monster>FaerieCatcher</Monster>
+		<Tag>Nonhuman</Tag>
+		<Tag>MonstersInTheFields</Tag>
+	</GroupDefinition>
+
+	<GroupDefinition>
+		<InternalName>Sefinae</InternalName>
+		<Likelihood>150</Likelihood>
+		<PowerRating>90</PowerRating>
+		<Monster>Sefinae</Monster>
+		<Tag>Nonhuman</Tag>
+		<Tag>MonstersInTheFields</Tag>
+	</GroupDefinition>
+
 	<GroupDefinition>
 		<InternalName>GreyRipper</InternalName>
 		<Likelihood>100</Likelihood>
@@ -37,19 +72,29 @@
 	
 	<GroupDefinition>
 		<InternalName>DroneGroup</InternalName>
-		<Likelihood>1000000</Likelihood>
+		<Likelihood>100</Likelihood>
 		<PowerRating>70</PowerRating>
-		<Monster>Drone</Monster>
 		<Monster>Drone</Monster>
 		<Monster>Drone</Monster>
 		<Tag>MonstersInTheFields</Tag>
 	</GroupDefinition>
 
 	
-	
+	<GroupDefinition>
+		<InternalName>Fields_Bossfight_Hydra</InternalName>
+		<Likelihood>0</Likelihood>
+		<PowerRating>300</PowerRating>
+		<Monster>Hydra</Monster>
+		<Tag>MonstersInTheFields</Tag>
+		<Tag>Boss</Tag>
+	</GroupDefinition>
+
+
 	<!--
 		Shrieking Herald
 		Voiceless Preacher
 		Choir of Sinners	
 	-->
+	
+	
 </GroupDefinitions>

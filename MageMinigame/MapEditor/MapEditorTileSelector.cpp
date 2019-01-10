@@ -1,11 +1,11 @@
 #include "../BuildHeader.h"
 
 #include "MapEditorTileSelector.h"
-#include "../OpenGLContainer.h"
-#include "../LabyrinthPartDefinition_Manager.h"
+#include "OpenGLContainerWith3D.h"
+#include "Labyrinth/LabyrinthPartDefinition_Manager.h"
 
-#include "../common/shader.hpp"
-#include "../common/quaternion_utils.hpp"
+#include "common/shader.hpp"
+#include "common/quaternion_utils.hpp"
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 
@@ -14,8 +14,8 @@
 using namespace std;
 using namespace glm;
 
-MapEditorTileSelector::MapEditorTileSelector(OpenGLContainer* open_gl_,LabyrinthPartDefinition_Manager* part_def_manager_)
-	:filter_yes(),filter_no(),filter_cand(),filter_ui_yes(),filter_ui_no(),representatives(),part_def_manager(part_def_manager_),open_gl(open_gl_)
+MapEditorTileSelector::MapEditorTileSelector(OpenGLContainerWith3D* open_gl_,LabyrinthPartDefinition_Manager* part_def_manager_, bool active_parts_)
+	:filter_yes(),filter_no(),filter_cand(),filter_ui_yes(),filter_ui_no(),representatives(),part_def_manager(part_def_manager_),open_gl(open_gl_), active_parts(active_parts_)
 {
 	Update();
 };
@@ -23,7 +23,7 @@ MapEditorTileSelector::MapEditorTileSelector(OpenGLContainer* open_gl_,Labyrinth
 
 void MapEditorTileSelector::Update() {
 #ifdef MAGEMINIGAME_MAPEDITOR 
-    std::tie(representatives,filter_cand) = part_def_manager->GrabInstancesByFilter(filter_yes,filter_no);
+    std::tie(representatives,filter_cand) = part_def_manager->GrabInstancesByFilter(filter_yes,filter_no, active_parts);
 
 	cout << "Repres:" << representatives.size() << endl;
 
@@ -156,7 +156,7 @@ void MapEditorTileSelector::whereDoesMouseRayCutGround(float& cutX, float& cutY)
 	double mouseY;
 	glfwGetCursorPos(open_gl->window, &mouseX, &mouseY);
 
-	mouseY = -mouseY + screenY; //Mirror vertically TODO: Without this the y axis is mirrored, this fix works even tough i have no idea why. Revisit this later!
+	mouseY = -mouseY + screenY; //Mirror vertically Without this the y axis is mirrored, this fix works even tough i have no idea why. Revisit this later!
 	mouseX = mouseX;//  *  (screenY/screenX);
 
 					// The ray Start and End positions, in Normalized Device Coordinates (Have you read Tutorial 4 ?)
@@ -218,8 +218,9 @@ void MapEditorTileSelector::RemakeUi()
 		a.push_back(filter_cand.size());//int parameter[0]: 
 		std::vector<float> b;
 
-		UiElementParameter new_para(a, b, filter_cand);
-		filter_ui_yes.RemakeIfDifferent("../Data/Ui/LevelEditor_TileFilter_Yes.xml", new_para);
+		//TODO: Deprecated
+		//UiElementParameter new_para(a, b, filter_cand);
+		//filter_ui_yes.RemakeIfDifferent("../Data/Ui/LevelEditor_TileFilter_Yes.xml", new_para);
 	}
 	//
 
@@ -229,8 +230,9 @@ void MapEditorTileSelector::RemakeUi()
 		a.push_back(filter_cand.size());//int parameter[0]: 
 		std::vector<float> b;
 
-		UiElementParameter new_para(a, b, filter_cand);
-		filter_ui_no.RemakeIfDifferent("../Data/Ui/LevelEditor_TileFilter_No.xml", new_para);
+		//TODO: Deprecated
+		//UiElementParameter new_para(a, b, filter_cand);
+		//filter_ui_no.RemakeIfDifferent("../Data/Ui/LevelEditor_TileFilter_No.xml", new_para);
 	}
 	//
 
@@ -255,12 +257,14 @@ string MapEditorTileSelector::Logic(float mx, float my) {
 	}
 
 	//Click on ui for filters
+	//TODO: Deprecated (pre Ui element-command logic)
+	/*
 	double mouseX, mouseY;
 	glfwGetCursorPos(open_gl->window, &mouseX, &mouseY);
 	float uiMx = (float)mouseX / open_gl->window_x * 2 - 1;
 	float uiMy = -((float)mouseY / open_gl->window_y * 2 - 1);
 	if (mouse_mode > 0) {
-		auto result = filter_ui_yes.CheckInterception(uiMx, uiMy, mouse_mode,open_gl);
+		auto result = filter_ui_yes->CheckInterception(uiMx, uiMy, mouse_mode,open_gl);
 		for (auto it = result.begin(); it != result.end(); ++it) {
 			mouse_mode = 0;//flush mouse afterwards
 
@@ -286,7 +290,7 @@ string MapEditorTileSelector::Logic(float mx, float my) {
 
 	}
 
-
+	*/
 
 	//Click on presented object to select it
 	if (mouse_mode == 1)
@@ -331,7 +335,8 @@ void MapEditorTileSelector::RenderUi() {
 	//View and Projection matrix are fixed for Minigames
 
 	//Actual Rendering
-	filter_ui_yes.Render(glm::scale(glm::mat4(), glm::vec3(1.0f, 1.0f, 1.0f)), open_gl);
-	filter_ui_no.Render(glm::scale(glm::mat4(), glm::vec3(1.0f, 1.0f, 1.0f)), open_gl);
-
+	if (filter_ui_yes) {
+		filter_ui_yes->Render(glm::scale(glm::mat4(), glm::vec3(1.0f, 1.0f, 1.0f)), open_gl);
+		filter_ui_no->Render(glm::scale(glm::mat4(), glm::vec3(1.0f, 1.0f, 1.0f)), open_gl);
+	}
 }

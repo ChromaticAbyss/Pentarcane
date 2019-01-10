@@ -4,16 +4,68 @@
 	
 	
 	<GroupDefinition>
-		<InternalName>Pyramid_2</InternalName>
+		<InternalName>Pyramid_Guardian</InternalName>
 		<Likelihood>100</Likelihood>
-		<PowerRating>80</PowerRating>
+		<PowerRating>100</PowerRating>
 		<Monster>PyramidGuardian</Monster>
 		<Tag>Nonhuman</Tag>
 		<Tag>PyramidExcavation</Tag>
 	</GroupDefinition>		
 	
+	
 	<GroupDefinition>
-		<InternalName>Pyramid_C</InternalName>
+		<InternalName>Pyramid_Guardian_Star</InternalName>
+		<Likelihood>100</Likelihood>
+		<PowerRating>120</PowerRating>
+		<Monster>PyramidGuardian</Monster>
+		<Monster>Nightstar</Monster>
+		<Tag>Nonhuman</Tag>
+		<Tag>PyramidExcavation</Tag>
+	</GroupDefinition>		
+	
+	<GroupDefinition>
+		<InternalName>Pyramid_Guardian_Spook</InternalName>
+		<Likelihood>100</Likelihood>
+		<PowerRating>120</PowerRating>
+		<Monster>PyramidGuardian</Monster>
+		<Monster>Spook</Monster>
+		<Tag>Nonhuman</Tag>
+		<Tag>PyramidExcavation</Tag>
+	</GroupDefinition>		
+	
+	<GroupDefinition>
+		<InternalName>Pyramid_Enocyra</InternalName>
+		<Likelihood>100</Likelihood>
+		<PowerRating>100</PowerRating>
+		<Monster>Enocyra</Monster>
+		<Tag>Nonhuman</Tag>
+		<Tag>PyramidExcavation</Tag>
+	</GroupDefinition>		
+	
+	
+	<GroupDefinition>
+		<InternalName>Pyramid_Enocyra_Star</InternalName>
+		<Likelihood>100</Likelihood>
+		<PowerRating>120</PowerRating>
+		<Monster>Enocyra</Monster>
+		<Monster>Nightstar</Monster>
+		<Tag>Nonhuman</Tag>
+		<Tag>PyramidExcavation</Tag>
+	</GroupDefinition>		
+	
+	<GroupDefinition>
+		<InternalName>Pyramid_Enocyra_Spook</InternalName>
+		<Likelihood>100</Likelihood>
+		<PowerRating>120</PowerRating>
+		<Monster>Enocyra</Monster>
+		<Monster>Spook</Monster>
+		<Tag>Nonhuman</Tag>
+		<Tag>PyramidExcavation</Tag>
+	</GroupDefinition>		
+
+	
+	<GroupDefinition>
+		<InternalName>Pyramid_Cinders</InternalName>
 		<Likelihood>100</Likelihood>
 		<PowerRating>100</PowerRating>
 		<Monster>CindersOfTheLost</Monster>
@@ -21,19 +73,74 @@
 		<Tag>PyramidExcavation</Tag>
 	</GroupDefinition>		
 	
+	
 	<GroupDefinition>
-		<InternalName>GodInTheMire</InternalName>
+		<InternalName>Pyramid_Cinders_Spook</InternalName>
 		<Likelihood>100</Likelihood>
 		<PowerRating>120</PowerRating>
-		<Monster>GodInTheMire</Monster>
+		<Monster>CindersOfTheLost</Monster>
+		<Monster>Spook</Monster>
+		<Tag>Nonhuman</Tag>
+		<Tag>PyramidExcavation</Tag>
+	</GroupDefinition>	
+	
+	<GroupDefinition>
+		<InternalName>Pyramid_Cinders_Nightstar</InternalName>
+		<Likelihood>100</Likelihood>
+		<PowerRating>120</PowerRating>
+		<Monster>CindersOfTheLost</Monster>
+		<Monster>Nightstar</Monster>
+		<Tag>Nonhuman</Tag>
+		<Tag>PyramidExcavation</Tag>
+	</GroupDefinition>	
+
+	
+	
+	<GroupDefinition>
+		<InternalName>Pyramid_Conductor</InternalName>
+		<Likelihood>100</Likelihood>
+		<PowerRating>100</PowerRating>
+		<Monster>ConductorOfTheRite</Monster>
+		<Tag>Nonhuman</Tag>
+		<Tag>PyramidExcavation</Tag>
+	</GroupDefinition>		
+	
+	
+	<GroupDefinition>
+		<InternalName>Pyramid_Conductor_Star</InternalName>
+		<Likelihood>100</Likelihood>
+		<PowerRating>120</PowerRating>
+		<Monster>ConductorOfTheRite</Monster>
+		<Monster>Nightstar</Monster>
+		<Tag>Nonhuman</Tag>
+		<Tag>PyramidExcavation</Tag>
+	</GroupDefinition>		
+	
+	<GroupDefinition>
+		<InternalName>Pyramid_Conductor_Spook</InternalName>
+		<Likelihood>100</Likelihood>
+		<PowerRating>120</PowerRating>
+		<Monster>ConductorOfTheRite</Monster>
+		<Monster>Spook</Monster>
 		<Tag>Nonhuman</Tag>
 		<Tag>PyramidExcavation</Tag>
 	</GroupDefinition>		
 	
 
 	
+	<GroupDefinition>
+		<InternalName>GodInTheMire</InternalName>
+		<Likelihood>100</Likelihood>
+		<PowerRating>120</PowerRating>
+		<Monster>GodInTheMire</Monster>
+		<Tag>Nonhuman</Tag>
+		<Tag>Boss</Tag>
+		<Tag>PyramidExcavation</Tag>
+	</GroupDefinition>		
+	
+
+	
 	<!--
-		Shrieking Herald
 		Voiceless Preacher
 		Choir of Sinners	
 	-->

@@ -36,12 +36,8 @@ function setup()
 end
 
 function frame()
-	--Kill player on contact
-	possibly_player = CheckCollisionWithTag(my_id,"Player",0,0,0)
-	if(possibly_player > -1)then 
-		--Disable(possibly_player)
-		SendMessage(possibly_player,0,"Die")
-	end 	
+	EnemyPlayerCollision("Patrol")
+
 	--Handle Motion
 	if cycle_length <= 1 then 
 		return

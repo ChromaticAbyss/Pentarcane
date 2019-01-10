@@ -1,54 +1,195 @@
 <Sequence>
 	<DisplayName>Tutorial</DisplayName>
-	<Description>Train your arcane powers on dummies to earn your guild membership.</Description>
-	<Description>Fireball: Potentially hits every oponent.</Description>
-	<Description>Lightning Bolt: Moves fast, hinders enemy spellcasters.</Description>
-	<Description>Frozen Star: Deals more damage the more projectiles you bring to the goal.</Description>
-	<Description>Life Drain: If you bring the projectile back it not only damages the enemy but also heals you.</Description>
-	<Description>Legend has it that there is a fifth Arcane spell that humans can master.</Description><!--More than 6 lines will not be displayed correctly when a (completed) qualifier is added.-->
+	<Description>
+		Prove yourself to earn your guild membership the quick way.
+		You need to demonstrate mastery of previous magical knowledge by obliterating dummies.
+		Afterwards you will solve a puzzle that tests your analytical skills and to finish up 
+		you will brew a simple potion. Don't worry. You paid the fees in time, thus we will make this easy.
+	</Description>
+
 	
 	<Soundtrack>Lightless Dawn.mp3</Soundtrack>
 	
 	<Reward>Mages_Certificate</Reward><!--Unlock this thing for the player. It allows accessing additional sequences-->
+	<RewardHuman>Mage Certificate</RewardHuman>
+	<RewardIcon>../Data/2D/Rewards/Mage_Certificate.png</RewardIcon>
+	
 	<CompleteRequirement>Mages_Certificate</CompleteRequirement><!--Usually one of the rewards!-->
+		
 		
 	<Art3D>
 		<ModelFile>../Data/3D/LabyrinthParts/Target.obj</ModelFile>
 		<TextureFile>../Data/2D/Blue.png</TextureFile>
 		<Transform>
-			<RotX>90</RotX>
-			<Scale>1.7</Scale>	
+			<RotX>0</RotX>
+			<Scale>1.00</Scale>	
 		</Transform>			
 	</Art3D>	
 	
+	<Entry>
+		<Intro>
+			<Heading>Spell Choice</Heading>
+			<Text>
+				Examiner: In this simplest of all tests you will take on one of our patented target dummies.
+				It features a basic magical defense, though it pales against that of even the simpelst living creature.
+				Ready a spell or two and pummel the dummy with it.
+				As this is your main interest, you know all four spell bases of the arcane school:
+			</Text>
+			<Text>
+				Mola: A searing, volatile outburst of fire that is easy to guide.
+			</Text>
+			<Text>
+				Vex: An arcing lightning bolt. A glorious flash or a fizzle out 
+				at the slightest slipup.
+			</Text>
+			<Text>
+				Sal: A devastating spell that drains victims of their body warmth and crystallizes incorporeal entities.
+			</Text>
+			<Text>
+				Vita: Known only to the bloodwitches, this spell drains life itself from the victim. 
+			</Text>
+			<Text>
+				Each spell behaves differently when it comes to bypassing enemy defence.
+			</Text>
+		</Intro>
+		<Fight>
+			<Condition>
+				<Type>ExactName</Type>
+				<StringValue>Tutorial1</StringValue>
+			</Condition>
+			<Stage>../Data/Stages/Tutorial.xml</Stage>
+		</Fight>
+	</Entry>
 	
-	<Fight>
-		<Condition>
-			<Type>ExactName</Type>
-			<StringValue>Tutorial1</StringValue>
-		</Condition>
-		<Stage>../Data/Stages/Tutorial.xml</Stage><!--A stage is just a bunch of models and positions at which to place enemy models-->
-		<Description>...</Description>
-	</Fight>
+	<Entry>
+		<Intro>
+			<Heading>Spell Choice</Heading>
+			<Text>
+				Examiner: Behold: The armor dummy, tried and true. 
+				Many would be mages despair when faced with the complexity of it's defenses.
+				Or when their spells barely glance the fortified shell of infused granite.
+			</Text>
+			<Text>
+				In addition to having different behaviour, spells also have different effects aside from damage. 
+			</Text>
+			<Text>
+				Mola: Every labyrinth pickup (blue) will grant an additional random effect.
+			</Text>
+			<Text>
+				Vex: Reduce enemy spell points, inhibiting their special abilities.
+			</Text>
+			<Text>
+				Sal: Will always stun enemy if no countermeasure is hit (see frozen stun bar). 
+				Sal also deals icnresed base damage.
+			</Text>
+			<Text>
+				Vita: Directly steal lifeforce and add it to your pool.
+			</Text>
+			<Text>
+				Choice of the correct spell is as important as proper execution. 
+				A suboptimal spell flawlessly executed may still be mediocre.
+				Some labyrinths may be much easier with a certain spell.
+			</Text>
+		</Intro>
+		<Fight>
+			<Condition>
+				<Type>ExactName</Type>
+				<StringValue>Tutorial2</StringValue>
+			</Condition>
+			<Stage>../Data/Stages/Tutorial.xml</Stage>
+		</Fight>
+	</Entry>
 	
-	<Fight>
-		<Condition>
-			<Type>ExactName</Type>
-			<StringValue>Tutorial2</StringValue>
-		</Condition>
-		<Stage>../Data/Stages/Tutorial.xml</Stage><!--A stage is just a bunch of models and positions at which to place enemy models-->
-		<Description>...</Description>
-	</Fight>
+	<Entry>	
+		<Intro>
+			<Heading>Enemy Abilities</Heading>
+			<Text>
+				Examiner: The combats trial ends here! For most participants anyway. Our spellcaster dummy is one of the most sophisticated 
+				magical machines and may push your endurance to breaking point.
+				Actually if you beat this one, it is also the end of the combat trial.
+			</Text>
+			<Text>
+				So far hitting countermeasures has been fairly consequence-free aside from disabling stun.
+				However for each you hit a part of the spell's energy is transmitted to it's would-be victim
+				in the form of spell points. 
+			</Text>
+			<Text>
+				Most enemies in the game can spend spell points on abilities much more powerful than their regular attacks.
+				Avoid building up spell points on enemies, or at least don't let them live to make your life hell.
+			</Text>
+			<Text>
+				The upcoming fight can be beaten in a variety of ways.
+				If you haven't yet tried all four spells, this would be a good opportunity.
+			</Text>
+		</Intro>
+		<Fight>
+			<Condition>
+				<Type>ExactName</Type>
+				<StringValue>Tutorial3</StringValue>
+			</Condition>
+			<Stage>../Data/Stages/Tutorial.xml</Stage>
+		</Fight>
+	</Entry>
 	
-	<Fight>
-		<Condition>
-			<Type>ExactName</Type>
-			<StringValue>Tutorial3</StringValue>
-		</Condition>
-		<Stage>../Data/Stages/Tutorial.xml</Stage><!--A stage is just a bunch of models and positions at which to place enemy models-->
-		<Description>...</Description>
-	</Fight>
+
+	<Entry>	
+		<Intro>
+			<Heading>Analysis</Heading>
+			<Text>
+				Examiner: What? You thought being a mage consisted only of blowing stuff to bits?
+				Here take this puzzle box and write me a report on the subject visualized in it's vault. 
+				You ... know how to write, I hope?
+			</Text>
+			<Text>
+				No stress. You can't die while analyzing something. Though it has happened before to certain extremely dedicated analysts.
+				You can try as many times as you want.
+			</Text>
+			<Text>
+				Actually, still stress. In an analysis sequence you need to solve a puzzle before time runs out.
+				Theres two ways to go about such an endavour, differing only in ther in-labyrinth behaviour.
+			</Text>
+			<Text>
+				Intuition: High speed. A vital asset in time limited situations.
+			</Text>
+			<Text>
+				Abstraction: Teleport to the start when touching countermeasures instead of having to start over. 
+			</Text>
+		</Intro>
+		<Fight>
+			<Type>Analysis</Type>
+			<Condition>
+				<Type>ExactName</Type>
+				<StringValue>Tutorial4</StringValue>
+			</Condition>
+			<Stage>../Data/Stages/TutorialAnalysis.xml</Stage>
+		</Fight>
+	</Entry>
 	
+	<Entry>	
+		<Intro>
+			<Heading>Analysis</Heading>
+			<Text>
+				You finish your essay on the usage of wyvernroot in folk medicine well on time.
+				As the pupil of a with this is nothing to you. With ample time left you call for the examiner.
+				No one answers. You try the door, but it's locked.
+			</Text>
+			<Text>
+				It is an unusual door indeed. Some magical mechanism guards it instead of a lock.
+				Figuring this is your final test you set to work.
+			</Text>		
+		</Intro>
+		<Fight>
+			<Type>Analysis</Type>
+			<Condition>
+				<Type>ExactName</Type>
+				<StringValue>Tutorial5</StringValue>
+			</Condition>
+			<Stage>../Data/Stages/TutorialDoorBackground.xml</Stage>
+		</Fight>
+	</Entry>
+	
+	
+
 	
 </Sequence>
 	

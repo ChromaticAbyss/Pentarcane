@@ -1,27 +1,36 @@
 #pragma once
 
+#include <string>
 #include "Animation.h"
 #include "UiAnimation.h"
-#include "FlipbookAnimation.h"
+//#include "FlipbookAnimation.h"
+#include "AnimationTickGiver.h"
+#include "PolymorphicAnimation.h"
+#include "CompositeAnimation.h"
 
 class OpenGLContainer;
 
-class AnimationManager
+class AnimationManager : public PolymorphicAnimation
 {
 public:
-	AnimationManager();
+	AnimationManager(AnimationTickGiver* tick_giver);
 
-	bool Blocking() const;
+	bool blocking() const {
+		return block_ticks > 0;
+	}
 
-	void Progress();
+	void tick() override {
+		--block_ticks;
+	}
 
-	void AddAnimation( UiAnimation&& n);
-	void AddAnimation( FlipbookAnimation&& n);
+	void AddAnimation(std::string file, const Transform2D& transform);
 
 	void Render(OpenGLContainer*) const;
 
 private:
-	std::vector<UiAnimation> ui_animations;
-	std::vector<FlipbookAnimation> flipbook_animations;
+	AnimationTickGiver* tick_giver;
+	std::vector<std::unique_ptr<CompositeAnimation>> animations;
+
+	int block_ticks;
 };
 

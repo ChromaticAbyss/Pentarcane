@@ -34,12 +34,8 @@ function setup()
 end
 
 function frame()	
-	--Kill player on contact
-	possibly_player = CheckCollisionWithTag(my_id,"Player",0,0,0)
-	if(possibly_player > -1)then 
-		--Disable(possibly_player)
-		SendMessage(possibly_player,0,"Die")
-	end 
+	EnemyPlayerCollision("Patrol")
+
 	--Handle Motion
 	if cycle_length <= 1 then 
 		return
@@ -51,7 +47,8 @@ function frame()
 		return
 	end
 	-------------------------------------
-	
+	RotateZ(my_id,0.8)	
+
 	
 	distance = PatrolMovement(my_id,cycle_positions[next_in_cycle].pos_x,cycle_positions[next_in_cycle].pos_y,speed)
 	

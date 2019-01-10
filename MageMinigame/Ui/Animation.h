@@ -1,10 +1,10 @@
-#pragma once
+/*#pragma once
 
 
 #include <vector>
 #include <string>
 
-#include "../tinyxml2.h"
+#include "tinyxml2.h"
 
 class Animation {
 public:
@@ -30,4 +30,6 @@ private:
 	int max_frame;
 	bool blocking;
 	std::string sound;
+	float sound_volume;
 };
+*/

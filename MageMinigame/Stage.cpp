@@ -3,9 +3,12 @@
 #include "Log.h"
 
 #include "OpenGLContainer.h"
+#include "Log.h"
+#include "Utility\ParseTransform.h"
+#include "BasicUiElement.h"
 
 using namespace std;
-using namespace tinyxml2;
+;
 
 Stage::Stage() 
 	:background(),monster_positions()
@@ -16,35 +19,31 @@ Stage::Stage()
 Stage::Stage(string filename)
 	:background(),monster_positions()
 {
-	XMLDocument doc;
+	tinyxml2::XMLDocument doc;
 	doc.LoadFile(filename.c_str());
 	if (doc.ErrorID() == 0) {
-		XMLElement* xml_root = doc.FirstChildElement("Stage");
+		tinyxml2::XMLElement* xml_root = doc.FirstChildElement("Stage");
 		if (xml_root != 0) {
 			{ //Look up a model in the node
-				XMLElement * xml_child = xml_root->FirstChildElement("MonsterPosition");
+				tinyxml2::XMLElement * xml_child = xml_root->FirstChildElement("MonsterPosition");
 				while (xml_child != nullptr) {
-					monster_positions.push_back(Transform2D(xml_child,UiElementParameter()));
+					monster_positions.push_back(ParseTransform(xml_child));
 					xml_child = xml_child->NextSiblingElement("MonsterPosition");
 				}
 			}
 
-			{ //Look up a model in the node
-				XMLElement * xml_child = xml_root ->FirstChildElement("Art3D");
-				while (xml_child != nullptr) {
-					shared_ptr<Definition3D> temp = make_shared<Definition3D>(xml_child);
-					temp->attemptToLoadModel();
-					model_instances.push_back( Instance3D_New(temp));
-					xml_child = xml_child->NextSiblingElement("Art3D");
-				}
-			}
-
 			{ 
-				XMLElement * xml_child = xml_root->FirstChildElement("Background");
+				tinyxml2::XMLElement * xml_child = xml_root->FirstChildElement("Background");
 				if (xml_child != nullptr) {
-					auto offset_for_sidebar = 0.15f;
 					auto text = xml_child->GetText();
-					background = Instance2D(text,Transform2D(-offset_for_sidebar ,0.0f , 1.0f-offset_for_sidebar, 1.0f, false));
+					background = BasicUiElement::Make_BasicUiElement_UP(
+						Transform2D(
+							TransformPosition(0.0f, 0.0f),
+							TransformScale(2.0f, 2.0f)
+						)
+						, text
+					);
+
 				}
 			}
 
@@ -56,7 +55,7 @@ Stage::Stage(string filename)
 }
 
 
-Transform2D Stage::MonsterPosition(int id) {
+Transform2D Stage::MonsterPosition(int id) const{
 	if (id < 0 || id >= monster_positions.size()) {
 		return Transform2D();
 	}
@@ -64,13 +63,14 @@ Transform2D Stage::MonsterPosition(int id) {
 };
 
 void Stage::Render(OpenGLContainer* open_gl) const {
-	for (auto it = model_instances.cbegin(); it != model_instances.cend(); ++it) {
-		it->Render(glm::scale(glm::mat4(), glm::vec3(1.0f, 1.0f,1.0f)),open_gl);
-	}
+	//for (auto it = model_instances.cbegin(); it != model_instances.cend(); ++it) {
+	//	it->Render(glm::scale(glm::mat4(), glm::vec3(1.0f, 1.0f,1.0f)),open_gl);
+	//}
+	Log("Debug", "Stage::Render() doesn't need ot be called anymore");
 }
 
 void Stage::RenderBackground(OpenGLContainer * open_gl) const
 {
-	background.Render(glm::mat4(),open_gl);
+	background->Render(glm::mat4(),open_gl);
 }
 ;

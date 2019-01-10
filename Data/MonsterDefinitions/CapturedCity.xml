@@ -23,6 +23,11 @@
 		<CastWhenDamageTaken>
 			<InternalName>Vorigan_Enrage</InternalName>	
 			<Segment>
+				<Type>FlipbookAnimation</Type>
+				<Targets>Self</Targets>
+				<StringValue>../Data/Animations/Counterspell.xml</StringValue>
+			</Segment>	
+			<Segment>
 				<Type>FlipbookAnimation</Type> 
 				<Targets>Self</Targets>
 				<StringValue>../Data/Animations/Enrage.xml</StringValue>
@@ -58,6 +63,11 @@
 		<CastWhenDamageTaken>
 			<InternalName>Vorigan_Enrage</InternalName><!--Vorigan soldiers deal increased damage for every time they take damage. May be better to fail an attack than to hit and immediately get punched back-->
 			<Segment>
+				<Type>FlipbookAnimation</Type>
+				<Targets>Self</Targets>
+				<StringValue>../Data/Animations/Counterspell.xml</StringValue>
+			</Segment>	
+			<Segment>
 				<Type>FlipbookAnimation</Type> 
 				<Targets>Self</Targets>
 				<StringValue>../Data/Animations/Enrage.xml</StringValue>
@@ -92,6 +102,11 @@
 		<DefaultAttackAnimation>../Data/Animations/Attack_Blade.xml</DefaultAttackAnimation>
 		<CastWhenDamageTaken>
 			<InternalName>Vorigan_Enrage</InternalName><!--Vorigan soldiers deal increased damage for every time they take damage. May be better to fail an attack than to hit and immediately get punched back-->
+			<Segment>
+				<Type>FlipbookAnimation</Type>
+				<Targets>Self</Targets>
+				<StringValue>../Data/Animations/Counterspell.xml</StringValue>
+			</Segment>	
 			<Segment>
 				<Type>FlipbookAnimation</Type> 
 				<Targets>Self</Targets>
@@ -131,6 +146,11 @@
 		<CastWhenDamageTaken>
 			<InternalName>Vorigan_Enrage</InternalName><!--Vorigan soldiers deal increased damage for every time they take damage. May be better to fail an attack than to hit and immediately get punched back-->
 			<Segment>
+				<Type>FlipbookAnimation</Type>
+				<Targets>Self</Targets>
+				<StringValue>../Data/Animations/Counterspell.xml</StringValue>
+			</Segment>	
+			<Segment>
 				<Type>FlipbookAnimation</Type> 
 				<Targets>Self</Targets>
 				<StringValue>../Data/Animations/Enrage.xml</StringValue>
@@ -168,8 +188,31 @@
 		<Labyrinth>../Data/Labyrinths/Vorigan_Boss1.xml</Labyrinth><!-- Easy slow but hard to do on the timer (this version uses a shadow shroud-->	
 		<DefaultAttackAnimation>../Data/Animations/Attack_Blade.xml</DefaultAttackAnimation>				
 		<!--Cast some lightning strike-->
+		<Cast>
+			<InternalName>LightningBolt</InternalName>
+			<Segment>
+				<Type>FlipbookAnimation</Type> 
+				<Targets>Player</Targets>
+				<StringValue>../Data/Animations/LightningBolt.xml</StringValue>
+			</Segment>
+			<Segment>
+				<Type>Damage</Type>
+				<Targets>Player</Targets>
+				<Value>2</Value>
+				<Value>1</Value> <!--Add in monster base damage!-->
+			</Segment>			
+			<Segment>
+				<Type>Finish</Type>
+			</Segment>		
+		</Cast>			
+		
 		<CastWhenDamageTaken>
 			<InternalName>Vorigan_Enrage</InternalName><!--Vorigan soldiers deal increased damage for every time they take damage. May be better to fail an attack than to hit and immediately get punched back-->
+			<Segment>
+				<Type>FlipbookAnimation</Type>
+				<Targets>Self</Targets>
+				<StringValue>../Data/Animations/Counterspell.xml</StringValue>
+			</Segment>	
 			<Segment>
 				<Type>FlipbookAnimation</Type> 
 				<Targets>Self</Targets>
@@ -188,6 +231,61 @@
 	</MonsterDefinition>
 
 	
+    <MonsterDefinition>
+		<InternalName>Vorigan_Commander</InternalName>
+		<Name>Commander Breyaxa</Name>
+		<Stats>
+			<Health>7</Health>
+			<Attack>3</Attack>
+			<Armor>1</Armor>
+			<CastChance>75</CastChance>
+		</Stats>
+		<Image>../Data/2D/Monsters/Vorigan_Commander.png</Image>
+		<ImageTransform>
+			<SizeX>0.92</SizeX>
+			<SizeY>1.0</SizeY>
+			<SizeYRelativeToX>True</SizeYRelativeToX>
+		</ImageTransform>
+		<Labyrinth>../Data/Labyrinths/Vorigan_Commander.xml</Labyrinth><!--Rather easy labyrinth, in-fight strategy is the main part of this battle-->	
+		<DefaultAttackAnimation>../Data/Animations/Attack_Blade.xml</DefaultAttackAnimation>						
+		<Cast>
+			<InternalName>Reinforce1</InternalName>
+			<Segment>
+				<Type>SpawnMonster</Type>
+				<StringValue>Vorigan_Twinblade</StringValue>
+				<StringValue>../Data/Animations/Flipbook_Firesparks.xml</StringValue><!--Flipbook animation on minion spawn-->
+				<Value>1</Value><!--Spawn stunned-->
+			</Segment>
+			<Segment>
+				<Type>Finish</Type>
+			</Segment>		
+		</Cast>	
+		<Cast>
+			<InternalName>Reinforce1</InternalName>
+			<Segment>
+				<Type>SpawnMonster</Type>
+				<StringValue>Vorigan_Twinblade_2</StringValue>
+				<StringValue>../Data/Animations/Flipbook_Firesparks.xml</StringValue><!--Flipbook animation on minion spawn-->
+				<Value>1</Value><!--Spawn stunned-->
+			</Segment>
+			<Segment>
+				<Type>Finish</Type>
+			</Segment>		
+		</Cast>		
+		<Cast>
+			<InternalName>Reinforce1</InternalName>
+			<Segment>
+				<Type>SpawnMonster</Type>
+				<StringValue>Vorigan_Twinblade_3</StringValue>
+				<StringValue>../Data/Animations/Flipbook_Firesparks.xml</StringValue><!--Flipbook animation on minion spawn-->
+				<Value>1</Value><!--Spawn stunned-->
+			</Segment>
+			<Segment>
+				<Type>Finish</Type>
+			</Segment>		
+		</Cast>	
+	</MonsterDefinition>
+
 	
 	
 </MonsterDefinitions>

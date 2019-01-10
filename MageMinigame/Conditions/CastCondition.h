@@ -4,27 +4,32 @@
 #include <string>
 
 
-#include "../tinyxml2.h"
+#include "tinyxml2.h"
 
 class Monster;
+class PlayerState;
+class Fight;
+
+#include "ConditionToPlayer.h"
 
 class CastCondition {
 public:
-	enum TypeEnum{nothing, condition_to_monster};
+	 enum struct TypeEnum{nothing, alive, full_life, not_full_life,dead, high_spell_points,arena_not_full};
+	 enum struct TargetEnum {nothing, self, all_monsters, any_monster, player};
 
 	CastCondition();
-	CastCondition(tinyxml2::XMLElement * );
+	CastCondition(const tinyxml2::XMLElement * );
 
-	bool Evaluate(std::vector<Monster> monsters,int self); //+ player data
+	bool evaluate(int my_id, const Fight* fight) const;
 
 
 private:
-	void InitializeAsConditionToMonster(tinyxml2::XMLElement * xml_root);
-
+	bool CheckConditionOnMonster(const Monster&) const;
 
 	TypeEnum type;
 
-	std::string target;
+	TargetEnum target;
 
-	std::vector<std::string> conditions_to_monster;
+
+	std::vector<ConditionToPlayer> conditions_to_player;
 };

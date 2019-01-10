@@ -9,6 +9,7 @@ in vec3 LightDirection_cameraspace;
 
 // Ouput data
 out vec4 color;
+out float gl_FragDepth;
 
 // Values that stay constant for the whole mesh.
 uniform sampler2D myTextureSampler;
@@ -20,10 +21,13 @@ uniform sampler2D mask_blend_secondary_texture;
 uniform sampler2D mask_blend_mask;
 uniform float mask_blend_enable;
 	
+uniform vec3 color_mod;
 	
 uniform mat4 MV;
 uniform vec3 LightPosition_worldspace;
 uniform vec4 LightColourIntensity;
+uniform vec4 OverworldLightColourIntensity;
+uniform vec3 OverworldLightVector;
 
 
 void main(){
@@ -37,7 +41,7 @@ void main(){
 	// Material properties
 	
 	
-	vec3 MaterialDiffuseColor = texture2D( myTextureSampler, UV ).rgb;
+	vec3 MaterialDiffuseColor = texture2D( myTextureSampler, UV ).rgb; 
 	
 	if(mask_blend_enable >= 0.9f){
 		vec3 MaskColor = texture2D(mask_blend_mask, UV).rgb;
@@ -53,11 +57,13 @@ void main(){
 		
 		
 		
-
+	MaterialDiffuseColor = MaterialDiffuseColor * color_mod.rgb;	
+	
 		
 	vec3 MaterialAmbientColor = vec3(0.1,0.1,0.1) * MaterialDiffuseColor;
 	vec3 MaterialSpecularColor = vec3(0.3,0.3,0.3);
 
+	
 	// TEST: Non Uniform location
 	//vec3 LightPosition_woldspace_TEST = vec3(0,0,4);
 	
@@ -76,6 +82,11 @@ void main(){
 	//  - light is behind the triangle -> 0
 	float cosTheta = clamp( dot( n,l ), 0,1 );
 	
+	
+	vec3 L2 = normalize(OverworldLightVector);	
+	float cosThetaOverworld = clamp( dot( n,L2 ), 0,1 );
+
+	
 	// Eye vector (towards the camera)
 	vec3 E = normalize(EyeDirection_cameraspace);
 	// Direction in which the triangle reflects the light
@@ -86,27 +97,35 @@ void main(){
 	//  - Looking elsewhere -> < 1
 	float cosAlpha = clamp( dot( E,R ), 0,1 );
 	
+	
 	//color = 
-		// Ambient : simulates indirect lighting
+	// Ambient : simulates indirect lighting
 	//	MaterialAmbientColor +
-		// Diffuse : "color" of the object
+	// Diffuse : "color" of the object
 	//	MaterialDiffuseColor * LightColor * LightPower * cosTheta / (distance*distance) +
-		// Specular : reflective highlight, like a mirror
+	// Specular : reflective highlight, like a mirror
 	//	MaterialSpecularColor * LightColor * LightPower * pow(cosAlpha,5) / (distance*distance);
 	
-	//Light falls off by distance squared
-	color.r=MaterialAmbientColor.r + MaterialDiffuseColor.r * LightColor.r * LightPower * cosTheta / (distance*distance); 
-	color.g=MaterialAmbientColor.g + MaterialDiffuseColor.g * LightColor.g * LightPower * cosTheta / (distance*distance);
-	color.b=MaterialAmbientColor.b + MaterialDiffuseColor.b * LightColor.b * LightPower * cosTheta / (distance*distance);
-	
-	//Light falls off by distance (unrealistic but might look better)
-	//color.r=MaterialAmbientColor.r + MaterialDiffuseColor.r * LightColor.r * LightPower * cosTheta / (distance); 
-	//color.g=MaterialAmbientColor.g + MaterialDiffuseColor.g * LightColor.g * LightPower * cosTheta / (distance);
-	//color.b=MaterialAmbientColor.b + MaterialDiffuseColor.b * LightColor.b * LightPower * cosTheta / (distance);
-	
-		
 	
 	
-	color.a=texture2D( myTextureSampler, UV ).a;
 	
+
+
+	float inverse_square = 1.0 / (distance*distance); 
+	float point_light_contribution = LightPower * cosTheta * inverse_square;
+	float overworld_light_contribution = OverworldLightColourIntensity.a * cosThetaOverworld;
+	
+	color.r=MaterialAmbientColor.r + MaterialDiffuseColor.r * (LightColor.r * point_light_contribution  + overworld_light_contribution * OverworldLightColourIntensity.r); 
+	color.g=MaterialAmbientColor.g + MaterialDiffuseColor.g * (LightColor.g * point_light_contribution  + overworld_light_contribution * OverworldLightColourIntensity.g);
+	color.b=MaterialAmbientColor.b + MaterialDiffuseColor.b * (LightColor.b * point_light_contribution  + overworld_light_contribution * OverworldLightColourIntensity.b);
+	
+	
+	
+	
+	gl_FragDepth =	gl_FragCoord.z; //This is necessary because if we declare it we have to write a value!
+	color.a=1.0;
+	if( texture2D( myTextureSampler, UV ).a < 0.75){
+		color.a = 0.0; //Either fully transparent or not at all
+		gl_FragDepth = gl_FragCoord.z + 100; //Push transparent pixels extremely far back
+	}
 }

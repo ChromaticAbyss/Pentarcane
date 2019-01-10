@@ -4,7 +4,7 @@
 
 using namespace std;
 using namespace glm;
-using namespace tinyxml2;
+;
 
 Transform::Transform()
 	:pos_x(0),pos_y(0),pos_z(0),rot_x(0),rot_y(0),rot_z(0),scale(1.0f), cached_matrix_still_up_to_date(false)
@@ -16,7 +16,7 @@ Transform::Transform(float x, float y, float z, float sc)
 {
 }
 
-Transform::Transform(tinyxml2::XMLElement * xml_root)
+Transform::Transform(const tinyxml2::XMLElement * xml_root)
 	: pos_x(0), pos_y(0), pos_z(0), rot_x(0), rot_y(0), rot_z(0), scale(1.0f), cached_matrix_still_up_to_date(false)
 {
 
@@ -27,19 +27,19 @@ Transform::Transform(tinyxml2::XMLElement * xml_root)
 
 
 	{ //Look up x
-		XMLElement * xml_child = xml_root->FirstChildElement("X");
+		const tinyxml2::XMLElement * xml_child = xml_root->FirstChildElement("X");
 		if (xml_child != 0) {
 			pos_x = stof(xml_child->GetText());
 		}
 	}
 	{ //Look up y
-		XMLElement * xml_child = xml_root->FirstChildElement("Y");
+		const tinyxml2::XMLElement * xml_child = xml_root->FirstChildElement("Y");
 		if (xml_child != 0) {
 			pos_y = stof(xml_child->GetText());
 		}
 	}
 	{ //Look up z
-		XMLElement * xml_child = xml_root->FirstChildElement("Z");
+		const tinyxml2::XMLElement * xml_child = xml_root->FirstChildElement("Z");
 		if (xml_child != 0) {
 			pos_z = stof(xml_child->GetText());
 		}
@@ -47,26 +47,26 @@ Transform::Transform(tinyxml2::XMLElement * xml_root)
 
 
 	{ //Look up rot_x
-		XMLElement * xml_child = xml_root->FirstChildElement("RotX");
+		const tinyxml2::XMLElement * xml_child = xml_root->FirstChildElement("RotX");
 		if (xml_child != 0) {
 			rot_x = stof(xml_child->GetText());
 		}
 	}
 	{ //Look up rot_y
-		XMLElement * xml_child = xml_root->FirstChildElement("RotY");
+		const tinyxml2::XMLElement * xml_child = xml_root->FirstChildElement("RotY");
 		if (xml_child != 0) {
 			rot_y = stof(xml_child->GetText());
 		}
 	}
 	{ //Look up rot_z
-		XMLElement * xml_child = xml_root->FirstChildElement("RotZ");
+		const tinyxml2::XMLElement * xml_child = xml_root->FirstChildElement("RotZ");
 		if (xml_child != 0) {
 			rot_z = stof(xml_child->GetText());
 		}
 	}
 
 	{ //Look up scale
-		XMLElement * xml_child = xml_root->FirstChildElement("Scale");
+		const tinyxml2::XMLElement * xml_child = xml_root->FirstChildElement("Scale");
 		if (xml_child != 0) {
 			scale = stof(xml_child->GetText());
 		}
@@ -79,23 +79,30 @@ Transform::Transform(tinyxml2::XMLElement * xml_root)
 void Transform::Move(float dx, float dy, float dz) {
 	pos_x += dx;
 	pos_y += dy;
+	//cout << "Moved by:" << dy << endl;
 	pos_z += dz;
 	cached_matrix_still_up_to_date = false;
 }
 
 void Transform::RotateZ(float n_z)
 {
-	rot_z = (int)(rot_z + n_z) % 360; 
+	rot_z += n_z;
+	if (rot_z > 360) { rot_z -= 360; }
+	if (rot_z < 0) { rot_z += 360; }
 	cached_matrix_still_up_to_date = false;
 }
 void Transform::RotateX(float n_z)
 {
-	rot_x = (int)(rot_x + n_z) % 360;
+	rot_x += n_z;
+	if (rot_x > 360) { rot_x -= 360; }
+	if (rot_x < 0) { rot_x += 360; }
 	cached_matrix_still_up_to_date = false;
 }
 void Transform::RotateY(float n_z)
 {
-	rot_y = (int)(rot_y + n_z) % 360;
+	rot_y += n_z;
+	if (rot_y > 360) { rot_y -= 360; }
+	if (rot_y < 0) { rot_y += 360; }
 	cached_matrix_still_up_to_date = false;
 }
 
@@ -126,23 +133,23 @@ glm::mat4 Transform::MakeModelMatrix() const{
 }
 
 
-tinyxml2::XMLElement* Transform::MakeXML(XMLDocument & doc) const {
-	XMLElement * return_element = doc.NewElement("Transform");
+tinyxml2::XMLElement* Transform::MakeXML(tinyxml2::XMLDocument & doc) const {
+	tinyxml2::XMLElement * return_element = doc.NewElement("Transform");
 
 	{
-		XMLElement * type_element = doc.NewElement("X");
+		tinyxml2::XMLElement * type_element = doc.NewElement("X");
 		type_element->SetText(X());
 		return_element->InsertEndChild(type_element);
 	}
 
 	{
-		XMLElement * type_element = doc.NewElement("Y");
+		tinyxml2::XMLElement * type_element = doc.NewElement("Y");
 		type_element->SetText(Y());
 		return_element->InsertEndChild(type_element);
 	}
 
 	{
-		XMLElement * type_element = doc.NewElement("Z");
+		tinyxml2::XMLElement * type_element = doc.NewElement("Z");
 		type_element->SetText(Z());
 		return_element->InsertEndChild(type_element);
 	}
@@ -150,25 +157,25 @@ tinyxml2::XMLElement* Transform::MakeXML(XMLDocument & doc) const {
 
 	
 	if (rot_x != 0) {
-		XMLElement * type_element = doc.NewElement("RotX");
+		tinyxml2::XMLElement * type_element = doc.NewElement("RotX");
 		type_element->SetText(rot_x);
 		return_element->InsertEndChild(type_element);
 	}
 
 	if (rot_y != 0) {
-		XMLElement * type_element = doc.NewElement("RotY");
+		tinyxml2::XMLElement * type_element = doc.NewElement("RotY");
 		type_element->SetText(rot_y);
 		return_element->InsertEndChild(type_element);
 	}
 
 	if (rot_z != 0) {
-		XMLElement * type_element = doc.NewElement("RotZ");
+		tinyxml2::XMLElement * type_element = doc.NewElement("RotZ");
 		type_element->SetText(rot_z);
 		return_element->InsertEndChild(type_element);
 	}
 
 	{
-		XMLElement * type_element = doc.NewElement("Scale");
+		tinyxml2::XMLElement * type_element = doc.NewElement("Scale");
 		type_element->SetText(Scale());
 		return_element->InsertEndChild(type_element);
 	}

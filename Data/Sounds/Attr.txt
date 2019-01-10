@@ -16,6 +16,18 @@ slow mine : https://www.freesound.org/people/kantouth/sounds/104400/
 bite :  https://www.freesound.org/people/ggctuk/sounds/80550/
 slash :  https://www.freesound.org/people/Abyssmal/sounds/35213/
 enrage : https://www.freesound.org/people/thanvannispen/sounds/94583/
+minitrigger: https://www.freesound.org/people/Jagadamba/sounds/254286/
+slime_impact: https://freesound.org/people/DrMinky/sounds/167074/
+launch: https://freesound.org/people/saturdaysoundguy/sounds/394180/
+glasscrack_1 https://freesound.org/people/natemarler/sounds/338694/
+glassStart https://freesound.org/people/Anton/sounds/17/
+glass_break https://freesound.org/people/Vinnie_Palermo/sounds/321641/
+IceCrack_9 https://freesound.org/people/ecfike/sounds/177219/
+power_charge https://freesound.org/people/crashoverride61088/sounds/193610/
+AlienTrigger https://freesound.org/people/AlienXXX/sounds/78908/
+CthulhuGrowl https://freesound.org/people/cylon8472/sounds/249686/
+ShortGrowl https://freesound.org/people/Sea%20Fury/sounds/48688/
+BrassHitMedium https://freesound.org/people/HerbertBoland/sounds/178131/
 
 
 http://www.audiorhapsody.com/
@@ -23,8 +35,12 @@ labyrinth_fail (hit_3)
 obeliskImpact (impact_2)
 obeliskTrigger (impact_3)
 goal (riser_1)
+
+
+
 Mage tower theme (Phobia)
 (Division)
+Malicious (Pyramid)
 Liberate/Infiltrate (Crossing the chasm)
  Kevin MacLeod (incompetech.com)
 Licensed under Creative Commons: By Attribution 3.0 License

@@ -277,7 +277,7 @@ Strings
 			
 		<UiElement>
 			<Transform2D>
-				<X>0.01</X>
+				<X>-0.08</X>
 				<Y>-0.95</Y>
 				<SizeX>0.08</SizeX>
 				<SizeY>0.5</SizeY>
@@ -288,6 +288,25 @@ Strings
 			</Image>
 			<Effect>
 				<Type>SetFloatParameter</Type>
+				<Value>1</Value>
+				<Value>0</Value>
+				<ForMode>1</ForMode><!--On mouse click-->
+			</Effect>
+		</UiElement>	
+			
+		<UiElement>
+			<Transform2D>
+				<X>0.08</X>
+				<Y>-0.95</Y>
+				<SizeX>0.08</SizeX>
+				<SizeY>0.5</SizeY>
+				<SizeYRelativeToX>True</SizeYRelativeToX><!--takes into account window dimensions, so a 1 in SizeY would always be a square-->
+			</Transform2D>		
+			<Image>
+				<ImageFile>../Data/2D/Ui/MapEd_Select_SetNamedParameter.png</ImageFile>
+			</Image>
+			<Effect>
+				<Type>SetNamedParameter</Type>
 				<Value>1</Value>
 				<Value>0</Value>
 				<ForMode>1</ForMode><!--On mouse click-->

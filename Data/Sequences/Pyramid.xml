@@ -1,11 +1,10 @@
 <Sequence>
 	<DisplayName>Fogfall Pyramid Excavation</DisplayName>
-	<Description>.</Description>
-	<Description>.</Description>
-	<Description>.</Description>
-	<Description>.</Description>
-	<Description>.</Description>
-	<Description>.</Description>
+	<Description>Finally at the site of the excavation.</Description>
+	<Description>Most of the archeologists are huddled in a camp in the nearby mountains.</Description>
+	<Description>They tell you the pyramid is still full of ghostly guardians.</Description>
+	<Description>What little relics they could gather has been hard to translate.</Description>
+	<Description>The gist seems to be something about a "great transformation".</Description>
 	
 	
 	<SequenceModifiers><!--TODO: Currently not working as a feature-->
@@ -31,68 +30,79 @@
 		</Transform>			
 	</Art3D>
 	
-	<Soundtrack>Crypto.mp3</Soundtrack>
-
-	<Reward>Pyramid</Reward><!--Unlock this thing for the player. It allows accessing additional sequences-->
-	<CompleteRequirement>Pyramid</CompleteRequirement><!--Usually one of the rewards!-->
+	<Soundtrack>Malicious.mp3</Soundtrack>
+	<SoundtrackVolume>0.25</SoundtrackVolume>
 	
+	<Reward>Pyramid</Reward><!--Unlock this thing for the player. It allows accessing additional sequences-->
+	<RewardHuman>Rune Stone</RewardHuman>
+	<RewardIcon>../Data/2D/Rewards/RuneStone.png</RewardIcon>	
+	<RewardHuman>Rune Tracings</RewardHuman>
+	<RewardIcon>../Data/2D/Rewards/Transcript.png</RewardIcon>		
+	
+	<CompleteRequirement>Pyramid</CompleteRequirement><!--Usually one of the rewards!-->
 	<UnlockRequirement>ForestOfPurpleCoffins</UnlockRequirement>
 	
-	<!--Start with a random refight from forest of the purple coffins-->
-	<Fight>
-		<Condition> 
-			<Type>OR</Type>
+	<Entry>
+		<Fight>
 			<Condition>
-				<Type>ExactName</Type>
-				<StringValue>FoPC_4</StringValue>
-			</Condition>
-		</Condition>
-		<Stage>../Data/Stages/Pyramid.xml</Stage><!--A stage is just a bunch of models and positions at which to place enemy models-->
-		<Description>...</Description>
-	</Fight>
-	
-
-	<Fight>
-		<Condition> 
-			<Type>OR</Type>
-			<Condition>
-				<Type>ExactName</Type>
-				<StringValue>Pyramid_2</StringValue>
+				<Type>NOT</Type>
+				<Condition>
+					<Type>HasTag</Type>
+					<StringValue>Boss</StringValue>
+				</Condition>
 			</Condition>
 			<Condition>
-				<Type>ExactName</Type>
-				<StringValue>Hammerhead</StringValue>
-			</Condition>
-		</Condition>
-		<Stage>../Data/Stages/Pyramid.xml</Stage><!--A stage is just a bunch of models and positions at which to place enemy models-->
-		<Description>...</Description>
-	</Fight>
+				<Type>HasTag</Type>
+				<StringValue>PyramidExcavation</StringValue>
+			</Condition>	
+			<Stage>../Data/Stages/Pyramid.xml</Stage><!--A stage is just a bunch of models and positions at which to place enemy models-->
+		</Fight>
+	</Entry>
 	
-	
-	<Fight>
-		<Condition> 
-			<Type>OR</Type>
+	<Entry>
+		<Fight>
 			<Condition>
-				<Type>ExactName</Type>
-				<StringValue>Pyramid_C</StringValue>
+				<Type>NOT</Type>
+				<Condition>
+					<Type>HasTag</Type>
+					<StringValue>Boss</StringValue>
+				</Condition>
 			</Condition>
-		</Condition>
-		<Stage>../Data/Stages/Pyramid.xml</Stage><!--A stage is just a bunch of models and positions at which to place enemy models-->
-		<Description>...</Description>
-	</Fight>
-	
-	
-	<Fight>
-		<Condition> 
-			<Type>OR</Type>
 			<Condition>
-				<Type>ExactName</Type>
-				<StringValue>GodInTheMire</StringValue>
+				<Type>HasTag</Type>
+				<StringValue>PyramidExcavation</StringValue>
+			</Condition>	
+			<Stage>../Data/Stages/Pyramid.xml</Stage><!--A stage is just a bunch of models and positions at which to place enemy models-->
+		</Fight>
+	</Entry>
+	<Entry>
+		<Fight>
+			<Condition>
+				<Type>NOT</Type>
+				<Condition>
+					<Type>HasTag</Type>
+					<StringValue>Boss</StringValue>
+				</Condition>
 			</Condition>
-		</Condition>
-		<Stage>../Data/Stages/Pyramid.xml</Stage><!--A stage is just a bunch of models and positions at which to place enemy models-->
-		<Description>...</Description>
-	</Fight>
+			<Condition>
+				<Type>HasTag</Type>
+				<StringValue>PyramidExcavation</StringValue>
+			</Condition>	
+			<Stage>../Data/Stages/Pyramid.xml</Stage><!--A stage is just a bunch of models and positions at which to place enemy models-->
+		</Fight>
+	</Entry>
+	<Entry>
+		<Fight>
+			<Condition> 
+				<Type>OR</Type>
+				<Condition>
+					<Type>ExactName</Type>
+					<StringValue>GodInTheMire</StringValue>
+				</Condition>
+			</Condition>
+			<Stage>../Data/Stages/Pyramid.xml</Stage><!--A stage is just a bunch of models and positions at which to place enemy models-->
+		</Fight>
+	</Entry>
 	
 
 	

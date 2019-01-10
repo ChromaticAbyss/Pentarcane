@@ -751,15 +751,6 @@
         <Type>Pickup_Damage</Type>
         <Transform>
             <X>10</X>
-            <Y>2</Y>
-            <Z>0</Z>
-            <Scale>1</Scale>
-        </Transform>
-    </Part>
-    <Part>
-        <Type>Pickup_Damage</Type>
-        <Transform>
-            <X>10</X>
             <Y>0</Y>
             <Z>0</Z>
             <Scale>1</Scale>
@@ -774,8 +765,8 @@
             <Scale>1</Scale>
         </Transform>
         <UniqueName>Patrol_BackAndForth 2 -2 82</UniqueName>
-        <ScriptParameterString>Patrol_BackAndForth 2 -2 82</ScriptParameterString>
-        <ScriptParameterString>Patrol_GearGuardian 10 -2 25</ScriptParameterString>
+        <String>Patrol_BackAndForth 2 -2 82</String>
+        <String>Patrol_GearGuardian 10 -2 25</String>
     </Part>
     <Part>
         <Type>Patrol_BackAndForth</Type>
@@ -786,8 +777,8 @@
             <Scale>1</Scale>
         </Transform>
         <UniqueName>Patrol_BackAndForth 10 -3 32</UniqueName>
-        <ScriptParameterString>Patrol_BackAndForth 10 -3 32</ScriptParameterString>
-        <ScriptParameterString>Patrol_GearGuardian 2 -3 85</ScriptParameterString>
+        <String>Patrol_BackAndForth 10 -3 32</String>
+        <String>Patrol_GearGuardian 2 -3 85</String>
     </Part>
     <Part>
         <Type>Patrol_GearGuardian</Type>
@@ -798,8 +789,8 @@
             <Scale>1</Scale>
         </Transform>
         <UniqueName>Patrol_GearGuardian 10 -2 25</UniqueName>
-        <ScriptParameterString>Patrol_GearGuardian 10 -2 25</ScriptParameterString>
-        <ScriptParameterString>Patrol_BackAndForth 2 -2 82</ScriptParameterString>
+        <String>Patrol_GearGuardian 10 -2 25</String>
+        <String>Patrol_BackAndForth 2 -2 82</String>
     </Part>
     <Part>
         <Type>Patrol_GearGuardian</Type>
@@ -810,8 +801,8 @@
             <Scale>1</Scale>
         </Transform>
         <UniqueName>Patrol_GearGuardian 2 -3 85</UniqueName>
-        <ScriptParameterString>Patrol_GearGuardian 2 -3 85</ScriptParameterString>
-        <ScriptParameterString>Patrol_BackAndForth 10 -3 32</ScriptParameterString>
+        <String>Patrol_GearGuardian 2 -3 85</String>
+        <String>Patrol_BackAndForth 10 -3 32</String>
     </Part>
     <Part>
         <Type>Patrol_GearGuardian</Type>
@@ -822,8 +813,8 @@
             <Scale>1</Scale>
         </Transform>
         <UniqueName>Patrol_GearGuardian 1 5 16</UniqueName>
-        <ScriptParameterString>Patrol_GearGuardian 1 5 16</ScriptParameterString>
-        <ScriptParameterString>Patrol_GearGuardian 10 5 27</ScriptParameterString>
+        <String>Patrol_GearGuardian 1 5 16</String>
+        <String>Patrol_GearGuardian 10 5 27</String>
     </Part>
     <Part>
         <Type>Patrol_GearGuardian</Type>
@@ -833,8 +824,8 @@
             <Z>0</Z>
             <Scale>1</Scale>
         </Transform>
-        <ScriptParameterString>PositionMarker 10 4 40</ScriptParameterString>
-        <ScriptParameterString>PositionMarker 1 4 69</ScriptParameterString>
+        <String>PositionMarker 10 4 40</String>
+        <String>PositionMarker 1 4 69</String>
     </Part>
     <Part>
         <Type>Patrol_GearGuardian</Type>
@@ -845,8 +836,8 @@
             <Scale>1</Scale>
         </Transform>
         <UniqueName>Patrol_GearGuardian 10 5 27</UniqueName>
-        <ScriptParameterString>Patrol_GearGuardian 10 5 27</ScriptParameterString>
-        <ScriptParameterString>Patrol_GearGuardian 1 5 16</ScriptParameterString>
+        <String>Patrol_GearGuardian 10 5 27</String>
+        <String>Patrol_GearGuardian 1 5 16</String>
     </Part>
     <Part>
         <Type>PositionMarker</Type>
@@ -886,7 +877,7 @@
             <Z>0</Z>
             <Scale>1</Scale>
         </Transform>
-        <ScriptParameterString>Switchable_Blockade_Base -9 1 23</ScriptParameterString>
+        <String>Switchable_Blockade_Base -9 1 23</String>
     </Part>
     <Part>
         <Type>Switch_Base</Type>
@@ -896,7 +887,7 @@
             <Z>0</Z>
             <Scale>1</Scale>
         </Transform>
-        <ScriptParameterString>Door_Timed -6 -3 14</ScriptParameterString>
+        <String>Door_Timed -6 -3 14</String>
     </Part>
     <Part>
         <Type>Door_Timed</Type>
@@ -1444,8 +1435,8 @@
             <Z>0</Z>
             <Scale>1</Scale>
         </Transform>
-        <ScriptParameterString>ExplodingGroundTile_Charging -7 -2 2</ScriptParameterString>
-        <ScriptParameterString>ExplodingGroundTile_Charging -7 9 77</ScriptParameterString>
+        <String>ExplodingGroundTile_Charging -7 -2 2</String>
+        <String>ExplodingGroundTile_Charging -7 9 77</String>
     </Part>
     <Part>
         <Type>Patrol_BackAndForth</Type>
@@ -1455,10 +1446,10 @@
             <Z>0</Z>
             <Scale>1</Scale>
         </Transform>
-        <ScriptParameterString>ExplodingGroundTile_Charging -6 -2 75</ScriptParameterString>
-        <ScriptParameterString>ExplodingGroundTile_Charging -6 9 63</ScriptParameterString>
-        <ScriptParameterString>ExplodingGroundTile_Charging -6 -2 75</ScriptParameterString>
-        <ScriptParameterString>ExplodingGroundTile_Charging -6 9 63</ScriptParameterString>
+        <String>ExplodingGroundTile_Charging -6 -2 75</String>
+        <String>ExplodingGroundTile_Charging -6 9 63</String>
+        <String>ExplodingGroundTile_Charging -6 -2 75</String>
+        <String>ExplodingGroundTile_Charging -6 9 63</String>
     </Part>
     <Part>
         <Type>Patrol_BackAndForth</Type>
@@ -1468,8 +1459,8 @@
             <Z>0</Z>
             <Scale>1</Scale>
         </Transform>
-        <ScriptParameterString>ExplodingGroundTile_Charging -5 -2 12</ScriptParameterString>
-        <ScriptParameterString>ExplodingGroundTile_Charging -5 9 99</ScriptParameterString>
+        <String>ExplodingGroundTile_Charging -5 -2 12</String>
+        <String>ExplodingGroundTile_Charging -5 9 99</String>
     </Part>
     <Part>
         <Type>Patrol_BackAndForth</Type>
@@ -1479,8 +1470,8 @@
             <Z>0</Z>
             <Scale>1</Scale>
         </Transform>
-        <ScriptParameterString>ExplodingGroundTile_Charging -6 -2 75</ScriptParameterString>
-        <ScriptParameterString>ExplodingGroundTile_Charging -6 9 63</ScriptParameterString>
+        <String>ExplodingGroundTile_Charging -6 -2 75</String>
+        <String>ExplodingGroundTile_Charging -6 9 63</String>
     </Part>
     <Part>
         <Type>Patrol_BackAndForth</Type>
@@ -1490,8 +1481,8 @@
             <Z>0</Z>
             <Scale>1</Scale>
         </Transform>
-        <ScriptParameterString>ExplodingGroundTile_Charging -7 -2 2</ScriptParameterString>
-        <ScriptParameterString>ExplodingGroundTile_Charging -7 9 77</ScriptParameterString>
+        <String>ExplodingGroundTile_Charging -7 -2 2</String>
+        <String>ExplodingGroundTile_Charging -7 9 77</String>
     </Part>
     <Part>
         <Type>Patrol_BackAndForth</Type>
@@ -1501,8 +1492,8 @@
             <Z>0</Z>
             <Scale>1</Scale>
         </Transform>
-        <ScriptParameterString>ExplodingGroundTile_Charging -6 -2 75</ScriptParameterString>
-        <ScriptParameterString>ExplodingGroundTile_Charging -6 9 63</ScriptParameterString>
+        <String>ExplodingGroundTile_Charging -6 -2 75</String>
+        <String>ExplodingGroundTile_Charging -6 9 63</String>
     </Part>
     <Part>
         <Type>Patrol_BackAndForth</Type>
@@ -1513,8 +1504,8 @@
             <Scale>1</Scale>
         </Transform>
         <UniqueName>Patrol_BackAndForth -6 -4 80</UniqueName>
-        <ScriptParameterString>Patrol_BackAndForth -6 -4 80</ScriptParameterString>
-        <ScriptParameterString>PositionMarker 0 -4 44</ScriptParameterString>
+        <String>Patrol_BackAndForth -6 -4 80</String>
+        <String>PositionMarker 0 -4 44</String>
     </Part>
     <Part>
         <Type>Patrol_BackAndForth</Type>
@@ -1525,8 +1516,8 @@
             <Scale>1</Scale>
         </Transform>
         <UniqueName>Patrol_BackAndForth -6 -5 74</UniqueName>
-        <ScriptParameterString>Patrol_BackAndForth -6 -5 74</ScriptParameterString>
-        <ScriptParameterString>Patrol_BackAndForth 0 -5 12</ScriptParameterString>
+        <String>Patrol_BackAndForth -6 -5 74</String>
+        <String>Patrol_BackAndForth 0 -5 12</String>
     </Part>
     <Part>
         <Type>Patrol_BackAndForth</Type>
@@ -1537,8 +1528,8 @@
             <Scale>1</Scale>
         </Transform>
         <UniqueName>Patrol_BackAndForth 0 -5 12</UniqueName>
-        <ScriptParameterString>Patrol_BackAndForth 0 -5 12</ScriptParameterString>
-        <ScriptParameterString>Patrol_BackAndForth -6 -5 74</ScriptParameterString>
+        <String>Patrol_BackAndForth 0 -5 12</String>
+        <String>Patrol_BackAndForth -6 -5 74</String>
     </Part>
     <Part>
         <Type>Patrol_BackAndForth</Type>
@@ -1549,8 +1540,8 @@
             <Scale>1</Scale>
         </Transform>
         <UniqueName>Patrol_BackAndForth 0 -6 45</UniqueName>
-        <ScriptParameterString>Patrol_BackAndForth 0 -6 45</ScriptParameterString>
-        <ScriptParameterString>PositionMarker -6 -6 25</ScriptParameterString>
+        <String>Patrol_BackAndForth 0 -6 45</String>
+        <String>PositionMarker -6 -6 25</String>
     </Part>
     <Part>
         <Type>PositionMarker</Type>
@@ -1572,4 +1563,749 @@
         </Transform>
         <UniqueName>PositionMarker 0 -4 44</UniqueName>
     </Part>
+    <DecoPart>
+        <Type>DecoWall_Oudside_1</Type>
+        <Transform>
+            <X>-12</X>
+            <Y>-2</Y>
+            <Z>0</Z>
+            <RotZ>180</RotZ>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
+    <DecoPart>
+        <Type>DecoWall_Oudside_1</Type>
+        <Transform>
+            <X>4</X>
+            <Y>7</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
+    <DecoPart>
+        <Type>DecoWall_Oudside_1</Type>
+        <Transform>
+            <X>8</X>
+            <Y>6</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
+    <DecoPart>
+        <Type>DecoWall_Oudside_1</Type>
+        <Transform>
+            <X>8</X>
+            <Y>-5</Y>
+            <Z>0</Z>
+            <RotZ>180</RotZ>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
+    <DecoPart>
+        <Type>DecoWall_Oudside_1</Type>
+        <Transform>
+            <X>-1</X>
+            <Y>-8</Y>
+            <Z>0</Z>
+            <RotZ>180</RotZ>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
+    <DecoPart>
+        <Type>DecoWall_Oudside_1</Type>
+        <Transform>
+            <X>-9</X>
+            <Y>10</Y>
+            <Z>0</Z>
+            <RotZ>90</RotZ>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
+    <DecoPart>
+        <Type>DecoWall_Oudside_2</Type>
+        <Transform>
+            <X>-10</X>
+            <Y>9</Y>
+            <Z>0</Z>
+            <RotZ>90</RotZ>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
+    <DecoPart>
+        <Type>DecoWall_Oudside_2</Type>
+        <Transform>
+            <X>-13</X>
+            <Y>1</Y>
+            <Z>0</Z>
+            <RotZ>90</RotZ>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
+    <DecoPart>
+        <Type>DecoWall_Oudside_2</Type>
+        <Transform>
+            <X>6</X>
+            <Y>10</Y>
+            <Z>0</Z>
+            <RotZ>180</RotZ>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
+    <DecoPart>
+        <Type>DecoWall_Oudside_2</Type>
+        <Transform>
+            <X>5</X>
+            <Y>-6</Y>
+            <Z>0</Z>
+            <RotZ>270</RotZ>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
+    <DecoPart>
+        <Type>DecoWall_Oudside_2</Type>
+        <Transform>
+            <X>12</X>
+            <Y>2</Y>
+            <Z>0</Z>
+            <RotZ>270</RotZ>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
+    <DecoPart>
+        <Type>DecoWall_Oudside_2</Type>
+        <Transform>
+            <X>11</X>
+            <Y>1</Y>
+            <Z>0</Z>
+            <RotZ>270</RotZ>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
+    <DecoPart>
+        <Type>DecoWall_Oudside_2</Type>
+        <Transform>
+            <X>-1</X>
+            <Y>5</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
+    <DecoPart>
+        <Type>DecoWall_Oudside_2</Type>
+        <Transform>
+            <X>-5</X>
+            <Y>11</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
+    <DecoPart>
+        <Type>DecoWall_Oudside_2</Type>
+        <Transform>
+            <X>9</X>
+            <Y>1</Y>
+            <Z>0</Z>
+            <RotZ>90</RotZ>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
+    <DecoPart>
+        <Type>DecoWall_Oudside_2</Type>
+        <Transform>
+            <X>7</X>
+            <Y>3</Y>
+            <Z>0</Z>
+            <RotZ>180</RotZ>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
+    <DecoPart>
+        <Type>DecoWall_Oudside_2</Type>
+        <Transform>
+            <X>-7</X>
+            <Y>-7</Y>
+            <Z>0</Z>
+            <RotZ>180</RotZ>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
+    <DecoPart>
+        <Type>DecoWall_Oudside_2</Type>
+        <Transform>
+            <X>-9</X>
+            <Y>-6</Y>
+            <Z>0</Z>
+            <RotZ>180</RotZ>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
+    <DecoPart>
+        <Type>DecoWall_Oudside_2</Type>
+        <Transform>
+            <X>-16</X>
+            <Y>3</Y>
+            <Z>0</Z>
+            <RotZ>180</RotZ>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
+    <DecoPart>
+        <Type>GrassFloor_2x2</Type>
+        <Transform>
+            <X>9</X>
+            <Y>-3</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
+    <DecoPart>
+        <Type>GrassFloor_2x2</Type>
+        <Transform>
+            <X>7</X>
+            <Y>-3</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
+    <DecoPart>
+        <Type>GrassFloor_2x2</Type>
+        <Transform>
+            <X>5</X>
+            <Y>-3</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
+    <DecoPart>
+        <Type>GrassFloor_2x2</Type>
+        <Transform>
+            <X>3</X>
+            <Y>-3</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
+    <DecoPart>
+        <Type>GrassFloor_2x2</Type>
+        <Transform>
+            <X>3</X>
+            <Y>-1</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
+    <DecoPart>
+        <Type>GrassFloor_2x2</Type>
+        <Transform>
+            <X>3</X>
+            <Y>1</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
+    <DecoPart>
+        <Type>GrassFloor_2x2</Type>
+        <Transform>
+            <X>1</X>
+            <Y>1</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
+    <DecoPart>
+        <Type>GrassFloor_2x2</Type>
+        <Transform>
+            <X>1</X>
+            <Y>-1</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
+    <DecoPart>
+        <Type>GrassFloor_2x2</Type>
+        <Transform>
+            <X>1</X>
+            <Y>-3</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
+    <DecoPart>
+        <Type>GrassFloor_2x2</Type>
+        <Transform>
+            <X>9</X>
+            <Y>4</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
+    <DecoPart>
+        <Type>GrassFloor_2x2</Type>
+        <Transform>
+            <X>7</X>
+            <Y>4</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
+    <DecoPart>
+        <Type>GrassFloor_2x2</Type>
+        <Transform>
+            <X>5</X>
+            <Y>4</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
+    <DecoPart>
+        <Type>GrassFloor_2x2</Type>
+        <Transform>
+            <X>3</X>
+            <Y>4</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
+    <DecoPart>
+        <Type>GrassFloor_2x2</Type>
+        <Transform>
+            <X>1</X>
+            <Y>4</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
+    <DecoPart>
+        <Type>GrassFloor_2x2</Type>
+        <Transform>
+            <X>-1</X>
+            <Y>3</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
+    <DecoPart>
+        <Type>GrassFloor_2x2</Type>
+        <Transform>
+            <X>-4</X>
+            <Y>3</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
+    <DecoPart>
+        <Type>GrassFloor_2x2</Type>
+        <Transform>
+            <X>-3</X>
+            <Y>3</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
+    <DecoPart>
+        <Type>GrassFloor_2x2</Type>
+        <Transform>
+            <X>-3</X>
+            <Y>1</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
+    <DecoPart>
+        <Type>GrassFloor_2x2</Type>
+        <Transform>
+            <X>-1</X>
+            <Y>1</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
+    <DecoPart>
+        <Type>GrassFloor_2x2</Type>
+        <Transform>
+            <X>-1</X>
+            <Y>-1</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
+    <DecoPart>
+        <Type>GrassFloor_2x2</Type>
+        <Transform>
+            <X>-3</X>
+            <Y>-1</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
+    <DecoPart>
+        <Type>GrassFloor_2x2</Type>
+        <Transform>
+            <X>-3</X>
+            <Y>-3</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
+    <DecoPart>
+        <Type>GrassFloor_2x2</Type>
+        <Transform>
+            <X>-3</X>
+            <Y>-3</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
+    <DecoPart>
+        <Type>GrassFloor_2x2</Type>
+        <Transform>
+            <X>-1</X>
+            <Y>-3</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
+    <DecoPart>
+        <Type>GrassFloor_2x2</Type>
+        <Transform>
+            <X>-1</X>
+            <Y>-5</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
+    <DecoPart>
+        <Type>GrassFloor_2x2</Type>
+        <Transform>
+            <X>-1</X>
+            <Y>-6</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
+    <DecoPart>
+        <Type>GrassFloor_2x2</Type>
+        <Transform>
+            <X>-4</X>
+            <Y>-5</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
+    <DecoPart>
+        <Type>GrassFloor_2x2</Type>
+        <Transform>
+            <X>-6</X>
+            <Y>-6</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
+    <DecoPart>
+        <Type>GrassFloor_2x2</Type>
+        <Transform>
+            <X>-7</X>
+            <Y>-1</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
+    <DecoPart>
+        <Type>GrassFloor_2x2</Type>
+        <Transform>
+            <X>-7</X>
+            <Y>1</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
+    <DecoPart>
+        <Type>GrassFloor_2x2</Type>
+        <Transform>
+            <X>-7</X>
+            <Y>3</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
+    <DecoPart>
+        <Type>GrassFloor_2x2</Type>
+        <Transform>
+            <X>-7</X>
+            <Y>5</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
+    <DecoPart>
+        <Type>GrassFloor_2x2</Type>
+        <Transform>
+            <X>-7</X>
+            <Y>7</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
+    <DecoPart>
+        <Type>GrassFloor_2x2</Type>
+        <Transform>
+            <X>-6</X>
+            <Y>7</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
+    <DecoPart>
+        <Type>GrassFloor_2x2</Type>
+        <Transform>
+            <X>-6</X>
+            <Y>3</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
+    <DecoPart>
+        <Type>GrassFloor_2x2</Type>
+        <Transform>
+            <X>-5</X>
+            <Y>1</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
+    <DecoPart>
+        <Type>GrassFloor_2x2</Type>
+        <Transform>
+            <X>-5</X>
+            <Y>-1</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
+    <DecoPart>
+        <Type>GrassFloor_2x2</Type>
+        <Transform>
+            <X>-6</X>
+            <Y>-4</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
+    <DecoPart>
+        <Type>GrassFloor_2x2</Type>
+        <Transform>
+            <X>-12</X>
+            <Y>1</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
+    <DecoPart>
+        <Type>GrassFloor_2x2</Type>
+        <Transform>
+            <X>-12</X>
+            <Y>0</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
+    <DecoPart>
+        <Type>GrassFloor_2x2</Type>
+        <Transform>
+            <X>-11</X>
+            <Y>1</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
+    <DecoPart>
+        <Type>GrassFloor_2x2</Type>
+        <Transform>
+            <X>-8</X>
+            <Y>1</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
+    <DecoPart>
+        <Type>GrassFloor</Type>
+        <Transform>
+            <X>4</X>
+            <Y>3</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
+    <DecoPart>
+        <Type>GrassFloor</Type>
+        <Transform>
+            <X>10</X>
+            <Y>-1</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
+    <DecoPart>
+        <Type>GrassFloor</Type>
+        <Transform>
+            <X>10</X>
+            <Y>0</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
+    <DecoPart>
+        <Type>GrassFloor</Type>
+        <Transform>
+            <X>10</X>
+            <Y>2</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
+    <DecoPart>
+        <Type>GrassFloor</Type>
+        <Transform>
+            <X>10</X>
+            <Y>3</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
+    <DecoPart>
+        <Type>GrassFloor</Type>
+        <Transform>
+            <X>-2</X>
+            <Y>-4</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
+    <DecoPart>
+        <Type>GrassFloor</Type>
+        <Transform>
+            <X>-2</X>
+            <Y>-6</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
+    <DecoPart>
+        <Type>GrassFloor</Type>
+        <Transform>
+            <X>-4</X>
+            <Y>-6</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
+    <DecoPart>
+        <Type>GrassFloor</Type>
+        <Transform>
+            <X>-3</X>
+            <Y>-6</Y>
+            <Z>0</Z>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
+    <DecoPart>
+        <Type>GroundSpot_GrassDark</Type>
+        <Transform>
+            <X>-6</X>
+            <Y>4</Y>
+            <Z>0</Z>
+            <RotZ>180</RotZ>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
+    <DecoPart>
+        <Type>GroundSpot_GrassDark</Type>
+        <Transform>
+            <X>-6</X>
+            <Y>1</Y>
+            <Z>0</Z>
+            <RotZ>270</RotZ>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
+    <DecoPart>
+        <Type>GroundSpot_GrassDark</Type>
+        <Transform>
+            <X>-3</X>
+            <Y>3</Y>
+            <Z>0</Z>
+            <RotZ>270</RotZ>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
+    <DecoPart>
+        <Type>GrassFloor</Type>
+        <Transform>
+            <X>-5</X>
+            <Y>6</Y>
+            <Z>0</Z>
+            <RotZ>270</RotZ>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
+    <DecoPart>
+        <Type>GrassFloor</Type>
+        <Transform>
+            <X>-5</X>
+            <Y>4</Y>
+            <Z>0</Z>
+            <RotZ>270</RotZ>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
+    <DecoPart>
+        <Type>GrassFloor</Type>
+        <Transform>
+            <X>-5</X>
+            <Y>5</Y>
+            <Z>0</Z>
+            <RotZ>270</RotZ>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
+    <DecoPart>
+        <Type>GrassFloor</Type>
+        <Transform>
+            <X>-4</X>
+            <Y>5</Y>
+            <Z>0</Z>
+            <RotZ>270</RotZ>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
+    <DecoPart>
+        <Type>GroundSpot_Earth</Type>
+        <Transform>
+            <X>7</X>
+            <Y>-2</Y>
+            <Z>0</Z>
+            <RotZ>270</RotZ>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
+    <DecoPart>
+        <Type>GroundSpot_Earth</Type>
+        <Transform>
+            <X>-3</X>
+            <Y>-4</Y>
+            <Z>0</Z>
+            <RotZ>270</RotZ>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
+    <DecoPart>
+        <Type>GroundSpot_Earth</Type>
+        <Transform>
+            <X>-1</X>
+            <Y>-6</Y>
+            <Z>0</Z>
+            <RotZ>90</RotZ>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
 </Labyrinth>

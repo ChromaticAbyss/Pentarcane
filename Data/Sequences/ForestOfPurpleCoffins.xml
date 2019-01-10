@@ -2,10 +2,8 @@
 	<DisplayName>The Forest of purple coffins</DisplayName>
 	<Description>A thick forest lies between the nearest city and the excavation site.</Description>
 	<Description>It is filled with strange, crystalline blocks that attract malevolent spirits.</Description>
-	<Description>.</Description>
-	<Description>.</Description>
-	<Description>.</Description>
 	<Description>Despite thorough investigation the purpose and origin of the structures remains unknown.</Description>
+	<Description>It seems wise to not idle in this place.</Description>
 	
 	<Art3D>
 		<ModelFile>../Data/3D/Sequences/PurpleCoffin.obj</ModelFile>
@@ -13,7 +11,7 @@
 		<Transform>
 			<RotX>0</RotX>
 			<RotZ>180</RotZ>
-			<Scale>0.8</Scale>	
+			<Scale>0.85</Scale>	
 		</Transform>			
 	</Art3D>	
 	<Art3D>
@@ -29,55 +27,64 @@
 
 		
 	<Reward>ForestOfPurpleCoffins</Reward><!--Unlock this thing for the player. It allows accessing additional sequences-->
-	<CompleteRequirement>ForestOfPurpleCoffins</CompleteRequirement><!--Usually one of the rewards!-->
+	<RewardHuman>Safe Passage</RewardHuman>
+	<RewardIcon>../Data/2D/Rewards/Map.png</RewardIcon>
 	
+	<CompleteRequirement>ForestOfPurpleCoffins</CompleteRequirement><!--Usually one of the rewards!-->	
 	<UnlockRequirement>Mages_Certificate</UnlockRequirement>
 	
-	
-	<Fight>
-		<Condition>
-			<Type>OR</Type>
+	<Entry>	
+		<Fight>
 			<Condition>
-				<Type>ExactName</Type>
-				<StringValue>FoPC_1</StringValue>
+				<Type>OR</Type>
+				<Condition>
+					<Type>ExactName</Type>
+					<StringValue>FoPC_1</StringValue>
+				</Condition>
 			</Condition>
-		</Condition>
-		<Stage>../Data/Stages/ForestOfPurpleCoffins.xml</Stage><!--A stage is just a bunch of models and positions at which to place enemy models-->
-		<Description>...</Description>
-	</Fight>
-	<Fight>
-		<Condition>
-			<Type>OR</Type>
+			<Stage>../Data/Stages/ForestOfPurpleCoffins.xml</Stage><!--A stage is just a bunch of models and positions at which to place enemy models-->
+			<Description>...</Description>
+		</Fight>
+	</Entry>
+	<Entry>
+		<Fight>
 			<Condition>
-				<Type>ExactName</Type>
-				<StringValue>FoPC_2</StringValue>
+				<Type>OR</Type>
+				<Condition>
+					<Type>ExactName</Type>
+					<StringValue>FoPC_2</StringValue>
+				</Condition>
 			</Condition>
-		</Condition>
-		<Stage>../Data/Stages/ForestOfPurpleCoffins.xml</Stage><!--A stage is just a bunch of models and positions at which to place enemy models-->
-		<Description>...</Description>
-	</Fight>	
-	<Fight>
-		<Condition> 
-			<Type>OR</Type>
+			<Stage>../Data/Stages/ForestOfPurpleCoffins.xml</Stage><!--A stage is just a bunch of models and positions at which to place enemy models-->
+			<Description>...</Description>
+		</Fight>
+	</Entry>
+	<Entry>
+		<Fight>
+			<Condition> 
+				<Type>OR</Type>
+				<Condition>
+					<Type>ExactName</Type>
+					<StringValue>FoPC_3</StringValue>
+				</Condition>
+			</Condition>
+			<Stage>../Data/Stages/ForestOfPurpleCoffins.xml</Stage><!--A stage is just a bunch of models and positions at which to place enemy models-->
+			<Description>...</Description>
+		</Fight>
+	</Entry>
+	<Entry>
+		<Fight>
 			<Condition>
-				<Type>ExactName</Type>
-				<StringValue>FoPC_3</StringValue>
+				<Type>OR</Type>
+				<Condition>
+					<Type>ExactName</Type>
+					<StringValue>FoPC_4</StringValue>
+				</Condition>
 			</Condition>
-		</Condition>
-		<Stage>../Data/Stages/ForestOfPurpleCoffins.xml</Stage><!--A stage is just a bunch of models and positions at which to place enemy models-->
-		<Description>...</Description>
-	</Fight>	
-	<Fight>
-		<Condition>
-			<Type>OR</Type>
-			<Condition>
-				<Type>ExactName</Type>
-				<StringValue>FoPC_4</StringValue>
-			</Condition>
-		</Condition>
-		<Stage>../Data/Stages/ForestOfPurpleCoffins.xml</Stage><!--A stage is just a bunch of models and positions at which to place enemy models-->
-		<Description>...</Description>
-	</Fight>	
+			<Stage>../Data/Stages/ForestOfPurpleCoffins.xml</Stage><!--A stage is just a bunch of models and positions at which to place enemy models-->
+			<Description>...</Description>
+		</Fight>	
+	</Entry>
 	
 	
 </Sequence>

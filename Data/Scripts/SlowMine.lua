@@ -10,6 +10,7 @@ function frame()
 	if(possibly_player > -1)then 
 		SendMessage(possibly_player,0,"SpeedMult",0.7) --Message player object to slow itself by 30%
 		PlaySound("slow_mine.ogg")
+		ScreenShake(0.1)
 		Disable(my_id)
 	end 		
 	

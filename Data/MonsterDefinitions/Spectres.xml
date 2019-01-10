@@ -2,37 +2,54 @@
 <MonsterDefinitions>
 	<!--Monsters here have the special labyrinth feature of enemies that are invisible unless the player is close to them-->
 	
-
-	
     <MonsterDefinition>
 		<InternalName>Spook</InternalName>
 		<Name>Spook</Name>
-		<!--Also known as the weakest, most annoying monster you definitely need a mage to get rid of-->
 		<Stats>
 			<Health>3</Health>
 			<Attack>1</Attack>
 			<Armor>0</Armor>
-			<CastChance>0</CastChance>
+			<SpellPoints>0</SpellPoints>
 		</Stats>
-		<Image>../Data/2D/Monsters/Spook.png</Image>
+		<Image>../Data/2D/Monsters/Spook2.png</Image>
 		<ImageTransform>
 			<SizeX>0.45</SizeX>
 			<SizeY>1.0</SizeY>
 			<SizeYRelativeToX>True</SizeYRelativeToX>
 		</ImageTransform>	
-		<Labyrinth>../Data/Labyrinths/Spook.xml</Labyrinth>		
+		<Labyrinth>../Data/Labyrinths/Spook.xml</Labyrinth>	
+		<DefaultAttackAnimation>../Data/Animations/GhostAttack.png</DefaultAttackAnimation>
+		<Cast>
+			<Name>Fighten</Name>	
+			<Weight>100</Weight>
+			<SpellPoints>1</SpellPoints>
+			<Segment>
+				<Type>StartAnimation</Type>
+				<Select>Screen</Select>
+				<Path>../Data/Animations/Frighten.xml</Path>
+			</Segment>
+			<Segment>
+				<Type>Damage</Type>
+				<Damage>0</Damage>
+				<AddBase>1</AddBase>
+			</Segment>				
+			<Segment>
+				<Type>PlayerTempEffect</Type>
+				<Effect>Panicked</Effect>
+				<Duration>3</Duration>
+			</Segment>	
+		</Cast>	
 	</MonsterDefinition>
 	
 	
     <MonsterDefinition>
 		<InternalName>Spectre</InternalName>
 		<Name>Spectre</Name>
-		<!--Also known as the weakest, most annoying monster you definitely need a mage to get rid of-->
 		<Stats>
 			<Health>4</Health>
 			<Attack>2</Attack>
 			<Armor>0</Armor>
-			<CastChance>0</CastChance>
+			<SpellPoints>0</SpellPoints>
 		</Stats>
 		<Image>../Data/2D/Monsters/Spectre.png</Image>
 		<ImageTransform>
@@ -41,18 +58,20 @@
 			<SizeYRelativeToX>True</SizeYRelativeToX>
 		</ImageTransform>
 		<Labyrinth>../Data/Labyrinths/Spectre.xml</Labyrinth>
+		<DefaultAttackAnimation>../Data/Animations/GhostAttack.png</DefaultAttackAnimation>
 	</MonsterDefinition>
+	
+	
 	
 	
     <MonsterDefinition>
 		<InternalName>Wraith</InternalName>
 		<Name>Wraith</Name>
-		<!--Also known as the weakest, most annoying monster you definitely need a mage to get rid of-->
 		<Stats>
 			<Health>3</Health>
-			<Attack>3</Attack>
+			<Attack>2</Attack>
 			<Armor>0</Armor>
-			<CastChance>0</CastChance>
+			<SpellPoints>5</SpellPoints>
 		</Stats>
 		<Image>../Data/2D/Monsters/Wraith.png</Image>
 		<ImageTransform>
@@ -61,84 +80,63 @@
 			<SizeYRelativeToX>True</SizeYRelativeToX>
 		</ImageTransform>
 		<Labyrinth>../Data/Labyrinths/Wraith.xml</Labyrinth>
-	</MonsterDefinition>
-	
-	
-	
-	<MonsterDefinition>
-		<InternalName>PyramidGuardian</InternalName>
-		<Name>Imp</Name>
-		<Stats>
-			<Health>5</Health>
-			<Attack>2</Attack>
-			<Armor>0</Armor>
-			<CastChance>0</CastChance>
-		</Stats>
-		<Image>../Data/2D/Monsters/Imp.png</Image>
-		<ImageTransform>
-			<SizeX>0.45</SizeX>
-			<SizeY>1.0</SizeY>
-			<SizeYRelativeToX>True</SizeYRelativeToX>
-		</ImageTransform>	
-		<Labyrinth>../Data/Labyrinths/Imp_1.xml</Labyrinth>			
-	</MonsterDefinition>
-	
-	<MonsterDefinition><!--Unused-->
-		<InternalName>RitualGuardian</InternalName>
-		<Name>Imp of the rite</Name>
-		<Stats>
-			<Health>5</Health>
-			<Attack>3</Attack>
-			<Armor>0</Armor>
-			<CastChance>0</CastChance>
-		</Stats>
-		<Image>../Data/2D/Monsters/Imp.png</Image>
-		<ImageTransform>
-			<SizeX>0.48</SizeX>
-			<SizeY>1.0</SizeY>
-			<SizeYRelativeToX>True</SizeYRelativeToX>
-		</ImageTransform>	
-		<Labyrinth>../Data/Labyrinths/Imp_2.xml</Labyrinth>			
-	</MonsterDefinition>	
+		<DefaultAttackAnimation>../Data/Animations/GhostAttack.png</DefaultAttackAnimation>		
+		<Cast>
+			<Name>Wraith's deadly touch</Name>	
+			<Weight>200</Weight>
+			<SpellPoints>2</SpellPoints>
+			<Segment>
+				<Type>StartAnimation</Type>
+				<Select>Screen</Select>
+				<Path>../Data/Animations/WraithTouch.xml</Path>
+			</Segment>
+			<Segment>
+				<Type>Damage</Type>
+				<Damage>3</Damage>
+				<AddBase>1</AddBase>
+			</Segment>	
+			<Segment>
+				<Type>BlockSpell</Type>
+				<Spell>Lifesteal</Spell>
+				<Duration>3</Duration>
+			</Segment>	
+			<CastCondition>
+				<Target>Player</Target>
+				<Condition>
+					<Type>LowHealth</Type>
+				</Condition>
+			</CastCondition>
+		</Cast>		
+		<Cast>
+			<Name>Attempted Possession</Name>	
+			<Weight>100</Weight>
+			<SpellPoints>1</SpellPoints>
+			<Segment>
+				<Type>StartAnimation</Type>
+				<Select>Screen</Select>
+				<Path>../Data/Animations/WraithTouch.xml</Path>
+			</Segment>
+			<Segment>
+				<Type>Damage</Type>
+				<Damage>0</Damage>
+				<AddBase>1</AddBase>
+			</Segment>	
+			<Segment>
+				<Type>BlockSpell</Type>
+				<Spell>Lifesteal</Spell>
+				<Duration>3</Duration>
+			</Segment>	
+			<Segment>
+				<Type>PlayerTempEffect</Type>
+				<Effect>Panicked</Effect>
+				<Duration>3</Duration>
+			</Segment>	
+		</Cast>				
 		
-	<MonsterDefinition>
-		<InternalName>CindersOfTheLost</InternalName>
-		<Name>Cinders of the lost</Name>
-		<!--Also known as the weakest, most annoying monster you definitely need a mage to get rid of-->
-		<Stats>
-			<Health>3</Health>
-			<Attack>3</Attack>
-			<Armor>0</Armor>
-			<CastChance>30</CastChance>
-		</Stats>
-		<Image>../Data/2D/Monsters/CindersOfTheLost.png</Image>
-		<ImageTransform>
-			<SizeX>0.55</SizeX>
-			<SizeY>1.0</SizeY>
-			<SizeYRelativeToX>True</SizeYRelativeToX>
-		</ImageTransform>	
-		<Labyrinth>../Data/Labyrinths/CindersOfTheLost.xml</Labyrinth>			
+		
 	</MonsterDefinition>
 	
 	
-	
-	<MonsterDefinition>
-		<InternalName>GodInTheMire</InternalName>
-		<Name>God-In-The-Mire</Name>
-		<Stats>
-			<Health>8</Health>
-			<Attack>5</Attack>
-			<Armor>0</Armor>
-			<CastChance>25</CastChance>
-		</Stats>
-		<Image>../Data/2D/Monsters/God_In_The_Mire.png</Image>
-		<ImageTransform>
-			<SizeX>1.5</SizeX>
-			<SizeY>1.5</SizeY>
-			<SizeYRelativeToX>True</SizeYRelativeToX>
-		</ImageTransform>
-		<Labyrinth>../Data/Labyrinths/GodInTheMire.xml</Labyrinth>
-		<!--Cast: Attacks and Summons a small spectre (that the player can lifesteal/get a shield off, but they shouldn't get complacent, if they stack up they can still hurt.)-->
-	</MonsterDefinition>	
+
 
 </MonsterDefinitions>

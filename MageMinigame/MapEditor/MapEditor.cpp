@@ -1,40 +1,39 @@
-#include "../BuildHeader.h"
+#include "MapEditor.h"
 #ifdef MAGEMINIGAME_MAPEDITOR
 
-#include "MapEditor.h"
+
+#include <iostream>
+
 #include "MapEditorTileSelector.h"
-#include "../LabyrinthPartDefinition_Manager.h"
-#include "../tinyxml2.h"
-#include "../OpenGLContainer.h"
+#include "Labyrinth/LabyrinthPartDefinition_Manager.h"
+#include "tinyxml2.h"
+#include "OpenGLContainerWith3D.h"
 
 #include "../StringUtility.h"
 #include "../Log.h"
 
-#include <iostream>
 
-#include "../common\shader.hpp"
-#include "../common\quaternion_utils.hpp"
+#include "common\shader.hpp"
+#include "common\quaternion_utils.hpp"
 
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 
-
-#include "../Minigames.h"
-
-//#include "TextInput.h"
+#include "Grid.h"
+#include "BasicUiElement.h"
+#include "xmlutil.h"
+#include "Modes\DrawMode.h"
+#include "Modes\ModeCommonFunctionality.h"
 
 using namespace glm;
 using namespace std;
 using namespace tinyxml2;
 
-
-
-
-
-MapEditor::MapEditor(LabyrinthPartDefinition_Manager* part_def_manager_)
-	:tool_select_bar(),tool_option_bar(),selected_tool(0),name_of_current_file(),parts(),variant_carriers(),part_def_manager(part_def_manager_)
-	,currently_selected_part_type(),currently_selected_instance(-1),list_of_other_instances_nearby()
-	,key_esc(GLFW_KEY_ESCAPE),fast_time(30)
+MapEditor::MapEditor(LabyrinthPartDefinition_Manager* part_def_manager_, OpenGLContainerWith3D* open_gl_in)
+	:open_gl(open_gl_in),tool_select_bar(),name_of_current_file()
+	,parts(),deco_parts(),part_def_manager(part_def_manager_)
+	,key_esc(GLFW_KEY_ESCAPE),key_r(GLFW_KEY_R)
+	,fast_time(30)
 {
 
 
@@ -48,8 +47,10 @@ MapEditor::MapEditor(LabyrinthPartDefinition_Manager* part_def_manager_)
 				XMLElement* xml_child = xml_root->FirstChildElement("LastFile");
 				if (xml_child != nullptr) {
 					name_of_current_file = xml_child->GetText();
-					//TODO:Load map
-					LoadFile(name_of_current_file);
+					if (name_of_current_file != "" && name_of_current_file !=" ") {
+						LoadFile(name_of_current_file);
+					}
+					
 
 				}
 			}
@@ -59,7 +60,9 @@ MapEditor::MapEditor(LabyrinthPartDefinition_Manager* part_def_manager_)
 		}
 	}
 
-	RemakeUi();
+	reset_tools();
+
+	remake_ui();
 
 }
 
@@ -74,6 +77,7 @@ MapEditor::~MapEditor()
 			{
 				XMLElement* xml_child = xml_root->FirstChildElement("LastFile");
 				if (xml_child != nullptr) {
+					if (name_of_current_file == " ") { name_of_current_file = "_NAMENOTFOUND_"; }
 					xml_child->SetText(name_of_current_file.c_str());
 		
 				}
@@ -91,40 +95,18 @@ MapEditor::~MapEditor()
 void MapEditor::InitializeFromXml(tinyxml2::XMLElement * xml_root) {
 	//Must be strictly additive to allow recursion!
 
-	{ //Fast time
-		XMLElement * xml_child = xml_root->FirstChildElement("FastTime");
-		while (xml_child != 0) {
-			fast_time =  stoi(xml_child->GetText()); //30 frames per second
-			xml_child = xml_child->NextSiblingElement("FastTime");
-		}//while children are found
-	}
+	LoadSingleValueIfAvailable(xml_root, "FastTime", fast_time);
 
+	ForEachDo(xml_root, "Part", [&](const XMLElement * child) {
+		parts.push_back(part_def_manager->GetInstanceFromXml_UP(child));
+	});
 
-	{ //Look up parts
-		XMLElement * xml_child = xml_root->FirstChildElement("Part");
-		while (xml_child != 0) {
-
-			parts.push_back(part_def_manager->GetInstanceFromXml(xml_child));
-
-			xml_child = xml_child->NextSiblingElement("Part");
-		}//while children are found
-	}//look up parts
-
-
-	{ //Variants, map editor loads ALL of them into a specialised data structure
-		XMLElement * xml_child = xml_root->FirstChildElement("Variant");
-		while (xml_child != 0) {
-
-			variant_carriers.push_back(VariantCarrier(xml_child));
-
-			xml_child = xml_child->NextSiblingElement("Variant");
-		}
-	}
-
-
+	ForEachDo(xml_root, "DecoPart", [&](const XMLElement * child) {
+		deco_parts.push_back(part_def_manager->GetInstanceFromXml_UP(child));
+	});
 };
 
-void MapEditor::Run(OpenGLContainer* open_gl) {
+void MapEditor::run() {
 	//glfwSetKeyCallback(open_gl->window, TextInputForMapEditor::key_callback);
 
 	//Loop and make timed calls to: Rendering(up to upper limit set in config), Animation&Input(Lets say 30 a second to make things fluid but the same on all machines), 
@@ -160,7 +142,7 @@ void MapEditor::Run(OpenGLContainer* open_gl) {
 		if (current_time - time_last_render > min_time_between_renders) {
 			time_last_render = current_time;
 			glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-			Render(open_gl);
+			Render();
 			glfwSwapBuffers(open_gl->window);
 			//cout <<"Rendering at: "<< current_time << endl;
 		}
@@ -171,7 +153,7 @@ void MapEditor::Run(OpenGLContainer* open_gl) {
 			glfwPollEvents();
 			float mx, my = 0;
 			whereDoesMouseRayCutGround(open_gl,mx,my);
-			Logic(open_gl,mx,my);
+			Logic(mx,my);
 		}
 
 
@@ -190,7 +172,7 @@ void MapEditor::Run(OpenGLContainer* open_gl) {
 
 
 
-void MapEditor::Render(OpenGLContainer* open_gl) {
+void MapEditor::Render() {
 	//Set up opengl for 3 dimensional rendering
 	glCullFace(GL_BACK);
 	glEnable(GL_CULL_FACE);
@@ -210,20 +192,21 @@ void MapEditor::Render(OpenGLContainer* open_gl) {
 
 
 	//---------------------------------------- Actual rendering
-	int nr = -1;
-	for (vector<LabyrinthPartInstance>::const_iterator it = parts.cbegin(); it != parts.cend(); ++it) {
-		nr++;
-		if (currently_selected_instance == nr) {
-			glUniform4f(open_gl->LightColourIntensity, 250, 250, 250, 50.0);//Massively brighten the selected object
-		}
+	for (const auto& p : parts) {
+		auto color = current_mode->highlights_for_objects(p.get());
+		color.Uniforms(open_gl);
+		p->Render(glm::mat4(), open_gl);
+	}
 
-		it->Render(glm::mat4(), open_gl);
-
-		if (currently_selected_instance == nr) {
-			glUniform4f(open_gl->LightColourIntensity, 250, 250, 250, 9.0);//Restore old lighting for the rest of the loop
+	for (const auto& dp : deco_parts) {
+		auto color = current_mode->highlights_for_deco(dp.get());
+		color.Uniforms(open_gl);
+		if (color.alpha > 0.1f) {
+			dp->Render(glm::mat4(), open_gl);
 		}
 	}
 
+	current_mode->render_3d();
 
 	//UI:
 	glDisable(GL_CULL_FACE);
@@ -235,14 +218,15 @@ void MapEditor::Render(OpenGLContainer* open_gl) {
 	//View and Projection matrix are fixed for Minigames
 	
 	//Actual Rendering
-	tool_select_bar.Render(glm::scale(glm::mat4(), glm::vec3(1.0f, 1.0f, 1.0f)),open_gl);
-	tool_option_bar.Render(glm::scale(glm::mat4(), glm::vec3(1.0f, 1.0f, 1.0f)), open_gl);
+	tool_select_bar->Render(glm::scale(glm::mat4(), glm::vec3(1.0f, 1.0f, 1.0f)));
+
+	current_mode->render_ui();
 }
 
 
 glm::mat4 MapEditor::GetViewMatrixForEditor() const {
 	float camera_x = 0.0f;
-	float camera_y = -20.0f; //Better: -20
+	float camera_y = -15.0f; //
 	float camera_z = 40.0f;
 
 	glm::vec3 position(camera_x, camera_y, camera_z);
@@ -284,7 +268,7 @@ void MapEditor::whereDoesMouseRayCutGround(OpenGLContainer* open_gl,float& cutX,
 	double mouseY;
 	glfwGetCursorPos(open_gl->window, &mouseX, &mouseY);
 
-	mouseY = -mouseY + screenY; //Mirror vertically TODO: Without this the y axis is mirrored, this fix works even tough i have no idea why. Revisit this later!
+	mouseY = -mouseY + screenY; //Mirror vertically Without this the y axis is mirrored, this fix works even tough i have no idea why. Revisit this later!
 	mouseX = mouseX;//  *  (screenY/screenX);
 
 	// The ray Start and End positions, in Normalized Device Coordinates (Have you read Tutorial 4 ?)
@@ -325,7 +309,7 @@ void MapEditor::whereDoesMouseRayCutGround(OpenGLContainer* open_gl,float& cutX,
 	vec3 ray_wor = lRayDir_world;
 
 	//------------------------------TEEEEST-----------------------------------------------
-	vec3 cameraPos(0, -20, 40);
+	vec3 cameraPos(0, -15, 40);
 
 	//Intersect world ray with the ground(z=0)plane
 	//40 and 20 are the camera z and y positions
@@ -341,9 +325,10 @@ void MapEditor::whereDoesMouseRayCutGround(OpenGLContainer* open_gl,float& cutX,
 };
 
 
-void MapEditor::Logic(OpenGLContainer* open_gl,float mx, float my) {
+void MapEditor::Logic(float mx, float my) {
 	static bool left_mouse_state = false;
 	static bool right_mouse_state = false;
+	static bool middle_mouse_state = false;
 	static bool nullify_until_released = false;
 
 	int mouse_mode = 0;
@@ -369,6 +354,17 @@ void MapEditor::Logic(OpenGLContainer* open_gl,float mx, float my) {
 		}
 		right_mouse_state = false;
 	}
+	if (glfwGetMouseButton(open_gl->window, GLFW_MOUSE_BUTTON_MIDDLE) == GLFW_PRESS) {
+		middle_mouse_state = true;
+	}
+	else {
+		//Register a click when the mouse is lifted
+		if (middle_mouse_state) {
+			mouse_mode = 4;//4 is for middle mouse
+		}
+		middle_mouse_state = false;
+	}
+
 	if (nullify_until_released) {
 		mouse_mode = 0;
 	}
@@ -395,9 +391,29 @@ void MapEditor::Logic(OpenGLContainer* open_gl,float mx, float my) {
 	glfwGetCursorPos(open_gl->window, &mouseX, &mouseY);
 	float uiMx = (float)mouseX / open_gl->window_x * 2 - 1;
 	float uiMy = -((float)mouseY / open_gl->window_y * 2 - 1);
+	TransformPositionReduced mouse_position(uiMx, uiMy);
 
+	auto result = tool_select_bar->CheckInterception(mouse_position, mouse_mode, open_gl);
+	if (!result) {
+		result = current_mode->check_interception(mouse_position, mouse_mode);
+	}
+
+	//TODO: Re-enable
+	if (key_r.Update(open_gl->window)) {
+		//	draw_tool_angle++;
+		//	if (draw_tool_angle >= 4) {
+		//		draw_tool_angle = 0;
+		//	}
+	}
+
+
+	current_mode->ground_interception(mx, my, mouse_mode);
+
+
+
+
+#ifdef OLD_LOGIC
 	if (mouse_mode > 0) {
-		auto result = tool_select_bar.CheckInterception(uiMx, uiMy, mouse_mode, open_gl);
 		for (auto it = result.begin(); it != result.end(); ++it) {
 			mouse_mode = 0;//flush mouse afterwards
 			nullify_until_released = true; //mouse down/click doesn't count until next press&release!
@@ -423,7 +439,7 @@ void MapEditor::Logic(OpenGLContainer* open_gl,float mx, float my) {
 				cout << "File to load: ";
 				std::cin >> file_to_load;
 				if (file_to_load == "") {
-				return;
+					return;
 				}
 				file_to_load = "../Data/Labyrinths/" + file_to_load + ".xml";
 
@@ -431,22 +447,17 @@ void MapEditor::Logic(OpenGLContainer* open_gl,float mx, float my) {
 
 				return;
 			}
-
-
 		}
-
 	}
+#endif
 
 
 
-	if (selected_tool == 0) {
-
+#ifdef OLD_CODE
 		if (mouse_mode > 0) {
-			auto result = tool_option_bar.CheckInterception(uiMx, uiMy, mouse_mode, open_gl);
 			for (auto it = result.begin(); it != result.end(); ++it) {
 				mouse_mode = 0;//flush mouse afterwards
 				nullify_until_released = true; //mouse down/click doesn't count until next press&release!
-
 				if (it->type == "SelectToDraw") {
 					MapEditorTileSelector temp(open_gl,part_def_manager);
 					string res = temp.Run();
@@ -457,25 +468,35 @@ void MapEditor::Logic(OpenGLContainer* open_gl,float mx, float my) {
 
 					return;//Doing anything else this turn might be pointless
 				}//SetUniqueName
+				if (it->type == "Rotate") {
+					draw_tool_angle++;
+					if (draw_tool_angle >= 4) {
+						draw_tool_angle = 0;
+					}
+					return;
+				}
 			}
 		}
+#endif
+	
 
-		bool result = Tool_Draw(open_gl, mx, my, mouse_mode);
-
-		nullify_until_released = result; //mouse down/click doesn't count until next press&release!
-		if (result) {
-			mouse_mode = 0;
-		}
-
-		return;
-	}
-
-
-
+/*
 	if (selected_tool == 1) {
-		//As usual poll the UI first!
+
+		if (key_r.Update(open_gl->window)) {
+			if (currently_selected_instance > -1) {
+				float angle = 90;
+				Transform transf = parts[currently_selected_instance].transform;
+				transf.RotateZ(angle);
+				parts[currently_selected_instance].SetTransform(transf);
+				return;
+			}
+		}
+	}
+*/
+
+#ifdef OLD_CODE
 		if (mouse_mode == 1) {
-			auto result = tool_option_bar.CheckInterception(uiMx, uiMy, mouse_mode, open_gl);
 			for (auto it = result.begin(); it != result.end(); ++it) {
 				mouse_mode = 0;//flush mouse afterwards
 				nullify_until_released = true; //mouse down/click doesn't count until next press&release!
@@ -535,8 +556,9 @@ void MapEditor::Logic(OpenGLContainer* open_gl,float mx, float my) {
 					
 					//Create new instance
 					int old_instance = currently_selected_instance;
-					parts.emplace_back(parts[currently_selected_instance]);
+					parts.push_back(LabyrinthPartInstance(parts[old_instance]));
 					currently_selected_instance = parts.size() - 1;
+
 					string old_name = parts[old_instance].UniqueName();
 					if (old_name != "") {
 						parts[currently_selected_instance].SetUniqueName(old_name + "(Clone)");
@@ -558,6 +580,18 @@ void MapEditor::Logic(OpenGLContainer* open_gl,float mx, float my) {
 				}
 
 
+				if (it->type == "SetNamedParameter") {
+					string key;
+					string value;
+					cout << "Parameter Name:" << endl;
+					cin >> key;
+					cout << "Set to:" << endl;
+					cin >> value;
+					parts[currently_selected_instance].SetNamedParameter(key,value);
+				}
+
+
+
 			}//loop over results
 		}
 		if (mouse_mode == 2) { //Right click brings back to selector with nothing selected
@@ -576,9 +610,9 @@ void MapEditor::Logic(OpenGLContainer* open_gl,float mx, float my) {
 
 		return;
 	}//tool 1: Selection
+#endif
 
-
-
+#ifdef OLD_CODE
 	if (selected_tool == 2) {
 		if (mouse_mode == 2) { //Right click brings back to selector with nothing selected
 			selected_tool = 1;
@@ -613,9 +647,9 @@ void MapEditor::Logic(OpenGLContainer* open_gl,float mx, float my) {
 
 		return;
 	}//tool 2: Connection
+#endif
 
-
-
+#ifdef OLD_CODE
 	if (selected_tool == 4) {
 
 		if (mouse_mode > 0) {
@@ -626,9 +660,13 @@ void MapEditor::Logic(OpenGLContainer* open_gl,float mx, float my) {
 				if (it->type == "MoveAllXY") {
 					int x = it->value[0];
 					int y = it->value[1];
-					for_each(parts.begin(), parts.end(), [x,y](LabyrinthPartInstance& p) {
+					for(auto& p : parts){
 						p.Move(x, y);
-					});
+					};
+					for (auto& p : deco_parts) {
+						p.Move(x, y);
+					}
+
 					return;
 				}
 				if (it->type == "SetTimer") {
@@ -642,57 +680,85 @@ void MapEditor::Logic(OpenGLContainer* open_gl,float mx, float my) {
 
 
 		return;
-	}//tool 2: Connection
+	}//tool 4: GLobal
+#endif
 
+
+#ifdef OLD_CODE
+	if (selected_tool == 5) {
+		if (currently_selected_part_type != "") {
+			UpdateHoverShadow(mx, my);
+		}
+
+
+		if (key_r.Update(open_gl->window)) {
+			draw_tool_angle++;
+			if (draw_tool_angle >= 4) {
+				draw_tool_angle = 0;
+			}
+		}
+
+		if (mouse_mode > 0) {
+			auto result = tool_option_bar.CheckInterception(uiMx, uiMy, mouse_mode, open_gl);
+			for (auto it = result.begin(); it != result.end(); ++it) {
+				mouse_mode = 0;//flush mouse afterwards
+				nullify_until_released = true; //mouse down/click doesn't count until next press&release!
+
+				if (it->type == "SelectToDraw") {
+					MapEditorTileSelector temp(open_gl, part_def_manager,false);
+					string res = temp.Run();
+					if (res != "") {
+						currently_selected_part_type = res;
+					}
+					key_esc.BlockUntilReleased();
+
+					return;//Doing anything else this turn might be pointless
+				}//SetUniqueName
+
+				if (it->type == "Rotate") {
+					draw_tool_angle++;
+					if (draw_tool_angle >= 4) {
+						draw_tool_angle = 0;
+					}
+
+					return;
+				}
+
+			}
+		}
+
+		bool result = Tool_Draw_Deco(open_gl, mx, my, mouse_mode);
+
+		nullify_until_released = result; //mouse down/click doesn't count until next press&release!
+		if (result) {
+			mouse_mode = 0;
+		}
+
+		return;
+	} // tool 5 deco layer
+#endif
 }
+
+
 void MapEditor::SaveDialogue()
 {
-
-		if (name_of_current_file != "") {
-			Save(name_of_current_file);//name must be legal or otherwise it gets turned into ""!
-		}
-		else {
-			cout << "Enter a name for this new Labyrinth: " << endl;
-			string new_name;
-			cin >> new_name;
-			new_name = "../Data/Labyrinths/" + new_name + ".xml";
-			name_of_current_file = new_name;
-			Save(name_of_current_file);
-		}
-
-}
-;
-
-
-bool MapEditor::Tool_Draw(OpenGLContainer* open_gl,float mx, float my, int mouse_mode) {
-	mx = floor(mx + 0.5f);
-	my = floor(my + 0.5f);
-
-
-	if (mouse_mode == 1) {
-		if (currently_selected_part_type != "") {
-			LabyrinthPartInstance temp = part_def_manager->GetInstance(currently_selected_part_type);
-			temp.Move(mx, my);
-
-			parts.push_back(temp);
-		}
+	if (name_of_current_file != " ") {
+		Save(name_of_current_file);//name must be legal or otherwise it gets turned into ""!
 	}
-	if (mouse_mode == 2) {
-		for (auto it = parts.begin(); it != parts.end(); ++it) {
-			float range = 0.3f;
-			float dist_squared = (mx - it->X())*(mx - it->X()) + (my - it->Y())*(my - it->Y());
-			if (dist_squared < range*range) {
-				it->Hide();//Map editor will not write hidden objects
-			}
-
-		}
+	else {
+		cout << "Enter a name for this new Labyrinth: " << endl;
+		string new_name;
+		cin >> new_name;
+		new_name = "../Data/Labyrinths/" + new_name + ".xml";
+		name_of_current_file = new_name;
+		Save(name_of_current_file);
 	}
-
-	return false;
 }
 
 
-bool MapEditor::Tool_Select(OpenGLContainer* open_gl, float mx, float my, int mouse_mode) {
+#ifdef OLD_CODE
+
+bool MapEditor::Tool_Select(float mx, float my, int mouse_mode) {
 	//currently_selected_instance;
 	mx = floor(mx + 0.5f);
 	my = floor(my + 0.5f);
@@ -712,7 +778,7 @@ bool MapEditor::Tool_Select(OpenGLContainer* open_gl, float mx, float my, int mo
 						if (one_selection == false) {
 							one_selection = true;
 							currently_selected_instance = id;
-							RemakeUi();
+							remake_ui();
 							if (parts[id].UniqueName() != "") {
 								cout << "Sel " << parts[id].UniqueName()<<endl;
 							}
@@ -731,7 +797,7 @@ bool MapEditor::Tool_Select(OpenGLContainer* open_gl, float mx, float my, int mo
 }
 
 
-bool MapEditor::Tool_Connect(OpenGLContainer* open_gl, float mx, float my, int mouse_mode) {
+bool MapEditor::Tool_Connect(float mx, float my, int mouse_mode) {
 
 	//currently_selected_instance;
 	mx = floor(mx + 0.5f);
@@ -763,24 +829,73 @@ bool MapEditor::Tool_Connect(OpenGLContainer* open_gl, float mx, float my, int m
 	return false;
 }
 
-bool MapEditor::Tool_GlobalTool(OpenGLContainer* open_gl, float mx, float my, int mouse_mode)
+
+bool MapEditor::Tool_GlobalTool(float mx, float my, int mouse_mode)
 {
+	return false;
+}
 
 
+bool MapEditor::Tool_Draw_Deco(float mx, float my, int mouse_mode) {
+	mx = floor(mx + 0.5f);
+	my = floor(my + 0.5f);
+
+	if (mouse_mode == 4) { //Pickup tool
+		float range = 0.3f;
+
+		for (auto it = deco_parts.begin(); it != deco_parts.end(); ++it) {
+			if (it->Hidden() == false) {
+				float dist_squared = (mx - it->X())*(mx - it->X()) + (my - it->Y())*(my - it->Y());
+				if (dist_squared < range*range) {
+					currently_selected_part_type = it->TypeName();
+					return true;
+				}
+			}
+		}
+	}
+
+	if (mouse_mode == 2) {
+		float range = 0.3f;
+
+		for (auto it = deco_parts.begin(); it != deco_parts.end(); ++it) {
+			if (it->Hidden() == false) {
+				float dist_squared = (mx - it->X())*(mx - it->X()) + (my - it->Y())*(my - it->Y());
+				if (dist_squared < range*range) {
+					it->Hide();//Map editor will not write hidden objects
+					return true;
+				}
+			}
+		}
+	}
+
+
+	if (mouse_mode == 1) {
+		if (currently_selected_part_type != "") {
+			LabyrinthPartInstance temp = part_def_manager->GetInstance(currently_selected_part_type);
+			temp.Move(mx, my);
+
+			//float angle = it->valueF[0];
+			float angle = draw_tool_angle * 90;
+			Transform transf = temp.transform;
+			transf.RotateZ(angle);
+			temp.SetTransform(transf);
+
+			deco_parts.push_back(temp);
+			return true;
+		}
+	}
 
 	return false;
 }
+#endif
 
 bool MapEditor::LoadFile(std::string file_to_load)
 {
 	//Clean up everything still on the screen
 	parts.clear();
-	variant_carriers.clear();
-	currently_selected_instance = -1;
-	currently_selected_part_type = "";
-	list_of_other_instances_nearby.clear();
+	deco_parts.clear();
+	reset_tools();
 	fast_time = 30;
-	selected_tool = 0;
 
 	//Load the new file
 	XMLDocument doc;
@@ -790,34 +905,42 @@ bool MapEditor::LoadFile(std::string file_to_load)
 
 		XMLElement* xml_root = doc.FirstChildElement("Labyrinth");
 		if (xml_root != nullptr) {
-
 			InitializeFromXml(xml_root);
-
 		}//xml_root found
 	}
 	else {
 		Log("Error", "Map Editor could not find file to load, making new empty file");
 		cout << "XML Error ID(0=okay): " << doc.ErrorID() << " \t Filename: " << file_to_load << endl;
-		name_of_current_file = "";
+		name_of_current_file =  " ";
 	}
 
-	RemakeUi();
+	remake_ui();
 
 
 	return false;
 }
 
+void MapEditor::reset_tools()
+{
+	draw_mode = std::make_unique<DrawMode>(open_gl, &parts, part_def_manager);
+	//...
+	current_mode = draw_mode.get();
+}
+
+
 void MapEditor::TestMap(OpenGLContainer* open_gl)
 {
-	if (name_of_current_file != "") {
+	if (name_of_current_file != " ") {
 		Save(name_of_current_file);
 
 		std::vector<std::string> laby_names_2;
 		laby_names_2.push_back(name_of_current_file);
 		vector<int> monster_ids;
 		monster_ids.push_back(1);
-		Minigames min(laby_names_2, 1, monster_ids, part_def_manager);
-		min.Resolve(open_gl);
+
+		Log("TODO", "Re-enable map testing!");
+		//Minigames min(laby_names_2, 1, monster_ids, part_def_manager);
+		//min.Resolve(open_gl);
 	} else {
 		Log("Debug", "Save and Name the map before testing it.");
 	}
@@ -827,111 +950,55 @@ void MapEditor::TestMap(OpenGLContainer* open_gl)
 
 
 void MapEditor::Save(string file_name) {
-	cout << "Saved as:" << file_name << endl;
+	cout << "Saving as:" << file_name << endl;
 	XMLDocument doc;
-	//doc.NewDeclaration();
 
 	XMLNode* root = doc.NewElement("Labyrinth");
 	doc.InsertFirstChild(root);
 
-	/* Test
-	XMLElement * pElement = doc.NewElement("IntValue");
-	pElement->SetText(10);
-	root->InsertEndChild(pElement);
-	*/
 
 	//Fast time
 	XMLElement * p_part = doc.NewElement("FastTime");
 	p_part->SetText(fast_time);
 	root->InsertEndChild(p_part);
+	//AppendToRoot(&doc, root, "FastTime", fast_time);
 
 
-	for (auto it = parts.cbegin(); it != parts.cend(); ++it) {
-		if (it->Hidden() == false) {
-			XMLElement * p_part = it->MakeXML(doc);
+	auto active_parts = MapEditorCommonFunctionality::active_only(parts);
+	for (auto p : active_parts) {
+		if (!p->Disabled()) {
+			XMLElement * p_part = p->MakeXML(doc);
 			root->InsertEndChild(p_part);
 		}
 	}
 
-
-	for (auto it = variant_carriers.cbegin(); it != variant_carriers.cend(); ++it) {
-		XMLElement * p_part = it->MakeXML(doc);
-		root->InsertEndChild(p_part);
+	auto active_deco_parts = MapEditorCommonFunctionality::active_only(parts);
+	for (auto p : active_deco_parts) {
+		if (!p->Disabled()) {
+			XMLElement * p_part = p->MakeXML(doc);
+			root->InsertEndChild(p_part);
+		}
 	}
-
 
 	doc.SaveFile(file_name.c_str());
-
 };
 
 
-void MapEditor::RemakeUi() {
-	{
-		std::vector<int> a;
-		a.push_back(selected_tool);//int parameter[0]: Which spell is hovered
-		std::vector<float> b;
-		std::vector<string> c;
+void MapEditor::remake_ui() {
+	remake_tool_select_bar();
+}
+void MapEditor::remake_tool_select_bar() {
+	auto menu_icon_scale = TransformScale(0.05f, 1.0f, PercentOfScreen::ax_x).reduce(open_gl);
 
-		UiElementParameter new_para(a, b, c);
-		tool_select_bar.RemakeIfDifferent("../Data/Ui/LevelEditor_ToolSelector.xml", new_para);
-	}
-	//
+	auto bar = std::make_unique<Grid>(
+		open_gl, menu_icon_scale, 6, 1, OffsetElement::leup()
+	);
 
 
-	if (selected_tool == 0) {
-		//Default look: Nothing selected
-		std::vector<int> a;
-		std::vector<float> b;
-		std::vector<string> c;
-		UiElementParameter new_para_options(a, b, c);
-		tool_option_bar.RemakeIfDifferent("../Data/Ui/LevelEditor_ToolOptions_Draw.xml", new_para_options);
-	}
-
-	if (selected_tool == 1) {
-		//Default look: Nothing selected
-		std::vector<int> a;
-		a.push_back(currently_selected_instance);//int parameter[0]: Which object is selected
-		std::vector<float> b;
-		std::vector<string> c;
-		if (currently_selected_instance > -1) {
-			c.push_back(parts[currently_selected_instance].TypeName());
-			c.push_back(parts[currently_selected_instance].UniqueName());
-		} else {
-			c.push_back("");
-			c.push_back("");
-		}
-		UiElementParameter	new_para_options(a, b, c);
-		tool_option_bar.RemakeIfDifferent("../Data/Ui/LevelEditor_ToolOptions_Select.xml", new_para_options);
-
-	}
-
-
-	if (selected_tool == 2) {
-		//Default look: Nothing selected
-		std::vector<int> a;
-		a.push_back(currently_selected_instance);//int parameter[0]: Which object is selected
-		std::vector<float> b;
-		std::vector<string> c;
-
-		UiElementParameter	new_para_options(a, b, c);
-		tool_option_bar.RemakeIfDifferent("../Data/Ui/LevelEditor_ToolOptions_Connect.xml", new_para_options);
-
-	}
+	//TODO: Wrap in position decorator
+	tool_select_bar = std::move(bar);
+}
 
 
 
-
-	if (selected_tool == 4) {
-		//Default look: Nothing selected
-		std::vector<int> a;
-		std::vector<float> b;
-		std::vector<string> c;
-
-		UiElementParameter	new_para_options(a, b, c);
-		tool_option_bar.RemakeIfDifferent("../Data/Ui/LevelEditor_ToolOptions_Global.xml", new_para_options);
-
-	}
-
-};
-
-#endif
+#endif //map editor defined

@@ -6,7 +6,7 @@
 #include "Transform.h"
 
 using namespace std;
-using namespace tinyxml2;
+;
 
 Collider2D::Collider2D(float x, float y, float r)
 	:type(0),centre_of_mass_x(x),centre_of_mass_y(y),range(r)
@@ -23,13 +23,13 @@ Collider2D::Collider2D(int type_, tinyxml2::XMLElement * xml_root)
 	:type(type_),centre_of_mass_x(0),centre_of_mass_y(0),range(1.0f),vertices()
 {
 	if (xml_root == 0) {
-		Log("Error", "Attempting to create circular collider with nil pointer");
+		Log("Error", "Attempting to create a collider with nil pointer");
 		return;
 	}
 
 
 	{ //Look up radius
-		XMLElement * xml_child = xml_root->FirstChildElement("Radius");
+		tinyxml2::XMLElement * xml_child = xml_root->FirstChildElement("Radius");
 		if (xml_child != 0) {
 			range = stof(xml_child->GetText());
 			if (type != 0) {
@@ -39,13 +39,13 @@ Collider2D::Collider2D(int type_, tinyxml2::XMLElement * xml_root)
 	}
 
 	{ 
-		XMLElement * xml_child = xml_root->FirstChildElement("X");
+		tinyxml2::XMLElement * xml_child = xml_root->FirstChildElement("X");
 		if (xml_child != 0) {
 			centre_of_mass_x = stof(xml_child->GetText());
 		}
 	}
 	{
-		XMLElement * xml_child = xml_root->FirstChildElement("Y");
+		tinyxml2::XMLElement * xml_child = xml_root->FirstChildElement("Y");
 		if (xml_child != 0) {
 			centre_of_mass_y = stof(xml_child->GetText());
 		}
@@ -54,12 +54,12 @@ Collider2D::Collider2D(int type_, tinyxml2::XMLElement * xml_root)
 	if(type==1){ //Look up rect width/height
 		float w = 0.01f;
 		float h = 0.01f;
-		XMLElement * xml_child = xml_root->FirstChildElement("Width");
+		tinyxml2::XMLElement * xml_child = xml_root->FirstChildElement("Width");
 		if (xml_child != 0) {
 			w = stof(xml_child->GetText());
 		}
 
-		XMLElement * xml_child2 = xml_root->FirstChildElement("Height");
+		tinyxml2::XMLElement * xml_child2 = xml_root->FirstChildElement("Height");
 		if (xml_child2 != 0) {
 			h = stof(xml_child2->GetText());
 		}
@@ -90,7 +90,7 @@ Collider2D::Collider2D(int type_, tinyxml2::XMLElement * xml_root)
 }
 
 
-bool Collider2D::RangeCheck(Transform& my_transform, const Collider2D& other, Transform& other_transform) const {
+bool Collider2D::RangeCheck(const Transform& my_transform, const Collider2D& other, const Transform& other_transform) const {
 	float r1 = range * my_transform.Scale();
 	float r2 = other.range * other_transform.Scale();
 
@@ -140,7 +140,7 @@ bool CheckEdgeVsCircle(float c_x, float c_y, float radius, float a_x, float a_y,
 
 
 
-bool Collider2D::CheckCollision(Transform& my_transform, const Collider2D& other, Transform& other_transform) const {
+bool Collider2D::CheckCollision(const Transform& my_transform, const Collider2D& other, const Transform& other_transform) const {
 
 	if (RangeCheck(my_transform,other,other_transform)==false) {
 		return false;
@@ -183,7 +183,7 @@ bool Collider2D::CheckCollision(Transform& my_transform, const Collider2D& other
 			lambda2 = (modP.x * v2.x + modP.y * v2.y) / (v2.x * v2.x + v2.y*v2.y);
 		}
 		if (lambda1 >= 0 && lambda1 <= 1.0f && lambda2 >= 0 && lambda2 <= 1.0f) {
-			Log("Debug","Circle center would be in rectangle");
+			//Log("Debug","Circle center would be in rectangle");
 			return true;
 		}
 		

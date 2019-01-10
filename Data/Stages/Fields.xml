@@ -10,26 +10,31 @@
 		<X>0</X>
 		<Y>-0.2</Y>
 		<Z>0</Z>
-		<Scale>0.15f</Scale>
+		<Scale>0.5</Scale>
 	</MonsterPosition>
 	<MonsterPosition>
-		<X>-0.2</X>
-		<Y>-0.15</Y>
+		<X>0.1</X>
+		<Y>-0.27</Y>
 		<Z>0</Z>
-		<Scale>0.15f</Scale>
+		<Scale>0.6</Scale>
 	</MonsterPosition>
 	<MonsterPosition>
 		<X>0.2</X>
 		<Y>-0.25</Y>
 		<Z>0</Z>
-		<Scale>0.15f</Scale>
+		<Scale>0.7</Scale>
 	</MonsterPosition>
 	<MonsterPosition>
-		<X>0.2</X>
-		<Y>-0.15</Y>
+		<X>-0.1</X>
+		<Y>-0.4</Y>
 		<Z>0</Z>
-		<Scale>0.15f</Scale>
+		<Scale>0.75</Scale>
 	</MonsterPosition>
-
+	<MonsterPosition>
+		<X>-0.16</X>
+		<Y>-0.35</Y>
+		<Z>0</Z>
+		<Scale>0.82</Scale>
+	</MonsterPosition>
 
 </Stage>

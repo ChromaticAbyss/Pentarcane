@@ -19,6 +19,7 @@
 			<Width>1.0</Width>
 			<Height>1.0</Height>
 		</RectangleCollider>
+		<LogicStepScript>../Data/Scripts/Common/Enemy_Basics.lua</LogicStepScript>
 		<LogicStepScript>../Data/Scripts/KillOnContact.lua</LogicStepScript>
 		<Tag>Enemy</Tag>
 		<Tag>1x1</Tag>
@@ -37,8 +38,9 @@
 			</Transform>			
 		</Art3D>
 		<CircleCollider>
-			<Radius>0.50</Radius>
+			<Radius>0.45</Radius>
 		</CircleCollider>
+		<LogicStepScript>../Data/Scripts/Common/Enemy_Basics.lua</LogicStepScript>
 		<LogicStepScript>../Data/Scripts/KillOnContact.lua</LogicStepScript>
 		<Tag>Enemy</Tag>
 		<Tag>1x1</Tag>
@@ -59,6 +61,7 @@
 		<CircleCollider>
 			<Radius>0.32</Radius>
 		</CircleCollider>
+		<LogicStepScript>../Data/Scripts/Common/Enemy_Basics.lua</LogicStepScript>
 		<LogicStepScript>../Data/Scripts/Common/Patrol_Basics.lua</LogicStepScript>
 		<LogicStepScript>../Data/Scripts/Patrol_ThroughPoints.lua</LogicStepScript>
 		<Tag>Enemy</Tag>
@@ -83,6 +86,7 @@
 		<CircleCollider>
 			<Radius>0.64</Radius>
 		</CircleCollider>
+		<LogicStepScript>../Data/Scripts/Common/Enemy_Basics.lua</LogicStepScript>
 		<LogicStepScript>../Data/Scripts/Common/Patrol_Basics.lua</LogicStepScript>
 		<LogicStepScript>../Data/Scripts/Patrol_ThroughPoints.lua</LogicStepScript>
 		<Tag>Enemy</Tag>
@@ -102,12 +106,13 @@
 			<TextureFile>../Data/2D/Red.png</TextureFile>
 			<Transform>
 				<RotX>90</RotX>
-				<Scale>1.0</Scale>	
+				<Scale>0.8</Scale>	
 			</Transform>			
 		</Art3D>
 		<CircleCollider>
-			<Radius>0.45</Radius>
+			<Radius>0.35</Radius>
 		</CircleCollider>
+		<LogicStepScript>../Data/Scripts/Common/Enemy_Basics.lua</LogicStepScript>
 		<LogicStepScript>../Data/Scripts/Common/Patrol_Basics.lua</LogicStepScript>
 		<LogicStepScript>../Data/Scripts/Patrol_GearGuardian.lua</LogicStepScript>
 		<Tag>Enemy</Tag>
@@ -145,6 +150,7 @@
 		<Tag>Enemy</Tag>
 		<Tag>TimeBased</Tag>
 		<Tag>1x1</Tag>
+		<LogicStepScript>../Data/Scripts/Common/Enemy_Basics.lua</LogicStepScript>
 		<LogicStepScript>../Data/Scripts/ExplodingGroundTile.lua</LogicStepScript>
 	</LabyrinthPartDefinition>
 	<LabyrinthPartDefinition>
@@ -160,6 +166,7 @@
 		<CircleCollider>
 			<Radius>0.45</Radius>
 		</CircleCollider>
+		<LogicStepScript>../Data/Scripts/Common/Enemy_Basics.lua</LogicStepScript>
 		<LogicStepScript>../Data/Scripts/ExplodingGroundTile_Explosion.lua</LogicStepScript> 
 		<CanAppearInEditor>0</CanAppearInEditor><!--Tag that can be used to disable this object from showing in the editor. TODO -->
 	</LabyrinthPartDefinition>
@@ -179,6 +186,7 @@
 		<Tag>Triggered</Tag>
 		<Tag>TimeBased</Tag>
 		<Tag>1x1</Tag>
+		<LogicStepScript>../Data/Scripts/Common/Enemy_Basics.lua</LogicStepScript>
 		<LogicStepScript>../Data/Scripts/ExplodingGroundTile_Triggered.lua</LogicStepScript>
 		<!--Editor behaviour-->
 		<SpawnWithUniqueName>1</SpawnWithUniqueName>
@@ -207,6 +215,7 @@
 				<Scale>1.0</Scale>	
 			</Transform>			
 		</Art3D>
+		<LogicStepScript>../Data/Scripts/Common/Enemy_Basics.lua</LogicStepScript>
 		<LogicStepScript>../Data/Scripts/ExplodingGroundTile_3x3.lua</LogicStepScript>
 		<Tag>Enemy</Tag>
 		<Tag>3x3</Tag>
@@ -228,6 +237,7 @@
 			<Width>3.0</Width>
 			<Height>3.0</Height>
 		</RectangleCollider>
+		<LogicStepScript>../Data/Scripts/Common/Enemy_Basics.lua</LogicStepScript>
 		<LogicStepScript>../Data/Scripts/ExplodingGroundTile_Explosion.lua</LogicStepScript> 
 		<CanAppearInEditor>0</CanAppearInEditor><!--Tag that can be used to disable this object from showing in the editor. TODO -->
 	</LabyrinthPartDefinition>
@@ -246,8 +256,9 @@
 			</Transform>			
 		</Art3D>
 		<CircleCollider>
-			<Radius>0.45</Radius>
+			<Radius>0.40</Radius>
 		</CircleCollider>
+		<LogicStepScript>../Data/Scripts/Common/Enemy_Basics.lua</LogicStepScript>
 		<LogicStepScript>../Data/Scripts/SlowMine.lua</LogicStepScript>
 		<Tag>Enemy</Tag>
 		<Tag>1x1</Tag>
@@ -267,6 +278,39 @@
 				<Scale>0.40</Scale>	
 			</Transform>
 		</Art3D>
+		<Art3D>
+			<ModelFile>../Data/3D/LabyrinthParts/Hourglass.obj</ModelFile>
+			<TextureFile>../Data/2D/LabyrinthParts/Crystalline.png</TextureFile>
+			<Transform>
+				<Z>3.5</Z>
+				<Scale>0.3</Scale>	
+			</Transform>
+		</Art3D>
+		<Art3D>
+			<ModelFile>../Data/3D/LabyrinthParts/Hourglass.obj</ModelFile>
+			<TextureFile>../Data/2D/Orange.png</TextureFile>
+			<Transform>
+				<Z>3.5</Z>
+				<Scale>0.3</Scale>	
+			</Transform>
+		</Art3D>
+		<Art3D>
+			<ModelFile>../Data/3D/LabyrinthParts/Hourglass.obj</ModelFile>
+			<TextureFile>../Data/2D/Red.png</TextureFile>
+			<Transform>
+				<Z>3.5</Z>
+				<Scale>0.3</Scale>	
+			</Transform>
+		</Art3D>
+		<Art3D>
+			<ModelFile>../Data/3D/LabyrinthParts/IceCrystal_HourglassReplacer.obj</ModelFile>
+			<TextureFile>../Data/2D/LabyrinthParts/Crystalline.png</TextureFile>
+			<Transform>
+				<Z>3.5</Z>
+				<Scale>0.3</Scale>	
+			</Transform>
+		</Art3D>
+		<LogicStepScript>../Data/Scripts/Common/Enemy_Basics.lua</LogicStepScript>
 		<LogicStepScript>../Data/Scripts/Door_Timed.lua</LogicStepScript>
 		<Tag>LevelControl</Tag>
 		<Tag>Enemy</Tag>
@@ -289,6 +333,7 @@
 		<CircleCollider>
 			<Radius>0.45</Radius>
 		</CircleCollider>
+		<LogicStepScript>../Data/Scripts/Common/Enemy_Basics.lua</LogicStepScript>
 		<LogicStepScript>../Data/Scripts/Door_Timed_Cylinder.lua</LogicStepScript>
 		<Tag>Enemy</Tag>
 		<CanAppearInEditor>0</CanAppearInEditor><!--Tag that can be used to disable this object from showing in the editor. TODO -->
@@ -310,6 +355,7 @@
 		<Tag>Enemy</Tag>
 		<Tag>LevelControl</Tag>
 		<Tag>1x1</Tag>
+		<LogicStepScript>../Data/Scripts/Common/Enemy_Basics.lua</LogicStepScript>
 		<LogicStepScript>../Data/Scripts/SwitchableBlockade_Base.lua</LogicStepScript>
 		<!--Editor behaviour-->
 		<SpawnWithUniqueName>1</SpawnWithUniqueName>
@@ -327,6 +373,7 @@
 		<CircleCollider>
 			<Radius>0.45</Radius>
 		</CircleCollider>
+		<LogicStepScript>../Data/Scripts/Common/Enemy_Basics.lua</LogicStepScript>
 		<LogicStepScript>../Data/Scripts/ExplodingGroundTile_Explosion.lua</LogicStepScript> 
 		<CanAppearInEditor>0</CanAppearInEditor><!--Tag that can be used to disable this object from showing in the editor. TODO -->
 	</LabyrinthPartDefinition>
@@ -349,6 +396,7 @@
 		</CircleCollider>
 		<Tag>Enemy</Tag>
 		<Tag>1x1</Tag>
+		<LogicStepScript>../Data/Scripts/Common/Enemy_Basics.lua</LogicStepScript>
 		<LogicStepScript>../Data/Scripts/Obelisk.lua</LogicStepScript>
 	</LabyrinthPartDefinition>
 	<LabyrinthPartDefinition>
@@ -363,6 +411,7 @@
 			</Transform>			
 		</Art3D>
 		<Tag>Enemy</Tag>
+		<LogicStepScript>../Data/Scripts/Common/Enemy_Basics.lua</LogicStepScript>
 		<LogicStepScript>../Data/Scripts/Obelisk_Ball.lua</LogicStepScript>
 		<CanAppearInEditor>0</CanAppearInEditor><!--Tag that can be used to disable this object from showing in the editor. TODO -->
 	</LabyrinthPartDefinition>
@@ -370,17 +419,17 @@
 		<InternalName>Obelisk_Explosion</InternalName>
 		<Type>Inert</Type>
 		<Art3D>
-			<ModelFile>../Data/3D/Fireball.obj</ModelFile>
+			<ModelFile>../Data/3D/LabyrinthParts/Explosion.obj</ModelFile>
 			<TextureFile>../Data/2D/Red.png</TextureFile>
 			<Transform>
-				<RotX>90</RotX>
 				<Scale>9.5</Scale>	
 			</Transform>			
 		</Art3D>
 		<CircleCollider>
-			<Radius>4.7</Radius>
+			<Radius>4.2</Radius>
 		</CircleCollider>
 		<Tag>Enemy</Tag>
+		<LogicStepScript>../Data/Scripts/Common/Enemy_Basics.lua</LogicStepScript>
 		<LogicStepScript>../Data/Scripts/Obelisk_Explosion.lua</LogicStepScript>
 		<CanAppearInEditor>0</CanAppearInEditor><!--Tag that can be used to disable this object from showing in the editor. TODO -->
 	</LabyrinthPartDefinition>
@@ -406,6 +455,7 @@
 		</RectangleCollider>
 		<Tag>Enemy</Tag>
 		<Tag>1x1</Tag>
+		<LogicStepScript>../Data/Scripts/Common/Enemy_Basics.lua</LogicStepScript>
 		<LogicStepScript>../Data/Scripts/Shroud_Base.lua</LogicStepScript>
 		<!--Editor behaviour-->
 		<SpawnWithUniqueName>1</SpawnWithUniqueName>
@@ -415,7 +465,7 @@
 		<Type>Inert</Type>
 		<Art3D>
 			<ModelFile>../Data/3D/LabyrinthParts/Shroud_Shroud.obj</ModelFile>
-			<TextureFile>../Data/2D/LabyrinthParts/GhostlyRoof.png</TextureFile>
+			<TextureFile>../Data/2D/LabyrinthParts/Shroud.png</TextureFile>
 			<Transform>
 				<Z>-1.0</Z>
 				<RotX>0</RotX>
@@ -423,6 +473,7 @@
 			</Transform>			
 		</Art3D>
 		<Tag>Enemy</Tag>
+		<LogicStepScript>../Data/Scripts/Common/Enemy_Basics.lua</LogicStepScript>
 		<LogicStepScript>../Data/Scripts/Shroud_Shroud.lua</LogicStepScript>
 		<CanAppearInEditor>0</CanAppearInEditor><!--Tag that can be used to disable this object from showing in the editor. TODO -->
 	</LabyrinthPartDefinition>
@@ -440,8 +491,9 @@
 			</Transform>			
 		</Art3D>
 		<CircleCollider>
-			<Radius>0.32</Radius>
+			<Radius>0.30</Radius>
 		</CircleCollider>
+		<LogicStepScript>../Data/Scripts/Common/Enemy_Basics.lua</LogicStepScript>
 		<LogicStepScript>../Data/Scripts/Common/Patrol_Basics.lua</LogicStepScript>
 		<LogicStepScript>../Data/Scripts/Patrol_Spectral.lua</LogicStepScript>
 		<Tag>Enemy</Tag>
@@ -465,8 +517,9 @@
 			</Transform>			
 		</Art3D>
 		<CircleCollider>
-			<Radius>0.30</Radius>
+			<Radius>0.28</Radius>
 		</CircleCollider>
+		<LogicStepScript>../Data/Scripts/Common/Enemy_Basics.lua</LogicStepScript>
 		<LogicStepScript>../Data/Scripts/Common/Patrol_Basics.lua</LogicStepScript>
 		<LogicStepScript>../Data/Scripts/Patrol_WithStops.lua</LogicStepScript>
 		<Tag>Enemy</Tag>
@@ -488,6 +541,7 @@
 				<Scale>0.55</Scale>	
 			</Transform>			
 		</Art3D>
+		<LogicStepScript>../Data/Scripts/Common/Enemy_Basics.lua</LogicStepScript>
 		<LogicStepScript>../Data/Scripts/Common/Patrol_Basics.lua</LogicStepScript>
 		<LogicStepScript>../Data/Scripts/Patrol_Transporter.lua</LogicStepScript>
 		<Tag>Enemy</Tag>
@@ -506,12 +560,16 @@
 		<Type>Enemy</Type>
 		<Art3D>
 			<ModelFile>../Data/3D/LabyrinthParts/Shooter.obj</ModelFile>
-			<TextureFile>../Data/2D/Orange.png</TextureFile>
+			<TextureFile>../Data/2D/Red.png</TextureFile>
 			<Transform>
 				<RotX>0</RotX>
 				<Scale>0.55</Scale>	
 			</Transform>			
 		</Art3D>
+		<CircleCollider>
+			<Radius>0.30</Radius>
+		</CircleCollider>
+		<LogicStepScript>../Data/Scripts/Common/Enemy_Basics.lua</LogicStepScript>
 		<LogicStepScript>../Data/Scripts/Shooter.lua</LogicStepScript>
 		<Tag>Enemy</Tag>
 		<Tag>1x1</Tag>
@@ -529,9 +587,17 @@
 				<PosZ>0.25</PosZ>
 			</Transform>			
 		</Art3D>
+		<Art3D>
+			<ModelFile>../Data/3D/LabyrinthParts/Explosion.obj</ModelFile>
+			<TextureFile>../Data/2D/Red.png</TextureFile>
+			<Transform>
+				<Scale>0.5</Scale>	
+			</Transform>			
+		</Art3D>
 		<CircleCollider>
-			<Radius>0.16</Radius>
+			<Radius>0.15</Radius>
 		</CircleCollider>
+		<LogicStepScript>../Data/Scripts/Common/Enemy_Basics.lua</LogicStepScript>
 		<LogicStepScript>../Data/Scripts/Common/Patrol_Basics.lua</LogicStepScript>
 		<LogicStepScript>../Data/Scripts/ShooterBullet.lua</LogicStepScript>
 		<Tag>Enemy</Tag>
@@ -542,7 +608,141 @@
 		<CanAppearInEditor>0</CanAppearInEditor><!--Tag that can be used to disable this object from showing in the editor. TODO -->
 	</LabyrinthPartDefinition>
 
-		
 	
+
+
+	<LabyrinthPartDefinition>
+		<InternalName>Patrol_DropStuff</InternalName>
+		<Type>Enemy</Type>
+		<Art3D>
+			<ModelFile>../Data/3D/LabyrinthParts/Patrol_DropStuff.obj</ModelFile>
+			<TextureFile>../Data/2D/Red.png</TextureFile>
+			<Transform>
+				<RotX>0</RotX>
+				<Scale>0.6</Scale>	
+			</Transform>			
+		</Art3D>
+		<CircleCollider>
+			<Radius>0.40</Radius>
+		</CircleCollider>
+		<LogicStepScript>../Data/Scripts/Common/Enemy_Basics.lua</LogicStepScript>
+		<LogicStepScript>../Data/Scripts/Common/Patrol_Basics.lua</LogicStepScript>
+		<LogicStepScript>../Data/Scripts/Patrol_DropStuff.lua</LogicStepScript>
+		<Tag>Enemy</Tag>
+		<Tag>1x1</Tag>
+		<Tag>Mobile</Tag>
+		<!--Editor behaviour-->
+		<SpawnWithUniqueName>1</SpawnWithUniqueName>
+	</LabyrinthPartDefinition>
+	<LabyrinthPartDefinition>
+		<InternalName>Patrol_DropStuff_Blockade</InternalName>
+		<Type>Enemy</Type>
+		<Art3D>
+			<ModelFile>../Data/3D/Fireball.obj</ModelFile>
+			<TextureFile>../Data/2D/Red.png</TextureFile>
+			<Transform>
+				<RotX>90</RotX>
+				<Scale>0.75</Scale>	
+			</Transform>			
+		</Art3D>
+		<CircleCollider>
+			<Radius>0.16</Radius>
+		</CircleCollider>
+		<LogicStepScript>../Data/Scripts/Common/Enemy_Basics.lua</LogicStepScript>
+		<LogicStepScript>../Data/Scripts/KillOnContact.lua</LogicStepScript>
+		<Tag>Enemy</Tag>
+		<Tag>1x1</Tag>
+		<CanAppearInEditor>0</CanAppearInEditor><!--Tag that can be used to disable this object from showing in the editor. TODO -->
+	</LabyrinthPartDefinition>
+	
+	
+	<LabyrinthPartDefinition>
+		<InternalName>Spikeblob</InternalName>
+		<Type>Enemy</Type>
+		<Art3D>
+			<ModelFile>../Data/3D/LabyrinthParts/Spikeblob.obj</ModelFile>
+			<TextureFile>../Data/2D/Red.png</TextureFile>
+			<Transform>
+				<Scale>1.0</Scale>	
+			</Transform>			
+		</Art3D>
+		<Art3D>
+			<ModelFile>../Data/3D/LabyrinthParts/Spikeblob.obj</ModelFile>
+			<TextureFile>../Data/2D/Red.png</TextureFile>
+			<Transform>
+				<RotZ>45</RotZ>
+				<Scale>1.0</Scale>	
+			</Transform>			
+		</Art3D>		
+		<Art3D>
+			<ModelFile>../Data/3D/LabyrinthParts/Spikeproj.obj</ModelFile>
+			<TextureFile>../Data/2D/Red.png</TextureFile>
+			<Transform>
+				<RotZ>0</RotZ>
+				<Scale>0.5</Scale>	
+			</Transform>			
+		</Art3D>			
+		<CircleCollider>
+			<Radius>0.32</Radius>
+		</CircleCollider>
+		<LogicStepScript>../Data/Scripts/Common/Enemy_Basics.lua</LogicStepScript>
+		<LogicStepScript>../Data/Scripts/Common/Patrol_Basics.lua</LogicStepScript>
+		<LogicStepScript>../Data/Scripts/Spikeblob.lua</LogicStepScript>
+		<Tag>Enemy</Tag>
+		<Tag>1x1</Tag>
+		<Tag>Mobile</Tag>
+		<!--Editor behaviour-->
+		<SpawnWithUniqueName>1</SpawnWithUniqueName>
+	</LabyrinthPartDefinition>
+
+	
+	
+	<LabyrinthPartDefinition>
+		<InternalName>SnipeTower</InternalName>
+		<Type>Enemy</Type>
+		<Art3D>
+			<ModelFile>../Data/3D/LabyrinthParts/SnipeTower.obj</ModelFile>
+			<TextureFile>../Data/2D/Orange.png</TextureFile>
+			<Transform>
+				<RotX>0</RotX>
+				<Scale>0.45</Scale>	
+			</Transform>			
+		</Art3D>
+		<CircleCollider>
+			<Radius>4.5</Radius>
+		</CircleCollider>
+		<Tag>Enemy</Tag>
+		<Tag>1x1</Tag>
+		<LogicStepScript>../Data/Scripts/Common/Enemy_Basics.lua</LogicStepScript>
+		<LogicStepScript>../Data/Scripts/SnipeTower.lua</LogicStepScript>
+	</LabyrinthPartDefinition>
+	<LabyrinthPartDefinition>
+		<InternalName>SnipeTower_Explosion</InternalName>
+		<Type>Enemy</Type>
+		<Art3D>
+			<ModelFile>../Data/3D/LabyrinthParts/SnipeTower_Circle.obj</ModelFile>
+			<TextureFile>../Data/2D/Orange.png</TextureFile>
+			<Transform>
+				<RotX>0</RotX>
+				<Scale>1.0</Scale>	
+			</Transform>			
+		</Art3D>
+		<Art3D>
+			<ModelFile>../Data/3D/LabyrinthParts/SnipeTower_Circle.obj</ModelFile>
+			<TextureFile>../Data/2D/Red.png</TextureFile>
+			<Transform>
+				<RotX>0</RotX>
+				<Scale>1.0</Scale>	
+			</Transform>			
+		</Art3D>
+		<CircleCollider>
+			<Radius>4.0</Radius>
+		</CircleCollider>
+		<Tag>Enemy</Tag>
+		<Tag>1x1</Tag>
+		<LogicStepScript>../Data/Scripts/Common/Enemy_Basics.lua</LogicStepScript>
+		<LogicStepScript>../Data/Scripts/SnipeTower_Explosion.lua</LogicStepScript>
+		<CanAppearInEditor>0</CanAppearInEditor><!--Tag that can be used to disable this object from showing in the editor. TODO -->
+	</LabyrinthPartDefinition>
 	
 </LabyrinthPartDefinitions>

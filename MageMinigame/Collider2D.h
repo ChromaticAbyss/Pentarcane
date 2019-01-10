@@ -11,8 +11,8 @@ public:
 	explicit Collider2D(int, tinyxml2::XMLElement *);
 	explicit Collider2D();
 
-	bool RangeCheck(Transform&, const Collider2D&, Transform&) const;
-	bool CheckCollision(Transform& ,const Collider2D&, Transform&) const;
+	bool RangeCheck(const Transform&, const Collider2D&, const Transform&) const;
+	bool CheckCollision(const Transform& ,const Collider2D&, const Transform&) const;
 	void UpdateRange(float r) { range = r; };
 
 

@@ -10,6 +10,7 @@ function frame()
 	if(possibly_player > -1)then 
 		SendMessage(possibly_player,0,"SpeedMult",1.5) --Message player object to accelerate itself by 50%
 		PlaySound("Powerup1.ogg")
+		ScreenShake(0.05)
 		Disable(my_id)
 	end 		
 	

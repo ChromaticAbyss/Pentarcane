@@ -917,4 +917,14 @@
         <String>Patrol_BackAndForth 234 333</String>
         <String>PositionMarker 222 573</String>
     </Part>
+    <DecoPart>
+        <Type>DecoWall_Oudside_1</Type>
+        <Transform>
+            <X>-2</X>
+            <Y>12</Y>
+            <Z>0</Z>
+            <RotZ>90</RotZ>
+            <Scale>1</Scale>
+        </Transform>
+    </DecoPart>
 </Labyrinth>

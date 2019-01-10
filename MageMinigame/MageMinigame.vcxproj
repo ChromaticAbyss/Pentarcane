@@ -44,13 +44,13 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>E:\Coding\Libraries\glm-0.9.4.0;E:\Coding\Libraries\Simple OpenGL Image Library\src;E:\Coding\MageMinigame\MageMinigame\common;E:\Coding\Libraries\glew-2.0.0-win32\glew-2.0.0\include;E:\Coding\Libraries\glfw-3.2.1\include\GLFW;E:\Coding\Lua\5.1\include;E:\Coding\Libraries\irrKlang-32bit-1.5.0\irrKlang-1.5.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:\Coding\Libraries\glm-0.9.4.0;E:\Coding\Libraries\Simple OpenGL Image Library\src;E:\Coding\MageMinigame\MageMinigame\common;E:\Coding\Libraries\glew-2.0.0-win32\glew-2.0.0\include;E:\Coding\Libraries\glfw-3.2.1\include\GLFW;E:\Coding\Libraries\Lua\5.1\include;E:\Coding\Libraries\irrKlang-32bit-1.5.0\irrKlang-1.5.0\include;E:\Coding\Libraries\boost_1_62_0;E:\Coding\MageMinigame\MageMinigame;E:\Coding\Libraries_MyOwn\OpenGL_2D_Display_Base;E:\Coding\Libraries_MyOwn\OpenGL_2D_Display_Animations;E:\Coding\Libraries_MyOwn\Utility;E:\Coding\Libraries_MyOwn\Tinyxml2Expansion;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <OmitDefaultLibName>false</OmitDefaultLibName>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>tinyxml2.lib;glu32.lib;opengl32.lib;E:\Coding\Libraries\glfw-3.2.1\lib-vc2015\glfw3.lib;E:\Coding\Libraries\glew-2.0.0-win32\glew-2.0.0\lib\Release\Win32\glew32s.lib;E:\Coding\Lua\5.1\lib\lua5.1.lib;legacy_stdio_definitions.lib;irrKlang.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>glu32.lib;opengl32.lib;E:\Coding\Libraries\glfw-3.2.1\lib-vc2015\glfw3.lib;E:\Coding\Libraries\glew-2.0.0-win32\glew-2.0.0\lib\Release\Win32\glew32s.lib;E:\Coding\Libraries\Lua\5.1\lib\lua5.1.lib;legacy_stdio_definitions.lib;irrKlang.lib;E:\Coding\Libraries_MyOwn\Tinyxml2Expansion\Tinyxml2Expansion.lib;E:\Coding\Libraries_MyOwn\Utility\Utility.lib;E:\Coding\Libraries_MyOwn\OpenGL_2D_Display_Base\OpenGL2DBase.lib;E:\Coding\Libraries_MyOwn\OpenGL_2D_Display_Animations\OpenGL2DAnimations.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>E:\Coding\Libraries\tinyxml2-master\tinyxml2-master\tinyxml2\bin\Win32-Debug-Dll;E:\Coding\Libraries\irrKlang-32bit-1.5.0\irrKlang-1.5.0\lib\Win32-visualStudio;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
@@ -60,41 +60,71 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <AdditionalIncludeDirectories>E:\Coding\Libraries\glm-0.9.4.0;E:\Coding\Libraries\Simple OpenGL Image Library\src;E:\Coding\MageMinigame\MageMinigame\common;E:\Coding\Libraries\glew-2.0.0-win32\glew-2.0.0\include;E:\Coding\Libraries\glfw-3.2.1\include\GLFW;E:\Coding\Lua\5.1\include;E:\Coding\Libraries\irrKlang-32bit-1.5.0\irrKlang-1.5.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:\Coding\Libraries\glm-0.9.4.0;E:\Coding\Libraries\Simple OpenGL Image Library\src;E:\Coding\MageMinigame\MageMinigame\common;E:\Coding\Libraries\glew-2.0.0-win32\glew-2.0.0\include;E:\Coding\Libraries\glfw-3.2.1\include\GLFW;E:\Coding\Libraries\Lua\5.1\include;E:\Coding\Libraries\irrKlang-32bit-1.5.0\irrKlang-1.5.0\include;E:\Coding\Libraries\boost_1_62_0;E:\Coding\MageMinigame\MageMinigame;E:\Coding\Libraries_MyOwn\OpenGL_2D_Display_Base;E:\Coding\Libraries_MyOwn\OpenGL_2D_Display_Animations;E:\Coding\Libraries_MyOwn\Utility;E:\Coding\Libraries_MyOwn\Tinyxml2Expansion;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>tinyxml2.lib;glu32.lib;opengl32.lib;E:\Coding\Libraries\glfw-3.2.1\lib-vc2015\glfw3.lib;E:\Coding\Libraries\glew-2.0.0-win32\glew-2.0.0\lib\Release\Win32\glew32s.lib;E:\Coding\Lua\5.1\lib\lua5.1.lib;legacy_stdio_definitions.lib;irrKlang.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>glu32.lib;opengl32.lib;E:\Coding\Libraries\glfw-3.2.1\lib-vc2015\glfw3.lib;E:\Coding\Libraries\glew-2.0.0-win32\glew-2.0.0\lib\Release\Win32\glew32s.lib;E:\Coding\Libraries\Lua\5.1\lib\lua5.1.lib;legacy_stdio_definitions.lib;irrKlang.lib;E:\Coding\Libraries_MyOwn\Tinyxml2Expansion\Tinyxml2Expansion.lib;E:\Coding\Libraries_MyOwn\Utility\Utility.lib;E:\Coding\Libraries_MyOwn\OpenGL_2D_Display_Base\OpenGL2DBase.lib;E:\Coding\Libraries_MyOwn\OpenGL_2D_Display_Animations\OpenGL2DAnimations.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>E:\Coding\Libraries\tinyxml2-master\tinyxml2-master\tinyxml2\bin\Win32-Debug-Dll;E:\Coding\Libraries\irrKlang-32bit-1.5.0\irrKlang-1.5.0\lib\Win32-visualStudio;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Collider2D.cpp" />
+    <ClCompile Include="common\objloader.cpp" />
+    <ClCompile Include="Conditions\ConditionToPlayer.cpp" />
+    <ClCompile Include="Fight\PlayerActionPhase.cpp" />
+    <ClCompile Include="Fight\MonsterActionResolutionPhase.cpp" />
+    <ClCompile Include="Fight\MonsterPreActionPhase.cpp" />
+    <ClCompile Include="Fight\PlayerActionResolutionPhase.cpp" />
     <ClCompile Include="IrrklangSingleton.cpp" />
     <ClCompile Include="MapEditor\CommandSelectTool.cpp" />
-    <ClCompile Include="Ui\Command.cpp" />
-    <ClCompile Include="common\objloader.cpp" />
-    <ClCompile Include="common\quaternion_utils.cpp" />
-    <ClCompile Include="common\shader.cpp" />
-    <ClCompile Include="common\tangentspace.cpp" />
+    <ClCompile Include="MapEditor\Modes\DrawMode.cpp" />
+    <ClCompile Include="MapEditor\Modes\ModeCommonFunctionality.cpp" />
+    <ClCompile Include="Monster\AbilityEffects\BlockSpellh.cpp" />
+    <ClCompile Include="Monster\AbilityEffects\ChangeLabyrinth.cpp" />
+    <ClCompile Include="Monster\AbilityEffects\ChangeMonsterStats.cpp" />
+    <ClCompile Include="Monster\AbilityEffects\DealPlayerDamage.cpp" />
+    <ClCompile Include="Monster\AbilityEffects\DispatchEffect.cpp" />
+    <ClCompile Include="Monster\AbilityEffects\HealMonster.cpp" />
+    <ClCompile Include="Monster\AbilityEffects\MonsterCastEffect.cpp" />
+    <ClCompile Include="Monster\AbilityEffects\PlayerTempEffect.cpp" />
+    <ClCompile Include="Monster\AbilityEffects\SelectMonsters.cpp" />
+    <ClCompile Include="Monster\AbilityEffects\SpawnMonster.cpp" />
+    <ClCompile Include="Monster\AbilityEffects\StartAnimation.cpp" />
+    <ClCompile Include="Monster\MonsterCastCore.cpp" />
+    <ClCompile Include="OpenGLContainerWith3D.cpp" />
+    <ClCompile Include="Particles\BillboardParticle.cpp" />
+    <ClCompile Include="Particles\ClusterSpawnStrategy.cpp" />
+    <ClCompile Include="Particles\DriftUpwardMovement.cpp" />
+    <ClCompile Include="Particles\ParticleAnimationManager.cpp" />
+    <ClCompile Include="Particles\ParticleDefinition.cpp" />
+    <ClCompile Include="Particles\ParticleDispatching.cpp" />
+    <ClCompile Include="Particles\ParticleExplodeMovement.cpp" />
+    <ClCompile Include="Particles\SingleParticleCreationStrategy.cpp" />
+    <ClCompile Include="ScreenShaker.cpp" />
+    <ClCompile Include="Sequence\SequenceEntry.cpp" />
+    <ClCompile Include="Sequence\SequencePrefightText.cpp" />
+    <ClCompile Include="Spell.cpp" />
+    <ClCompile Include="Tests\Tests.cpp" />
+    <ClCompile Include="Ui\BackgroundNebula.cpp" />
+    <ClCompile Include="Ui\BackgroundNebulaFlash.cpp" />
     <ClCompile Include="common\texture.cpp" />
-    <ClCompile Include="common\vboindexer.cpp" />
     <ClCompile Include="Conditions\CastCondition.cpp" />
     <ClCompile Include="Definition3D.cpp" />
-    <ClCompile Include="Fight.cpp" />
-    <ClCompile Include="FightData.cpp" />
+    <ClCompile Include="Fight\Fight.cpp" />
+    <ClCompile Include="Fight\FightData.cpp" />
     <ClCompile Include="GroupDefinition.cpp" />
     <ClCompile Include="GroupDefinition_Manager.cpp" />
     <ClCompile Include="HashingForTags.cpp" />
     <ClCompile Include="Instance3D_New.cpp" />
     <ClCompile Include="Key.cpp" />
-    <ClCompile Include="LabyrinthPartDefinition.cpp" />
-    <ClCompile Include="LabyrinthPartDefinition_Manager.cpp" />
-    <ClCompile Include="LabyrinthPartInstance.cpp" />
-    <ClCompile Include="LabyrinthResult.cpp" />
+    <ClCompile Include="Labyrinth\LabyrinthPartDefinition.cpp" />
+    <ClCompile Include="Labyrinth\LabyrinthPartDefinition_Manager.cpp" />
+    <ClCompile Include="Labyrinth\LabyrinthPartInstance.cpp" />
+    <ClCompile Include="Labyrinth\LabyrinthResult.cpp" />
     <ClCompile Include="LoadSaveUnlocks.cpp" />
     <ClCompile Include="Log.cpp" />
     <ClCompile Include="Main.cpp" />
@@ -103,52 +133,86 @@
     <ClCompile Include="MapEditor\TextInput.cpp" />
     <ClCompile Include="MapEditor\PseudoInstance.cpp" />
     <ClCompile Include="MapEditor\VariantCarrier.cpp" />
-    <ClCompile Include="Minigames.cpp" />
-    <ClCompile Include="Monster.cpp" />
-    <ClCompile Include="MonsterCast.cpp" />
-    <ClCompile Include="MonsterDefinition.cpp" />
-    <ClCompile Include="MonsterDefinition_Manager.cpp" />
-    <ClCompile Include="LabyrinthInstance.cpp" />
-    <ClCompile Include="OpenGLContainer.cpp" />
+    <ClCompile Include="Monster\Monster.cpp" />
+    <ClCompile Include="Monster\MonsterCast.cpp" />
+    <ClCompile Include="Monster\MonsterDefinition.cpp" />
+    <ClCompile Include="Monster\MonsterDefinition_Manager.cpp" />
+    <ClCompile Include="Labyrinth\LabyrinthInstance.cpp" />
     <ClCompile Include="PlayerState.cpp" />
     <ClCompile Include="ScriptBridge.cpp" />
     <ClCompile Include="ScriptReturn.cpp" />
-    <ClCompile Include="Sequence.cpp" />
-    <ClCompile Include="SequenceRepresentation.cpp" />
-    <ClCompile Include="SequenceSelect.cpp" />
+    <ClCompile Include="Sequence\Sequence.cpp" />
+    <ClCompile Include="Sequence\SequenceRepresentation.cpp" />
+    <ClCompile Include="Sequence\SequenceSelect.cpp" />
     <ClCompile Include="Stage.cpp" />
     <ClCompile Include="Stats.cpp" />
     <ClCompile Include="StringUtility.cpp" />
     <ClCompile Include="Ui\AnimationManager.cpp" />
-    <ClCompile Include="Ui\FlipbookAnimation.cpp" />
-    <ClCompile Include="Ui\OffsetElement.cpp" />
+    <ClCompile Include="Ui\LabyrinthHitCounter.cpp" />
+    <ClCompile Include="Ui\MonsterUiCombat.cpp" />
+    <ClCompile Include="Ui\PlayerActionPhaseSidebar.cpp" />
+    <ClCompile Include="Ui\PlayerStatsUi.cpp" />
+    <ClCompile Include="Ui\SpellResult.cpp" />
     <ClCompile Include="Ui\TimerBar.cpp" />
     <ClCompile Include="Transform.cpp" />
     <ClCompile Include="Ui\Animation.cpp" />
-    <ClCompile Include="Ui\Element2D.cpp" />
-    <ClCompile Include="Ui\TimerManager.cpp" />
-    <ClCompile Include="Ui\Transform2D.cpp" />
-    <ClCompile Include="Ui\UiAnimation.cpp" />
-    <ClCompile Include="Ui\UiElement.cpp" />
+    <ClCompile Include="Ui\TooltipHolder.cpp" />
     <ClCompile Include="Ui\UiElementEffect.cpp" />
     <ClCompile Include="Ui\UiElementParameter.cpp" />
+    <ClCompile Include="Utility\ParseTransform.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BuildHeader.h" />
     <ClInclude Include="Collider2D.h" />
-    <ClInclude Include="IrrklangSingleton.h" />
-    <ClInclude Include="MapEditor\CommandSelectTool.h" />
-    <ClInclude Include="Ui\Command.h" />
     <ClInclude Include="common\objloader.hpp" />
-    <ClInclude Include="common\quaternion_utils.hpp" />
-    <ClInclude Include="common\shader.hpp" />
-    <ClInclude Include="common\tangentspace.hpp" />
+    <ClInclude Include="Conditions\ConditionToPlayer.h" />
+    <ClInclude Include="Fight\FightPhase.h" />
+    <ClInclude Include="Fight\PlayerActionPhase.h" />
+    <ClInclude Include="Fight\MonsterActionResolutionPhase.h" />
+    <ClInclude Include="Fight\MonsterPreActionPhase.h" />
+    <ClInclude Include="Fight\PlayerActionResolutionPhase.h" />
+    <ClInclude Include="IrrklangSingleton.h" />
+    <ClInclude Include="Labyrinth\LabyrinthParameters.h" />
+    <ClInclude Include="MapEditor\CommandSelectTool.h" />
+    <ClInclude Include="MapEditor\Modes\DrawMode.h" />
+    <ClInclude Include="MapEditor\Modes\MapEditorMode.h" />
+    <ClInclude Include="MapEditor\Modes\ModeCommonFunctionality.h" />
+    <ClInclude Include="Monster\AbilityEffects\BlockSpellh.h" />
+    <ClInclude Include="Monster\AbilityEffects\ChangeLabyrinth.h" />
+    <ClInclude Include="Monster\AbilityEffects\ChangeMonsterStats.h" />
+    <ClInclude Include="Monster\AbilityEffects\DealPlayerDamage.h" />
+    <ClInclude Include="Monster\AbilityEffects\DispatchEffect.h" />
+    <ClInclude Include="Monster\AbilityEffects\HealMonster.h" />
+    <ClInclude Include="Monster\AbilityEffects\PlayerTempEffect.h" />
+    <ClInclude Include="Monster\AbilityEffects\SelectMonsters.h" />
+    <ClInclude Include="Monster\AbilityEffects\SpawnMonster.h" />
+    <ClInclude Include="Monster\AbilityEffects\StartAnimation.h" />
+    <ClInclude Include="Monster\AbilityEffects\MonsterCastEffect.h" />
+    <ClInclude Include="Monster\MonsterCastCore.h" />
+    <ClInclude Include="OpenGLContainerWith3D.h" />
+    <ClInclude Include="Particles\BillboardParticle.h" />
+    <ClInclude Include="Particles\ClusterSpawnStrategy.h" />
+    <ClInclude Include="Particles\DriftUpwardMovement.h" />
+    <ClInclude Include="Particles\ParticleAnimationManager.h" />
+    <ClInclude Include="Particles\ParticleCreationStrategy.h" />
+    <ClInclude Include="Particles\ParticleDefinition.h" />
+    <ClInclude Include="Particles\ParticleDispatching.h" />
+    <ClInclude Include="Particles\ParticleExplodeMovement.h" />
+    <ClInclude Include="Particles\ParticleMovementStrategy.h" />
+    <ClInclude Include="Particles\PolymorphicParticle3D.h" />
+    <ClInclude Include="Particles\SingleParticleCreationStrategy.h" />
+    <ClInclude Include="ScreenShaker.h" />
+    <ClInclude Include="Sequence\SequenceEntry.h" />
+    <ClInclude Include="Sequence\SequencePrefightText.h" />
+    <ClInclude Include="Spell.h" />
+    <ClInclude Include="Tests\Tests.h" />
+    <ClInclude Include="Ui\BackgroundNebula.h" />
+    <ClInclude Include="Ui\BackgroundNebulaFlash.h" />
     <ClInclude Include="common\texture.hpp" />
-    <ClInclude Include="common\vboindexer.hpp" />
     <ClInclude Include="Conditions\CastCondition.h" />
     <ClInclude Include="Definition3D.h" />
-    <ClInclude Include="Fight.h" />
-    <ClInclude Include="FightData.h" />
+    <ClInclude Include="Fight\Fight.h" />
+    <ClInclude Include="Fight\FightData.h" />
     <ClInclude Include="GroupDefinition.h" />
     <ClInclude Include="GroupDefinition_Manager.h" />
     <ClInclude Include="HashingForTags.h" />
@@ -158,44 +222,42 @@
     <ClInclude Include="MapEditor\TextInput.h" />
     <ClInclude Include="MapEditor\PseudoInstance.h" />
     <ClInclude Include="MapEditor\VariantCarrier.h" />
-    <ClInclude Include="MonsterCast.h" />
+    <ClInclude Include="Monster\MonsterCast.h" />
     <ClInclude Include="PlayerState.h" />
-    <ClInclude Include="Sequence.h" />
-    <ClInclude Include="SequenceRepresentation.h" />
-    <ClInclude Include="SequenceSelect.h" />
+    <ClInclude Include="Sequence\Sequence.h" />
+    <ClInclude Include="Sequence\SequenceRepresentation.h" />
+    <ClInclude Include="Sequence\SequenceSelect.h" />
     <ClInclude Include="Stage.h" />
     <ClInclude Include="Instance3D_New.h" />
-    <ClInclude Include="LabyrinthInstance.h" />
-    <ClInclude Include="LabyrinthPartDefinition.h" />
-    <ClInclude Include="LabyrinthPartDefinition_Manager.h" />
-    <ClInclude Include="LabyrinthPartInstance.h" />
-    <ClInclude Include="LabyrinthResult.h" />
+    <ClInclude Include="Labyrinth\LabyrinthInstance.h" />
+    <ClInclude Include="Labyrinth\LabyrinthPartDefinition.h" />
+    <ClInclude Include="Labyrinth\LabyrinthPartDefinition_Manager.h" />
+    <ClInclude Include="Labyrinth\LabyrinthPartInstance.h" />
+    <ClInclude Include="Labyrinth\LabyrinthResult.h" />
     <ClInclude Include="Log.h" />
     <ClInclude Include="MapEditor\MapEditor.h" />
     <ClInclude Include="MapEditor\MapEditorTileSelector.h" />
-    <ClInclude Include="Minigames.h" />
-    <ClInclude Include="Monster.h" />
-    <ClInclude Include="MonsterDefinition.h" />
-    <ClInclude Include="MonsterDefinition_Manager.h" />
-    <ClInclude Include="OpenGLContainer.h" />
+    <ClInclude Include="Monster\Monster.h" />
+    <ClInclude Include="Monster\MonsterDefinition.h" />
+    <ClInclude Include="Monster\MonsterDefinition_Manager.h" />
     <ClInclude Include="ScriptBridge.h" />
     <ClInclude Include="ScriptReturn.h" />
     <ClInclude Include="Stats.h" />
     <ClInclude Include="StringUtility.h" />
     <ClInclude Include="Ui\AnimationManager.h" />
-    <ClInclude Include="Ui\FlipbookAnimation.h" />
-    <ClInclude Include="Ui\OffsetElement.h" />
+    <ClInclude Include="Ui\LabyrinthHitCounter.h" />
+    <ClInclude Include="Ui\MonsterUiCombat.h" />
+    <ClInclude Include="Ui\PlayerActionPhaseSidebar.h" />
+    <ClInclude Include="Ui\PlayerStatsUi.h" />
+    <ClInclude Include="Ui\SpellResult.h" />
     <ClInclude Include="Ui\TimerBar.h" />
-    <ClInclude Include="tinyxml2.h" />
     <ClInclude Include="Transform.h" />
     <ClInclude Include="Ui\Animation.h" />
-    <ClInclude Include="Ui\Element2D.h" />
-    <ClInclude Include="Ui\TimerManager.h" />
-    <ClInclude Include="Ui\Transform2D.h" />
-    <ClInclude Include="Ui\UiAnimation.h" />
-    <ClInclude Include="Ui\UiElement.h" />
+    <ClInclude Include="Ui\TooltipHolder.h" />
     <ClInclude Include="Ui\UiElementEffect.h" />
     <ClInclude Include="Ui\uiElementParameter.h" />
+    <ClInclude Include="Utility\ParseTransform.h" />
+    <ClInclude Include="Utility\PickWeighted.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />

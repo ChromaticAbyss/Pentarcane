@@ -147,7 +147,48 @@ Strings
 	</Conditional>
 
 	
+	<UiElement>
+		<Transform2D>
+			<X>0.28</X>
+			<Y>0.0</Y>
+			<SizeX>0.04</SizeX>
+			<SizeY>1.0</SizeY>
+			<SizeYRelativeToX>True</SizeYRelativeToX><!--takes into account window dimensions, so a 1 in SizeY would always be a square-->
+		</Transform2D>		
+		<Image>
+			<ImageFile>../Data/2D/Ui/MapEd_Deco.png</ImageFile>
+		</Image>
+		<Effect>
+			<Type>Tooltip</Type>
+			<ForMode>0</ForMode><!--On mouse hover-->
+			<StringValue>...</StringValue>
+		</Effect>
+		<Effect>
+			<Type>SelectTool</Type>
+			<ForMode>1</ForMode>
+			<Value>5</Value>
+		</Effect>
+	</UiElement>
+	
+	<Conditional>
+		<IntValueEqual Index="0" Value="5">Content Doesnt matter</IntValueEqual>
+		<UiElement>
+			<Transform2D>
+				<X>0.28</X>
+				<Y>0.0</Y>
+				<SizeX>0.04</SizeX>
+				<SizeY>1.0</SizeY>
+				<SizeYRelativeToX>True</SizeYRelativeToX><!--takes into account window dimensions, so a 1 in SizeY would always be a square-->
+			</Transform2D>		
+			<Image>
+				<ImageFile>../Data/2D/Ui/Select.png</ImageFile>
+			</Image>
+		</UiElement>
+	</Conditional>
 
+	
+	
+	
 	
 	<UiElement>
 		<Transform2D>

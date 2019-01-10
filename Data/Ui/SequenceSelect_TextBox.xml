@@ -16,11 +16,12 @@ Strings
 		<SizeX>0.6</SizeX>
 		<SizeY>0.07</SizeY>
 	</Transform2D>
+	<!--
 	<Image>
-		<ImageFile>../Data/2D/Grey.png</ImageFile>
+		<ImageFile>../Data/2D/Ui/SequenceSelectHeader.png</ImageFile>
 	</Image>
-	
-	
+	-->
+	<!--
 	<UiElement>
 		<TextField>
 			<StringParameterIndex>0</StringParameterIndex>	
@@ -32,14 +33,14 @@ Strings
 			</Transform2D>		
 		</TextField>	
 	</UiElement>
-	
+	-->
 
+	<!--
 	<Conditional>
 		<IntValueGreaterThan Index="0" Value="1">Content Doesnt matter</IntValueGreaterThan>	
 		<UiElement>
 			<TextField>
 				<StringParameterIndex>1</StringParameterIndex>	
-				<!--<MaxBoxSizeX>100</MaxBoxSizeX>-->
 				<Transform2D>
 					<X>0</X>
 					<Y>-0.10</Y>
@@ -140,7 +141,7 @@ Strings
 		</UiElement>
 	</Conditional>
 
-	
+	-->
 </UiElement>
 
 

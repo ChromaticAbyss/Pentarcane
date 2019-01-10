@@ -39,8 +39,19 @@ function PatrolMovement(my_id,tx,ty,speed)
 	end
 	
 	length = Sqrt(dx * dx + dy * dy)
+	
+	--print("actual distance moved: "..Sqrt((dx*speed/length)*(dx*speed/length) + (dy*speed/length)*(dy*speed/length)))
+	--THis equals the "speed" with only tiniest rounding errors. Stays constant
 	Move(my_id,dx*speed/length,dy*speed/length,0)
 	
-	return length
+	dx2 = tx - (x + dx*speed/length)
+	dy2 = ty - (y + dy*speed/length)
+	if(dx==0 and dy==0)then
+		return 0
+	end
+	length2 = Sqrt(dx2 * dx2 + dy2 * dy2)
+	
+	
+	return length2
 end 
 

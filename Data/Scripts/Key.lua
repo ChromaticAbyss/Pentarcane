@@ -13,5 +13,6 @@ function frame()
 		GrantLabyrinthKey()
 		PlaySound("key.ogg")
 		Disable(my_id)	
-	end 
+	end
+	RotateZ(my_id,0.8)	
 end 

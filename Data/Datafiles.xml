@@ -1,33 +1,64 @@
 <Datafiles>
 	<GroupDefinitions>GroupDefinitions/GroupDefinitions1.xml</GroupDefinitions>
-	<GroupDefinitions>GroupDefinitions/Luna_Groups.xml</GroupDefinitions>
+	<GroupDefinitions>GroupDefinitions/Tutorial.xml</GroupDefinitions>
+	<GroupDefinitions>GroupDefinitions/TestGroup.xml</GroupDefinitions>
+	<GroupDefinitions>GroupDefinitions/MageTowerGroups.xml</GroupDefinitions>
+	<GroupDefinitions>GroupDefinitions/MonstersInTheCellar.xml</GroupDefinitions>
+	<GroupDefinitions>GroupDefinitions/MonstersInTheGarden.xml</GroupDefinitions>
 	<GroupDefinitions>GroupDefinitions/MonstersInTheFields.xml</GroupDefinitions>
+	<GroupDefinitions>GroupDefinitions/MonstersInTheCellar2.xml</GroupDefinitions>
+	<GroupDefinitions>GroupDefinitions/ArenaFight_1_2.xml</GroupDefinitions>
 	<GroupDefinitions>GroupDefinitions/ForestOfPurpleCoffins.xml</GroupDefinitions>
 	<GroupDefinitions>GroupDefinitions/Pyramid.xml</GroupDefinitions>
 	<GroupDefinitions>GroupDefinitions/CapturedCity.xml</GroupDefinitions>
 	<GroupDefinitions>GroupDefinitions/ColdfireCavern.xml</GroupDefinitions>
+	<GroupDefinitions>GroupDefinitions/CrystallineSomething.xml</GroupDefinitions>
 	
-
+	<MonsterDefinitions>MonsterDefinitions/Tutorial.xml</MonsterDefinitions>
 	<MonsterDefinitions>MonsterDefinitions/Monsters1.xml</MonsterDefinitions>
-	<MonsterDefinitions>MonsterDefinitions/Lunas.xml</MonsterDefinitions>
 	<MonsterDefinitions>MonsterDefinitions/MonstersInTheFields.xml</MonsterDefinitions>
+	<MonsterDefinitions>MonsterDefinitions/MonstersInTheCellar.xml</MonsterDefinitions>
 	<MonsterDefinitions>MonsterDefinitions/Spectres.xml</MonsterDefinitions>
+	<MonsterDefinitions>MonsterDefinitions/MageTower.xml</MonsterDefinitions>
+
+	<!--
+	<MonsterDefinitions>MonsterDefinitions/ArenaFight_1_2.xml</MonsterDefinitions>
 	<MonsterDefinitions>MonsterDefinitions/CapturedCity.xml</MonsterDefinitions>
 	<MonsterDefinitions>MonsterDefinitions/ColdfireCavern.xml</MonsterDefinitions>
-
+	<MonsterDefinitions>MonsterDefinitions/CrystallineSomething.xml</MonsterDefinitions>
+	<MonsterDefinitions>MonsterDefinitions/Pyramid.xml</MonsterDefinitions>
+-->
+	<LabyrinthPartDefinitions>LabyrinthParts/PlayerParts.xml</LabyrinthPartDefinitions>
 	<LabyrinthPartDefinitions>LabyrinthParts/PartDefinitions1.xml</LabyrinthPartDefinitions>
 	<LabyrinthPartDefinitions>LabyrinthParts/Walls.xml</LabyrinthPartDefinitions>
 	<LabyrinthPartDefinitions>LabyrinthParts/EnemyParts.xml</LabyrinthPartDefinitions>
 	<LabyrinthPartDefinitions>LabyrinthParts/Pickups.xml</LabyrinthPartDefinitions>
+	<LabyrinthPartDefinitions>LabyrinthParts/Deco.xml</LabyrinthPartDefinitions>
 
 
 	<Sequence>Sequences/TestSequence.xml</Sequence>
 	<Sequence>Sequences/Tutorial.xml</Sequence>
+	<Sequence>Sequences/MonstersInTheCellar.xml</Sequence>
+	<Sequence>Sequences/EvenMoreMonstersInYetAnotherCellar.xml</Sequence>
+	<!--
+	<Sequence>Sequences/IGetItItsAnArenaFight.xml</Sequence>
+	<Sequence>Sequences/ArenaFight_2.xml</Sequence>
+	-->
 	<Sequence>Sequences/MonstersInTheFields.xml</Sequence>
 	<Sequence>Sequences/MagicTower.xml</Sequence>
 	<Sequence>Sequences/ForestOfPurpleCoffins.xml</Sequence>
 	<Sequence>Sequences/Pyramid.xml</Sequence>
+		<!--
 	<Sequence>Sequences/CapturedCity_Infiltrate.xml</Sequence>
 	<Sequence>Sequences/CapturedCity_Liberate.xml</Sequence>
+	-->
+	<!--
 	<Sequence>Sequences/ColdfireCavern.xml</Sequence>
+	<Sequence>Sequences/BastionSpell.xml</Sequence>
+	<Sequence>Sequences/DraconicLibrary.xml</Sequence>
+	-->
+		
+	<Particles>Particles/PlayerParticles.xml</Particles>
+	<Particles>Particles/EnemyParticles.xml</Particles>
+	<Particles>Particles/Other.xml</Particles>
 </Datafiles>

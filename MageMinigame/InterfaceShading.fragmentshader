@@ -10,9 +10,7 @@ out vec4 color;
 
 // Values that stay constant for the whole mesh.
 uniform float Grey; //Set to 1 to turn the texture greyscale
-uniform float Red;
-uniform float Green;
-uniform float Blue;
+uniform vec3 color_mod;
 uniform float Transparency;
 uniform sampler2D myTextureSampler_interface;
 //uniform mat4 MV;
@@ -25,13 +23,13 @@ void main(){
 	
 
 		
-	color.r=MaterialDiffuseColor.r * Red;
-	color.g=MaterialDiffuseColor.g * Green;
-	color.b=MaterialDiffuseColor.b * Blue;
+	color.r=MaterialDiffuseColor.r * color_mod.r;
+	color.g=MaterialDiffuseColor.g * color_mod.g;
+	color.b=MaterialDiffuseColor.b * color_mod.b;
 	color.a=MaterialDiffuseColor.a * Transparency;	
 		
 	if(Grey>0.01){
-		float avg=(MaterialDiffuseColor.r+MaterialDiffuseColor.g+MaterialDiffuseColor.b)/3.0;
+		float avg = (MaterialDiffuseColor.r+MaterialDiffuseColor.g+MaterialDiffuseColor.b)/3.0;
 		color.r = color.r * (1 - Grey) + Grey * avg;
 		color.g = color.g * (1 - Grey) + Grey * avg;
 		color.b = color.b * (1 - Grey) + Grey * avg;		

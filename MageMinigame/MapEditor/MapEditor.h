@@ -1,69 +1,67 @@
 #pragma once
 
 #include "../BuildHeader.h"
+class LabyrinthPartDefinition_Manager;
+class OpenGLContainerWith3D;
+class DrawMode;
 
-#include "../LabyrinthPartInstance.h"
-#include "MapEditorTileSelector.h"
 #include <memory>
 #include <vector>
 #include <string>
 
 #include "VariantCarrier.h"
-
-#include "../Ui/UiElement.h"
-
+#include "Labyrinth/LabyrinthPartInstance.h"
+#include "MapEditorTileSelector.h"
 
 #include "../Key.h"
 
-class LabyrinthPartDefinition_Manager;
-class OpenGLContainer;
+#include "MapEditor\Modes\MapEditorMode.h"
+
 
 
 class MapEditor {
 public:
-	MapEditor(LabyrinthPartDefinition_Manager* part_def_manager_);
+	MapEditor(LabyrinthPartDefinition_Manager* part_def_manager_, OpenGLContainerWith3D* open_gl_in);
 	~MapEditor();
 
-	void Run(OpenGLContainer*);
-	void Render(OpenGLContainer*);
-	void Logic(OpenGLContainer*,float,float);
+	void run();
+	void Render();
+	void Logic(float,float);
 	void SaveDialogue();
 	void Save(std::string);
 
 	glm::mat4 GetViewMatrixForEditor() const;
 	void whereDoesMouseRayCutGround(OpenGLContainer*,float& cutX, float& cutY);
+
 private:
 	void InitializeFromXml(tinyxml2::XMLElement * xml_root);
-	bool Tool_Draw(OpenGLContainer*,float, float,int);
-	bool Tool_Select(OpenGLContainer*, float, float, int);
-	bool Tool_Connect(OpenGLContainer*, float, float, int);
-	bool Tool_GlobalTool(OpenGLContainer*, float, float, int);
 	bool LoadFile(std::string);
+	void reset_tools();
 
 	void TestMap(OpenGLContainer*);
+	void remake_ui();
+	void remake_tool_select_bar();
 
-	UiElement tool_select_bar;
-	UiElement tool_option_bar;
-	void RemakeUi();
+	OpenGLContainerWith3D* open_gl;
+	std::unique_ptr<PolymorphicUiElementReduced> tool_select_bar;
 
-	int selected_tool;//0 draw, 1 select, 2 connection
+
+	std::unique_ptr<DrawMode> draw_mode;
+	MapEditorMode* current_mode;
+
+
 	std::string name_of_current_file;
 
-	std::vector<LabyrinthPartInstance> parts;
-	std::vector<VariantCarrier> variant_carriers;
+	std::vector<std::unique_ptr<LabyrinthPartInstance>> parts;
+	std::vector<std::unique_ptr<LabyrinthPartInstance>> deco_parts;
 
+
+	//std::vector<VariantCarrier> variant_carriers;
 	LabyrinthPartDefinition_Manager* part_def_manager;
-
-
-	//Draw tool things
-	std::string currently_selected_part_type;
-
-	//Select tool things
-	int currently_selected_instance; // Also used by many other tools
-	std::vector<int> list_of_other_instances_nearby;
 
 	//bool ignore_esc_until_released;//Allows ignoring the esc key when returning from a sub object, esc must be released and pressed again to terminate the editor
 	Key key_esc;
+	Key key_r;
 
 	int fast_time;
 };

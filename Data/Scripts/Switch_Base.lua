@@ -40,7 +40,7 @@ function frame()
 			delay_left = delay
 			SendMessage(child_object_indicator,0,"Retract",0.7)
 			PlaySound("../Data/Sounds/positive_trigger.ogg")
-			
+			ScreenShake(0.05)
 			--Message all objects named in the signalers string parameters
 			count = 0
 			name = GetScriptParameterString(0)

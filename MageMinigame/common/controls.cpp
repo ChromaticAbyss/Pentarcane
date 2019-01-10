@@ -3,7 +3,7 @@
 
 // Include GLFW
 #include <glfw3.h>
-extern GLFWwindow* window; // The "extern" keyword here is to access the variable "window" declared in tutorialXXX.cpp. This is a hack to keep the tutorials simple. Please avoid this.
+//extern GLFWwindow* window; // The "extern" keyword here is to access the variable "window" declared in tutorialXXX.cpp. This is a hack to keep the tutorials simple. Please avoid this.
 
 
 // Include GLM
@@ -52,21 +52,21 @@ void fixedView(){
 
 
 	// Move forward
-	if (glfwGetKey( window, GLFW_KEY_UP ) == GLFW_PRESS){
-		camera_y = camera_y + 0.25f;
-	}
+	//if (glfwGetKey( window, GLFW_KEY_UP ) == GLFW_PRESS){
+	//	camera_y = camera_y + 0.25f;
+	//}
 	// Move backward
-	if (glfwGetKey( window, GLFW_KEY_DOWN ) == GLFW_PRESS){
-		camera_y = camera_y - 0.25f;
-	}
+	//if (glfwGetKey( window, GLFW_KEY_DOWN ) == GLFW_PRESS){
+	//	camera_y = camera_y - 0.25f;
+	//}
 	// Strafe right
-	if (glfwGetKey( window, GLFW_KEY_RIGHT ) == GLFW_PRESS){
-		camera_x = camera_x + 0.25f;
-	}
+	//if (glfwGetKey( window, GLFW_KEY_RIGHT ) == GLFW_PRESS){
+	//	camera_x = camera_x + 0.25f;
+	//}
 	// Strafe left
-	if (glfwGetKey( window, GLFW_KEY_LEFT ) == GLFW_PRESS){
-		camera_x = camera_x - 0.25f;
-	}
+	//if (glfwGetKey( window, GLFW_KEY_LEFT ) == GLFW_PRESS){
+	//	camera_x = camera_x - 0.25f;
+	//}
 
 	position = glm::vec3(camera_x,camera_y,camera_z);
 	//std::cout<<"Camera position: "<<position.x<<","<<position.y<<","<<position.z<<std::endl;
@@ -127,8 +127,8 @@ void computeMatricesFromInputs(){
 	float deltaTime = float(currentTime - lastTime);
 
 	// Get mouse position
-	double xpos, ypos;
-	glfwGetCursorPos(window, &xpos, &ypos);
+	double xpos = 0, ypos = 0;
+	//glfwGetCursorPos(window, &xpos, &ypos);
 
 	// Reset mouse position for next frame
 	//glfwSetCursorPos(window, 1024/2, 768/2);
@@ -158,6 +158,7 @@ void computeMatricesFromInputs(){
 	glm::vec3 up = glm::cross( right, direction );
 
 	// Move forward
+	/*
 	if (glfwGetKey( window, GLFW_KEY_UP ) == GLFW_PRESS){
 		position += direction * deltaTime * speed;
 	}
@@ -173,7 +174,7 @@ void computeMatricesFromInputs(){
 	if (glfwGetKey( window, GLFW_KEY_LEFT ) == GLFW_PRESS){
 		position -= right * deltaTime * speed;
 	}
-
+	*/
 	float FoV = initialFoV;// - 5 * glfwGetMouseWheel(); // Now GLFW 3 requires setting up a callback for this. It's a bit too complicated for this beginner's tutorial, so it's disabled instead.
 
 	// Projection matrix : 45° Field of View, 4:3 ratio, display range : 0.1 unit <-> 100 units

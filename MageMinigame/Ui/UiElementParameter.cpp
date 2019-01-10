@@ -5,7 +5,7 @@
 #include "../Log.h"
 
 using namespace std;
-using namespace tinyxml2;
+;
 
 UiElementParameter::UiElementParameter()
 	:int_values(),float_values(),string_values()
@@ -69,10 +69,10 @@ bool operator== (const UiElementParameter &c1, const UiElementParameter &c2)
 	return true;
 }
 
-bool UiElementParameter::EvaluateCondition(XMLElement * xml_root) const {
+bool UiElementParameter::EvaluateCondition(tinyxml2::XMLElement * xml_root) const {
 
 	{
-		XMLElement * xml_child = xml_root->FirstChildElement("IntValueEqual");
+		const tinyxml2::XMLElement * xml_child = xml_root->FirstChildElement("IntValueEqual");
 		while (xml_child != 0) {
 			int index = 0;
 			xml_child->QueryIntAttribute("Index", &index);
@@ -86,7 +86,7 @@ bool UiElementParameter::EvaluateCondition(XMLElement * xml_root) const {
 	}
 
 	{
-		XMLElement * xml_child = xml_root->FirstChildElement("IntValueInequal");
+		const tinyxml2::XMLElement * xml_child = xml_root->FirstChildElement("IntValueInequal");
 		while (xml_child != 0) {
 			int index = 0;
 			xml_child->QueryIntAttribute("Index", &index);
@@ -101,7 +101,7 @@ bool UiElementParameter::EvaluateCondition(XMLElement * xml_root) const {
 
 
 	{
-		XMLElement * xml_child = xml_root->FirstChildElement("IntValueGreaterThan");
+		const tinyxml2::XMLElement * xml_child = xml_root->FirstChildElement("IntValueGreaterThan");
 		while (xml_child != 0) {
 			int index = 0;
 			xml_child->QueryIntAttribute("Index", &index);
@@ -118,7 +118,7 @@ bool UiElementParameter::EvaluateCondition(XMLElement * xml_root) const {
 
 
 	{
-		XMLElement * xml_child = xml_root->FirstChildElement("IntValueSmallerThan");
+		const tinyxml2::XMLElement * xml_child = xml_root->FirstChildElement("IntValueSmallerThan");
 		while (xml_child != 0) {
 			int index = 0;
 			xml_child->QueryIntAttribute("Index", &index);

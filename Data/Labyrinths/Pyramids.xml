@@ -1,4 +1,5 @@
 <Labyrinth>
+    <FastTime>30</FastTime>
     <Part>
         <Type>Wall_3x3_Pyramid</Type>
         <Transform>
@@ -1239,8 +1240,8 @@
             <Scale>1</Scale>
         </Transform>
         <UniqueName>Patrol_U1</UniqueName>
-        <ScriptParameterString>Patrol_U1</ScriptParameterString>
-        <ScriptParameterString>Patrol_U1_1</ScriptParameterString>
+        <String>Patrol_U1</String>
+        <String>Patrol_U1_1</String>
     </Part>
     <Part>
         <Type>Patrol_BackAndForth</Type>
@@ -1251,8 +1252,8 @@
             <Scale>1</Scale>
         </Transform>
         <UniqueName>Patrol_U2</UniqueName>
-        <ScriptParameterString>Patrol_U2_2</ScriptParameterString>
-        <ScriptParameterString>Patrol_U2_1</ScriptParameterString>
+        <String>Patrol_U2_2</String>
+        <String>Patrol_U2_1</String>
     </Part>
     <Part>
         <Type>Patrol_BackAndForth</Type>
@@ -1263,8 +1264,8 @@
             <Scale>1</Scale>
         </Transform>
         <UniqueName>Patrol_U3</UniqueName>
-        <ScriptParameterString>Patrol_U3_2</ScriptParameterString>
-        <ScriptParameterString>Patrol_U3_1</ScriptParameterString>
+        <String>Patrol_U3_2</String>
+        <String>Patrol_U3_1</String>
     </Part>
     <Part>
         <Type>PositionMarker</Type>
@@ -1325,13 +1326,13 @@
             <Scale>1</Scale>
         </Transform>
         <UniqueName>Patrol_L1</UniqueName>
-        <ScriptParameterString>Patrol_L1</ScriptParameterString>
-        <ScriptParameterString>Patrol_L2</ScriptParameterString>
-        <ScriptParameterString>PL_2</ScriptParameterString>
-        <ScriptParameterString>PL_4</ScriptParameterString>
-        <ScriptParameterString>PL_2</ScriptParameterString>
-        <ScriptParameterString>Patrol_L2</ScriptParameterString>
-        <ScriptParameterString>Patrol_L1</ScriptParameterString>
+        <String>Patrol_L1</String>
+        <String>Patrol_L2</String>
+        <String>PL_2</String>
+        <String>PL_4</String>
+        <String>PL_2</String>
+        <String>Patrol_L2</String>
+        <String>Patrol_L1</String>
     </Part>
     <Part>
         <Type>Patrol_BackAndForth_Large</Type>
@@ -1342,11 +1343,11 @@
             <Scale>1</Scale>
         </Transform>
         <UniqueName>Patrol_L2</UniqueName>
-        <ScriptParameterString>Patrol_L2</ScriptParameterString>
-        <ScriptParameterString>PL_2</ScriptParameterString>
-        <ScriptParameterString>PL_4</ScriptParameterString>
-        <ScriptParameterString>PL_2</ScriptParameterString>
-        <ScriptParameterString>Patrol_L2</ScriptParameterString>
+        <String>Patrol_L2</String>
+        <String>PL_2</String>
+        <String>PL_4</String>
+        <String>PL_2</String>
+        <String>Patrol_L2</String>
     </Part>
     <Part>
         <Type>PositionMarker</Type>
@@ -1495,8 +1496,8 @@
             <Z>0</Z>
             <Scale>1</Scale>
         </Transform>
-        <ScriptParameterString>PM_4</ScriptParameterString>
-        <ScriptParameterString>PM_8</ScriptParameterString>
+        <String>PM_4</String>
+        <String>PM_8</String>
     </Part>
     <Part>
         <Type>Patrol_BackAndForth</Type>
@@ -1506,8 +1507,8 @@
             <Z>0</Z>
             <Scale>1</Scale>
         </Transform>
-        <ScriptParameterString>PM_3</ScriptParameterString>
-        <ScriptParameterString>PM_7</ScriptParameterString>
+        <String>PM_3</String>
+        <String>PM_7</String>
     </Part>
     <Part>
         <Type>Patrol_BackAndForth</Type>
@@ -1517,8 +1518,8 @@
             <Z>0</Z>
             <Scale>1</Scale>
         </Transform>
-        <ScriptParameterString>PM_2</ScriptParameterString>
-        <ScriptParameterString>PM_6</ScriptParameterString>
+        <String>PM_2</String>
+        <String>PM_6</String>
     </Part>
     <Part>
         <Type>Patrol_BackAndForth</Type>
@@ -1528,8 +1529,8 @@
             <Z>0</Z>
             <Scale>1</Scale>
         </Transform>
-        <ScriptParameterString>PM_1</ScriptParameterString>
-        <ScriptParameterString>PM_5</ScriptParameterString>
+        <String>PM_1</String>
+        <String>PM_5</String>
     </Part>
     <Part>
         <Type>PositionMarker</Type>
@@ -1550,8 +1551,8 @@
             <Scale>1</Scale>
         </Transform>
         <UniqueName>Patrol_BackAndForth -6 9 24</UniqueName>
-        <ScriptParameterString>Patrol_BackAndForth -6 9 24</ScriptParameterString>
-        <ScriptParameterString>PositionMarker 5 9 41</ScriptParameterString>
+        <String>Patrol_BackAndForth -6 9 24</String>
+        <String>PositionMarker 5 9 41</String>
     </Part>
     <Part>
         <Type>Patrol_BackAndForth</Type>
@@ -1562,8 +1563,8 @@
             <Scale>1</Scale>
         </Transform>
         <UniqueName>Patrol_BackAndForth 5 8 24</UniqueName>
-        <ScriptParameterString>Patrol_BackAndForth 5 8 24</ScriptParameterString>
-        <ScriptParameterString>PositionMarker -6 8 49</ScriptParameterString>
+        <String>Patrol_BackAndForth 5 8 24</String>
+        <String>PositionMarker -6 8 49</String>
     </Part>
     <Part>
         <Type>Patrol_BackAndForth</Type>
@@ -1574,8 +1575,8 @@
             <Scale>1</Scale>
         </Transform>
         <UniqueName>Patrol_BackAndForth -6 7 21</UniqueName>
-        <ScriptParameterString>Patrol_BackAndForth -6 7 21</ScriptParameterString>
-        <ScriptParameterString>PositionMarker 5 7 19</ScriptParameterString>
+        <String>Patrol_BackAndForth -6 7 21</String>
+        <String>PositionMarker 5 7 19</String>
     </Part>
     <Part>
         <Type>PositionMarker</Type>

@@ -18,7 +18,7 @@
 		<CircleCollider>
 			<Radius>0.35</Radius>
 		</CircleCollider>
-		<Tag>LevelControl</Tag>
+		<Tag>Pickup</Tag>	
 		<Tag>1x1</Tag>
 	</LabyrinthPartDefinition>
 
@@ -37,7 +37,7 @@
 		<CircleCollider>
 			<Radius>0.35</Radius>
 		</CircleCollider>
-		<Tag>LevelControl</Tag>
+		<Tag>Pickup</Tag>	
 		<Tag>1x1</Tag>
 	</LabyrinthPartDefinition>
 	
@@ -56,7 +56,7 @@
 		<CircleCollider>
 			<Radius>0.35</Radius>
 		</CircleCollider>
-		<Tag>LevelControl</Tag>
+		<Tag>Pickup</Tag>	
 		<Tag>1x1</Tag>
 	</LabyrinthPartDefinition>
 		
@@ -76,7 +76,7 @@
 		<CircleCollider>
 			<Radius>0.35</Radius>
 		</CircleCollider>
-		<Tag>LevelControl</Tag>
+		<Tag>Pickup</Tag>	
 		<Tag>1x1</Tag>
 	</LabyrinthPartDefinition>
 
@@ -96,11 +96,52 @@
 		<CircleCollider>
 			<Radius>0.35</Radius>
 		</CircleCollider>
-		<Tag>LevelControl</Tag>
+		<Tag>Pickup</Tag>	
 		<Tag>1x1</Tag>
 	</LabyrinthPartDefinition>
 
 	
+	<LabyrinthPartDefinition>
+		<InternalName>Pickup_SpellPointDamage</InternalName>
+		<Type>Interactive</Type>
+		<Art3D>
+			<ModelFile>../Data/3D/LabyrinthParts/Pickup_NoCounterspell.obj</ModelFile>
+			<TextureFile>../Data/2D/Blue.png</TextureFile>
+			<Transform>
+				<RotX>0</RotX>
+				<Scale>1.0</Scale>	
+			</Transform>
+		</Art3D>
+		<LogicStepScript>../Data/Scripts/Pickup_SpellPointDamage.lua</LogicStepScript>
+		<CircleCollider>
+			<Radius>0.35</Radius>
+		</CircleCollider>
+		<Tag>Pickup</Tag>	
+		<Tag>1x1</Tag>
+	</LabyrinthPartDefinition>
+
+	<LabyrinthPartDefinition>
+		<InternalName>Pickup_Heal</InternalName>
+		<Type>Interactive</Type>
+		<Art3D>
+			<ModelFile>../Data/3D/LabyrinthParts/Pickup_Potion.obj</ModelFile>
+			<TextureFile>../Data/2D/LabyrinthParts/Pickup_Potion.png</TextureFile>
+			<Transform>
+				<RotX>0</RotX>
+				<Scale>0.85</Scale>	
+			</Transform>
+		</Art3D>
+		<LogicStepScript>../Data/Scripts/Pickup_Heal.lua</LogicStepScript>
+		<CircleCollider>
+			<Radius>0.35</Radius>
+		</CircleCollider>
+		<Tag>Pickup</Tag>	
+		<Tag>1x1</Tag>
+	</LabyrinthPartDefinition>
+
+
+
+
 	<LabyrinthPartDefinition>
 		<InternalName>SpeedPickup</InternalName>
 		<Type>Interactive</Type>
@@ -116,11 +157,39 @@
 			<Radius>0.45</Radius>
 		</CircleCollider>
 		<Tag>1x1</Tag>
-		<Tag>Collectible</Tag>
+		<Tag>Pickup</Tag>	
 		<LogicStepScript>../Data/Scripts/SpeedPickup.lua</LogicStepScript>
 	</LabyrinthPartDefinition>
 	
-
+	
+	<LabyrinthPartDefinition>
+		<InternalName>SpiralToken</InternalName>
+		<Type>Interactive</Type>
+		<Art3D>
+			<ModelFile>../Data/3D/LabyrinthParts/SpiralToken_Flat.obj</ModelFile>
+			<TextureFile>../Data/2D/Blue.png</TextureFile>
+			<Transform>
+				<RotX>0</RotX>
+				<Scale>0.20</Scale>	
+			</Transform>			
+		</Art3D>
+		<Art3D>
+			<ModelFile>../Data/3D/LabyrinthParts/SpiralToken_Upright.obj</ModelFile>
+			<TextureFile>../Data/2D/Blue.png</TextureFile>
+			<Transform>
+				<Z>1.5</Z>
+				<Scale>0.15</Scale>	
+			</Transform>			
+		</Art3D>
+		<CircleCollider>
+			<Radius>0.45</Radius>
+		</CircleCollider>
+		<Tag>1x1</Tag>
+		<Tag>Pickup</Tag>	
+		<LogicStepScript>../Data/Scripts/SpiralToken.lua</LogicStepScript>
+	</LabyrinthPartDefinition>
+	
+	
 	<LabyrinthPartDefinition>
 		<InternalName>MobileKey</InternalName>
 		<Type>Interactive</Type>
@@ -137,13 +206,33 @@
 		</CircleCollider>
 		<Tag>1x1</Tag>
 		<Tag>LevelControl</Tag>
-		<Tag>Collectible</Tag>
+		<Tag>Pickup</Tag>	
 		<Tag>Mobile</Tag>
 		<LogicStepScript>../Data/Scripts/Common/Patrol_Basics.lua</LogicStepScript>
 		<LogicStepScript>../Data/Scripts/MobileKey.lua</LogicStepScript>
 	</LabyrinthPartDefinition>
 	
 
+		
+	<LabyrinthPartDefinition>
+		<InternalName>CrystalContainer</InternalName>
+		<Type>Inert</Type>
+		<Art3D>
+			<ModelFile>../Data/3D/LabyrinthParts/CrystalContainer.obj</ModelFile>
+			<TextureFile>../Data/2D/Blue.png</TextureFile>
+			<Transform>
+				<RotX>0</RotX>
+				<Scale>0.75</Scale>	
+			</Transform>			
+		</Art3D>
+		<RectangleCollider>
+			<Width>1.0</Width>
+			<Height>1.0</Height>
+		</RectangleCollider>
+		<LogicStepScript>../Data/Scripts/CrystallineContainer.lua</LogicStepScript>
+		<Tag>Wall</Tag>
+		<Tag>1x1</Tag>
+	</LabyrinthPartDefinition>	
 	
 	
 </LabyrinthPartDefinitions>

@@ -20,7 +20,9 @@
 #include "Transform.h"
 //#include "Instance3D.h"
 
-class OpenGLContainer;
+#include "Color.h"
+
+class OpenGLContainerWith3D;
 
 class Definition3D{
 	friend class Instance3D_New;
@@ -29,15 +31,16 @@ public:
 	Definition3D(std::string,std::string,Transform);
 	Definition3D(tinyxml2::XMLElement*);
 
-	
+	Definition3D(const Definition3D& o) = delete;
+	Definition3D& operator=(const Definition3D& o) = delete;
+
 	//void Render(glm::mat4 matrix, std::shared_ptr<OpenGLContainer> open_gl) const;
-	void Render(glm::mat4 matrix, OpenGLContainer* open_gl) const;
+	void Render(glm::mat4 matrix, OpenGLContainerWith3D* open_gl, Color tint = Color(1, 1, 1, 1)) const;
 
 	bool attemptToLoadModel();
 private:
 	void InitializeFromXml(tinyxml2::XMLElement * xml_root);
 
-	
 
 	int load_state; //0 not loaded, 1 loaded, 2 tried to load but failed
 	int vertex_count;
@@ -50,9 +53,9 @@ private:
 	
 	GLuint texture;
 
-	std::vector<std::shared_ptr<Definition3D>> children;  
+	std::vector<std::unique_ptr<Definition3D>> children;  
 
-
+	Color color;
 };
 
 

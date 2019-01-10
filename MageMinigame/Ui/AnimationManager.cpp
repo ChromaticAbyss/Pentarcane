@@ -1,60 +1,71 @@
 #include "AnimationManager.h"
+#include "tinyxml2.h"
 
-#include "../OpenGLContainer.h"
+#include "OpenGLContainer.h"
+#include "Log.h"
+#include "XMLUtil.h"
+#include "Behaviours\behaviourbase.h"
+#include "BehaviourContainer.h"
+#include "Behaviours\ParticleBehaviourDispatcher.h"
+
+#include "IrrklangSingleton.h"
 
 using namespace std;
 
-AnimationManager::AnimationManager()
-	:ui_animations(),flipbook_animations()
+AnimationManager::AnimationManager(AnimationTickGiver* tick_giver_in)
+	:PolymorphicAnimation(tick_giver_in), animations(),tick_giver(tick_giver_in), block_ticks(0)
 {
 
 }
 
-bool AnimationManager::Blocking() const
+
+void AnimationManager::AddAnimation(std::string file, const Transform2D& transform)
 {
-	for (auto it = ui_animations.cbegin(); it != ui_animations.cend(); ++it) {
-		if (it->Blocking()) {
-			return true;
+	tinyxml2::XMLDocument doc;
+	doc.LoadFile(file.c_str());
+
+	if (doc.ErrorID() != 0) {
+		int i = 7;
+		return;
+	}
+
+	tinyxml2::XMLElement* root = doc.FirstChildElement("Animation");
+	if (root) {
+
+		int frames = LoadSingleValue_Required<int>(root, "Frames");
+		int block = LoadSingleValue(root, "BlockFrames", 0);
+		if (block > block_ticks) {
+			block_ticks = block;
 		}
-	}
-	for (auto it = flipbook_animations.cbegin(); it != flipbook_animations.cend(); ++it) {
 
-		if (it->Blocking()) {
-			return true;
+		//TODO: Sounds
+		std::string sound = LoadSingleString(root, "Sound", "");
+		if (sound != "") {
+			IrrklangSingleton::get()->play2D(sound.c_str(), false);
 		}
+
+		auto behaCo = LoadVectorOf<BehaviourContainer>(root, "Behaviour");
+
+		auto temp = std::make_unique<CompositeAnimation>(tick_giver,
+			transform,
+			frames,
+			std::move(behaCo)
+		);
+
+		animations.push_back(
+			std::move(temp)
+		);
+
+	} else {
+		Log("Error", "Animations need <Animation> as root file: "+file);
 	}
 
-	return false;
-}
-
-void AnimationManager::Progress()
-{
-	for (auto it = ui_animations.begin(); it != ui_animations.end(); ++it) {
-		it->Progress();
-	}
-	for (auto it = flipbook_animations.begin(); it != flipbook_animations.end(); ++it) {
-		it->Progress();
-	}
-}
-
-void AnimationManager::AddAnimation( UiAnimation&& n)
-{
-	ui_animations.push_back(std::move(n));
-}
-
-void AnimationManager::AddAnimation( FlipbookAnimation&& n)
-{
-
-	flipbook_animations.push_back(std::move(n));
 }
 
 void AnimationManager::Render(OpenGLContainer * open_gl) const
 {
-	for (auto it = ui_animations.cbegin(); it != ui_animations.cend(); ++it) {
-		it->Render(open_gl);
-	}
-
-	for (auto it = flipbook_animations.cbegin(); it != flipbook_animations.cend(); ++it) {
-		it->Render(open_gl);
+	static Transform2D anim_transform(TransformPosition(0, 0), TransformScale(1.0f, 1.0f, PercentOfScreen::ax_x));
+	for (const auto& anim : animations) {
+		anim->render(anim_transform.MakeModelMatrix(open_gl), open_gl);
 	}
 }

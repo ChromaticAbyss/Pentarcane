@@ -10,38 +10,108 @@
 			<Health>2</Health>
 			<Attack>1</Attack>
 			<Armor>0</Armor>
-			<CastChance>25</CastChance>
+			<SpellPoints>0</SpellPoints>
 		</Stats>
-		<Image>../Data/2D/Monsters/Drone_2d.png</Image>
+		<Image>../Data/2D/Monsters/CylDrone.png</Image>
 		<ImageTransform>
 			<SizeX>0.3</SizeX>
 			<SizeY>1.0</SizeY>
 			<SizeYRelativeToX>True</SizeYRelativeToX>
 		</ImageTransform>
 		<Labyrinth>../Data/Labyrinths/Drone1.xml</Labyrinth>
+		<Labyrinth>../Data/Labyrinths/Drone2.xml</Labyrinth>
+		<Labyrinth>../Data/Labyrinths/Drone3.xml</Labyrinth>
+		<Labyrinth>../Data/Labyrinths/Drone4.xml</Labyrinth>
 		<Cast>
-			<InternalName>CylReinforcements</InternalName>
+			<Name>Signal Pheromones</Name>
+			<SpellPoints>2</SpellPoints>
+			<Weight>600</Weight>
+			<Segment>
+				<Type>StartAnimation</Type>
+				<Select>Screen</Select>
+				<Path>../Data/Animations/SignalPheromones.xml</Path>
+			</Segment>
 			<Segment>
 				<Type>SpawnMonster</Type>
-				<StringValue>Drone</StringValue>
-				<StringValue>../Data/Animations/Flipbook_Firesparks.xml</StringValue><!--Flipbook animation on minion spawn-->
-				<Value>1</Value><!--Spawn stunned-->
-			</Segment>	
+				<CreatureName>Drone</CreatureName>
+				<!-- <AnimationPath>../Data/Animations/SignalPheromones.xml</AnimationPath> -->
+				<SpawnStunned>1</SpawnStunned>
+			</Segment>
+			<CastCondition>
+				<Type>ArenaNotFull</Type>
+			</CastCondition>			
+		</Cast>
+		<Cast>
+			<Name>Frenzy Phermones</Name>
+			<SpellPoints>2</SpellPoints>
+			<Weight>200</Weight>
 			<Segment>
-				<Type>Finish</Type>
-			</Segment>		
+				<Type>StartAnimation</Type>
+				<Select>Screen</Select>
+				<Path>../Data/Animations/FrenzyPheromones.xml</Path>
+			</Segment>
+			<Segment>
+				<Type>ChangeMonsterStats</Type>
+				<Select>AllLivingMonsters</Select>
+				<Stats>
+					<Attack>1</Attack>
+				</Stats>
+			</Segment>
+			<Segment>
+				<Type>StartAnimation</Type>
+				<Select>AllLivingMonsters</Select>
+				<Path>../Data/Animations/Buff_Attack.xml</Path>
+			</Segment>
+		</Cast>			
+	</MonsterDefinition>
+			
+			
+	<MonsterDefinition>
+		<InternalName>Hammerhead</InternalName>
+		<Name>Hammerhead</Name>
+		<Stats>
+			<Health>5</Health>
+			<Attack>2</Attack>
+			<Armor>0</Armor>
+			<SpellPoints>0</SpellPoints>
+		</Stats>
+		<Image>../Data/2D/Monsters/Hammerhead.png</Image>
+		<ImageTransform>
+			<SizeX>0.6</SizeX>
+			<SizeY>1.0</SizeY>
+			<SizeYRelativeToX>True</SizeYRelativeToX>
+		</ImageTransform>
+		<Labyrinth>../Data/Labyrinths/Hammerhead.xml</Labyrinth>
+		<Cast>
+			<Name>Lurking Fear</Name>
+			<SpellPoints>2</SpellPoints>
+			<Weight>200</Weight>
+			<Segment>
+				<Type>StartAnimation</Type>
+				<Select>Screen</Select>
+				<Path>../Data/Animations/HammerheadLurkingFear.xml</Path>
+			</Segment>
+			<Segment>
+				<Type>Damage</Type>
+				<Damage>6</Damage>
+				<AddBase>1</AddBase>
+			</Segment>
+			<CastCondition>
+				<Type>HighSpellPoints</Type>
+				<Target>Self</Target>
+			</CastCondition>	
 		</Cast>	
 	</MonsterDefinition>
 			
-	
+			
 	<MonsterDefinition>
-		<InternalName>SkinModifier</InternalName>
-		<Name>Skin Modifier</Name>
+		<InternalName>Drakta</InternalName>
+		<Name>Drakta</Name>
 		<Stats>
 			<Health>5</Health>
 			<Attack>2</Attack>
 			<Armor>1</Armor>
-			<CastChance>50</CastChance>
+			<SpellPoints>0</SpellPoints>
 		</Stats>
 		<Image>../Data/2D/Monsters/SkinModifier.png</Image>
 		<ImageTransform>
@@ -49,36 +119,63 @@
 			<SizeY>1.0</SizeY>
 			<SizeYRelativeToX>True</SizeYRelativeToX>
 		</ImageTransform>
-		<Labyrinth>../Data/Labyrinths/SkinModifier.xml</Labyrinth>
+		<Labyrinth>../Data/Labyrinths/Drakta.xml</Labyrinth>
 		<Cast>
-			<InternalName>PlaceTotem</InternalName>
-			<!--
+			<Name>Wood binding</Name>
+			<SpellPoints>2</SpellPoints>
+			<Weight>200</Weight>
 			<Segment>
-				<Type>UiAnimation</Type> 
-				<StringValue>Blah</StringValue>
+				<Type>StartAnimation</Type>
+				<Select>Screen</Select>
+				<Path>../Data/Animations/Woodbinding.xml</Path>
 			</Segment>
-			-->
 			<Segment>
 				<Type>SpawnMonster</Type>
-				<StringValue>SkinModifier_Totem</StringValue>
-				<StringValue>../Data/Animations/Flipbook_Firesparks.xml</StringValue><!--Flipbook animation on minion spawn-->
-				<Value>1</Value><!--Spawn stunned-->
-			</Segment>
-			
+				<CreatureName>DraktaTotem</CreatureName>
+				<!--<AnimationPath>../Data/Animations/Woodbinding.xml</AnimationPath> no need to repeat the animation-->
+				<SpawnStunned>1</SpawnStunned>
+			</Segment>	
+			<CastCondition>
+				<Type>ArenaNotFull</Type>
+			</CastCondition>
+		</Cast>	
+		<Cast>
+			<Name>Artisinal Claw</Name>
+			<SpellPoints>2</SpellPoints>
+			<Weight>200</Weight>
 			<Segment>
-				<Type>Finish</Type>
-			</Segment>		
+				<Type>StartAnimation</Type>
+				<Select>Screen</Select>
+				<Path>../Data/Animations/ArtisanClaw.xml</Path>
+			</Segment>
+			<Segment>
+				<Type>ChangeMonsterStats</Type>
+				<Select>Self</Select>
+				<Stats>
+					<Attack>1</Attack>
+				</Stats>
+			</Segment>
+			<Segment>
+				<Type>StartAnimation</Type>
+				<Select>Self</Select>
+				<Path>../Data/Animations/Buff_Attack.xml</Path>
+			</Segment>
+			<Segment>
+				<Type>Damage</Type>
+				<Damage>0</Damage>
+				<AddBase>1</AddBase>
+			</Segment>
 		</Cast>	
 	</MonsterDefinition>
 
 	<MonsterDefinition>
-		<InternalName>SkinModifier_Totem</InternalName>
-		<Name>Skin Modifier Totem</Name>
+		<InternalName>DraktaTotem</InternalName>
+		<Name>Drakta Totem</Name>
 		<Stats>
 			<Health>3</Health>
 			<Attack>4</Attack>
 			<Armor>0</Armor>
-			<CastChance>0</CastChance>
+			<SpellPoints>0</SpellPoints>
 		</Stats>
 		<Image>../Data/2D/Monsters/SkinModifier_Totem.png</Image>
 		<ImageTransform>
@@ -86,21 +183,57 @@
 			<SizeY>1.0</SizeY>
 			<SizeYRelativeToX>True</SizeYRelativeToX>
 		</ImageTransform>
-		<Labyrinth>../Data/Labyrinths/SkinModifier_Totem.xml</Labyrinth>
+		<Labyrinth>../Data/Labyrinths/DraktaTotem.xml</Labyrinth>
 	</MonsterDefinition>	
 	
 	
-	
+	<MonsterDefinition>
+		<InternalName>FaerieCatcher</InternalName>
+		<Name>Faerie Catcher</Name>
+		<Stats>
+			<Health>5</Health>
+			<Attack>2</Attack>
+			<Armor>0</Armor>
+			<SpellPoints>1</SpellPoints>
+		</Stats>
+		<Image>../Data/2D/Monsters/FaerieCatcher.png</Image>
+		<ImageTransform>
+			<SizeX>0.6</SizeX>
+			<SizeY>1.0</SizeY>
+			<SizeYRelativeToX>True</SizeYRelativeToX>
+		</ImageTransform>
+		<Labyrinth>../Data/Labyrinths/FaerieCatcher.xml</Labyrinth>
+		<Cast>
+			<Name>Sapping Enzyme</Name>
+			<SpellPoints>1</SpellPoints>
+			<Weight>200</Weight>
+			<Segment>
+				<Type>StartAnimation</Type>
+				<Select>Screen</Select>
+				<Path>../Data/Animations/DigestiveEnzyme.xml</Path>
+			</Segment>
+			<Segment>
+				<Type>BlockSpell</Type>
+				<Spell>Fireball</Spell><!--Spell Name: Fireball, LightningBolt, Freeze, Lifesteal -->
+				<Duration>2</Duration>
+			</Segment>
+			<Segment>
+				<Type>Damage</Type>
+				<Damage>0</Damage>
+				<AddBase>1</AddBase> <!--1 = Add in monster base damage!-->
+			</Segment>				
+		</Cast>
+	</MonsterDefinition>
+				
 	
 	<MonsterDefinition>
 		<InternalName>GreyRipper</InternalName>
 		<Name>Grey Ripper</Name>
-		<!--Also known as the weakest, most annoying monster you definitely need a mage to get rid of-->
 		<Stats>
 			<Health>5</Health>
 			<Attack>3</Attack>
 			<Armor>0</Armor>
-			<CastChance>0</CastChance>
+			<SpellPoints>0</SpellPoints>
 		</Stats>
 		<Image>../Data/2D/Monsters/GreyRipper.png</Image>
 		<ImageTransform>
@@ -111,17 +244,33 @@
 		<Labyrinth>../Data/Labyrinths/GreyRipper.xml</Labyrinth>
 	</MonsterDefinition>
 	
-
+	<MonsterDefinition>
+		<InternalName>Sefinae</InternalName>
+		<Name>Sefinae</Name>
+		<Stats>
+			<Health>5</Health>
+			<Attack>2</Attack>
+			<Armor>0</Armor>
+			<SpellPoints>0</SpellPoints>
+		</Stats>
+		<Image>../Data/2D/Monsters/Sefinae.png</Image>
+		<ImageTransform>
+			<SizeX>0.95</SizeX>
+			<SizeY>1.0</SizeY>
+			<SizeYRelativeToX>True</SizeYRelativeToX>
+		</ImageTransform>
+		<Labyrinth>../Data/Labyrinths/Sefinae.xml</Labyrinth>
+	</MonsterDefinition>
+	
 	
 	<MonsterDefinition>
 		<InternalName>Siyia</InternalName>
 		<Name>Thornsiyia</Name>
-		<!--Also known as the weakest, most annoying monster you definitely need a mage to get rid of-->
 		<Stats>
 			<Health>2</Health>
 			<Attack>1</Attack>
 			<Armor>0</Armor>
-			<CastChance>0</CastChance>
+			<SpellPoints>0</SpellPoints>
 		</Stats>
 		<Image>../Data/2D/Monsters/PlantThing.png</Image>
 		<ImageTransform>
@@ -130,10 +279,49 @@
 			<SizeYRelativeToX>True</SizeYRelativeToX>
 		</ImageTransform>
 		<Labyrinth>../Data/Labyrinths/Siyia.xml</Labyrinth>
+		<Cast>
+			<Name>Blossom</Name>
+			<Weight>100</Weight>
+			<SpellPoints>2</SpellPoints>
+			<Segment>
+				<Type>StartAnimation</Type>
+				<Select>Screen</Select>
+				<Path>../Data/Animations/Blossom.xml</Path>
+			</Segment>
+			<Segment>
+				<Type>ChangeMonsterStats</Type>
+				<Select>Self</Select>
+				<Stats>
+					<Health>1</Health>
+				</Stats>
+			</Segment>
+			<Segment>
+				<Type>Heal</Type>
+				<Select>Self</Select>
+				<Heal>2</Heal>
+			</Segment>							
+		</Cast>
 	</MonsterDefinition>
 	
 
-	
+	<MonsterDefinition>
+		<InternalName>GreenSlime</InternalName>
+		<Name>Green Slime</Name>
+		<Stats>
+			<Health>3</Health>
+			<Attack>2</Attack>
+			<Armor>0</Armor>
+			<SpellPoints>0</SpellPoints>
+		</Stats>
+		<Image>../Data/2D/Monsters/GreenSlime.png</Image>
+		<ImageTransform>
+			<SizeX>0.55</SizeX>
+			<SizeY>1.0</SizeY>
+			<SizeYRelativeToX>True</SizeYRelativeToX>
+		</ImageTransform>
+		<Labyrinth>../Data/Labyrinths/GreenSlime.xml</Labyrinth>
+	</MonsterDefinition>
+		
 	
 	
 
@@ -144,60 +332,50 @@
 			<Health>22</Health>
 			<Attack>2</Attack>
 			<Armor>0</Armor>
-			<CastChance>30</CastChance>
+			<SpellPoints>1</SpellPoints>
 		</Stats>
-		<Art3D>
-			<ModelFile>../Data/3D/Monsters/Hydra.obj</ModelFile>
-			<TextureFile>../Data/2D/Monsters/Hydra.png</TextureFile>
-			<Transform>
-				<RotX>0</RotX>
-				<RotZ>-90</RotZ>
-				<Scale>1.20</Scale>	
-			</Transform>			
-		</Art3D>
 		<Image>../Data/2D/Monsters/Hydra_2d.png</Image>
 		<ImageTransform>
-			<SizeX>1.6</SizeX><!-- has no effect at the moment-->
-			<SizeY>1.0</SizeY>
-			<SizeYRelativeToX>True</SizeYRelativeToX>
+			<SizeX>2.0</SizeX><!-- has no effect at the moment-->
+			<SizeY>2.0</SizeY>
 		</ImageTransform>
 		<Labyrinth>../Data/Labyrinths/Hydra1.xml</Labyrinth>
+		<Labyrinth>../Data/Labyrinths/Hydra2.xml</Labyrinth>	
+		<Labyrinth>../Data/Labyrinths/Hydra3.xml</Labyrinth>	
+		<Labyrinth>../Data/Labyrinths/HydraWithGuns.xml</Labyrinth>	
+		<Labyrinth>../Data/Labyrinths/HydraSpikeblobs.xml</Labyrinth>	
+		<Labyrinth>../Data/Labyrinths/HydraWithShrouds.xml</Labyrinth>	
+		<Labyrinth>../Data/Labyrinths/HydraSpiralToken.xml</Labyrinth>	
 		<Cast>
-			<InternalName>SelfHeal</InternalName>	
+			<Name>Oroubourus</Name>
+			<Weight>200</Weight>
+			<SpellPoints>1</SpellPoints>
 			<Segment>
-				<Type>FlipbookAnimation</Type>
-				<Targets>Self</Targets>
-				<StringValue>../Data/Animations/Heal.xml</StringValue>
+				<Type>StartAnimation</Type>
+				<Select>Screen</Select>
+				<Path>../Data/Animations/Ouroboros.xml</Path>
 			</Segment>
 			<Segment>
 				<Type>Heal</Type>
-				<Targets>Self</Targets>
-				<Value>5</Value><!--Hp-->
+				<Select>Self</Select>
+				<Heal>5</Heal>
 			</Segment>		
 			<Segment>
 				<Type>ChangeLabyrinth</Type>
-				<Targets>Self</Targets>
-				<StringValue>../Data/Labyrinths/Hydra1.xml</StringValue>
-				<StringValue>../Data/Labyrinths/Hydra2.xml</StringValue>	
-				<StringValue>../Data/Labyrinths/Hydra3.xml</StringValue>	
-			</Segment>			
-			<Segment>
-				<Type>Finish</Type>
-			</Segment>		
+				<Select>Self</Select>
+				<Labyrinth>../Data/Labyrinths/Hydra1.xml</Labyrinth>
+				<Labyrinth>../Data/Labyrinths/Hydra2.xml</Labyrinth>	
+				<Labyrinth>../Data/Labyrinths/Hydra3.xml</Labyrinth>	
+				<Labyrinth>../Data/Labyrinths/HydraWithGuns.xml</Labyrinth>	
+				<Labyrinth>../Data/Labyrinths/HydraSpikeblobs.xml</Labyrinth>	
+				<Labyrinth>../Data/Labyrinths/HydraWithShrouds.xml</Labyrinth>	
+				<Labyrinth>../Data/Labyrinths/HydraSpiralToken.xml</Labyrinth>					
+			</Segment>					
+			<CastCondition>
+				<Type>NotFullLife</Type>
+				<Target>Self</Target>
+			</CastCondition>
 		</Cast>
-		<CastWhenDamageTaken>
-			<Segment>
-				<Type>ChangeLabyrinth</Type>
-				<Targets>Self</Targets>
-				<StringValue>../Data/Labyrinths/Hydra1.xml</StringValue>
-				<StringValue>../Data/Labyrinths/Hydra2.xml</StringValue>	
-				<StringValue>../Data/Labyrinths/Hydra3.xml</StringValue>	
-			</Segment>			
-			<Segment>
-				<Type>Finish</Type>
-			</Segment>			
-		</CastWhenDamageTaken>
-		
 	</MonsterDefinition>	
 	
 	

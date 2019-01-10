@@ -1,7 +1,8 @@
 #include "GroupDefinition_Manager.h"
 #include "Log.h"
 #include "tinyxml2.h"
-using namespace tinyxml2;
+#include "XMLUtil.h"
+#include "Utility\PickWeighted.h"
 using namespace std;
 
 
@@ -10,28 +11,36 @@ GroupDefinition_Manager::GroupDefinition_Manager(std::vector<std::string> files)
 	:groups()
 {
 	for (vector<string>::iterator it = files.begin(); it != files.end(); ++it) {
-		XMLDocument doc;
+		tinyxml2::XMLDocument doc;
 		doc.LoadFile(it->c_str());
-
 		if (doc.ErrorID() == 0) {
 			//Log a message, if loading crashes due to a malformed file we can trace it
 			string a = it->c_str();
 			Log("Data", "Reading file " + a);
 
-			XMLElement* p_definitions_root = doc.FirstChildElement("GroupDefinitions");
-			if (p_definitions_root != 0) {
+			tinyxml2::XMLElement* defroot = doc.FirstChildElement("GroupDefinitions");
+			if (defroot) {
 				//Now we loop over the actual monster definitions contained until we run out
-				XMLElement* p_definition = p_definitions_root->FirstChildElement("GroupDefinition");
-				while (p_definition != 0) {
-					groups.push_back(GroupDefinition(p_definition));
-					p_definition = p_definition->NextSiblingElement("GroupDefinition");
-				}
+				//XMLElement* p_definition = p_definitions_root->FirstChildElement("GroupDefinition");
+				//while (p_definition != 0) {
+				//	groups.push_back(GroupDefinition(p_definition));
+				//	p_definition = p_definition->NextSiblingElement("GroupDefinition");
+				//}
+
+				auto& groupsref = groups;
+
+				ForEachDo(defroot, "GroupDefinition", [&groupsref](const tinyxml2::XMLElement* child) {
+					try {
+						groupsref.push_back(GroupDefinition(child));
+					} catch (std::runtime_error e) {
+						Log("Error", std::string("in GroupDefinition ") + "  " + e.what());
+					}
+				});
 			}
 			else {
 				Log("Error", "A file sent to GroupDefinition_Manager contains no group data");
 			}
-		}
-		else {
+		} else {
 			cout << "XML Error ID(0=okay): " << doc.ErrorID() << " \t Filename: " << it->c_str() << endl;
 		}
 		//doc.Clear();
@@ -74,16 +83,8 @@ std::vector<std::string> GroupDefinition_Manager::GrabFittingGroup(vector<FightD
 	}
 
 	//generate a completely random number between 0 and weight_sum and use that to determine a fitting position
-	int totally_random_number = rand() % weight_sum;
-	int jj = 0;
-	for (vector<int>::iterator it = weights.begin(); it != weights.end(); ++it) {
-		if (*it > totally_random_number) {
-			break;
-		}
-		++jj;
-	}
-	int actual_group_pos = pos[jj];
-
+	int choice = PickWeighted(weights, rand(), [](int a) {return a; });
+	int actual_group_pos = pos[choice];
 	auto temp = groups[actual_group_pos].MonsterNames();
 	temp.push_back(groups[actual_group_pos].InternalName()); //Last entry in the vector is the group internal name!
 

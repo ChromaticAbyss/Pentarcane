@@ -1,10 +1,22 @@
-﻿  Fight.cpp
-e:\coding\mageminigame\mageminigame\monstercast.h(43): warning C4018: ">=": Konflikt zwischen "signed" und "unsigned"
-e:\coding\mageminigame\mageminigame\fight.cpp(44): warning C4244: "Initialisierung": Konvertierung von "double" in "float", möglicher Datenverlust
-e:\coding\mageminigame\mageminigame\fight.cpp(618): warning C4018: ">=": Konflikt zwischen "signed" und "unsigned"
+﻿  PlayerActionPhase.cpp
+e:\coding\mageminigame\mageminigame\fight\playeractionphase.cpp(160): warning C4018: ">=": Konflikt zwischen "signed" und "unsigned"
+e:\coding\libraries_myown\opengl_2d_display_animations\keyframed.h(94): warning C4018: "<": Konflikt zwischen "signed" und "unsigned"
+  e:\coding\libraries_myown\opengl_2d_display_animations\keyframed.h(91): note: Bei der Kompilierung der Klassen-template der "int KeyframeMechanism<Transform2DReduced,glm::mat4>::getNextKeyframe(void) const"-Memberfunktion
+  e:\coding\libraries_myown\opengl_2d_display_animations\keyframed.h(81): note: Siehe Verweis auf die Instanziierung der gerade kompilierten Funktions-template "int KeyframeMechanism<Transform2DReduced,glm::mat4>::getNextKeyframe(void) const".
+  e:\coding\libraries_myown\opengl_2d_display_animations\keyframedtransform2d.h(13): note: Siehe Verweis auf die Instanziierung der gerade kompilierten Klassen-template "KeyframeMechanism<Transform2DReduced,glm::mat4>".
+e:\coding\libraries_myown\opengl_2d_display_animations\keyframed.h(84): warning C4018: "<": Konflikt zwischen "signed" und "unsigned"
+  e:\coding\libraries_myown\opengl_2d_display_animations\keyframed.h(83): note: Bei der Kompilierung der Klassen-template der "int KeyframeMechanism<Transform2DReduced,glm::mat4>::getCurrentKeyframe(void) const"-Memberfunktion
+  e:\coding\libraries_myown\opengl_2d_display_animations\keyframed.h(79): note: Siehe Verweis auf die Instanziierung der gerade kompilierten Funktions-template "int KeyframeMechanism<Transform2DReduced,glm::mat4>::getCurrentKeyframe(void) const".
   Code wird generiert...
   Überspringen... (keine relevanten Änderungen gefunden)
   Sequence.cpp
+  MonsterCast.cpp
+  MonsterCastEffect.cpp
   Main.cpp
+  PlayerActionResolutionPhase.cpp
+  MonsterPreActionPhase.cpp
+  MonsterActionResolutionPhase.cpp
+  Fight.cpp
+  CastCondition.cpp
   MageMinigame.vcxproj -> E:\Coding\MageMinigame\Debug\MageMinigame.exe
   MageMinigame.vcxproj -> E:\Coding\MageMinigame\Debug\MageMinigame.pdb (Full PDB)

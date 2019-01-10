@@ -1,6 +1,6 @@
 #pragma once
 
-#include "LabyrinthInstance.h"
+#include "Labyrinth/LabyrinthInstance.h"
 
 #include <vector>
 #include <string>
@@ -31,19 +31,28 @@ namespace ScriptBridge {
 	int GetPosition(lua_State * Lua);
 	int Move(lua_State * Lua);
 	int MoveTo(lua_State * Lua);
+	int RotateZ(lua_State * Lua);
+	int FaceDirection(lua_State * Lua);
+	int SetScale(lua_State * Lua);
+	int SetColor(lua_State * Lua);
 	int CheckCollisionWithTag(lua_State * Lua);
 	int GetDistanceFromTag(lua_State * Lua);
 	int GetScriptParameterString(lua_State * Lua);
 	int GetScriptParameterFloat(lua_State * Lua);
+	int GetNamedScriptParameter(lua_State * Lua);
 	int GetMessageParameterString(lua_State * Lua);
 	int Sqrt(lua_State * Lua);
 	int GrantLabyrinthBonus(lua_State * Lua);
+	int EnemyHit(lua_State * Lua);
 	int GrantLabyrinthGoal(lua_State * Lua);
 	int GrantLabyrinthKey(lua_State * Lua);
 	int UseLabyrinthKey(lua_State * Lua);
 	int GetSpellType(lua_State * Lua);
 	int SendMessage(lua_State * Lua);
 	int PlaySound(lua_State * Lua);
+	int StartAnimation(lua_State * Lua);
+	int ScreenShake(lua_State * Lua);
+	int HasSpecialEffect(lua_State * Lua);
 
 };
 

@@ -6,7 +6,6 @@
 
 #include "Log.h"
 
-
 using namespace std;
 
 void Log(string text) {
@@ -15,7 +14,6 @@ void Log(string text) {
 
 bool Log(string type ,string text){
 	//Types: Error,Error(Data),Warning,Warning(Data)
-
 	static ofstream myfile("../Log.txt");
 	static int calls=0;
 
@@ -29,9 +27,11 @@ bool Log(string type ,string text){
 	  else cout << "Unable to open file: DataFiles.txt"; 
 
 
-	//TODO: Save them to print them in a file sorted
-	  calls++;
+	  if (type == "Error") {
+		  int i = 7;
+	  }
 
+	  calls++;
 	  return true;
 };
 

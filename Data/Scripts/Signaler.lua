@@ -28,7 +28,7 @@ function frame()
 			count = count + 1
 			name = GetScriptParameterString(count)
 		end 
-		
+		ScreenShake(0.05)
 		PlaySound("../Data/Sounds/positive_trigger.ogg")
 		Disable(my_id)
 	end 

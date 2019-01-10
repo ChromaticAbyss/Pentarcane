@@ -4,6 +4,8 @@ my_id = -1
 open = 0
 my_blockade_id = -1;
 
+key = 0
+
 function setup()
 	my_id = GetMyId() 
 	
@@ -13,6 +15,14 @@ function setup()
 end
 
 function frame()
+	if(key > 0 and key < 100)then 
+		Move(my_id,0,0,key/30,1)
+		key = key + 1
+		if(key == 100)then 
+			Hide(my_id,1)
+		end 
+	end 
+
 
 	--Disable self and grant bonus on player contact
 	--TODO: Animation that makes the barrier sink into the ground/dissapear otherwise
@@ -26,6 +36,7 @@ function frame()
 				--print("Used key")
 				open = 1
 				PlaySound("Unlock.ogg")
+				key = 1
 				Disable(my_blockade_id)
 			end 
 		end 

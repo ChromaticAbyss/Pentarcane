@@ -3,27 +3,27 @@
 	
 	<MonsterPosition>
 		<X>-0.1</X>
-		<Y>0</Y>
+		<Y>-0.2</Y>
 		<Z>0</Z>
-		<Scale>0.45f</Scale>
+		<Scale>0.30f</Scale>
 	</MonsterPosition>
 	<MonsterPosition>
-		<X>-0.2</X>
+		<X>-0.4</X>
 		<Y>0.1</Y>
 		<Z>0</Z>
-		<Scale>0.45f</Scale>
+		<Scale>0.30f</Scale>
 	</MonsterPosition>
 	<MonsterPosition>
-		<X>0.2</X>
+		<X>0.4</X>
 		<Y>-0.1</Y>
 		<Z>0</Z>
-		<Scale>0.45f</Scale>
+		<Scale>0.20f</Scale>
 	</MonsterPosition>
 	<MonsterPosition>
-		<X>0.2</X>
+		<X>0.15</X>
 		<Y>0.2</Y>
 		<Z>0</Z>
-		<Scale>0.45f</Scale>
+		<Scale>0.15f</Scale>
 	</MonsterPosition>
 
 

@@ -1,24 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <LabyrinthPartDefinitions>
 
-	<LabyrinthPartDefinition>
-		<InternalName>Spawn</InternalName>
-		<Type>Interactive</Type>
-		<Art3D>
-			<ModelFile>../Data/3D/LabyrinthParts/Spawn.obj</ModelFile>
-			<TextureFile>../Data/2D/Blue.png</TextureFile>
-			<Transform>
-				<RotX>90</RotX>
-				<Scale>1.0</Scale>	
-			</Transform>
-		</Art3D>
-		<LogicStepScript>../Data/Scripts/Spawn.lua</LogicStepScript>
-		<CircleCollider>
-			<Radius>0.35</Radius>
-		</CircleCollider>
-		<Tag>LevelControl</Tag>
-		<Tag>1x1</Tag>
-	</LabyrinthPartDefinition>
+
 	
 	
 	<LabyrinthPartDefinition>
@@ -26,9 +9,9 @@
 		<Type>Interactive</Type>
 		<Art3D>
 			<ModelFile>../Data/3D/LabyrinthParts/Target.obj</ModelFile>
-			<TextureFile>../Data/2D/Blue.png</TextureFile>
+			<TextureFile>../Data/2D/Labyrinthparts/Target.png</TextureFile>
 			<Transform>
-				<RotX>90</RotX>
+				<RotX>0</RotX>
 				<Scale>1.0</Scale>	
 			</Transform>
 		</Art3D>
@@ -40,6 +23,49 @@
 		<Tag>Goal</Tag>
 		<Tag>1x1</Tag>
 	</LabyrinthPartDefinition>
+	
+	
+	<LabyrinthPartDefinition>
+		<InternalName>TutorialPointer_Goal</InternalName>
+		<Type>Interactive</Type>
+		<Art3D>
+			<ModelFile>../Data/3D/LabyrinthParts/Pointer.obj</ModelFile>
+			<TextureFile>../Data/2D/Green.png</TextureFile>
+			<Transform>
+				<RotX>0</RotX>
+				<Scale>1.0</Scale>	
+			</Transform>
+		</Art3D>
+		<LogicStepScript>../Data/Scripts/Pointer.lua</LogicStepScript>
+		<CircleCollider>
+			<Radius>0.35</Radius>
+		</CircleCollider>
+		<Tag>LevelControl</Tag>
+		<Tag>Goal</Tag>
+		<Tag>1x1</Tag>
+		<CanAppearInEditor>0</CanAppearInEditor><!--Tag that can be used to disable this object from showing in the editor. TODO -->
+	</LabyrinthPartDefinition>
+	<LabyrinthPartDefinition>
+		<InternalName>Pointer_AlwaysOn</InternalName>
+		<Type>Interactive</Type>
+		<Art3D>
+			<ModelFile>../Data/3D/LabyrinthParts/Pointer.obj</ModelFile>
+			<TextureFile>../Data/2D/Green.png</TextureFile>
+			<Transform>
+				<RotX>0</RotX>
+				<Scale>1.0</Scale>	
+			</Transform>
+		</Art3D>
+		<LogicStepScript>../Data/Scripts/Pointer_AlwaysOn.lua</LogicStepScript>
+		<CircleCollider>
+			<Radius>0.35</Radius>
+		</CircleCollider>
+		<Tag>LevelControl</Tag>
+		<Tag>Goal</Tag>
+		<Tag>1x1</Tag>
+		<CanAppearInEditor>0</CanAppearInEditor><!--Tag that can be used to disable this object from showing in the editor. TODO -->
+	</LabyrinthPartDefinition>
+	
 
 	
 
@@ -74,6 +100,15 @@
 				<Scale>1.0</Scale>	
 			</Transform>
 		</Art3D>
+		<Art3D>
+			<ModelFile>../Data/3D/LabyrinthParts/MiniKey.obj</ModelFile>
+			<TextureFile>../Data/2D/Orange.png</TextureFile>
+			<Transform>
+				<Z>2.3</Z>
+				<RotZ>90</RotZ>
+				<Scale>1.0</Scale>	
+			</Transform>
+		</Art3D>		
 		<CircleCollider>
 			<Radius>1.00</Radius>
 		</CircleCollider>
@@ -100,7 +135,34 @@
 		<Tag>Wall</Tag><!--A non deadly blocker!-->
 		<CanAppearInEditor>0</CanAppearInEditor><!--Tag that can be used to disable this object from showing in the editor. TODO -->
 	</LabyrinthPartDefinition>
-
+	<LabyrinthPartDefinition>
+		<InternalName>Door_Crystal</InternalName>
+		<Type>Interactive</Type>
+		<Art3D>
+			<ModelFile>../Data/3D/LabyrinthParts/Door.obj</ModelFile>
+			<TextureFile>../Data/2D/LabyrinthParts/Crystalline.png</TextureFile>
+			<Transform>
+				<RotX>90</RotX>
+				<Scale>1.0</Scale>	
+			</Transform>
+		</Art3D>
+		<Art3D>
+			<ModelFile>../Data/3D/LabyrinthParts/MiniKey.obj</ModelFile>
+			<TextureFile>../Data/2D/Orange.png</TextureFile>
+			<Transform>
+				<Z>2.3</Z>
+				<RotZ>90</RotZ>
+				<Scale>1.0</Scale>	
+			</Transform>
+		</Art3D>		
+		<CircleCollider>
+			<Radius>1.00</Radius>
+		</CircleCollider>
+		<LogicStepScript>../Data/Scripts/Door.lua</LogicStepScript>
+		<Tag>LevelControl</Tag>
+		<Tag>Door</Tag>
+		<Tag>AxB</Tag>
+	</LabyrinthPartDefinition>
 	
 	<LabyrinthPartDefinition>
 		<InternalName>PositionMarker</InternalName>
@@ -120,148 +182,6 @@
 		<SpawnWithUniqueName>1</SpawnWithUniqueName>
 	</LabyrinthPartDefinition>
 
-	
-	<LabyrinthPartDefinition>
-		<InternalName>Player_Fireball</InternalName>
-		<Type>Interactive</Type>
-		<Art3D>
-			<ModelFile>../Data/3D/Fireball.obj</ModelFile>
-			<TextureFile>../Data/2D/Fireball.png</TextureFile>
-			<Transform>
-				<RotX>90</RotX>
-				<Scale>1.0</Scale>	
-			</Transform>
-		</Art3D>
-		<CircleCollider>
-			<Radius>0.35</Radius>
-		</CircleCollider>
-		<LogicStepScript>../Data/Scripts/Common/Player_Message_Recieve.lua</LogicStepScript>
-		<LogicStepScript>../Data/Scripts/Player_Fireball.lua</LogicStepScript>
-		<Tag>Player</Tag>
-		<CanAppearInEditor>0</CanAppearInEditor><!--Tag that can be used to disable this object from showing in the editor. TODO -->
-	</LabyrinthPartDefinition>
-	
-	
-	<LabyrinthPartDefinition>
-		<InternalName>Player_LightningBolt</InternalName>
-		<Type>Interactive</Type>
-		<Art3D>
-			<ModelFile>../Data/3D/Fireball.obj</ModelFile>
-			<TextureFile>../Data/2D/Blue.png</TextureFile>
-			<Transform>
-				<RotX>90</RotX>
-				<Scale>0.75</Scale>	
-			</Transform>
-		</Art3D>
-		<CircleCollider>
-			<Radius>0.25</Radius>
-		</CircleCollider>
-		<LogicStepScript>../Data/Scripts/Common/Player_Message_Recieve.lua</LogicStepScript>
-		<LogicStepScript>../Data/Scripts/Player_LightningBolt.lua</LogicStepScript>
-		<Tag>Player</Tag>
-		<CanAppearInEditor>0</CanAppearInEditor><!--Tag that can be used to disable this object from showing in the editor. TODO -->
-	</LabyrinthPartDefinition>		
-	
-	
-	<LabyrinthPartDefinition>
-		<InternalName>Player_FrozenStar</InternalName>
-		<Type>Interactive</Type>
-		<Art3D>
-			<ModelFile>../Data/3D/Labyrinthparts/GearGuardian.obj</ModelFile>
-			<TextureFile>../Data/2D/Blue.png</TextureFile>
-					<Transform>
-				<RotX>90</RotX>
-				<Scale>0.8</Scale>	
-			</Transform>
-		</Art3D>
-		<CircleCollider>
-			<Radius>0.35</Radius>
-		</CircleCollider>
-		<LogicStepScript>../Data/Scripts/Player_FrozenStar.lua</LogicStepScript>
-		<Tag>Blah</Tag><!--Not player-->	
-		<CanAppearInEditor>0</CanAppearInEditor><!--Tag that can be used to disable this object from showing in the editor. TODO -->		
-	</LabyrinthPartDefinition>	
-
-	
-	<LabyrinthPartDefinition>
-		<InternalName>Player_FrozenStar_MindlessFollower</InternalName>
-		<Type>Interactive</Type>
-		<Art3D>
-			<ModelFile>../Data/3D/Labyrinthparts/GearGuardian.obj</ModelFile>
-			<TextureFile>../Data/2D/Blue.png</TextureFile>
-			<Transform>
-				<RotX>90</RotX>
-				<Scale>0.7</Scale>	
-			</Transform>
-		</Art3D>
-		<CircleCollider>
-			<Radius>0.30</Radius>
-		</CircleCollider>
-		<LogicStepScript>../Data/Scripts/Player_FrozenStar_Follower.lua</LogicStepScript>
-		<Tag>Player</Tag>	
-		<CanAppearInEditor>0</CanAppearInEditor><!--Tag that can be used to disable this object from showing in the editor. TODO -->		
-	</LabyrinthPartDefinition>	
-
-	<LabyrinthPartDefinition>
-		<InternalName>Player_Sliding</InternalName>
-		<Type>Interactive</Type>
-		<Art3D>
-			<ModelFile>../Data/3D/Fireball.obj</ModelFile>
-			<TextureFile>../Data/2D/Blue.png</TextureFile>
-			<Transform>
-				<RotX>90</RotX>
-				<Scale>1.0</Scale>	
-			</Transform>
-		</Art3D>
-		<CircleCollider>
-			<Radius>0.35</Radius>
-		</CircleCollider>
-		<LogicStepScript>../Data/Scripts/Common/Player_Message_Recieve.lua</LogicStepScript>
-		<LogicStepScript>../Data/Scripts/Player_Sliding.lua</LogicStepScript>
-		<Tag>Player</Tag>
-		<CanAppearInEditor>0</CanAppearInEditor><!--Tag that can be used to disable this object from showing in the editor. TODO -->
-	</LabyrinthPartDefinition>
-	
-	
-	<LabyrinthPartDefinition>
-		<InternalName>Player_Lifesteal_A</InternalName>
-		<Type>Interactive</Type>
-		<Art3D>
-			<ModelFile>../Data/3D/Fireball.obj</ModelFile>
-			<TextureFile>../Data/2D/Purple.png</TextureFile>
-			<Transform>
-				<RotX>90</RotX>
-				<Scale>1.0</Scale>	
-			</Transform>
-		</Art3D>
-		<CircleCollider>
-			<Radius>0.35</Radius>
-		</CircleCollider>
-		<LogicStepScript>../Data/Scripts/Player_Fireball.lua</LogicStepScript>
-		<Tag>Player</Tag>
-		<CanAppearInEditor>0</CanAppearInEditor><!--Tag that can be used to disable this object from showing in the editor. TODO -->
-	</LabyrinthPartDefinition>
-	
-	
-	<LabyrinthPartDefinition>
-		<InternalName>Player_Lifesteal_B</InternalName>
-		<Type>Interactive</Type>
-		<Art3D>
-			<ModelFile>../Data/3D/Fireball.obj</ModelFile>
-			<TextureFile>../Data/2D/BloodRed.png</TextureFile>
-			<Transform>
-				<RotX>90</RotX>
-				<Scale>1.0</Scale>	
-			</Transform>
-		</Art3D>
-		<CircleCollider>
-			<Radius>0.35</Radius>
-		</CircleCollider>
-		<LogicStepScript>../Data/Scripts/Player_Fireball.lua</LogicStepScript>
-		<Tag>Player</Tag>
-		<CanAppearInEditor>0</CanAppearInEditor><!--Tag that can be used to disable this object from showing in the editor. TODO -->
-	</LabyrinthPartDefinition>
-		
 	
 	
 	<LabyrinthPartDefinition>
@@ -283,22 +203,31 @@
 		<Tag>Collectible</Tag>
 		<LogicStepScript>../Data/Scripts/Signaler.lua</LogicStepScript>
 	</LabyrinthPartDefinition>
-
 	
 	<LabyrinthPartDefinition>
-		<InternalName>GhostlyRoof</InternalName>
-		<Type>Inert</Type>
+		<InternalName>OnWallSignaler</InternalName>
+		<Type>Interactive</Type>
 		<Art3D>
-			<ModelFile>../Data/3D/LabyrinthParts/GhostlyRoof.obj</ModelFile>
-			<TextureFile>../Data/2D/LabyrinthParts/GhostlyRoof.png</TextureFile>
+			<ModelFile>../Data/3D/LabyrinthParts/Collectible.obj</ModelFile>
+			<TextureFile>../Data/2D/Orange.png</TextureFile>
 			<Transform>
-				<RotX>90</RotX>
-				<Scale>1.0</Scale>	
+				<RotX>0</RotX>
+				<Scale>0.25</Scale>	
+				<Z>0.75</Z>
 			</Transform>			
 		</Art3D>
+		<CircleCollider>
+			<Radius>1.60</Radius>
+		</CircleCollider>
+		<Tag>LevelControl</Tag>
 		<Tag>1x1</Tag>
-		<Tag>NonBlocking</Tag>
+		<Tag>Collectible</Tag>
+		<LogicStepScript>../Data/Scripts/WallSignaler.lua</LogicStepScript>
 	</LabyrinthPartDefinition>
+
+	
+	
+	
 
 		
 	
@@ -352,5 +281,8 @@
 		<CanAppearInEditor>0</CanAppearInEditor><!--Tag that can be used to disable this object from showing in the editor. TODO -->		
 	</LabyrinthPartDefinition>	
 	
+	
+
+
 	
 </LabyrinthPartDefinitions>

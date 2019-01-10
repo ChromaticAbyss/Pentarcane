@@ -11,28 +11,28 @@
 
 #include "common/quaternion_utils.hpp" // See quaternion_utils.cpp for RotationBetweenVectors, LookAt and RotateTowards
 
-#include "OpenGLContainer.h"
+#include "OpenGLContainerWith3D.h"
 
 using namespace glm;
 using namespace std;
-using namespace tinyxml2;
+;
 
 
 Definition3D::Definition3D()
-	:load_state(0),vertex_count(0),transform(),model_file_name("../Data/3D/MissingModelMarker.obj"),texture_file_name("../Data/2D/MissingTexture.png"),children()
+	:load_state(0),vertex_count(0),transform(),model_file_name("../Data/3D/MissingModelMarker.obj"),texture_file_name("../Data/2D/MissingTexture.png"),children(),color()
 {
 }
 
 Definition3D::Definition3D(string file_3d, string file_texture, Transform t)
-	:load_state(0), vertex_count(0), transform(t), model_file_name(file_3d), texture_file_name(file_texture), children()
+	:load_state(0), vertex_count(0), transform(t), model_file_name(file_3d), texture_file_name(file_texture), children(), color()
 {
 
 	//attemptToLoadModel();
 }
 
 
-Definition3D::Definition3D(XMLElement* xml_root)
-	:load_state(0),vertex_count(0),transform(),model_file_name(""),texture_file_name("../Data/2D/MissingTexture.png"),children()
+Definition3D::Definition3D(tinyxml2::XMLElement* xml_root)
+	:load_state(0),vertex_count(0),transform(),model_file_name(""),texture_file_name("../Data/2D/MissingTexture.png"),children(), color()
 {
 	InitializeFromXml(xml_root);
 
@@ -40,43 +40,46 @@ Definition3D::Definition3D(XMLElement* xml_root)
 }
 
 void Definition3D::InitializeFromXml(tinyxml2::XMLElement * xml_root){
-	if (xml_root == 0) {
+	if (xml_root == nullptr) {
 		Log("Error", "Definition3D::Definition3D xml_root is null");
 		return;
 	}
 
-
-
 	{
-		XMLElement * xml_child = xml_root->FirstChildElement("Transform");
-		if (xml_child != 0) {
+		tinyxml2::XMLElement * xml_child = xml_root->FirstChildElement("Transform");
+		if (xml_child != nullptr) {
 			transform = Transform(xml_child);
 		}
 	}
 
 
 	{
-		XMLElement * xml_child = xml_root->FirstChildElement("ModelFile");
-		if (xml_child != 0) {
+		tinyxml2::XMLElement * xml_child = xml_root->FirstChildElement("ModelFile");
+		if (xml_child != nullptr) {
 			model_file_name = xml_child->GetText();
+		}
+	}
+
+	{
+		tinyxml2::XMLElement * xml_child = xml_root->FirstChildElement("Color");
+		if (xml_child != nullptr) {
+			color = Color::MakeColor(xml_child);
 		}
 	}
 
 
 	{
-		XMLElement * xml_child = xml_root->FirstChildElement("TextureFile");
-		if (xml_child != 0) {
+		tinyxml2::XMLElement * xml_child = xml_root->FirstChildElement("TextureFile");
+		if (xml_child != nullptr) {
 			texture_file_name = xml_child->GetText();
 		}
 	}
 
 
 	{
-		XMLElement * xml_child = xml_root->FirstChildElement("Children");
-		while (xml_child != 0) {
-
-			children.push_back(make_shared<Definition3D>(Definition3D(xml_child)));	//Does this work?
-
+		tinyxml2::XMLElement * xml_child = xml_root->FirstChildElement("Children");
+		while (xml_child != nullptr) {
+			children.push_back(std::move(make_unique<Definition3D>(xml_child)));
 			xml_child = xml_child->NextSiblingElement("Children");
 		}
 	}
@@ -84,17 +87,17 @@ void Definition3D::InitializeFromXml(tinyxml2::XMLElement * xml_root){
 };
 
 bool Definition3D::attemptToLoadModel(){
-	//TODO: Check if string empty or other shenanigans
 	if (model_file_name == "") { return false; }
 
 	//Load from file
 	std::vector<glm::vec3> T_vertices;
 	std::vector<glm::vec2> T_uvs;
 	std::vector<glm::vec3> T_normals;
-	cout << "Attempting to load model with name " << model_file_name << endl;
+	//cout << "Attempting to load model with name " << model_file_name << endl;
 	bool res = loadOBJ(model_file_name, T_vertices, T_uvs, T_normals);
 	if (res == false) { 
 		load_state = 2; //tried to load but failed
+		Log("Error(Data)", "Tried to load model" + model_file_name + ", but failed");
 		return false; 
 	}
 	vertex_count = T_vertices.size() + 1;
@@ -156,12 +159,6 @@ bool Definition3D::attemptToLoadModel(){
 
 	load_state = 1; //successfully loaded
 
-
-	cout << "attempting to load texture:" <<texture_file_name<< endl;
-
-
-
-
 	//Log("Data","Loading 3d element texture ["+renderDefinition.textureFileName+"] on the fly");
 	texture = loadPNG_stb(texture_file_name.c_str());
 	if (texture == 0) {
@@ -169,18 +166,11 @@ bool Definition3D::attemptToLoadModel(){
 		return false;
 	}
 
-
-	//cout<<"Attempting to load texture with name"<<textureFileName<<endl;
-	//texture = loadDDS("../3D/uvmap.DDS");
-
-	cout<<"Sucessfully loaded!"<<endl;
 	return true;
 }
 
 
-void Definition3D::Render(glm::mat4 matrix, OpenGLContainer* open_gl) const {
-//void Definition3D::Render(glm::mat4 matrix, std::shared_ptr<OpenGLContainer> open_gl) const {
-
+void Definition3D::Render(glm::mat4 matrix, OpenGLContainerWith3D* open_gl, Color tint) const {
 
 	//cout << "Definition3D: render called" << endl;
 	glBindVertexArray(VertexArrayID);
@@ -211,17 +201,21 @@ void Definition3D::Render(glm::mat4 matrix, OpenGLContainer* open_gl) const {
 	// Send our transformation to the currently bound shader, 
 	// in the "MVP" uniform
 
+	Color mixed = color.mix(tint);
+	glUniform3f(open_gl->Color_interface_3D, mixed.r,mixed.g,mixed.b);
+
 
 	glUniformMatrix4fv(open_gl->MatrixID, 1, GL_FALSE, &MVP[0][0]);
 	glUniformMatrix4fv(open_gl->ModelMatrixID, 1, GL_FALSE, &ModelMatrix[0][0]);
 	glUniformMatrix4fv(open_gl->ViewMatrixID, 1, GL_FALSE, &open_gl->ViewMatrix[0][0]); //View matrix into opengl_container?
 
 
+
 	//-------------Set up texture stuff------------------
 	// Bind our texture in Texture Unit 0
 	glActiveTexture(GL_TEXTURE0);
 	glBindTexture(GL_TEXTURE_2D, texture);
-	glUniform1i(open_gl->TextureID, 0);
+	glUniform1i(open_gl->texture_id_3d, 0);
 
 	// Draw the triangle !
 	glDrawArrays(GL_TRIANGLES, 0, vertex_count);

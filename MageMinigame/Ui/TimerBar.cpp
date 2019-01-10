@@ -2,54 +2,115 @@
 
 #include "../Log.h"
 
-#include "../OpenGLContainer.h"
+#include "OpenGLContainerWith3D.h"
+
+#include "group.h"
+#include "BasicUiElement.h"
 
 
-using namespace std;
-
-TimerBar::TimerBar()
-	:id(0),frames_left(0),frames_total(1),ui()
+TimerBar::TimerBar(OpenGLContainer * open_gl)
+	:mode(Spell::Fire()),frames_left(0),frames_total(1),ui(), open_gl(open_gl)
 {
 }
 
-TimerBar::TimerBar(int id,int frames, std::string ui_name_)
-	:id(id),frames_left(frames),frames_total(frames),ui_name(ui_name_),ui(nullptr)
+
+TimerBar::TimerBar(int frames, Spell mode, OpenGLContainer * open_gl)
+	:mode(mode),frames_left(frames),frames_total(frames),ui(nullptr), open_gl(open_gl)
 {
-
-	std::vector<int> a;
-	std::vector<float> b;
-	b.push_back(1.0f);
-	std::vector<string> c;
-	UiElementParameter new_para(a, b, c);
-	ui = make_unique<UiElement>(ui_name, new_para);
-
 	if (frames_total <= 1) {
-		frames_total = 1;
 		Log("Error", "We are creating a progressbar with length 0 or less frames!");
 		//Halt, because this is an odd bug
+		return;
 	}
+
+	auto new_ui = std::make_unique<Group>(
+		//TODO: Proper transform	
+	);
+	if (mode.is_combat_spell()) {
+		new_ui->addElement(
+			stun_background()
+		);
+		if (mode == Spell::Ice()) {
+			makeBar("../Data/2D/Ui/TimeBarFrozen.png");
+		} else {
+			makeBar("../Data/2D/Ui/TimeBar.png");
+		}
+	} else if (mode.is_analysis_spell()) {
+		new_ui->addElement(
+			distraction_background()
+		);
+		makeBar("../Data/2D/Ui/TimeBar.png");
+	} else {
+		//TODO:
+	}
+
+	ui = std::move(new_ui);
 }
 
-void TimerBar::Render(OpenGLContainer * open_gl) const
+
+
+
+void TimerBar::render(OpenGLContainer * open_gl) const
 {
-	if (!Done()) {
+	if (!Done() && ui) {
 		ui->Render(glm::mat4(),open_gl);
+		bar->Render(glm::mat4());
 	}
-
-
 }
 
 
 void TimerBar::Progress() {
 	frames_left--;
-
 	if (frames_left % 5 == 0) { //reduce frequency of updates as they wil be the same visually
-		std::vector<int> a;
-		std::vector<float> b;
-		b.push_back((float)frames_left / frames_total);
-		std::vector<string> c;
-
-		UiElementParameter new_para(a, b, c);
-		ui->RemakeIfDifferent(ui_name, new_para);
+		float progress = float(frames_left) / frames_total;
+		bar->set_percent(progress);
 	}
+}
+
+namespace detail {
+	Transform2D BackgroundTransform() {
+		return Transform2D(
+			TransformPosition(0, -0.8f)
+			, TransformScale(0.75f, 0.3f)
+		);
+	}
+}
+
+std::unique_ptr<PolymorphicUiElement> TimerBar::stun_background() const
+{
+	std::unique_ptr<PolymorphicUiElement> result = BasicUiElement::Make_BasicUiElement_UP(
+		detail::BackgroundTransform()
+		,"../Data/2D/Ui/StunBar.png"
+	);
+	return result;
+}
+
+std::unique_ptr<PolymorphicUiElement> TimerBar::distraction_background() const
+{
+	std::unique_ptr<PolymorphicUiElement> result = BasicUiElement::Make_BasicUiElement_UP(
+		detail::BackgroundTransform()
+		, "../Data/2D/Ui/DistractionBar.png"
+	);
+	return result;
+}
+
+
+
+void TimerBar::makeBar(const std::string& file)
+{
+	bar = BarUiElement::Make_BarUiElement_UP(
+		Transform2DReduced(
+			TransformPositionReduced(0, -0.818f)
+			, TransformScaleReduced(0.50f, 0.127f)
+		)
+		,file
+		, open_gl
+		,1.0f
+	);
+}
+
+
+void TimerBar::nullify() {
+	//MAYBE: Explode or something
+	frames_left = 0;
 }

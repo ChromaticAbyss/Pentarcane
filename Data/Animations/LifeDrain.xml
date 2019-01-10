@@ -1,25 +1,31 @@
-<FlipbookAnimation>
-	<!--For derived class "FlipbookAnimation"-->
-	<FileName>../Data/2D/Animations/Lifedrain_1.png</FileName>
-	<FileName>../Data/2D/Animations/Lifedrain_2.png</FileName>
-	<FileName>../Data/2D/Animations/Lifedrain_3.png</FileName>
-	<FileName>../Data/2D/Animations/Lifedrain_4.png</FileName>
-	<FileName>../Data/2D/Animations/Lifedrain_5.png</FileName>
-	<FileName>../Data/2D/Animations/Lifedrain_6.png</FileName>
-	<FileName>../Data/2D/Animations/Lifedrain_7.png</FileName>
-	<FileName>../Data/2D/Animations/Lifedrain_8.png</FileName>
-	<FileName>../Data/2D/Animations/Lifedrain_9.png</FileName>
-	
-	<Transform2D>
-		<X>0.0</X>
-		<Y>0.0</Y>
-		<SizeX>0.4</SizeX>
-		<SizeY>1.0</SizeY>
-		<SizeYRelativeToX>True</SizeYRelativeToX>
-	</Transform2D>
-	
-	
-	<!--For base class "Animation"-->
-	<Frames>40</Frames>
-	<Blocking>1</Blocking>
-</FlipbookAnimation>
+<Animation>
+	<Frames>50</Frames>
+	<BlockFrames>40</BlockFrames>
+	<Behaviour>
+		<Type>SpawnFlipbookParticle</Type>
+		<Size>0.6</Size>
+		<Image>../Data/2D/Animations/Empty.png</Image>
+		<Image>../Data/2D/Animations/Lifedrain_1.png</Image>
+		<Image>../Data/2D/Animations/Lifedrain_2.png</Image>
+		<Image>../Data/2D/Animations/Lifedrain_3.png</Image>
+		<Image>../Data/2D/Animations/Lifedrain_4.png</Image>
+		<Image>../Data/2D/Animations/Lifedrain_5.png</Image>
+		<Image>../Data/2D/Animations/Lifedrain_6.png</Image>
+		<Image>../Data/2D/Animations/Lifedrain_7.png</Image>
+		<Image>../Data/2D/Animations/Lifedrain_8.png</Image>
+		<Image>../Data/2D/Animations/Lifedrain_9.png</Image>
+		<Image>../Data/2D/Animations/Empty.png</Image>
+		<Transform2D>
+			<X>0.0</X>
+			<Y>0.0</Y>
+			<SizeX>0.4</SizeX>
+			<SizeY>1.0</SizeY>
+			<SizeYRelativeToX>True</SizeYRelativeToX>
+		</Transform2D>
+		<FramesPerImage>7</FramesPerImage>
+		<Fade>-3</Fade>
+	</Behaviour>	
+	<Sound>../Data/Sounds/richerland_magic.ogg</Sound>	
+</Animation>
+
+

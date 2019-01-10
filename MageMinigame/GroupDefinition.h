@@ -5,11 +5,11 @@
 
 #include "tinyxml2.h"
 
-#include "FightData.h"
+#include "Fight/FightData.h"
 
 class GroupDefinition {
 public:
-	explicit GroupDefinition(tinyxml2::XMLElement * pointer_xml);
+	explicit GroupDefinition(const tinyxml2::XMLElement * pointer_xml);
 
 	int Likelihood() const { return likelihood; };
 	std::string InternalName() const { return internal_name; };
